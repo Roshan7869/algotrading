@@ -1,7 +1,7 @@
 
 import logging
 from datetime import datetime, timedelta
-from typing import Any, Dict, Tuple
+from typing import Any, Dict
 
 from sqlalchemy import and_, or_
 
@@ -68,3 +68,12 @@ class StoplossGuard(IProtection):
             If true, all pairs will be locked with <reason> until <until>
         """
         return self._stoploss_guard(date_now, pair=None)
+
+    def stop_per_pair(self, pair: str, date_now: datetime) -> ProtectionReturn:
+        """
+        Stops trading (position entering) for this pair
+        This must evaluate to true for the whole period of the "cooldown period".
+        :return: Tuple of [bool, until, reason].
+            If true, this pair will be locked with <reason> until <until>
+        """
+        return False, None, None
