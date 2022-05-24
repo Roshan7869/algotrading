@@ -143,13 +143,13 @@ class StrategyTestV3(IStrategy):
                 (dataframe['adx'] > 65) &
                 (dataframe['plus_di'] > self.buy_plusdi.value)
             ),
-            ['enter_long', 'enter_tag']] = 1, 'enter_tag_long'
+            'enter_long'] = 1
 
         dataframe.loc[
             (
                 qtpylib.crossed_below(dataframe['rsi'], self.sell_rsi.value)
             ),
-            ['enter_short', 'enter_tag']] = 1, 'enter_tag_short'
+            'enter_short'] = 1
 
         return dataframe
 
@@ -167,13 +167,13 @@ class StrategyTestV3(IStrategy):
                 (dataframe['adx'] > 70) &
                 (dataframe['minus_di'] > self.sell_minusdi.value)
             ),
-            ['exit_long', 'exit_tag']] = 1, 'exit_tag_long'
+            'exit_long'] = 1
 
         dataframe.loc[
             (
                 qtpylib.crossed_above(dataframe['rsi'], self.buy_rsi.value)
             ),
-            ['exit_long', 'exit_tag']] = 1, 'exit_tag_short'
+            'exit_short'] = 1
 
         return dataframe
 
