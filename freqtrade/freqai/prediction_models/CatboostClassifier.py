@@ -32,9 +32,6 @@ class CatboostClassifier(BaseRegressionModel):
 
         cbr = CatBoostClassifier(
             allow_writing_files=False,
-            gpu_ram_part=0.5,
-            verbose=100,
-            early_stopping_rounds=400,
             loss_function='MultiClass',
             **self.model_training_parameters,
         )
