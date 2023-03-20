@@ -11,7 +11,7 @@ from freqtrade.freqai.prediction_models.PyTorchMLPModel import PyTorchMLPModel
 class PyTorchMLPClassifier(PyTorchClassifier):
     """
     This class implements the fit method of IFreqaiModel.
-    int the fit method we initialize the model and trainer objects.
+    in the fit method we initialize the model and trainer objects.
     the only requirement from the model is to be aligned to PyTorchClassifier
     predict method that expects the model to predict tensor of type long.
     the trainer defines the training loop.
@@ -75,6 +75,7 @@ class PyTorchMLPClassifier(PyTorchClassifier):
             model_meta_data={"class_names": class_names},
             device=self.device,
             init_model=init_model,
+            target_tensor_type=torch.long,
             **self.trainer_kwargs,
         )
         trainer.fit(data_dictionary)
