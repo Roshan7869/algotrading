@@ -1,24 +1,11 @@
 import logging
-import sys
 from logging import Formatter
-from logging.handlers import BufferingHandler, RotatingFileHandler, SysLogHandler
+from logging.handlers import RotatingFileHandler, SysLogHandler
 
 from freqtrade.constants import Config
 from freqtrade.exceptions import OperationalException
-
-
-class FTBufferingHandler(BufferingHandler):
-    def flush(self):
-        """
-        Override Flush behaviour - we keep half of the configured capacity
-        otherwise, we have moments with "empty" logs.
-        """
-        self.acquire()
-        try:
-            # Keep half of the records in buffer.
-            self.buffer = self.buffer[-int(self.capacity / 2):]
-        finally:
-            self.release()
+from freqtrade.loggers.buffering_handler import FTBufferingHandler
+from freqtrade.loggers.std_err_stream_handler import FTStdErrStreamHandler
 
 
 logger = logging.getLogger(__name__)
@@ -45,6 +32,7 @@ def _set_loggers(verbosity: int = 0, api_verbosity: str = 'info') -> None:
         logging.INFO if verbosity <= 2 else logging.DEBUG
     )
     logging.getLogger('telegram').setLevel(logging.INFO)
+    logging.getLogger('httpx').setLevel(logging.INFO)
 
     logging.getLogger('werkzeug').setLevel(
         logging.ERROR if api_verbosity == 'error' else logging.INFO
@@ -69,7 +57,7 @@ def setup_logging_pre() -> None:
     logging.basicConfig(
         level=logging.INFO,
         format=LOGFORMAT,
-        handlers=[logging.StreamHandler(sys.stderr), bufferHandler]
+        handlers=[FTStdErrStreamHandler(), bufferHandler]
     )
 
 
@@ -103,9 +91,9 @@ def setup_logging(config: Config) -> None:
             logging.root.addHandler(handler_sl)
         elif s[0] == 'journald':  # pragma: no cover
             try:
-                from systemd.journal import JournaldLogHandler
+                from cysystemd.journal import JournaldLogHandler
             except ImportError:
-                raise OperationalException("You need the systemd python package be installed in "
+                raise OperationalException("You need the cysystemd python package be installed in "
                                            "order to use logging to journald.")
             handler_jd = get_existing_handlers(JournaldLogHandler)
             if handler_jd:
