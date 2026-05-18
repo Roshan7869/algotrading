@@ -1,12 +1,21 @@
 {
   "pair": "BTC/USDT:USDT",
-  "regime": "unknown",
-  "regime_probs": {},
+  "regime": "volatile",
+  "regime_probs": {
+    "trending_up": 0.0,
+    "ranging": 0.0,
+    "volatile": 1.0,
+    "trending_down": 0.0
+  },
   "regime_duration_hours": 1,
-  "regime_stability": 0.875,
-  "volatility_20": 0.5122,
-  "returns_20": -0.0993,
-  "regime_multiplier": 1.0,
-  "_timestamp": "2026-05-16T17:40:08.704248+00:00",
-  "_written_by": "VectorStrategy_HMM_Phase2"
+  "regime_stability": 1.0,
+  "volatility_20": 0.0018,
+  "returns_20": -0.0006,
+  "regime_multiplier": 0.5,
+  "all_regimes": {
+    "BTC/USDT:USDT": "volatile",
+    "ETH/USDT:USDT": "volatile"
+  },
+  "_timestamp": "2026-05-18T18:45:41.815738+00:00",
+  "_written_by": "signal_bus:160918"
 }

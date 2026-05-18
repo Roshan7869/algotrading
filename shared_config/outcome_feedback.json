@@ -1,0 +1,35 @@
+{
+  "win_rate": 0.8487,
+  "total_trades": 119,
+  "wins": 101,
+  "avg_r_multiple": 0.3701,
+  "long_win_rate": 0.8621,
+  "short_win_rate": 0.8471,
+  "long_trades": 29,
+  "short_trades": 85,
+  "regime_stats": {
+    "trending_up": {
+      "trades": 66,
+      "wins": 59,
+      "win_rate": 0.8939
+    },
+    "ranging": {
+      "trades": 12,
+      "wins": 10,
+      "win_rate": 0.8333
+    },
+    "volatile": {
+      "trades": 20,
+      "wins": 17,
+      "win_rate": 0.85
+    },
+    "trending_down": {
+      "trades": 21,
+      "wins": 15,
+      "win_rate": 0.7143
+    }
+  },
+  "status": "ok",
+  "_timestamp": "2026-05-18T18:43:19.051155+00:00",
+  "_written_by": "signal_bus:159961"
+}
