@@ -1,0 +1,26 @@
+{
+  "action": "NEUTRAL",
+  "confidence": 0.5931,
+  "regime": "volatile",
+  "direction": "short",
+  "suggested_leverage": 3.0,
+  "scores": {
+    "regime": 0.175,
+    "sentiment": 0.7296,
+    "outcome": 0.8787,
+    "agents": 0.5,
+    "circuit_breaker": 1.0,
+    "composite": 0.5931
+  },
+  "reasoning": [
+    "regime=volatile (score=0.175, stability=1.00)",
+    "sentiment=bullish (score=0.7296)",
+    "outcomes: WR=84.87% over 119 trades (score=0.8787)",
+    "agents: Neutral (score=0.5)",
+    "circuit_breaker: UNKNOWN (score=1.0)",
+    "composite=0.593 \u2192 action=NEUTRAL, direction=short"
+  ],
+  "timestamp": "2026-05-18T18:48:09.728116+00:00",
+  "_timestamp": "2026-05-18T18:48:09.728180+00:00",
+  "_written_by": "signal_bus:161894"
+}
