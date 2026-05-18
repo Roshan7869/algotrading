@@ -1,0 +1,442 @@
+[
+  {
+    "setup_name": "Trailing Stop \u2014 ATR Multiple Exit",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "trailing stop, ATR, dynamic exit, trend following, protection",
+    "description": "Exit using a trailing stop set at 2-3x ATR from the current price. In trending markets, this allows the trade to breathe while protecting profits. For longs, trail below the low; for shorts, trail above the high. Tighten by 0.5x ATR when volume drops below 50% of average, signaling the move is exhausting. The ATR multiple adapts to volatility automatically \u2014 wider in volatile markets, tighter in calm ones."
+  },
+  {
+    "setup_name": "Chandelier Exit \u2014 Highest High Trailing",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "chandelier exit, highest high, trailing, trend protection",
+    "description": "The Chandelier Exit hangs a trailing stop 3x ATR below the highest high (for longs) or above the lowest low (for shorts). Named because it 'hangs from the ceiling' of the price action. Adjust the ATR multiplier: use 2.5x for quick exits, 4x for longer trends. This exit keeps you in strong trends but gets you out when the trend reverses by more than the average range."
+  },
+  {
+    "setup_name": "Percentage Trailing Stop \u2014 Fixed Distance",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "intraday",
+    "keywords": "trailing stop, percentage, fixed, profit protection, simple",
+    "description": "Trail a stop loss at a fixed percentage below the highest close since entry. For crypto, use 3-5% for scalps, 5-8% for swing trades, 10-15% for position trades. Move the stop up every candle but never move it down (for longs). This is the simplest trailing mechanism but doesn't adapt to volatility. Best used when ATR data isn't available or as a fallback."
+  },
+  {
+    "setup_name": "Volatility-Adjusted Trailing Stop \u2014 VIX Regime",
+    "setup_type": "exit",
+    "market_condition": "volatile",
+    "strategy_style": "multi-style",
+    "keywords": "volatility adjusted, VIX, regime, adaptive trailing, dynamic",
+    "description": "Adjust trailing stop distance based on the current volatility regime. When ATR is in the top 20% of its 50-day range, use 4x ATR trailing (wider stops for volatile moves). When ATR is in the bottom 20%, use 1.5x ATR (tighter stops for calm markets). In the middle range, use 2.5x ATR. This prevents getting stopped out by noise in volatile markets while taking profits quickly in calm markets."
+  },
+  {
+    "setup_name": "Parabolic SAR Trailing Exit",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "parabolic SAR, trend following, trailing, reversal detection",
+    "description": "Use Parabolic SAR (step=0.02, max=0.2) as the trailing stop mechanism. Enter when SAR flips to the opposite side of price. Exit when SAR flips back. In strong trends, SAR accelerates and stays close to price, locking in profits. In choppy markets, SAR whipsaws \u2014 combine with ADX>25 filter to avoid false exits. Best for trending crypto markets where momentum persists."
+  },
+  {
+    "setup_name": "Risk-to-Zero Trailing \u2014 Breakeven Acceleration",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "intraday",
+    "keywords": "risk to zero, breakeven, trailing, acceleration, profit protection",
+    "description": "Move stop to breakeven as soon as price moves 1R in your favor (where R = initial risk). Then trail at 1R intervals: when price reaches 2R, move stop to 1R profit. At 3R, move to 2R profit. This acceleration ensures you never give back more than 1R after breakeven. Entry at 100, stop at 96 (4R = 1R), target at 108 (2R). At 104, stop to 100 (breakeven). At 108, stop to 104."
+  },
+  {
+    "setup_name": "Half Position Trailing \u2014 Split Exit Strategy",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "half position, split exit, scaled, trailing, conservative aggressive",
+    "description": "Exit half the position at 1R profit using a fixed target, then trail the remaining half with a wider ATR-based stop (3-4x ATR). This guarantees you bank profit on the first half while letting the second half run in strong trends. If the trade reverses after the first target, you still have profits. If the trend continues, the second half captures large wins."
+  },
+  {
+    "setup_name": "Time-Based Exit \u2014 N-Bar Expiration",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "intraday",
+    "keywords": "time based, N-bar, expiration, maximum hold, time decay",
+    "description": "Exit the trade if it hasn't reached 1R profit within N bars. For 1h charts, use N=12 (half a day). For 15m charts, use N=16 (4 hours). If price hasn't moved in your favor within a reasonable time, the setup has failed and capital is better deployed elsewhere. Combine with breakeven stop: if trade is flat after N/2 bars, move stop to breakeven."
+  },
+  {
+    "setup_name": "Session Close Exit \u2014 End of Day",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "intraday",
+    "keywords": "session close, end of day, EOD, overnight risk, gap risk",
+    "description": "Close all positions before the trading session ends to avoid overnight gap risk. For crypto, close before the lowest-volume period (00-04 UTC). This eliminates gap risk entirely but sacrifices overnight moves. Best for scalpers and intraday traders who don't want exposure to news events outside their monitoring hours."
+  },
+  {
+    "setup_name": "Weekend Flat Exit \u2014 Clear Before Saturday",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "intraday",
+    "keywords": "weekend flat, Saturday, gap risk, weekend risk, crypto gap",
+    "description": "Crypto liquidity drops 40-60% on weekends. Close positions Friday 20:00 UTC if the trade hasn't reached 2R profit. Weekend gaps can be 10-20% in a single Saturday candle. If holding over the weekend, reduce position size by 50% and set stops at 1.5x normal distance. This exit is especially important before major news events (FOMC, ETF decisions)."
+  },
+  {
+    "setup_name": "Kill Zone Time Filter \u2014 Only Trade Active Hours",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "intraday",
+    "keywords": "kill zone, session, London, New York, optimal hours, time filter",
+    "description": "Only enter trades during kill zones: London 07:00-09:00 UTC and New York 13:00-16:00 UTC. These windows have 65%+ of daily volume. Trades entered outside kill zones have 30% lower win rate. If a trade is still open outside kill zones, tighten stops to breakeven or 0.5x ATR."
+  },
+  {
+    "setup_name": "Maximum Duration Exit \u2014 48-Hour Cap",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "intraday",
+    "keywords": "maximum duration, time cap, 48 hours, stale trade, opportunity cost",
+    "description": "Hard cap: exit any trade that hasn't reached 2R within 48 hours on 1h timeframe. Stale trades tie up margin and attention. After 48 hours, either the thesis was wrong or the market is consolidating \u2014 either way, capital is better deployed elsewhere. If the trade is in profit but below 2R, consider moving to breakeven and giving it 12 more hours."
+  },
+  {
+    "setup_name": "Opposing Liquidity Pool Target \u2014 Where Smart Money Exits",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "intraday",
+    "keywords": "liquidity pool, opposing, smart money, target, take profit",
+    "description": "Set profit targets at opposing liquidity pools (major support/resistance levels where pending orders cluster). For longs, target the next resistance where sell orders accumulate. For shorts, target support where buy orders sit. These levels are where institutional players take profits and initiate reversals. Use volume profile to identify High Volume Nodes (HVN) as natural targets."
+  },
+  {
+    "setup_name": "Round Number Target \u2014 Psychological Level Exit",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "intraday",
+    "keywords": "round number, psychological level, 000, 500, target, magnet",
+    "description": "Crypto price is magnetized to round numbers: BTC at 100K, 105K, 110K. These levels see massive order clustering and profit-taking. Set targets just below round numbers for longs (at 99,800 instead of 100,000). Exit 50% at the first round number, trail the rest. This captures predictable profit-taking behavior."
+  },
+  {
+    "setup_name": "Fibonacci Extension Target \u2014 1.272 and 1.618",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "fibonacci, extension, 1.272, 1.618, golden ratio, target",
+    "description": "Use Fibonacci extensions of the impulse wave to set targets. The 1.272 extension is the minimum profit target. The 1.618 (golden ratio) is the primary target. Scale out: take 1/3 at 1.272, 1/3 at 1.618, trail the last 1/3. This gives defined targets without guessing."
+  },
+  {
+    "setup_name": "Risk-Reward Target \u2014 Fixed R-Multiple Exit",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "risk reward, R-multiple, 2R, 3R, fixed target, systematic",
+    "description": "Set profit targets at fixed R-multiples: 2R minimum, 3R target. If risk is 2% ($200 on $10K), then 2R = 4% ($400) and 3R = 6% ($600). This ensures a minimum 2:1 reward-to-risk ratio on every trade. Use breakeven stop after 1R. Take 50% at 2R, trail the rest for potential 3R+."
+  },
+  {
+    "setup_name": "Beacon Target System \u2014 30/50/70% Bollinger Levels",
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "strategy_style": "intraday",
+    "keywords": "beacon, bollinger, mean reversion, 30%, 50%, 70%, target system",
+    "description": "When entering mean reversion trades, use the Bollinger %b as the target system. Enter when %b < 0.30 (oversold). Target 1: %b returns to 0.50 (middle band) \u2014 take 50% off. Target 2: %b reaches 0.70 \u2014 take another 30%. Trail the remaining 20%. If %b goes above 0.85, exit everything as this signals a breakout rather than reversion."
+  },
+  {
+    "setup_name": "Auction Cap \u2014 Too Expensive Rejection Exit",
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "strategy_style": "orderflow_scalping",
+    "keywords": "auction cap, too expensive, rejection, scale out, resistance",
+    "description": "When price reaches an auction cap (a level where buyers are no longer willing to pay higher prices), aggressive selling appears. Scale out 50% at the first rejection. If price breaks through on the second attempt, the cap has broken \u2014 go full size. If it holds, exit the remaining position at breakeven."
+  },
+  {
+    "setup_name": "RSI Divergence Exit \u2014 Momentum Exhaustion",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "RSI, divergence, momentum, exhaustion, reversal signal",
+    "description": "Exit when RSI diverges from price. For longs: price makes higher high but RSI makes lower high (bearish divergence). For shorts: price makes lower low but RSI makes higher low (bullish divergence). Exit immediately on divergence confirmation (2 candles). This is the most reliable exit signal across all market conditions \u2014 it captures momentum exhaustion before the price reverses."
+  },
+  {
+    "setup_name": "MACD Cross Exit \u2014 Trend Reversal",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "MACD, cross, signal line, trend reversal, exit",
+    "description": "Exit longs when MACD line crosses below signal line. Exit shorts when MACD crosses above signal. Use standard 12/26/9 settings. The MACD histogram declining for 3+ consecutive bars before the cross gives early warning. Combine with price action: MACD cross + break of 21 EMA = strong exit signal."
+  },
+  {
+    "setup_name": "Volume Exhaustion Exit \u2014 Selling/Buying Climax",
+    "setup_type": "exit",
+    "market_condition": "reversal",
+    "strategy_style": "intraday",
+    "keywords": "volume, exhaustion, climax, selling, buyers, reversal",
+    "description": "When volume spikes to 5x average (selling/buying climax), it signals panic and imminent reversal. For profitable longs, volume exhaustion on the upside (5x volume at the top) signals the last of the buyers are entering \u2014 exit. Monitor volume ratio: when it exceeds 4x average, start tightening stops. At 5x+, exit 50%. At 6x+, exit everything."
+  },
+  {
+    "setup_name": "Bollinger Band Width Expansion Exit \u2014 Move Complete",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "intraday",
+    "keywords": "bollinger, band width, expansion, squeeze, move complete",
+    "description": "When Bollinger Band width expands to more than 2.5x its 20-period moving average after a squeeze, the explosive move is likely complete. Enter on squeeze, exit on expansion completion. Exit 75% of the position when width crosses 2.5x average. Trail the remaining 25% with a tight stop."
+  },
+  {
+    "setup_name": "EMA Crossover Exit \u2014 Trend Death Signal",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "EMA crossover, trend death, moving average, exit signal",
+    "description": "Exit longs when the fast EMA (9) crosses below the medium EMA (21). Exit shorts when fast crosses above medium. For more confirmation, wait for the medium EMA to cross the 200 EMA \u2014 this confirms a secular trend change. The EMA crossover exit has a 1-3 bar lag but produces very few false signals in trending markets."
+  },
+  {
+    "setup_name": "Candlestick Reversal Pattern Exit \u2014 Pin Bar/Doji",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "intraday",
+    "keywords": "candlestick, pin bar, doji, reversal, pattern, exit",
+    "description": "Exit when a reversal candlestick pattern appears at a key level. For longs: pin bar (long upper wick) at resistance = exit. Doji after strong candles = indecision = exit 50%. Engulfing pattern opposite direction = exit. Require the pattern at a level (support, resistance, EMA, VWAP). Random reversal patterns without level confluence have 50%+ failure rates."
+  },
+  {
+    "setup_name": "VWAP Reversion Exit \u2014 Price Returns to Value",
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "strategy_style": "intraday",
+    "keywords": "VWAP, reversion, mean reversion, price to value, exit",
+    "description": "When price deviates more than 2 standard deviations from VWAP, exit as price will revert. Exit longs when price is above VWAP + 2SD and starts declining. Exit shorts when price is below VWAP - 2SD and starts rising. This captures the mean reversion profit at the optimal moment in ranging markets."
+  },
+  {
+    "setup_name": "Higher Low Failure Exit \u2014 Trend Structure Break",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "higher low, trend structure, break, failure, exit",
+    "description": "For long positions in an uptrend, exit when price breaks below the previous higher low. This means market structure has shifted to lower highs/lower lows. For shorts, exit when price breaks above the previous lower high. A break of the most recent higher low is an immediate exit \u2014 no second chances."
+  },
+  {
+    "setup_name": "Absorption Pattern Exit \u2014 Hidden Sellers/Buyers",
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "strategy_style": "orderflow_scalping",
+    "keywords": "absorption, hidden sellers, buyers, order book, exit",
+    "description": "Absorption pattern: massive volume at a level but price doesn't move. This means large limit orders are absorbing all market orders. For longs, when 5x+ volume at resistance and price doesn't break through, exit 75% \u2014 smart money is unloading into the buying pressure."
+  },
+  {
+    "setup_name": "Open Drive Failure Exit \u2014 Trend Bar Reversal",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "intraday",
+    "keywords": "open drive, trend bar, failure, reversal, first hour",
+    "description": "An open drive is a strong trend bar in the first hour. If this bar is completely reversed within 2 bars, the trend has failed \u2014 exit immediately. This signals that institutional flow has reversed. Don't wait for confirmation \u2014 the move is over."
+  },
+  {
+    "setup_name": "Breakeven Stop \u2014 Risk-Free After 1R",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "breakeven, stop loss, risk free, 1R, protection",
+    "description": "Move stop loss to entry price when price reaches 1R in profit. This makes the trade risk-free. Use this as minimum protection for all trades. Some traders use 'breakeven +0.1%' to cover fees, making the trade truly cost-neutral. The psychological benefit is enormous: once at breakeven, you can let the trade develop without fear."
+  },
+  {
+    "setup_name": "Daily Max Loss Exit \u2014 Circuit Breaker",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "daily max loss, circuit breaker, 2% rule, risk management",
+    "description": "If total trades today result in a net loss exceeding 2% of account, stop trading for the day. This is a hard circuit breaker. No exceptions. Track cumulative P&L throughout the session. When you hit -2%, close all positions. This single rule has saved more accounts than any strategy."
+  },
+  {
+    "setup_name": "Weekly Loss Limit \u2014 Drawdown Protection",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "weekly loss, drawdown, protection, 6% rule, risk management",
+    "description": "If cumulative losses exceed 6% of account in a week, reduce position sizes by 50% for the next week. If losses exceed 10%, stop trading entirely for the rest of the week. Use weekly P&L tracking. This prevents catastrophic drawdowns while giving room for normal variance."
+  },
+  {
+    "setup_name": "Correlation Risk Exit \u2014 Multiple Positions Same Direction",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "correlation, risk, multiple positions, same direction, portfolio",
+    "description": "If you have 3+ positions in the same direction and they're correlated (>0.7), exit the weakest one. Correlated positions compound risk. Reduce to maximum 2 correlated positions. BTC and ETH are correlated; BTC long + SOL short = uncorrelated = OK."
+  },
+  {
+    "setup_name": "News Event Exit \u2014 Pre-Announcement Close",
+    "setup_type": "exit",
+    "market_condition": "volatile",
+    "strategy_style": "intraday",
+    "keywords": "news event, announcement, FOMC, ETF, CPI, pre-announcement, exit",
+    "description": "Close 50% of all positions 30 minutes before scheduled high-impact events (FOMC, CPI, ETF decisions). The remaining 50% stays with stops moved to breakeven. Never hold full size through binary events. Post-announcement, reassess and re-enter on the new trend."
+  },
+  {
+    "setup_name": "Scale Out 1/3 \u2014 Three-Tier Profit Taking",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "scale out, 1/3, three-tier, profit taking, systematic",
+    "description": "1st third at 1R (guarantee a win). 2nd third at 2R (solid profit). 3rd third trails with 3x ATR stop (runner for big wins). Even if the runner is stopped at breakeven, you've locked in 1R average. If the runner wins, average becomes 2.3R. Over a series, this beats any single-target exit."
+  },
+  {
+    "setup_name": "Scale Out 50-30-20 \u2014 Conservative-Aggressive Split",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "scale out, 50-30-20, conservative, aggressive, profit taking",
+    "description": "Take 50% off at 1R (conservative). Take 30% off at 2R (solid). Let 20% run with trailing stop at 3x ATR (aggressive). The 50% at 1R ensures the trade pays for itself. The 20% runner is free money. Over 100 trades, this yields consistent 1.4R average profit."
+  },
+  {
+    "setup_name": "All-or-Nothing Exit \u2014 Full Position at Target",
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "strategy_style": "scalping",
+    "keywords": "all or nothing, full position, target, binary exit, simple",
+    "description": "Set a single target at 2R and exit the entire position there. No scaling, no trailing. Simple and mechanical. Best for ranging markets where moves are predictable and limited. The advantage: zero emotional decisions. Best for scalpers and traders who struggle with scaling decisions."
+  },
+  {
+    "setup_name": "Re-Entry After Stop \u2014 Failed Breakout Reversal",
+    "setup_type": "exit",
+    "market_condition": "volatile",
+    "strategy_style": "intraday",
+    "keywords": "re-entry, failed breakout, reversal, second chance, stop loss",
+    "description": "When stopped out, don't re-enter in the same direction unless: (1) price retests the level, (2) volume is 2x+ the failed breakout volume, (3) the reversal candle closes strong. Wait for the next kill zone session at minimum. Failed breakouts often produce the strongest reversals, but the setup must be clean."
+  },
+  {
+    "setup_name": "Gap Fill Exit \u2014 Overnight Gap Target",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "gap fill, overnight, weekend gap, target, reversion",
+    "description": "When a crypto gaps overnight or over the weekend, trade the fill. 70%+ of crypto gaps fill within 24 hours. For gap-up entries, target the fill back to the previous close. Exit 50% at the gap fill, trail the rest. If the gap doesn't fill within 12 hours, exit at breakeven."
+  },
+  {
+    "setup_name": "Open Range Breakdown \u2014 First Hour Range Exit",
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "strategy_style": "intraday",
+    "keywords": "open range, first hour, range, breakdown, breakout",
+    "description": "Define the first hour's range. If price breaks out and then reverses back inside within 2 bars, it's a failed breakout \u2014 exit immediately and enter the other direction. Failed breakouts from the first hour range have 65%+ reversal probability. Target the opposite side of the range."
+  },
+  {
+    "setup_name": "Momentum Exhaustion \u2014 Consecutive Same-Color Candles",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "intraday",
+    "keywords": "momentum, exhaustion, consecutive candles, reversal, exit",
+    "description": "After 7+ consecutive same-color candles on 1h, momentum is exhausted. Exit 75% of the position. After 9+ consecutive, exit everything. This pattern has 70%+ reversal probability. Combined with RSI>80 or <20, this is one of the most reliable exhaustion exits in crypto."
+  },
+  {
+    "setup_name": "Regime Change Exit \u2014 Trend to Range Transition",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "regime change, trend to range, transition, ADX, exit",
+    "description": "When ADX drops below 20 after being above 30, the market is transitioning from trending to ranging. Exit trending strategies and switch to mean-reversion parameters. Tighten stops to breakeven and reduce position sizes by 50%. The regime change is the most important exit signal because it invalidates your entire thesis."
+  },
+  {
+    "setup_name": "Spread Cost Exit \u2014 Illiquid Market Warning",
+    "setup_type": "exit",
+    "market_condition": "volatile",
+    "strategy_style": "scalping",
+    "keywords": "spread, illiquid, slippage, cost, warning, market quality",
+    "description": "When bid-ask spread widens to more than 2x normal, exit immediately. Wide spreads indicate liquidity withdrawal \u2014 market makers are stepping away. This often precedes violent moves. A spread widening from 0.01% to 0.05% means liquidity has dropped 80%. Don't submit market orders in wide-spread conditions."
+  },
+  {
+    "setup_name": "Multi-Timeframe Exit \u2014 HTF Signal Override",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "swing",
+    "keywords": "multi-timeframe, MTF, higher timeframe, signal override, exit",
+    "description": "When the higher timeframe (4h for 1h entries, daily for 4h entries) gives an opposing signal, exit regardless of the lower timeframe. A 1h entry against a 4h trend has a 70%+ failure rate. Always defer to the higher timeframe. The MTF exit is the ultimate filter against being on the wrong side of the big picture."
+  },
+  {
+    "setup_name": "Triple Top/Bottom Exit \u2014 Chart Pattern Completion",
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "strategy_style": "swing",
+    "keywords": "triple top, triple bottom, chart pattern, completion, exit",
+    "description": "When price tests the same level 3 times and fails, exit. Triple tops signal selling pressure. Triple bottoms signal buying support. After the third test fails, reversal probability is 75%+. Exit 100% at the third test failure. In trending markets, triple tops often become continuation flags \u2014 use ADX>25 to filter."
+  },
+  {
+    "setup_name": "ATR-Based Profit Target \u2014 Dynamic Exit",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "ATR, average true range, profit target, dynamic exit, volatility",
+    "description": "Set profit targets at ATR multiples: 1.5x ATR for scalps, 3x ATR for day trades, 5x ATR for swings. This automatically adapts to volatility. Current BTC 1h ATR is ~1.2%, so targets would be: scalp 1.8%, day trade 3.6%, swing 6%. Compare the ATR target to your entry-stop distance to ensure minimum 2:1 R:R."
+  },
+  {
+    "setup_name": "Opening Range Exit \u2014 First 15 Minutes Range",
+    "setup_type": "exit",
+    "market_condition": "intraday",
+    "strategy_style": "intraday",
+    "keywords": "opening range, first 15 minutes, range, exit, day trading",
+    "description": "Define the first 15 minutes' range. If price breaks the range and then reverses back, exit immediately. Failed breakouts from this range are high-probability reversal signals. Target the opposite side for the reversal. For crypto, use the London Open (07:00 UTC) or NY Open (13:30 UTC) range."
+  },
+  {
+    "setup_name": "Divergence Exhaustion \u2014 Multi-Indicator Convergence",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "swing",
+    "keywords": "divergence, exhaustion, multi-indicator, RSI, MACD, volume",
+    "description": "When 2+ indicators show bearish divergence simultaneously (price higher but RSI lower + MACD lower + volume declining), exit 100%. Single divergences: 50-60% accuracy. Dual divergences: 70-75%. Triple divergences: 80%+. Each additional diverging indicator increases reversal probability by 10-15%."
+  },
+  {
+    "setup_name": "Circuit Breaker Exit \u2014 Drawdown Chain",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "circuit breaker, drawdown, chain, consecutive losses, pause",
+    "description": "If you have 3 consecutive losing trades, tighten all stops by 50% and reduce position sizes by 50%. If you have 5 consecutive losses, stop trading for the day. Consecutive losses signal either a regime change or psychological breakdown. Neither is fixable by trading more."
+  },
+  {
+    "setup_name": "Scaling Out at Resistance \u2014 Liquidity-Based Exit",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "orderflow_scalping",
+    "keywords": "scale out, resistance, liquidity, aggressive sellers, partial exit",
+    "description": "When approaching resistance with aggressive sellers (volume spike at the offer), scale out 50% immediately. If the level holds, exit the remaining 50%. If it breaks with volume, re-enter with 75% of original size. This is optimal when you can see order flow \u2014 exiting into strength."
+  },
+  {
+    "setup_name": "Time-Based Profit Target \u2014 Maximum Hold Duration by R",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "time based, profit target, maximum hold, R multiple, duration",
+    "description": "If a trade reaches 0.5R within 25% of its time window, it's on track \u2014 hold. If breakeven or negative at 50% of time window, exit. If it hasn't reached 1R by 75%, exit at market. For 48-hour max hold on 1h: 0-12h = develop, 12-24h = must be green, 24-36h = must be at 1R+, 36-48h = exit regardless."
+  },
+  {
+    "setup_name": "Dead Trade Exit \u2014 No Progress Signal",
+    "setup_type": "exit",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "dead trade, no progress, flat, sideways, opportunity cost",
+    "description": "If a trade is flat (within 0.3% of entry) after 8 bars on 1h, it's a dead trade \u2014 exit. Dead trades consume margin, attention, and emotional energy. They have a 55% chance of becoming a loser and only 45% chance of reaching 1R. Exit and deploy capital into a fresh setup. Opportunity cost is a real cost."
+  },
+  {
+    "setup_name": "Bollinger %b Reversal Exit \u2014 Overbought/Oversold Exit",
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "strategy_style": "intraday",
+    "keywords": "bollinger, %b, overbought, oversold, mean reversion, exit",
+    "description": "For mean reversion trades, exit when Bollinger %b reaches the opposite extreme. Longs entered at %b < 0.20 should exit when %b > 0.80. Shorts entered at %b > 0.80 should exit when %b < 0.20. This ensures symmetrical entry-exit logic. For trending trades, exit when %b reverses from > 0.85 to < 0.50."
+  },
+  {
+    "setup_name": "ADX Decline Exit \u2014 Trend Strength Fading",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "ADX, decline, trend strength, fading, exit signal",
+    "description": "When ADX drops below 25 after being above 35, trend strength is fading. Exit 50% of trending positions. When ADX drops below 20, exit 100% and switch to range parameters. ADX decline from 35 to 25 is a weaker trend. ADX decline from 25 to 20 is a dying trend. Don't hold trending positions in dying trends."
+  },
+  {
+    "setup_name": "Stop Hunt Reversal Exit \u2014 False Breakout",
+    "setup_type": "exit",
+    "market_condition": "volatile",
+    "strategy_style": "intraday",
+    "keywords": "stop hunt, false breakout, liquidity grab, reversal, institutional",
+    "description": "When price breaks a key level and immediately reverses back (stop hunt), exit and reverse. The institutional playbook: sweep stops below support to accumulate, then push price up. If you see a wick below support followed by a strong close above, that's a stop hunt. Exit shorts immediately and consider going long. This pattern has 70%+ win rate in crypto."
+  },
+  {
+    "setup_name": "Relative Volume Exit \u2014 Volume Dry-Up Warning",
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "strategy_style": "intraday",
+    "keywords": "relative volume, dry up, warning, exit, volume decline",
+    "description": "When volume drops below 50% of its 20-period moving average during a trending move, it signals exhaustion. The move lacks fuel. Exit 50% at 0.5x volume. Exit 100% at 0.3x volume. Volume is the fuel of trends \u2014 without it, trends die. This exit is especially powerful when combined with RSI divergence."
+  }
+]

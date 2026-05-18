@@ -1,0 +1,71 @@
+[
+  {
+    "strategy": "VectorStrategy",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "VectorStrategy_P3F_KEY_LEVEL_TIGHT_TRAIL",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "VectorStrategy_P3E_KEY_LEVEL_BOOST",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "VectorStrategy_P3E_HYPEROPT",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "VectorStrategy_P3B_TIGHTER_TRAIL",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "VectorStrategy_P3C_WIDER_TRAIL",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "VectorStrategy_P3D_KILL_ZONE_FILTER",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "VectorStrategy_P3A_RSI_DIVERGENCE_EXIT",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "BollingerMeanReversion",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "MacdRsiStrategy",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "AroonMomentumEngine_V2",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "EmaTrendFollowing",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "DmiAdxStrategy",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "RsiDivergenceStrategy",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "SupertrendEmaStrategy",
+    "error": "requires_shorts_spot_not_supported"
+  },
+  {
+    "strategy": "ensemble_strategy",
+    "error": "parse_failed",
+    "output": ".exchange.exchange - INFO - Instance is running with dry_run enabled\n2026-05-17 00:42:14,081 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.10\n2026-05-17 00:42:14,127 - freqtrade.exchange.exchange - INFO - Using Exchange \"Binance\"\n2026-05-17 00:42:16,908 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...\n2026-05-17 00:42:16,916 - freqtrade - ERROR - Impossible to load Strategy 'ensemble_strategy'. This class does not exist or contains Python code errors."
+  },
+  {
+    "strategy": "VectorStrategyV2",
+    "error": "requires_shorts_spot_not_supported"
+  }
+]

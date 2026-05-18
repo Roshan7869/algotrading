@@ -1,0 +1,38 @@
+{
+  "strategy_name": "DmiAdxStrategy",
+  "params": {
+    "roi": {
+      "0": 0.3,
+      "120": 0.15,
+      "360": 0.08,
+      "720": 0.04
+    },
+    "stoploss": {
+      "stoploss": -0.05
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.06,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 5
+    },
+    "buy": {
+      "adx_period": 20,
+      "adx_slope_period": 3,
+      "adx_threshold": 27,
+      "di_threshold": 26,
+      "rsi_filter": false,
+      "rsi_oversold": 24
+    },
+    "sell": {
+      "atr_multiplier": 1.9,
+      "risk_reward": 1.8,
+      "rsi_overbought": 74
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-05-14 11:35:53.786331+00:00"
+}

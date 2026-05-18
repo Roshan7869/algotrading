@@ -1,0 +1,26 @@
+{
+  "analyzed_at": "2026-05-17T07:23:05.290992",
+  "source_file": "/home/roshan/Downloads/Algotrading/all_results_8y_spot_20260517_072252.json",
+  "summary": {
+    "Existing": {
+      "production_ready": 4,
+      "promising": 1,
+      "underperforming": 6,
+      "high_drawdown": 4
+    },
+    "Generated": {
+      "underperforming": 2,
+      "high_drawdown": 46
+    }
+  },
+  "recommendations": {
+    "Existing": [
+      "PRODUCTION: VectorStrategy \u2014 +135.26% | WR=74.7% | DD=12.45%",
+      "PROMISING: VectorStrategy_P3A_RSI_DIVERGENCE_EXIT \u2014 +0.30% | WR=51.0% | DD=5.41%",
+      "PRODUCTION: VectorStrategy_P3E_HYPEROPT \u2014 +2489.64% | WR=75.4% | DD=24.45%",
+      "PRODUCTION: VectorStrategy_P3E_KEY_LEVEL_BOOST \u2014 +178.91% | WR=74.6% | DD=14.70%",
+      "PRODUCTION: VectorStrategy_P3F_KEY_LEVEL_TIGHT_TRAIL \u2014 +135.26% | WR=74.7% | DD=12.45%"
+    ],
+    "Generated": []
+  }
+}

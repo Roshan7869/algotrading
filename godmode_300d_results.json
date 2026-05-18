@@ -1,0 +1,146 @@
+{
+  "VectorStrategy": {
+    "status": "DONE",
+    "elapsed": 45.1,
+    "trades": 95,
+    "profit_pct": 13.74,
+    "win_rate": 82.1,
+    "dd_pct": 2.05
+  },
+  "VectorStrategyV2": {
+    "status": "DONE",
+    "elapsed": 55.1,
+    "trades": 91,
+    "profit_pct": 2.32,
+    "win_rate": 83.5,
+    "dd_pct": 0.94
+  },
+  "VectorStrategy_P3B_TIGHTER_TRAIL": {
+    "status": "DONE",
+    "elapsed": 45.1,
+    "trades": 95,
+    "profit_pct": 13.13,
+    "win_rate": 83.2,
+    "dd_pct": 2.06
+  },
+  "VectorStrategy_P3C_WIDER_TRAIL": {
+    "status": "DONE",
+    "elapsed": 40.1,
+    "trades": 95,
+    "profit_pct": 12.93,
+    "win_rate": 78.9,
+    "dd_pct": 2.33
+  },
+  "VectorStrategy_P3D_KILL_ZONE_FILTER": {
+    "status": "DONE",
+    "elapsed": 35.0,
+    "trades": 95,
+    "profit_pct": 13.74,
+    "win_rate": 82.1,
+    "dd_pct": 2.05
+  },
+  "VectorStrategy_P3D_KILL_ZONE_FORCED": {
+    "status": "DONE",
+    "elapsed": 30.0,
+    "trades": 95,
+    "profit_pct": 13.74,
+    "win_rate": 82.1,
+    "dd_pct": 2.05
+  },
+  "VectorStrategy_P3E_KEY_LEVEL_BOOST": {
+    "status": "DONE",
+    "elapsed": 55.0,
+    "trades": 548,
+    "profit_pct": 129.05,
+    "win_rate": 86.9,
+    "dd_pct": 2.8
+  },
+  "VectorStrategy_P3F_KEY_LEVEL_TIGHT_TRAIL": {
+    "status": "DONE",
+    "elapsed": 55.0,
+    "trades": 557,
+    "profit_pct": 129.7,
+    "win_rate": 88.5,
+    "dd_pct": 2.8
+  },
+  "VectorStrategy_P3A_RSI_DIVERGENCE_EXIT": {
+    "status": "DONE",
+    "elapsed": 40.0,
+    "trades": 95,
+    "profit_pct": 8.34,
+    "win_rate": 65.3,
+    "dd_pct": 2.78
+  },
+  "AroonMomentumEngine_Hybrid": {
+    "status": "ZERO_TRADES",
+    "elapsed": 45.1,
+    "trades": 0,
+    "profit_pct": 0.0,
+    "win_rate": 0.0,
+    "dd_pct": 0.0
+  },
+  "BollingerMeanReversion": {
+    "status": "DONE",
+    "elapsed": 55.1,
+    "trades": 284,
+    "profit_pct": 14.65,
+    "win_rate": 53.5,
+    "dd_pct": 7.69
+  },
+  "DmiAdxStrategy": {
+    "status": "ZERO_TRADES",
+    "elapsed": 60.0,
+    "trades": 0,
+    "profit_pct": 0.0,
+    "win_rate": 0.0,
+    "dd_pct": 0.0
+  },
+  "VectorStrategy_P3E_HYPEROPT": {
+    "status": "DONE",
+    "elapsed": 555.2,
+    "trades": 8578,
+    "profit_pct": 3632254.67,
+    "win_rate": 76.4,
+    "dd_pct": 6.81
+  },
+  "MacdRsiStrategy": {
+    "status": "DONE",
+    "elapsed": 45.0,
+    "trades": 4,
+    "profit_pct": 0.06,
+    "win_rate": 50.0,
+    "dd_pct": 0.53
+  },
+  "RsiDivergenceStrategy": {
+    "status": "ZERO_TRADES",
+    "elapsed": 55.0,
+    "trades": 0,
+    "profit_pct": 0,
+    "win_rate": 0,
+    "dd_pct": 0
+  },
+  "SupertrendEmaStrategy": {
+    "status": "ZERO_TRADES",
+    "elapsed": 75.0,
+    "trades": 0,
+    "profit_pct": 0,
+    "win_rate": 0,
+    "dd_pct": 0
+  },
+  "ensemble_strategy": {
+    "status": "ZERO_TRADES",
+    "elapsed": 15.0,
+    "trades": 0,
+    "profit_pct": 0,
+    "win_rate": 0,
+    "dd_pct": 0
+  },
+  "EmaTrendFollowing": {
+    "status": "ZERO_TRADES",
+    "elapsed": 500.3,
+    "trades": 0,
+    "profit_pct": 0,
+    "win_rate": 0,
+    "dd_pct": 0
+  }
+}

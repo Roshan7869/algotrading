@@ -1,0 +1,13 @@
+{
+  "provider": {
+    "deepseek-v4": {
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "apiKeyEnv": "DEEPSEEK_API_KEY"
+    },
+    "qwen3.6": {
+      "model": "qwen/qwen3-235b-a22b",
+      "apiKeyEnv": "OPENROUTER_API_KEY"
+    }
+  },
+  "model": "deepseek-v4"
+}

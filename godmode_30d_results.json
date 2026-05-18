@@ -1,0 +1,58 @@
+{
+  "VectorStrategy_P3F_KEY_LEVEL_TIGHT_TRAIL": {
+    "trades": 60,
+    "profit_pct": 3.6,
+    "wr": 52.0,
+    "dd": 1.06,
+    "status": "DONE"
+  },
+  "VectorStrategy_P3E_KEY_LEVEL_BOOST": {
+    "trades": 60,
+    "profit_pct": 5.09,
+    "wr": 52.0,
+    "dd": 0.7,
+    "status": "DONE"
+  },
+  "VectorStrategy_P3E_HYPEROPT": {
+    "trades": 749,
+    "profit_pct": 124.79,
+    "wr": 587.0,
+    "dd": 6.28,
+    "status": "DONE"
+  },
+  "BollingerMeanReversion": {
+    "trades": 0,
+    "profit_pct": 0,
+    "wr": 0,
+    "dd": 0,
+    "status": "ZERO_TRADES"
+  },
+  "VectorStrategy": {
+    "trades": 11,
+    "profit_pct": -0.54,
+    "wr": 8.0,
+    "dd": 0.8,
+    "status": "DONE"
+  },
+  "VectorStrategy_P3B_TIGHTER_TRAIL": {
+    "trades": 11,
+    "profit_pct": -0.89,
+    "wr": 8.0,
+    "dd": 1.16,
+    "status": "DONE"
+  },
+  "VectorStrategy_P3A_RSI_DIVERGENCE_EXIT": {
+    "trades": 11,
+    "profit_pct": -0.67,
+    "wr": 7.0,
+    "dd": 0.8,
+    "status": "DONE"
+  },
+  "AroonMomentumEngine_V2": {
+    "trades": 514,
+    "profit_pct": -12.8,
+    "wr": 239.0,
+    "dd": 19.79,
+    "status": "DONE"
+  }
+}

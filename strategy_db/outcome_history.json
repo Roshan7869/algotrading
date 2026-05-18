@@ -1,0 +1,2682 @@
+{
+  "trades": [
+    {
+      "trade_id": "T001",
+      "pair": "BTC/USDT",
+      "timestamp": "2026-05-16T06:40:37.305446",
+      "regime": "trending_up",
+      "setup_names": [
+        "BB Squeeze Breakout",
+        "EMA Alignment Confirmation"
+      ],
+      "pnl_pct": 5.2,
+      "r_multiple": 2.1,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "bb_squeeze"
+    },
+    {
+      "trade_id": "T002",
+      "pair": "BTC/USDT",
+      "timestamp": "2026-05-16T06:40:37.305741",
+      "regime": "trending_up",
+      "setup_names": [
+        "Risk to Zero ASAP",
+        "21 EMA Pullback Entry"
+      ],
+      "pnl_pct": -2.1,
+      "r_multiple": -0.8,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "ema_alignment"
+    },
+    {
+      "trade_id": "T003",
+      "pair": "ETH/USDT",
+      "timestamp": "2026-05-16T06:40:37.306049",
+      "regime": "ranging",
+      "setup_names": [
+        "Bollinger Band Squeeze Mean Reversion",
+        "Absorption Pattern Passive"
+      ],
+      "pnl_pct": 3.8,
+      "r_multiple": 1.5,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "bb_squeeze"
+    },
+    {
+      "trade_id": "T004",
+      "pair": "BTC/USDT",
+      "timestamp": "2026-05-16T06:40:37.306388",
+      "regime": "volatile",
+      "setup_names": [
+        "Low Probability Day Filter",
+        "Leverage Mechanics"
+      ],
+      "pnl_pct": 1.2,
+      "r_multiple": 0.5,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "filter"
+    },
+    {
+      "trade_id": "T005",
+      "pair": "BTC/USDT",
+      "timestamp": "2026-05-16T06:40:37.306770",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Selling Bearish Structure",
+        "Risk to Zero ASAP"
+      ],
+      "pnl_pct": 8.5,
+      "r_multiple": 3.2,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "ema_alignment"
+    },
+    {
+      "trade_id": "P1_T001",
+      "pair": "KAS/USDT:USDT",
+      "timestamp": "2025-05-14 15:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": -6.2841,
+      "r_multiple": -1.0473,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "stop_loss",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 99.9596,
+      "open_rate": 0.1227,
+      "close_rate": 0.12025,
+      "profit_abs": -6.2846849
+    },
+    {
+      "trade_id": "P1_T002",
+      "pair": "1000SHIB/USDT:USDT",
+      "timestamp": "2025-05-16 18:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.8722,
+      "r_multiple": 0.1454,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 180,
+      "stake_amount": 99.37092,
+      "open_rate": 0.01494,
+      "close_rate": 0.014882,
+      "profit_abs": 0.86624208
+    },
+    {
+      "trade_id": "P1_T003",
+      "pair": "VET/USDT:USDT",
+      "timestamp": "2025-05-29 13:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.9232,
+      "r_multiple": 0.4872,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 99.457256,
+      "open_rate": 0.026924,
+      "close_rate": 0.026635,
+      "profit_abs": 2.90592758
+    },
+    {
+      "trade_id": "P1_T004",
+      "pair": "ALGO/USDT:USDT",
+      "timestamp": "2025-06-11 13:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 1.4477,
+      "r_multiple": 0.2413,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 120,
+      "stake_amount": 99.7444,
+      "open_rate": 0.2058,
+      "close_rate": 0.207,
+      "profit_abs": 1.4446944
+    },
+    {
+      "trade_id": "P1_T005",
+      "pair": "XLM/USDT:USDT",
+      "timestamp": "2025-06-14 02:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.3497,
+      "r_multiple": 0.0583,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 99.89294,
+      "open_rate": 0.25879,
+      "close_rate": 0.25823,
+      "profit_abs": 0.34912542
+    },
+    {
+      "trade_id": "P1_T006",
+      "pair": "NEAR/USDT:USDT",
+      "timestamp": "2025-06-14 15:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.8027,
+      "r_multiple": 0.4671,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "trailing_stop_loss",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 99.428,
+      "open_rate": 2.226,
+      "close_rate": 2.203,
+      "profit_abs": 2.785257
+    },
+    {
+      "trade_id": "P1_T007",
+      "pair": "ONDO/USDT:USDT",
+      "timestamp": "2025-06-15 20:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.0086,
+      "r_multiple": 0.3348,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 480,
+      "stake_amount": 100.20302,
+      "open_rate": 0.7806,
+      "close_rate": 0.7746,
+      "profit_abs": 2.01171493
+    },
+    {
+      "trade_id": "P1_T008",
+      "pair": "KAS/USDT:USDT",
+      "timestamp": "2025-06-25 10:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 9.1946,
+      "r_multiple": 1.5324,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "trailing_stop_loss",
+      "side": "long",
+      "trade_duration": 0,
+      "stake_amount": 100.39026667,
+      "open_rate": 0.07418,
+      "close_rate": 0.07653,
+      "profit_abs": 9.2350587
+    },
+    {
+      "trade_id": "P1_T009",
+      "pair": "VET/USDT:USDT",
+      "timestamp": "2025-06-25 16:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 4.2883,
+      "r_multiple": 0.7147,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 101.329452,
+      "open_rate": 0.021364,
+      "close_rate": 0.021038,
+      "profit_abs": 4.34311333
+    },
+    {
+      "trade_id": "P1_T010",
+      "pair": "AVAX/USDT:USDT",
+      "timestamp": "2025-07-05 18:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -0.0302,
+      "r_multiple": -0.005,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 100.878,
+      "open_rate": 17.802,
+      "close_rate": 17.786,
+      "profit_abs": -0.030498
+    },
+    {
+      "trade_id": "P1_T011",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2025-07-06 11:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.0705,
+      "r_multiple": 0.0117,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 101.75659667,
+      "open_rate": 0.3241,
+      "close_rate": 0.3237,
+      "profit_abs": 0.07167859
+    },
+    {
+      "trade_id": "P1_T012",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2025-07-25 20:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -6.2724,
+      "r_multiple": -1.0454,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "stop_loss",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 101.76394,
+      "open_rate": 0.4274,
+      "close_rate": 0.4359,
+      "profit_abs": -6.3798776
+    },
+    {
+      "trade_id": "P1_T013",
+      "pair": "ENA/USDT:USDT",
+      "timestamp": "2025-07-27 12:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 10.0211,
+      "r_multiple": 1.6702,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "roi",
+      "side": "long",
+      "trade_duration": 0,
+      "stake_amount": 101.0955,
+      "open_rate": 0.6127,
+      "close_rate": 0.6338,
+      "profit_abs": 10.13599125
+    },
+    {
+      "trade_id": "P1_T014",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2025-07-27 18:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 0.891,
+      "r_multiple": 0.1485,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 102.1364,
+      "open_rate": 0.453,
+      "close_rate": 0.4548,
+      "profit_abs": 0.91050204
+    },
+    {
+      "trade_id": "P1_T015",
+      "pair": "OP/USDT:USDT",
+      "timestamp": "2025-07-27 18:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": -0.0535,
+      "r_multiple": -0.0089,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 102.13734,
+      "open_rate": 0.7299,
+      "close_rate": 0.7305,
+      "profit_abs": -0.05465796
+    },
+    {
+      "trade_id": "P1_T016",
+      "pair": "SUI/USDT:USDT",
+      "timestamp": "2025-07-30 21:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.2982,
+      "r_multiple": 0.0497,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 102.12444,
+      "open_rate": 3.7638,
+      "close_rate": 3.7563,
+      "profit_abs": 0.30443193
+    },
+    {
+      "trade_id": "P1_T017",
+      "pair": "LINK/USDT:USDT",
+      "timestamp": "2025-08-11 03:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 2.6741,
+      "r_multiple": 0.4457,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 102.25766667,
+      "open_rate": 22.07,
+      "close_rate": 22.289,
+      "profit_abs": 2.73580495
+    },
+    {
+      "trade_id": "P1_T018",
+      "pair": "VET/USDT:USDT",
+      "timestamp": "2025-08-15 14:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.4188,
+      "r_multiple": 0.4031,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 102.53080667,
+      "open_rate": 0.02474,
+      "close_rate": 0.024516,
+      "profit_abs": 2.47879208
+    },
+    {
+      "trade_id": "P1_T019",
+      "pair": "ONDO/USDT:USDT",
+      "timestamp": "2025-08-15 14:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.6486,
+      "r_multiple": 0.4414,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 102.53394,
+      "open_rate": 1.0082,
+      "close_rate": 0.9983,
+      "profit_abs": 2.71439843
+    },
+    {
+      "trade_id": "P1_T020",
+      "pair": "VET/USDT:USDT",
+      "timestamp": "2025-08-19 15:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 3.642,
+      "r_multiple": 0.607,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "beacon_target_short",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 103.047953,
+      "open_rate": 0.023691,
+      "close_rate": 0.02338,
+      "profit_abs": 3.75112426
+    },
+    {
+      "trade_id": "P1_T021",
+      "pair": "NEAR/USDT:USDT",
+      "timestamp": "2025-08-20 13:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.2613,
+      "r_multiple": 0.3769,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "trailing_stop_loss",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 103.404,
+      "open_rate": 2.462,
+      "close_rate": 2.441,
+      "profit_abs": 2.337111
+    },
+    {
+      "trade_id": "P1_T022",
+      "pair": "DOT/USDT:USDT",
+      "timestamp": "2025-08-20 13:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.6875,
+      "r_multiple": 0.2813,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "trailing_stop_loss",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 103.3639,
+      "open_rate": 3.777,
+      "close_rate": 3.752,
+      "profit_abs": 1.74343455
+    },
+    {
+      "trade_id": "P1_T023",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2025-08-20 13:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 5.9831,
+      "r_multiple": 0.9972,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 103.415,
+      "open_rate": 0.4875,
+      "close_rate": 0.4773,
+      "profit_abs": 6.18428064
+    },
+    {
+      "trade_id": "P1_T024",
+      "pair": "AVAX/USDT:USDT",
+      "timestamp": "2025-08-20 13:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.5558,
+      "r_multiple": 0.2593,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "trailing_stop_loss",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 98.86066667,
+      "open_rate": 22.814,
+      "close_rate": 22.673,
+      "profit_abs": 1.5373345
+    },
+    {
+      "trade_id": "P1_T025",
+      "pair": "ONDO/USDT:USDT",
+      "timestamp": "2025-08-20 14:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 5.0421,
+      "r_multiple": 0.8404,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "beacon_target_short",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 104.59108333,
+      "open_rate": 0.9275,
+      "close_rate": 0.911,
+      "profit_abs": 5.27096772
+    },
+    {
+      "trade_id": "P1_T026",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2025-08-22 11:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.183,
+      "r_multiple": 0.3638,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 104.9152,
+      "open_rate": 0.9312,
+      "close_rate": 0.9235,
+      "profit_abs": 2.2891557
+    },
+    {
+      "trade_id": "P1_T027",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2025-08-30 17:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.8598,
+      "r_multiple": 0.1433,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 180,
+      "stake_amount": 105.14206667,
+      "open_rate": 0.9038,
+      "close_rate": 0.9004,
+      "profit_abs": 0.90357674
+    },
+    {
+      "trade_id": "P1_T028",
+      "pair": "SUI/USDT:USDT",
+      "timestamp": "2025-08-30 19:00:00+00:00",
+      "regime": "volatile",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.9208,
+      "r_multiple": 0.1535,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 105.35254333,
+      "open_rate": 3.2957,
+      "close_rate": 3.2823,
+      "profit_abs": 0.9696449
+    },
+    {
+      "trade_id": "P1_T029",
+      "pair": "AVAX/USDT:USDT",
+      "timestamp": "2025-09-11 15:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.9756,
+      "r_multiple": 0.1626,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 96.51,
+      "open_rate": 28.953,
+      "close_rate": 28.83,
+      "profit_abs": 0.941085
+    },
+    {
+      "trade_id": "P1_T030",
+      "pair": "LINK/USDT:USDT",
+      "timestamp": "2025-09-16 15:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.3886,
+      "r_multiple": 0.2314,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 105.6285,
+      "open_rate": 23.473,
+      "close_rate": 23.341,
+      "profit_abs": 1.4660055
+    },
+    {
+      "trade_id": "P1_T031",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2025-09-16 15:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.326,
+      "r_multiple": 0.3877,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "trailing_stop_loss",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 105.63355,
+      "open_rate": 0.4917,
+      "close_rate": 0.4874,
+      "profit_abs": 2.45583502
+    },
+    {
+      "trade_id": "P1_T032",
+      "pair": "VET/USDT:USDT",
+      "timestamp": "2025-09-16 17:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -6.267,
+      "r_multiple": -1.0445,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "stop_loss",
+      "side": "short",
+      "trade_duration": 180,
+      "stake_amount": 105.643272,
+      "open_rate": 0.024136,
+      "close_rate": 0.024618,
+      "profit_abs": -6.61736381
+    },
+    {
+      "trade_id": "P1_T033",
+      "pair": "1000SHIB/USDT:USDT",
+      "timestamp": "2025-09-17 04:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -1.1699,
+      "r_multiple": -0.195,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 900,
+      "stake_amount": 105.64540933,
+      "open_rate": 0.013018,
+      "close_rate": 0.013057,
+      "profit_abs": -1.23529563
+    },
+    {
+      "trade_id": "P1_T034",
+      "pair": "XLM/USDT:USDT",
+      "timestamp": "2025-09-17 18:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.4192,
+      "r_multiple": 0.0699,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 105.23518,
+      "open_rate": 0.38407,
+      "close_rate": 0.38315,
+      "profit_abs": 0.44091258
+    },
+    {
+      "trade_id": "P1_T035",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2025-09-18 19:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 0.0831,
+      "r_multiple": 0.0138,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 180,
+      "stake_amount": 104.85653333,
+      "open_rate": 1.5968,
+      "close_rate": 1.599,
+      "profit_abs": 0.08715477
+    },
+    {
+      "trade_id": "P1_T036",
+      "pair": "OP/USDT:USDT",
+      "timestamp": "2025-09-23 18:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.5466,
+      "r_multiple": 0.4244,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 180,
+      "stake_amount": 105.29657333,
+      "open_rate": 0.6998,
+      "close_rate": 0.6931,
+      "profit_abs": 2.68010326
+    },
+    {
+      "trade_id": "P1_T037",
+      "pair": "TRX/USDT:USDT",
+      "timestamp": "2025-10-03 19:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": -0.134,
+      "r_multiple": -0.0223,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 105.49831333,
+      "open_rate": 0.34327,
+      "close_rate": 0.34346,
+      "profit_abs": -0.14140253
+    },
+    {
+      "trade_id": "P1_T038",
+      "pair": "LINK/USDT:USDT",
+      "timestamp": "2025-10-08 17:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -6.2734,
+      "r_multiple": -1.0456,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "stop_loss",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 105.50254,
+      "open_rate": 21.934,
+      "close_rate": 22.372,
+      "profit_abs": -6.61527119
+    },
+    {
+      "trade_id": "P1_T039",
+      "pair": "OP/USDT:USDT",
+      "timestamp": "2025-10-16 15:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 3.0423,
+      "r_multiple": 0.5071,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 104.89725333,
+      "open_rate": 0.4582,
+      "close_rate": 0.4531,
+      "profit_abs": 3.18973958
+    },
+    {
+      "trade_id": "P1_T040",
+      "pair": "LINK/USDT:USDT",
+      "timestamp": "2025-10-16 18:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 5.3533,
+      "r_multiple": 0.8922,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "beacon_target_short",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 105.1694,
+      "open_rate": 18.06,
+      "close_rate": 17.72,
+      "profit_abs": 5.6272617
+    },
+    {
+      "trade_id": "P1_T041",
+      "pair": "AVAX/USDT:USDT",
+      "timestamp": "2025-10-20 16:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": -6.2412,
+      "r_multiple": -1.0402,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "stop_loss",
+      "side": "long",
+      "trade_duration": 120,
+      "stake_amount": 103.775,
+      "open_rate": 20.755,
+      "close_rate": 20.34,
+      "profit_abs": -6.48001972
+    },
+    {
+      "trade_id": "P1_T042",
+      "pair": "AVAX/USDT:USDT",
+      "timestamp": "2025-10-22 17:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.8221,
+      "r_multiple": 0.3037,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "trailing_stop_loss",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 104.192,
+      "open_rate": 19.536,
+      "close_rate": 19.398,
+      "profit_abs": 1.89758451
+    },
+    {
+      "trade_id": "P1_T043",
+      "pair": "OP/USDT:USDT",
+      "timestamp": "2025-10-22 17:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 5.9774,
+      "r_multiple": 0.9962,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 105.1218,
+      "open_rate": 0.4326,
+      "close_rate": 0.4236,
+      "profit_abs": 6.28044897
+    },
+    {
+      "trade_id": "P1_T044",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2025-10-22 18:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.9174,
+      "r_multiple": 0.4862,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 105.94173333,
+      "open_rate": 0.308,
+      "close_rate": 0.3047,
+      "profit_abs": 3.08914743
+    },
+    {
+      "trade_id": "P1_T045",
+      "pair": "XLM/USDT:USDT",
+      "timestamp": "2025-10-29 23:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -0.1119,
+      "r_multiple": -0.0187,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 240,
+      "stake_amount": 106.15393333,
+      "open_rate": 0.3191,
+      "close_rate": 0.3189,
+      "profit_abs": -0.118762
+    },
+    {
+      "trade_id": "P1_T046",
+      "pair": "ENA/USDT:USDT",
+      "timestamp": "2025-10-31 17:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 5.7285,
+      "r_multiple": 0.9547,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 106.13383333,
+      "open_rate": 0.3985,
+      "close_rate": 0.3905,
+      "profit_abs": 6.0767945
+    },
+    {
+      "trade_id": "P1_T047",
+      "pair": "ONDO/USDT:USDT",
+      "timestamp": "2025-10-31 17:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 6.6315,
+      "r_multiple": 1.1053,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 106.2295,
+      "open_rate": 0.6925,
+      "close_rate": 0.6765,
+      "profit_abs": 7.04113188
+    },
+    {
+      "trade_id": "P1_T048",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2025-10-31 17:00:00+00:00",
+      "regime": "trending_down",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 6.1093,
+      "r_multiple": 1.0182,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 106.1808,
+      "open_rate": 0.8044,
+      "close_rate": 0.7872,
+      "profit_abs": 6.48367658
+    },
+    {
+      "trade_id": "P1_T049",
+      "pair": "LINK/USDT:USDT",
+      "timestamp": "2025-11-02 18:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.1079,
+      "r_multiple": 0.1847,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 108.19908333,
+      "open_rate": 17.275,
+      "close_rate": 17.194,
+      "profit_abs": 1.19815375
+    },
+    {
+      "trade_id": "P1_T050",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2025-11-04 17:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 5.6396,
+      "r_multiple": 0.9399,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 108.32115667,
+      "open_rate": 0.2623,
+      "close_rate": 0.2571,
+      "profit_abs": 6.10583868
+    },
+    {
+      "trade_id": "P1_T051",
+      "pair": "TRX/USDT:USDT",
+      "timestamp": "2025-11-04 19:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.448,
+      "r_multiple": 0.0747,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 108.93045667,
+      "open_rate": 0.28099,
+      "close_rate": 0.28029,
+      "profit_abs": 0.48771568
+    },
+    {
+      "trade_id": "P1_T052",
+      "pair": "LINK/USDT:USDT",
+      "timestamp": "2025-11-11 03:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 3.8772,
+      "r_multiple": 0.6462,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 108.95094,
+      "open_rate": 16.359,
+      "close_rate": 16.587,
+      "profit_abs": 4.22630946
+    },
+    {
+      "trade_id": "P1_T053",
+      "pair": "TRX/USDT:USDT",
+      "timestamp": "2025-11-12 12:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 0.7831,
+      "r_multiple": 0.1305,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 120,
+      "stake_amount": 109.39374,
+      "open_rate": 0.29889,
+      "close_rate": 0.29997,
+      "profit_abs": 0.85706586
+    },
+    {
+      "trade_id": "P1_T054",
+      "pair": "ALGO/USDT:USDT",
+      "timestamp": "2025-11-17 17:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 9.1196,
+      "r_multiple": 1.5199,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "trailing_stop_loss",
+      "side": "short",
+      "trade_duration": 0,
+      "stake_amount": 109.49186,
+      "open_rate": 0.1594,
+      "close_rate": 0.1544,
+      "profit_abs": 9.98017617
+    },
+    {
+      "trade_id": "P1_T055",
+      "pair": "NEAR/USDT:USDT",
+      "timestamp": "2025-11-18 11:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 3.9613,
+      "r_multiple": 0.6602,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 109.74333333,
+      "open_rate": 2.255,
+      "close_rate": 2.223,
+      "profit_abs": 4.345106
+    },
+    {
+      "trade_id": "P1_T056",
+      "pair": "VET/USDT:USDT",
+      "timestamp": "2025-11-18 12:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.0497,
+      "r_multiple": 0.175,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 110.48886,
+      "open_rate": 0.01446,
+      "close_rate": 0.014395,
+      "profit_abs": 1.15927342
+    },
+    {
+      "trade_id": "P1_T057",
+      "pair": "OP/USDT:USDT",
+      "timestamp": "2025-11-22 21:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.1031,
+      "r_multiple": 0.1839,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 180,
+      "stake_amount": 111.04174667,
+      "open_rate": 0.2996,
+      "close_rate": 0.2982,
+      "profit_abs": 1.22431309
+    },
+    {
+      "trade_id": "P1_T058",
+      "pair": "XLM/USDT:USDT",
+      "timestamp": "2025-11-26 18:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 8.043,
+      "r_multiple": 1.3405,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "beacon_target_long",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 111.14532,
+      "open_rate": 0.25146,
+      "close_rate": 0.25846,
+      "profit_abs": 8.94392304
+    },
+    {
+      "trade_id": "P1_T059",
+      "pair": "KAS/USDT:USDT",
+      "timestamp": "2025-11-29 03:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 2.1125,
+      "r_multiple": 0.3521,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 112.05041,
+      "open_rate": 0.05839,
+      "close_rate": 0.05886,
+      "profit_abs": 2.36828587
+    },
+    {
+      "trade_id": "P1_T060",
+      "pair": "LINK/USDT:USDT",
+      "timestamp": "2025-11-30 12:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.4605,
+      "r_multiple": 0.0768,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 180,
+      "stake_amount": 112.25793333,
+      "open_rate": 13.028,
+      "close_rate": 12.995,
+      "profit_abs": 0.51670273
+    },
+    {
+      "trade_id": "P1_T061",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2025-12-10 20:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 4.6078,
+      "r_multiple": 0.768,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 112.17166667,
+      "open_rate": 0.629,
+      "close_rate": 0.6393,
+      "profit_abs": 5.17122975
+    },
+    {
+      "trade_id": "P1_T062",
+      "pair": "OP/USDT:USDT",
+      "timestamp": "2025-12-10 20:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 3.116,
+      "r_multiple": 0.5193,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 112.34468667,
+      "open_rate": 0.3334,
+      "close_rate": 0.3372,
+      "profit_abs": 3.50246523
+    },
+    {
+      "trade_id": "P1_T063",
+      "pair": "KAS/USDT:USDT",
+      "timestamp": "2025-12-12 08:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 4.0294,
+      "r_multiple": 0.6716,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 180,
+      "stake_amount": 113.21336,
+      "open_rate": 0.04733,
+      "close_rate": 0.04665,
+      "profit_abs": 4.55949274
+    },
+    {
+      "trade_id": "P1_T064",
+      "pair": "KAS/USDT:USDT",
+      "timestamp": "2025-12-14 02:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -6.2447,
+      "r_multiple": -1.0408,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "stop_loss",
+      "side": "short",
+      "trade_duration": 420,
+      "stake_amount": 113.65792,
+      "open_rate": 0.04624,
+      "close_rate": 0.04716,
+      "profit_abs": -7.09409033
+    },
+    {
+      "trade_id": "P1_T065",
+      "pair": "ONDO/USDT:USDT",
+      "timestamp": "2025-12-14 05:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -0.3117,
+      "r_multiple": -0.052,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 840,
+      "stake_amount": 113.65794,
+      "open_rate": 0.4609,
+      "close_rate": 0.4609,
+      "profit_abs": -0.3541377
+    },
+    {
+      "trade_id": "P1_T066",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2025-12-16 14:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -6.1582,
+      "r_multiple": -1.0264,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "stop_loss",
+      "side": "short",
+      "trade_duration": 0,
+      "stake_amount": 112.92556,
+      "open_rate": 0.1948,
+      "close_rate": 0.1986,
+      "profit_abs": -6.95066097
+    },
+    {
+      "trade_id": "P1_T067",
+      "pair": "ONDO/USDT:USDT",
+      "timestamp": "2025-12-16 15:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -6.2722,
+      "r_multiple": -1.0454,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "stop_loss",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 112.91713667,
+      "open_rate": 0.4073,
+      "close_rate": 0.4154,
+      "profit_abs": -7.07888979
+    },
+    {
+      "trade_id": "P1_T068",
+      "pair": "ONDO/USDT:USDT",
+      "timestamp": "2025-12-25 11:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.8097,
+      "r_multiple": 0.4683,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "beacon_target_short",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 111.52381333,
+      "open_rate": 0.3766,
+      "close_rate": 0.3727,
+      "profit_abs": 3.13192094
+    },
+    {
+      "trade_id": "P1_T069",
+      "pair": "TRX/USDT:USDT",
+      "timestamp": "2025-12-28 18:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 0.0697,
+      "r_multiple": 0.0116,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 111.74622,
+      "open_rate": 0.28386,
+      "close_rate": 0.28421,
+      "profit_abs": 0.07790467
+    },
+    {
+      "trade_id": "P1_T070",
+      "pair": "DOGE/USDT:USDT",
+      "timestamp": "2025-12-28 19:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -1.8669,
+      "r_multiple": -0.3111,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "beacon_target_short",
+      "side": "short",
+      "trade_duration": 1560,
+      "stake_amount": 111.83415,
+      "open_rate": 0.12267,
+      "close_rate": 0.12331,
+      "profit_abs": -2.08677765
+    },
+    {
+      "trade_id": "P1_T071",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2025-12-30 17:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.5174,
+      "r_multiple": 0.2529,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 111.52453333,
+      "open_rate": 0.4964,
+      "close_rate": 0.4934,
+      "profit_abs": 1.69144769
+    },
+    {
+      "trade_id": "P1_T072",
+      "pair": "ENA/USDT:USDT",
+      "timestamp": "2025-12-31 16:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 6.0359,
+      "r_multiple": 1.006,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 111.75033333,
+      "open_rate": 0.2038,
+      "close_rate": 0.1995,
+      "profit_abs": 6.74178575
+    },
+    {
+      "trade_id": "P1_T073",
+      "pair": "DOT/USDT:USDT",
+      "timestamp": "2026-01-04 05:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 0.404,
+      "r_multiple": 0.0673,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 240,
+      "stake_amount": 112.4112,
+      "open_rate": 2.129,
+      "close_rate": 2.134,
+      "profit_abs": 0.4543704
+    },
+    {
+      "trade_id": "P1_T074",
+      "pair": "SUI/USDT:USDT",
+      "timestamp": "2026-01-05 02:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 2.4747,
+      "r_multiple": 0.4124,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "beacon_target_long",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 112.47153,
+      "open_rate": 1.7067,
+      "close_rate": 1.7225,
+      "profit_abs": 2.78468358
+    },
+    {
+      "trade_id": "P1_T075",
+      "pair": "DOGE/USDT:USDT",
+      "timestamp": "2026-01-05 02:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 2.2309,
+      "r_multiple": 0.3718,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 112.4992,
+      "open_rate": 0.1504,
+      "close_rate": 0.15167,
+      "profit_abs": 2.51095746
+    },
+    {
+      "trade_id": "P1_T076",
+      "pair": "ENA/USDT:USDT",
+      "timestamp": "2026-01-09 01:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 4.0613,
+      "r_multiple": 0.6769,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 300,
+      "stake_amount": 112.99226667,
+      "open_rate": 0.2341,
+      "close_rate": 0.2307,
+      "profit_abs": 4.5866848
+    },
+    {
+      "trade_id": "P1_T077",
+      "pair": "ENA/USDT:USDT",
+      "timestamp": "2026-01-10 22:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.7476,
+      "r_multiple": 0.1246,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 113.5035,
+      "open_rate": 0.2293,
+      "close_rate": 0.2285,
+      "profit_abs": 0.8480835
+    },
+    {
+      "trade_id": "P1_T078",
+      "pair": "1000SHIB/USDT:USDT",
+      "timestamp": "2026-01-11 13:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 0.8062,
+      "r_multiple": 0.1344,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "beacon_target_long",
+      "side": "long",
+      "trade_duration": 120,
+      "stake_amount": 113.598771,
+      "open_rate": 0.008671,
+      "close_rate": 0.008703,
+      "profit_abs": 0.91627084
+    },
+    {
+      "trade_id": "P1_T079",
+      "pair": "TRX/USDT:USDT",
+      "timestamp": "2026-01-13 15:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 1.9981,
+      "r_multiple": 0.333,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "roi",
+      "side": "long",
+      "trade_duration": 420,
+      "stake_amount": 113.658,
+      "open_rate": 0.2991,
+      "close_rate": 0.30138,
+      "profit_abs": 2.27216794
+    },
+    {
+      "trade_id": "P1_T080",
+      "pair": "KAS/USDT:USDT",
+      "timestamp": "2026-01-14 14:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 3.9943,
+      "r_multiple": 0.6657,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "roi",
+      "side": "long",
+      "trade_duration": 240,
+      "stake_amount": 113.91226333,
+      "open_rate": 0.04799,
+      "close_rate": 0.04868,
+      "profit_abs": 4.55232356
+    },
+    {
+      "trade_id": "P1_T081",
+      "pair": "KAS/USDT:USDT",
+      "timestamp": "2026-01-19 22:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.2503,
+      "r_multiple": 0.2084,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 114.36524,
+      "open_rate": 0.04261,
+      "close_rate": 0.04239,
+      "profit_abs": 1.42923
+    },
+    {
+      "trade_id": "P1_T082",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2026-01-20 06:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 4.0147,
+      "r_multiple": 0.6691,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 180,
+      "stake_amount": 114.41783333,
+      "open_rate": 0.5011,
+      "close_rate": 0.4939,
+      "profit_abs": 4.5912125
+    },
+    {
+      "trade_id": "P1_T083",
+      "pair": "NEAR/USDT:USDT",
+      "timestamp": "2026-01-20 07:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.7466,
+      "r_multiple": 0.4578,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 114.59533333,
+      "open_rate": 1.577,
+      "close_rate": 1.561,
+      "profit_abs": 3.145958
+    },
+    {
+      "trade_id": "P1_T084",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2026-01-20 07:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.502,
+      "r_multiple": 0.417,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "trailing_stop_loss",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 114.97483,
+      "open_rate": 0.1929,
+      "close_rate": 0.1911,
+      "profit_abs": 2.8752648
+    },
+    {
+      "trade_id": "P1_T085",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2026-01-21 14:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.2876,
+      "r_multiple": 0.3813,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 115.4608,
+      "open_rate": 0.4758,
+      "close_rate": 0.4717,
+      "profit_abs": 2.63991
+    },
+    {
+      "trade_id": "P1_T086",
+      "pair": "ENA/USDT:USDT",
+      "timestamp": "2026-01-21 16:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 10.0435,
+      "r_multiple": 1.6739,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 0,
+      "stake_amount": 115.8,
+      "open_rate": 0.18,
+      "close_rate": 0.1738,
+      "profit_abs": 11.624583
+    },
+    {
+      "trade_id": "P1_T087",
+      "pair": "NEAR/USDT:USDT",
+      "timestamp": "2026-01-25 09:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 3.1264,
+      "r_multiple": 0.5211,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "beacon_target_short",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 116.733,
+      "open_rate": 1.503,
+      "close_rate": 1.486,
+      "profit_abs": 3.6477639
+    },
+    {
+      "trade_id": "P1_T088",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2026-01-25 14:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -0.172,
+      "r_multiple": -0.0287,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 117.28116667,
+      "open_rate": 0.4685,
+      "close_rate": 0.4683,
+      "profit_abs": -0.2015684
+    },
+    {
+      "trade_id": "P1_T089",
+      "pair": "ENA/USDT:USDT",
+      "timestamp": "2026-01-30 18:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.4458,
+      "r_multiple": 0.241,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 117.3384,
+      "open_rate": 0.1548,
+      "close_rate": 0.1539,
+      "profit_abs": 1.6956081
+    },
+    {
+      "trade_id": "P1_T090",
+      "pair": "AVAX/USDT:USDT",
+      "timestamp": "2026-01-30 18:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 3.9885,
+      "r_multiple": 0.6648,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 116.56533333,
+      "open_rate": 10.928,
+      "close_rate": 10.771,
+      "profit_abs": 4.64689072
+    },
+    {
+      "trade_id": "P1_T091",
+      "pair": "NEAR/USDT:USDT",
+      "timestamp": "2026-02-01 15:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 10.0203,
+      "r_multiple": 1.6701,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 0,
+      "stake_amount": 117.70933333,
+      "open_rate": 1.193,
+      "close_rate": 1.152,
+      "profit_abs": 11.78894
+    },
+    {
+      "trade_id": "P1_T092",
+      "pair": "VET/USDT:USDT",
+      "timestamp": "2026-02-01 15:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 9.9944,
+      "r_multiple": 1.6657,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "roi",
+      "side": "short",
+      "trade_duration": 0,
+      "stake_amount": 119.158676,
+      "open_rate": 0.008372,
+      "close_rate": 0.008085,
+      "profit_abs": 11.90326428
+    },
+    {
+      "trade_id": "P1_T093",
+      "pair": "1000SHIB/USDT:USDT",
+      "timestamp": "2026-02-01 16:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 4.2073,
+      "r_multiple": 0.7012,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 120.350048,
+      "open_rate": 0.006734,
+      "close_rate": 0.006633,
+      "profit_abs": 5.06099005
+    },
+    {
+      "trade_id": "P1_T094",
+      "pair": "DOGE/USDT:USDT",
+      "timestamp": "2026-02-01 16:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 3.2365,
+      "r_multiple": 0.5394,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 120.34647,
+      "open_rate": 0.10529,
+      "close_rate": 0.10405,
+      "profit_abs": 3.89304657
+    },
+    {
+      "trade_id": "P1_T095",
+      "pair": "NEAR/USDT:USDT",
+      "timestamp": "2026-02-02 05:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.4828,
+      "r_multiple": 0.2471,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 121.044,
+      "open_rate": 1.179,
+      "close_rate": 1.172,
+      "profit_abs": 1.793946
+    },
+    {
+      "trade_id": "P1_T096",
+      "pair": "DOT/USDT:USDT",
+      "timestamp": "2026-02-02 05:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.8818,
+      "r_multiple": 0.4803,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 121.20266667,
+      "open_rate": 1.51,
+      "close_rate": 1.494,
+      "profit_abs": 3.4911184
+    },
+    {
+      "trade_id": "P1_T097",
+      "pair": "TRX/USDT:USDT",
+      "timestamp": "2026-02-03 11:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.1134,
+      "r_multiple": 0.0189,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 121.7717,
+      "open_rate": 0.28319,
+      "close_rate": 0.2828,
+      "profit_abs": 0.13803645
+    },
+    {
+      "trade_id": "P1_T098",
+      "pair": "SUI/USDT:USDT",
+      "timestamp": "2026-02-07 18:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 0.992,
+      "r_multiple": 0.1653,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 121.77370667,
+      "open_rate": 0.9976,
+      "close_rate": 1.0019,
+      "profit_abs": 1.20855155
+    },
+    {
+      "trade_id": "P1_T099",
+      "pair": "OP/USDT:USDT",
+      "timestamp": "2026-02-21 17:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.9028,
+      "r_multiple": 0.4838,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 120,
+      "stake_amount": 121.90835,
+      "open_rate": 0.1293,
+      "close_rate": 0.1279,
+      "profit_abs": 3.53698103
+    },
+    {
+      "trade_id": "P1_T100",
+      "pair": "SUI/USDT:USDT",
+      "timestamp": "2026-03-07 16:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.9988,
+      "r_multiple": 0.1665,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 122.25696,
+      "open_rate": 0.9016,
+      "close_rate": 0.8977,
+      "profit_abs": 1.22054238
+    },
+    {
+      "trade_id": "P1_T101",
+      "pair": "ENA/USDT:USDT",
+      "timestamp": "2026-03-09 00:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.5144,
+      "r_multiple": 0.2524,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 122.3707,
+      "open_rate": 0.0993,
+      "close_rate": 0.0987,
+      "profit_abs": 1.852197
+    },
+    {
+      "trade_id": "P1_T102",
+      "pair": "ARB/USDT:USDT",
+      "timestamp": "2026-03-09 00:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 3.1303,
+      "r_multiple": 0.5217,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 122.38325,
+      "open_rate": 0.0955,
+      "close_rate": 0.0944,
+      "profit_abs": 3.82909555
+    },
+    {
+      "trade_id": "P1_T103",
+      "pair": "XLM/USDT:USDT",
+      "timestamp": "2026-03-09 02:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 1.1032,
+      "r_multiple": 0.1839,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 180,
+      "stake_amount": 122.34542,
+      "open_rate": 0.14902,
+      "close_rate": 0.14829,
+      "profit_abs": 1.34904457
+    },
+    {
+      "trade_id": "P1_T104",
+      "pair": "AVAX/USDT:USDT",
+      "timestamp": "2026-03-11 14:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 3.1349,
+      "r_multiple": 0.5225,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 121.57466667,
+      "open_rate": 9.598,
+      "close_rate": 9.708,
+      "profit_abs": 3.813186
+    },
+    {
+      "trade_id": "P1_T105",
+      "pair": "NEAR/USDT:USDT",
+      "timestamp": "2026-03-13 17:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 2.5669,
+      "r_multiple": 0.4278,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "trailing_stop_loss",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 123.032,
+      "open_rate": 1.352,
+      "close_rate": 1.365,
+      "profit_abs": 3.15966224
+    },
+    {
+      "trade_id": "P1_T106",
+      "pair": "XLM/USDT:USDT",
+      "timestamp": "2026-03-14 02:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 0.759,
+      "r_multiple": 0.1265,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 60,
+      "stake_amount": 123.78418,
+      "open_rate": 0.16417,
+      "close_rate": 0.16475,
+      "profit_abs": 0.93995148
+    },
+    {
+      "trade_id": "P1_T107",
+      "pair": "KAS/USDT:USDT",
+      "timestamp": "2026-03-25 00:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 3.995,
+      "r_multiple": 0.6658,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "roi",
+      "side": "long",
+      "trade_duration": 120,
+      "stake_amount": 123.87210667,
+      "open_rate": 0.03616,
+      "close_rate": 0.03668,
+      "profit_abs": 4.95115731
+    },
+    {
+      "trade_id": "P1_T108",
+      "pair": "DOT/USDT:USDT",
+      "timestamp": "2026-03-25 14:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 3.8136,
+      "r_multiple": 0.6356,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 124.36766667,
+      "open_rate": 1.387,
+      "close_rate": 1.368,
+      "profit_abs": 4.7404525
+    },
+    {
+      "trade_id": "P1_T109",
+      "pair": "DOGE/USDT:USDT",
+      "timestamp": "2026-03-27 10:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 2.3171,
+      "r_multiple": 0.3862,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 124.8344,
+      "open_rate": 0.09179,
+      "close_rate": 0.09099,
+      "profit_abs": 2.8911288
+    },
+    {
+      "trade_id": "P1_T110",
+      "pair": "WLD/USDT:USDT",
+      "timestamp": "2026-04-07 15:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.4365,
+      "r_multiple": 0.0727,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 125.07213333,
+      "open_rate": 0.2446,
+      "close_rate": 0.244,
+      "profit_abs": 0.5456438
+    },
+    {
+      "trade_id": "P1_T111",
+      "pair": "DOT/USDT:USDT",
+      "timestamp": "2026-04-24 07:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 0.4287,
+      "r_multiple": 0.0715,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "vector_exit",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 125.1656,
+      "open_rate": 1.236,
+      "close_rate": 1.233,
+      "profit_abs": 0.5363589
+    },
+    {
+      "trade_id": "P1_T112",
+      "pair": "NEAR/USDT:USDT",
+      "timestamp": "2026-04-28 16:00:00+00:00",
+      "regime": "trending_up",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": 4.3904,
+      "r_multiple": 0.7317,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "beacon_target_short",
+      "side": "short",
+      "trade_duration": 60,
+      "stake_amount": 124.927,
+      "open_rate": 1.353,
+      "close_rate": 1.332,
+      "profit_abs": 5.48204734
+    },
+    {
+      "trade_id": "P1_T113",
+      "pair": "VET/USDT:USDT",
+      "timestamp": "2026-05-03 16:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Long Confluence Entry"
+      ],
+      "pnl_pct": 0.5865,
+      "r_multiple": 0.0977,
+      "is_win": true,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_long",
+      "exit_reason": "vector_exit",
+      "side": "long",
+      "trade_duration": 180,
+      "stake_amount": 125.79384333,
+      "open_rate": 0.00719,
+      "close_rate": 0.007211,
+      "profit_abs": 0.73814769
+    },
+    {
+      "trade_id": "P1_T114",
+      "pair": "ENA/USDT:USDT",
+      "timestamp": "2026-05-04 01:00:00+00:00",
+      "regime": "ranging",
+      "setup_names": [
+        "Short Confluence Entry"
+      ],
+      "pnl_pct": -6.2907,
+      "r_multiple": -1.0484,
+      "is_win": false,
+      "strategy_type": "VectorStrategy",
+      "dominant_signal": "vector_short",
+      "exit_reason": "stop_loss",
+      "side": "short",
+      "trade_duration": 0,
+      "stake_amount": 125.84924,
+      "open_rate": 0.10076,
+      "close_rate": 0.10277,
+      "profit_abs": -7.91278346
+    }
+  ],
+  "chunk_stats": {
+    "BB Squeeze Breakout": {
+      "total_trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "total_pnl": 5.2,
+      "total_r_multiple": 2.1,
+      "regime_breakdown": {
+        "trending_up": {
+          "trades": 1,
+          "wins": 1,
+          "pnl": 5.2,
+          "r_multiple": 2.1
+        }
+      }
+    },
+    "EMA Alignment Confirmation": {
+      "total_trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "total_pnl": 5.2,
+      "total_r_multiple": 2.1,
+      "regime_breakdown": {
+        "trending_up": {
+          "trades": 1,
+          "wins": 1,
+          "pnl": 5.2,
+          "r_multiple": 2.1
+        }
+      }
+    },
+    "Risk to Zero ASAP": {
+      "total_trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "total_pnl": 6.4,
+      "total_r_multiple": 2.4000000000000004,
+      "regime_breakdown": {
+        "trending_up": {
+          "trades": 1,
+          "wins": 0,
+          "pnl": -2.1,
+          "r_multiple": -0.8
+        },
+        "trending_down": {
+          "trades": 1,
+          "wins": 1,
+          "pnl": 8.5,
+          "r_multiple": 3.2
+        }
+      }
+    },
+    "21 EMA Pullback Entry": {
+      "total_trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "total_pnl": -2.1,
+      "total_r_multiple": -0.8,
+      "regime_breakdown": {
+        "trending_up": {
+          "trades": 1,
+          "wins": 0,
+          "pnl": -2.1,
+          "r_multiple": -0.8
+        }
+      }
+    },
+    "Bollinger Band Squeeze Mean Reversion": {
+      "total_trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "total_pnl": 3.8,
+      "total_r_multiple": 1.5,
+      "regime_breakdown": {
+        "ranging": {
+          "trades": 1,
+          "wins": 1,
+          "pnl": 3.8,
+          "r_multiple": 1.5
+        }
+      }
+    },
+    "Absorption Pattern Passive": {
+      "total_trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "total_pnl": 3.8,
+      "total_r_multiple": 1.5,
+      "regime_breakdown": {
+        "ranging": {
+          "trades": 1,
+          "wins": 1,
+          "pnl": 3.8,
+          "r_multiple": 1.5
+        }
+      }
+    },
+    "Low Probability Day Filter": {
+      "total_trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "total_pnl": 1.2,
+      "total_r_multiple": 0.5,
+      "regime_breakdown": {
+        "volatile": {
+          "trades": 1,
+          "wins": 1,
+          "pnl": 1.2,
+          "r_multiple": 0.5
+        }
+      }
+    },
+    "Leverage Mechanics": {
+      "total_trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "total_pnl": 1.2,
+      "total_r_multiple": 0.5,
+      "regime_breakdown": {
+        "volatile": {
+          "trades": 1,
+          "wins": 1,
+          "pnl": 1.2,
+          "r_multiple": 0.5
+        }
+      }
+    },
+    "Short Selling Bearish Structure": {
+      "total_trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "total_pnl": 8.5,
+      "total_r_multiple": 3.2,
+      "regime_breakdown": {
+        "trending_down": {
+          "trades": 1,
+          "wins": 1,
+          "pnl": 8.5,
+          "r_multiple": 3.2
+        }
+      }
+    },
+    "Long Confluence Entry": {
+      "total_trades": 29,
+      "wins": 25,
+      "losses": 4,
+      "total_pnl": 58.1506,
+      "total_r_multiple": 9.691600000000001,
+      "regime_breakdown": {
+        "ranging": {
+          "trades": 4,
+          "wins": 3,
+          "pnl": 4.9447,
+          "r_multiple": 0.8241
+        },
+        "volatile": {
+          "trades": 4,
+          "wins": 3,
+          "pnl": 13.532700000000002,
+          "r_multiple": 2.2555
+        },
+        "trending_down": {
+          "trades": 3,
+          "wins": 1,
+          "pnl": -6.2921000000000005,
+          "r_multiple": -1.0487
+        },
+        "trending_up": {
+          "trades": 18,
+          "wins": 18,
+          "pnl": 45.96529999999999,
+          "r_multiple": 7.660700000000002
+        }
+      }
+    },
+    "Short Confluence Entry": {
+      "total_trades": 85,
+      "wins": 72,
+      "losses": 13,
+      "total_pnl": 167.08150000000006,
+      "total_r_multiple": 27.847199999999997,
+      "regime_breakdown": {
+        "ranging": {
+          "trades": 7,
+          "wins": 6,
+          "pnl": 6.954,
+          "r_multiple": 1.1591
+        },
+        "volatile": {
+          "trades": 15,
+          "wins": 13,
+          "pnl": 23.2689,
+          "r_multiple": 3.8782
+        },
+        "trending_down": {
+          "trades": 17,
+          "wins": 13,
+          "pnl": 31.4156,
+          "r_multiple": 5.2358
+        },
+        "trending_up": {
+          "trades": 46,
+          "wins": 40,
+          "pnl": 105.44300000000001,
+          "r_multiple": 17.574099999999994
+        }
+      }
+    }
+  }
+}

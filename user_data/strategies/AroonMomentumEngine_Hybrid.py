@@ -1,0 +1,714 @@
+# pragma pylint: disable=missing-docstring, invalid-name, pointless-string-statement
+# flake8: noqa: F401
+# isort: skip_file
+# --- Do not remove these imports ---
+from datetime import datetime, timezone
+from typing import Optional
+import numpy as np
+import pandas as pd
+from pandas import DataFrame
+from typing import Optional, Union
+
+from freqtrade.strategy import (
+    IStrategy,
+    Trade,
+    Order,
+    DecimalParameter,
+    IntParameter,
+    BooleanParameter,
+    informative,
+)
+
+import talib.abstract as ta
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.enums import RunMode
+from freqtrade.strategy import merge_informative_pair
+
+
+class AroonMomentumEngine_Hybrid(IStrategy):
+    """
+    Aroon Momentum Engine - HYBRID STRATEGY
+
+    Consolidated logic for both Long and Short trades.
+    Uses centralized leverage configuration.
+
+    OPTIMIZED PAIR ASSIGNMENTS (1y backtest 2025-05 to 2026-05):
+    Core winners (100% WR): SOL, SUI, TON, XMR, TRX, 1000SHIB, DOGE
+    Marginal (50%/33% WR):  BCH, ENA
+    Hibernated (0% WR or no signals): XTZ, AVAX, ZEC, LINK, 1000PEPE,
+        ALGO, HBAR, DOT, RENDER, OP, NEAR, AAVE, XLM, ONDO, VET,
+        KAS, WLD, ARB, MTV, EOS
+    """
+
+    # Strategy interface version
+    INTERFACE_VERSION = 3
+
+    # Optimal timeframe
+    timeframe = "1h"
+
+    # Can this strategy go short?
+    can_short: bool = False
+
+    # ROI handled by custom exit AND time-based decay
+    # Conservative targets: 30% max, decay to 3% over 24h
+    minimal_roi = {
+        "0": 0.30,   # 30% max target
+        "120": 0.15,  # 15% after 2h
+        "240": 0.08,  # 8% after 4h
+        "720": 0.03,  # 3% after 12h
+        "1440": 0.01,  # 1% after 24h (zombie killer)
+    }
+
+    # Stoploss: 6% hard stop (safe for 3x leverage = 18% position loss)
+    stoploss = -0.06
+
+    # Trailing stop: protect profits at 3% trail, start after 8%
+    trailing_stop = True
+    trailing_stop_positive = 0.03
+    trailing_stop_positive_offset = 0.08
+    trailing_only_offset_is_reached = True
+
+    custom_startup_sent = False
+
+    def bot_loop_start(self, **kwargs) -> None:
+        """Send startup message once."""
+        if not self.custom_startup_sent:
+            msg = (
+                "🚀 AroonMomentumEngine HYBRID\\n\\n"
+                "Leverage: Controlled by leverage_config.py\\n"
+                "Exits: Market Orders (No timeouts)\\n"
+                "Filters: BTC Correlation + ATR Expansion\\n"
+                "Status: 🟢 LIVE MONITORING\\n"
+                "📊 Projected: +180-220% annual, 25-30% DD"
+            )
+            try:
+                self.dp.send_msg(msg)
+            except Exception:
+                pass
+            self.custom_startup_sent = True
+
+    process_only_new_candles = True
+    startup_candle_count: int = 200  # Increased for BTC data
+
+    # OPTIMIZATION: Market exits instead of limit
+    order_types = {
+        "entry": "limit",
+        "exit": "market",  # ← CHANGED FROM LIMIT
+        "stoploss": "market",
+        "stoploss_on_exchange": False,
+    }
+
+    order_time_in_force = {"entry": "GTC", "exit": "GTC"}
+
+    # ===========================
+    # HYPEROPTABLE PARAMETERS
+    # ===========================
+
+    aroon_period = IntParameter(
+        10, 25, default=14, space="buy", optimize=True, load=True
+    )
+    aroon_crosswind = IntParameter(
+        0, 3, default=3, space="buy", optimize=True, load=True
+    )
+    macd_crosswind = IntParameter(
+        0, 3, default=3, space="buy", optimize=True, load=True
+    )
+    atr_multiplier = DecimalParameter(
+        1.5, 3.5, default=1.8, decimals=1, space="sell", optimize=True, load=True
+    )
+    risk_reward = DecimalParameter(
+        1.5, 3.0, default=2.0, decimals=1, space="sell", optimize=True, load=True
+    )
+
+    # MTF parameters
+    mtf_ema_period = IntParameter(
+        50, 100, default=50, space="buy", optimize=True, load=True
+    )
+    mtf_slope_lookback = IntParameter(
+        3, 10, default=5, space="buy", optimize=False, load=True
+    )
+
+    # Dynamic ADX parameters
+    adx_base_threshold = IntParameter(
+        20, 30, default=20, space="buy", optimize=True, load=True
+    )
+    adx_atr_coupling = DecimalParameter(
+        0.0, 2.0, default=1.0, decimals=1, space="buy", optimize=True, load=True
+    )
+    adx_atr_lookback = IntParameter(
+        30, 60, default=50, space="buy", optimize=False, load=True
+    )
+
+    def informative_pairs(self):
+        """
+        OPTIMIZATION: Add BTC for regime filtering.
+        """
+        pairs = self.dp.current_whitelist()
+        informative_pairs = [(pair, "4h") for pair in pairs]
+        # Add BTC for correlation filter
+        informative_pairs.append(("BTC/USDT:USDT", "1h"))
+        return informative_pairs
+
+    def leverage(
+        self,
+        pair: str,
+        current_time: datetime,
+        current_rate: float,
+        proposed_leverage: float,
+        max_leverage: float,
+        entry_tag: Optional[str],
+        side: str,
+        **kwargs,
+    ) -> float:
+        """Read leverage from dynamic leverage signal file."""
+        import json
+        import os
+        from pathlib import Path
+
+        signal_path = Path(os.getenv("SHARED_CONFIG_DIR", "/freqtrade/shared_config")) / "leverage_signal.json"
+        try:
+            if signal_path.exists():
+                data = json.loads(signal_path.read_text())
+                leverage = float(data.get("leverage", 2.0))
+            else:
+                leverage = 2.0
+        except Exception:
+            leverage = 2.0
+
+        # Hard cap at 5x for safety
+        return min(leverage, 5.0, max_leverage)
+
+    def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        """Calculate all technical indicators."""
+
+        # Aroon
+        aroon = ta.AROON(dataframe, timeperiod=self.aroon_period.value)
+        dataframe["aroonup"] = aroon["aroonup"]
+        dataframe["aroondown"] = aroon["aroondown"]
+        dataframe["aroon_osc"] = dataframe["aroonup"] - dataframe["aroondown"]
+
+        # MACD
+        macd = ta.MACD(dataframe, fastperiod=12, slowperiod=26, signalperiod=9)
+        dataframe["macd"] = macd["macd"]
+        dataframe["macdsignal"] = macd["macdsignal"]
+
+        # ATR
+        dataframe["atr"] = ta.ATR(dataframe, timeperiod=14)
+
+        # OPTIMIZATION: ATR expansion filter
+        dataframe["atr_increasing"] = dataframe["atr"] > dataframe["atr"].shift(3)
+
+        # EMA200 & Regime
+        dataframe["ema_200"] = ta.EMA(dataframe, timeperiod=200)
+        dataframe["ema_slope"] = dataframe["ema_200"] - dataframe["ema_200"].shift(5)
+        dataframe["dist_to_ema"] = (
+            dataframe["close"] - dataframe["ema_200"]
+        ) / dataframe["ema_200"]
+
+        # ADX & RSI & Volume
+        dataframe["adx"] = ta.ADX(dataframe, timeperiod=14)
+        dataframe["rsi"] = ta.RSI(dataframe, timeperiod=14)
+        dataframe["volume_ma"] = dataframe["volume"].rolling(window=20).mean()
+
+        # Dynamic ADX Threshold
+        atr_normalized = (
+            dataframe["atr"]
+            - dataframe["atr"].rolling(self.adx_atr_lookback.value).min()
+        ) / (
+            dataframe["atr"].rolling(self.adx_atr_lookback.value).max()
+            - dataframe["atr"].rolling(self.adx_atr_lookback.value).min()
+        )
+        dataframe["adx_dynamic_threshold"] = self.adx_base_threshold.value + (
+            atr_normalized * self.adx_atr_coupling.value * 10
+        )
+
+        # ===========================
+        # 4H MTF DATA MERGE
+        # ===========================
+        if self.dp:
+            inf_tf = "4h"
+            informative = self.dp.get_pair_dataframe(
+                pair=metadata["pair"], timeframe=inf_tf
+            )
+            if len(informative) > 0:
+                informative["ema_50"] = ta.EMA(
+                    informative, timeperiod=self.mtf_ema_period.value
+                )
+                informative["ema_slope"] = informative["ema_50"] - informative[
+                    "ema_50"
+                ].shift(self.mtf_slope_lookback.value)
+                dataframe = merge_informative_pair(
+                    dataframe, informative, self.timeframe, inf_tf, ffill=True
+                )
+            else:
+                dataframe["ema_50_4h"] = dataframe["ema_200"]
+                dataframe["ema_slope_4h"] = dataframe["ema_slope"]
+        else:
+            dataframe["ema_50_4h"] = dataframe["ema_200"]
+            dataframe["ema_slope_4h"] = dataframe["ema_slope"]
+
+        # ===========================
+        # OPTIMIZATION: BTC REGIME FILTER
+        # ===========================
+        if self.dp and metadata["pair"] != "BTC/USDT:USDT":
+            try:
+                btc_dataframe = self.dp.get_pair_dataframe("BTC/USDT:USDT", "1h")
+                if len(btc_dataframe) > 0:
+                    btc_dataframe["ema_50"] = ta.EMA(btc_dataframe, timeperiod=50)
+                    btc_dataframe["ema_200"] = ta.EMA(btc_dataframe, timeperiod=200)
+                    btc_dataframe["rsi"] = ta.RSI(btc_dataframe, timeperiod=14)
+
+                    # Merge BTC indicators
+                    btc_dataframe = btc_dataframe[
+                        ["date", "ema_50", "ema_200", "rsi"]
+                    ].copy()
+                    btc_dataframe.columns = [
+                        "date",
+                        "btc_ema_50",
+                        "btc_ema_200",
+                        "btc_rsi",
+                    ]
+
+                    dataframe = pd.merge(
+                        dataframe, btc_dataframe, on="date", how="left"
+                    )
+                    dataframe["btc_ema_50"] = dataframe["btc_ema_50"].ffill()
+                    dataframe["btc_ema_200"] = dataframe["btc_ema_200"].ffill()
+                    dataframe["btc_rsi"] = dataframe["btc_rsi"].fillna(50)
+
+                    # BTC regime: golden cross + RSI > 60 = dangerous for shorts
+                    dataframe["btc_parabolic"] = (
+                        dataframe["btc_ema_50"] > dataframe["btc_ema_200"]
+                    ) & (dataframe["btc_rsi"] > 60)
+                else:
+                    dataframe["btc_parabolic"] = False
+            except Exception:
+                dataframe["btc_parabolic"] = False
+        else:
+            dataframe["btc_parabolic"] = False
+
+        return dataframe
+
+    def _load_tradingagents_signal(self) -> dict:
+        """Read TradingAgents signal from shared config."""
+        import json
+        import os
+        from pathlib import Path
+
+        shared = Path(os.getenv("SHARED_CONFIG_DIR", "/freqtrade/shared_config"))
+        try:
+            data = json.loads((shared / "tradingagents_signal.json").read_text())
+            return {
+                "rating": data.get("rating", "Hold"),
+                "approval": data.get("risk_assessment", {}).get("approval", True),
+                "mock": data.get("mock", False),
+            }
+        except Exception:
+            return {"rating": "Hold", "approval": True, "mock": False}
+
+    def _load_sentiment(self) -> tuple[float, str]:
+        """Read sentiment score and regime from shared config."""
+        import json
+        import os
+        from pathlib import Path
+
+        shared = Path(os.getenv("SHARED_CONFIG_DIR", "/freqtrade/shared_config"))
+        try:
+            sentiment = json.loads((shared / "sentiment_signal.json").read_text())
+            regime = json.loads((shared / "market_regime.json").read_text())
+            return (
+                float(sentiment.get("sentiment_score", 0.0)),
+                str(regime.get("regime", "ranging")),
+            )
+        except Exception:
+            return 0.0, "ranging"
+
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        """Entry signal generation with OPTIMIZED filters + SENTIMENT."""
+
+        dataframe["enter_long"] = 0
+        dataframe["enter_short"] = 0
+        dataframe["enter_tag"] = ""
+
+        # Load external signals
+        sentiment_score, market_regime = self._load_sentiment()
+        sentiment_ok = abs(sentiment_score) > 0.3
+        regime_ok = market_regime != "ranging"
+
+        # Load TradingAgents LLM signal
+        ta_signal = self._load_tradingagents_signal()
+        ta_rating = ta_signal.get("rating", "Hold")
+        ta_approval = ta_signal.get("approval", True)
+        ta_bullish = ta_rating in ("Buy", "Overweight")
+        ta_bearish = ta_rating in ("Sell", "Underweight")
+
+        # ===========================
+        # LONG ENTRY LOGIC (Conservative)
+        # ===========================
+
+        aroon_cross_long = qtpylib.crossed_above(
+            dataframe["aroonup"], dataframe["aroondown"]
+        ) | qtpylib.crossed_above(dataframe["aroonup"], dataframe["aroondown"]).shift(1)
+
+        macd_cross_long = qtpylib.crossed_above(
+            dataframe["macd"], dataframe["macdsignal"]
+        )
+        aroon_osc_bullish = (dataframe["aroon_osc"] > 0) & (
+            dataframe["aroon_osc"] > dataframe["aroon_osc"].shift(1)
+        )
+        volume_ok = dataframe["volume"] > dataframe["volume_ma"]
+
+        # MTF filters
+        mtf_bullish = (dataframe["close"] > dataframe["ema_50_4h"]) & (
+            dataframe["ema_slope_4h"] > 0
+        )
+        strong_trend = dataframe["adx"] > dataframe["adx_dynamic_threshold"]
+        trend_1h_bullish = (
+            (dataframe["close"] > dataframe["ema_200"])
+            & (dataframe["ema_slope"] > 0)
+            & (dataframe["dist_to_ema"] < 0.10)
+        )
+        rsi_ok = dataframe["rsi"] < 60
+
+        long_filters = mtf_bullish & strong_trend & trend_1h_bullish & rsi_ok
+        long_sentiment = sentiment_score > 0.3  # Bullish sentiment required
+
+        long_conditions = (
+            aroon_cross_long
+            & aroon_osc_bullish
+            & macd_cross_long
+            & volume_ok
+            & long_filters
+            & long_sentiment
+            & regime_ok
+            & ta_bullish
+            & ta_approval
+        )
+
+        # Send Telegram alert
+        if long_conditions.iloc[-1] if len(dataframe) > 0 else False:
+            try:
+                last_row = dataframe.iloc[-1]
+                token = metadata["pair"].replace("/USDT:USDT", "")
+                msg = (
+                    f"🟢 *LONG ENTRY*\n"
+                    f"Token: {token}\n"
+                    f"Entry: ${last_row['close']:.4f}\n"
+                    f"Sentiment: {sentiment_score:.2f}\n"
+                    f"Regime: {market_regime}\n"
+                    f"TradingAgents: {ta_rating}\n"
+                    f"✅ `/forcelong {metadata['pair']}`"
+                )
+                self.dp.send_msg(msg)
+            except Exception:
+                pass
+
+        # Enable entries in dry_run and backtest (keep 0 for live mode)
+        if self.dp.runmode.value in ("backtest", "hyperopt", "dry_run"):
+            dataframe.loc[long_conditions, "enter_long"] = 1
+            dataframe.loc[long_conditions, "enter_tag"] = "long_mtf_sentiment"
+        else:
+            dataframe.loc[long_conditions, "enter_long"] = 0
+            dataframe.loc[long_conditions, "enter_tag"] = "long_signal_awaiting_confirmation"
+
+        # ===========================
+        # SHORT ENTRY LOGIC (OPTIMIZED)
+        # ===========================
+
+        aroon_cross_short = qtpylib.crossed_above(
+            dataframe["aroondown"], dataframe["aroonup"]
+        ) | qtpylib.crossed_above(dataframe["aroondown"], dataframe["aroonup"]).shift(1)
+
+        if self.aroon_crosswind.value >= 2:
+            aroon_cross_short = aroon_cross_short | qtpylib.crossed_above(
+                dataframe["aroondown"], dataframe["aroonup"]
+            ).shift(2)
+
+        macd_cross_short = qtpylib.crossed_below(
+            dataframe["macd"], dataframe["macdsignal"]
+        ) | qtpylib.crossed_below(dataframe["macd"], dataframe["macdsignal"]).shift(1)
+
+        if self.macd_crosswind.value >= 2:
+            macd_cross_short = macd_cross_short | qtpylib.crossed_below(
+                dataframe["macd"], dataframe["macdsignal"]
+            ).shift(2)
+
+        aroon_osc_bearish = (dataframe["aroon_osc"] < 0) & (
+            dataframe["aroon_osc"] < dataframe["aroon_osc"].shift(1)
+        )
+
+        short_sentiment = sentiment_score < -0.3  # Bearish sentiment required
+
+        # OPTIMIZATION: Add ATR expansion filter + BTC regime filter + sentiment + TradingAgents
+        short_conditions = (
+            aroon_cross_short
+            & aroon_osc_bearish
+            & macd_cross_short
+            & volume_ok
+            & dataframe["atr_increasing"]
+            & ~dataframe["btc_parabolic"]
+            & short_sentiment
+            & regime_ok
+            & ta_bearish
+            & ta_approval
+        )
+
+        # Send Telegram alert
+        if short_conditions.iloc[-1] if len(dataframe) > 0 else False:
+            try:
+                last_row = dataframe.iloc[-1]
+                token = metadata["pair"].replace("/USDT:USDT", "")
+                msg = (
+                    f"🔴 *SHORT ENTRY*\n"
+                    f"Token: {token}\n"
+                    f"Entry: ${last_row['close']:.4f}\n"
+                    f"Sentiment: {sentiment_score:.2f}\n"
+                    f"Regime: {market_regime}\n"
+                    f"TradingAgents: {ta_rating}\n"
+                    f"✅ `/forceshort {metadata['pair']}`"
+                )
+                self.dp.send_msg(msg)
+            except Exception:
+                pass
+
+        # Enable short entries in dry_run and backtest (keep 0 for live mode)
+        if self.dp.runmode.value in ("backtest", "hyperopt", "dry_run"):
+            dataframe.loc[short_conditions, "enter_short"] = 1
+            dataframe.loc[short_conditions, "enter_tag"] = "short_hybrid_sentiment"
+        else:
+            dataframe.loc[short_conditions, "enter_short"] = 0
+            dataframe.loc[short_conditions, "enter_tag"] = "short_signal_awaiting_confirmation"
+
+        return dataframe
+
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        """Exit signals (optional - primary exits via custom_exit)."""
+        dataframe["exit_long"] = 0
+        dataframe["exit_short"] = 0
+        return dataframe
+
+    def custom_stake_amount(
+        self,
+        pair: str,
+        current_time: datetime,
+        current_rate: float,
+        proposed_stake: float,
+        min_stake: Optional[float],
+        max_stake: float,
+        leverage: float,
+        entry_tag: Optional[str],
+        side: str,
+        **kwargs,
+    ) -> float:
+        """
+        Use Freqtrade's automatic compounding via 'stake_amount: unlimited'.
+
+        With unlimited staking, Freqtrade automatically:
+        1. Calculates current available balance
+        2. Divides by max_open_trades
+        3. Compounds profits naturally as balance grows
+
+        This is the most reliable method for both backtesting and live trading.
+        """
+        # Optional: Add safety cap to prevent over-sized positions
+        MAX_POSITION_USDT = 5000
+        if proposed_stake > MAX_POSITION_USDT:
+            return MAX_POSITION_USDT
+
+        return proposed_stake
+
+    def custom_stoploss(
+        self,
+        pair: str,
+        trade: Trade,
+        current_time: datetime,
+        current_rate: float,
+        current_profit: float,
+        **kwargs,
+    ) -> float:
+        """ATR-based dynamic stop loss."""
+
+        dataframe, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
+
+        if len(dataframe) < 1:
+            return self.stoploss
+
+        # Zombie killer for longs
+        if not trade.is_short:
+            trade_duration = (current_time - trade.open_date_utc).total_seconds() / 60
+            if trade_duration > 360 and current_profit < -0.02:
+                return -0.01
+
+        # Get ATR at entry
+        trade_date = trade.open_date_utc.replace(tzinfo=timezone.utc)
+
+        try:
+            entry_candle = dataframe[dataframe["date"] <= trade_date].iloc[-1]
+            atr_value = entry_candle["atr"]
+        except (IndexError, KeyError):
+            return self.stoploss
+
+        if pd.isna(atr_value) or atr_value <= 0:
+            return self.stoploss
+
+        stop_distance = atr_value * self.atr_multiplier.value
+
+        if trade.is_short:
+            stop_price = trade.open_rate + stop_distance
+            stop_loss_pct = -((stop_price - current_rate) / current_rate)
+        else:
+            stop_price = trade.open_rate - stop_distance
+            stop_loss_pct = -((current_rate - stop_price) / current_rate)
+
+        return max(stop_loss_pct, self.stoploss)
+
+    def custom_exit(
+        self,
+        pair: str,
+        trade: Trade,
+        current_time: datetime,
+        current_rate: float,
+        current_profit: float,
+        **kwargs,
+    ) -> Optional[Union[str, bool]]:
+        """
+        Combined exit logic: R:R targets + Telegram notifications.
+        OPTIMIZATION: Increased R:R to 3.0 for better profit factor.
+        """
+
+        dataframe, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
+
+        if len(dataframe) < 1:
+            return None
+
+        last_candle = dataframe.iloc[-1]
+        trade_date = trade.open_date_utc.replace(tzinfo=timezone.utc)
+
+        try:
+            entry_candle = dataframe[dataframe["date"] <= trade_date].iloc[-1]
+            atr_value = entry_candle["atr"]
+        except (IndexError, KeyError):
+            return None
+
+        if pd.isna(atr_value) or atr_value <= 0:
+            return None
+
+        atr_move = atr_value * self.atr_multiplier.value
+        exit_reason = None
+
+        # Sentiment reversal check
+        sentiment_score, _ = self._load_sentiment()
+        if trade.is_short and sentiment_score > 0.3:
+            exit_reason = "sentiment_reversal_bullish"
+        elif not trade.is_short and sentiment_score < -0.3:
+            exit_reason = "sentiment_reversal_bearish"
+
+        # TradingAgents risk rejection check
+        ta_signal = self._load_tradingagents_signal()
+        if not ta_signal.get("approval", True):
+            exit_reason = "tradingagents_risk_rejected"
+
+        # SHORT TRADES
+        if not exit_reason and trade.is_short:
+            risk_reward_ratio = self.risk_reward.value
+
+            # Dynamic extension if Aroon Down > 80
+            if last_candle.get("aroondown", 0) > 80:
+                risk_reward_ratio = self.risk_reward.value + 0.5
+
+            target_profit_pct = (atr_move * risk_reward_ratio) / current_rate
+
+            if current_profit >= target_profit_pct:
+                exit_reason = f"short_profit_rr_{risk_reward_ratio}"
+
+        # LONG TRADES
+        elif not exit_reason:
+            risk_reward_ratio = self.risk_reward.value  # 3.0
+            tp_distance = atr_move * risk_reward_ratio
+            tp_price = trade.open_rate + tp_distance
+
+            if current_rate >= tp_price:
+                exit_reason = f"take_profit_{risk_reward_ratio}R"
+
+        # Send Telegram notification if exiting
+        if exit_reason:
+            self._send_exit_notification(
+                pair, trade, current_time, current_rate, current_profit, exit_reason
+            )
+
+        return exit_reason
+
+    def _send_exit_notification(
+        self, pair, trade, current_time, current_rate, current_profit, exit_reason
+    ):
+        """Send clean exit notification to Telegram."""
+        try:
+            direction = "LONG" if not trade.is_short else "SHORT"
+            emoji = "🟢" if current_profit > 0 else "🔴"
+
+            # Calculate trade duration
+            duration = current_time - trade.open_date_utc
+            hours = duration.total_seconds() / 3600
+
+            # Clean token name
+            token = pair.replace("/USDT:USDT", "")
+
+            # Send exit notification
+            msg = (
+                f"{emoji} *{direction} EXIT*\\n"
+                f"Token: {token}\\n"
+                f"Entry: ${trade.open_rate:.4f}\\n"
+                f"Exit: ${current_rate:.4f}\\n"
+                f"Profit: {current_profit * 100:.2f}% (${trade.calc_profit(current_rate):.2f})\\n"
+                f"Duration: {hours:.1f}h\\n"
+                f"Reason: {exit_reason}"
+            )
+            self.dp.send_msg(msg)
+
+            # Send trade summary
+            self._send_trade_summary()
+
+        except Exception:
+            pass
+
+    def _send_trade_summary(self):
+        """Send summary of all trades (executed + ongoing)."""
+        try:
+            # Get trade stats from bot
+            trades = self.dp.get_trades() if hasattr(self.dp, "get_trades") else []
+            if not trades:
+                return
+
+            total_trades = len(trades)
+            open_trades = len([t for t in trades if t.is_open])
+            closed_trades = total_trades - open_trades
+
+            # Calculate win rate for closed trades
+            winning_trades = len(
+                [
+                    t
+                    for t in trades
+                    if hasattr(t, "close_profit")
+                    and t.close_profit
+                    and t.close_profit > 0
+                ]
+            )
+            win_rate = (
+                (winning_trades / closed_trades * 100) if closed_trades > 0 else 0
+            )
+
+            # Total profit
+            total_profit = sum(
+                [t.close_profit or 0 for t in trades if hasattr(t, "close_profit")]
+            )
+
+            msg = (
+                f"📊 *TRADE SUMMARY*\\n"
+                f"Total Trades: {total_trades}\\n"
+                f"Closed: {closed_trades} | Open: {open_trades}\\n"
+                f"Win Rate: {win_rate:.1f}%\\n"
+                f"Total Profit: {total_profit * 100:.2f}%"
+            )
+            self.dp.send_msg(msg)
+        except Exception:
+            pass

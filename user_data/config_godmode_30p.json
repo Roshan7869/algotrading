@@ -1,0 +1,63 @@
+{
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "exchange": {
+    "name": "binance",
+    "pair_whitelist": [
+      "1000PEPE/USDT:USDT",
+      "1000SHIB/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "ARB/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "BCH/USDT:USDT",
+      "BTC/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "DOT/USDT:USDT",
+      "ENA/USDT:USDT",
+      "ETH/USDT:USDT",
+      "KAS/USDT:USDT",
+      "LINK/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "SOL/USDT:USDT",
+      "XRP/USDT:USDT",
+      "HBAR/USDT:USDT",
+      "ONDO/USDT:USDT",
+      "OP/USDT:USDT",
+      "RENDER/USDT:USDT",
+      "SUI/USDT:USDT",
+      "TON/USDT:USDT",
+      "TRX/USDT:USDT",
+      "VET/USDT:USDT",
+      "WLD/USDT:USDT",
+      "XLM/USDT:USDT",
+      "XMR/USDT:USDT",
+      "ZEC/USDT:USDT",
+      "XTZ/USDT:USDT"
+    ],
+    "pair_blacklists": []
+  },
+  "max_open_trades": 7,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.7,
+  "dry_run": true,
+  "timeframe": "1h",
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ]
+}

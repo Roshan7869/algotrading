@@ -1,0 +1,266 @@
+[
+  {
+    "setup_name": "Fixed Fractional Sizing \u2014 1% Risk Per Trade",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "fixed fractional, 1% risk, position sizing, risk management, conservative",
+    "description": "Risk exactly 1% of account equity per trade. Position size = (Account x 0.01) / (Entry - StopLoss). On a $10,000 account with a $200 stop distance, position = $50K / $200 = 250 units. This ensures no single trade can destroy the account. After 10 consecutive losses (10% drawdown), each subsequent trade is smaller because it's 1% of a smaller account. This built-in compounding prevents catastrophic drawdowns."
+  },
+  {
+    "setup_name": "Fixed Fractional Sizing \u2014 2% Risk Per Trade",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "fixed fractional, 2% risk, position sizing, risk management, standard",
+    "description": "Risk exactly 2% of account equity per trade. More aggressive than 1%, allowing faster account growth but deeper drawdowns. On a $10,000 account: max loss per trade = $200. This is the most common position sizing method for experienced traders. After 5 consecutive losses (10% drawdown), sizes naturally reduce. Requires a win rate above 40% with at least 1.5:1 R:R to be profitable."
+  },
+  {
+    "setup_name": "Fixed Fractional Sizing \u2014 0.5% Risk (Conservative)",
+    "setup_type": "position_sizing",
+    "market_condition": "volatile",
+    "strategy_style": "multi-style",
+    "keywords": "fixed fractional, 0.5% risk, conservative, position sizing, small size",
+    "description": "Risk only 0.5% of account equity per trade. The most conservative sizing, ideal for: (1) new strategies being tested, (2) volatile market conditions, (3) drawdown recovery mode. On a $10,000 account: max loss per trade = $50. Allows 20 consecutive losses before reaching 10% drawdown. Slower account growth but maximum survivability. Use this when uncertainty is high."
+  },
+  {
+    "setup_name": "Tiered Fixed Fractional \u2014 Volatility-Based Sizing",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "tiered, fixed fractional, volatility, ATR-based, dynamic sizing",
+    "description": "Adjust risk percentage based on ATR percentile. Low volatility (ATR in bottom 25%): risk 2%. Normal volatility (25-75%): risk 1.5%. High volatility (top 25%): risk 1%. Extreme volatility (top 5%): risk 0.5%. This automatically reduces size in volatile markets where stops need to be wider, and increases size in calm markets where stops are tight. The result: consistent dollar risk per trade regardless of volatility regime."
+  },
+  {
+    "setup_name": "Risk Per Volatility Unit \u2014 ATR-Based Fixed Risk",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "risk per volatility, ATR, fixed risk, volatility unit, sizing",
+    "description": "Define risk in terms of ATR units, not percentage. Risk = 2 x ATR per position. Position size = (Account x Risk%) / (2 x ATR x ContractMultiplier). This normalizes risk across assets with different volatilities. BTC with 3% daily ATR gets a smaller position than ETH with 2% ATR, ensuring equal dollar risk. This is how professional prop desks size positions."
+  },
+  {
+    "setup_name": "Kelly Criterion \u2014 Optimal f Position Sizing",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "Kelly criterion, optimal f, position sizing, mathematical, edge",
+    "description": "Kelly Criterion: f = (bp - q) / b, where b = win:loss ratio, p = win rate, q = 1 - p. For a strategy with 74% win rate and 1.5:1 R:R: f = (1.5 x 0.74 - 0.26) / 1.5 = 49.3%. This is theoretical maximum \u2014 never bet full Kelly. Use half-Kelly (24.7%) or quarter-Kelly (12.3%). Full Kelly produces maximum geometric growth but catastrophic drawdowns. Half-Kelly provides 75% of the growth with 50% of the drawdown."
+  },
+  {
+    "setup_name": "Half-Kelly Sizing \u2014 Conservative Optimal Growth",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "half-Kelly, Kelly, conservative, position sizing, optimal growth",
+    "description": "Use half of the Kelly Criterion position size. This provides 75% of the growth rate with 50% of the maximum drawdown. For a 74% WR, 1.5:1 R:R strategy: full Kelly = 49.3%, half-Kelly = 24.7% of bankroll per trade. In practice, cap at 10% per trade regardless. Half-Kelly is the sweet spot between aggressive growth and survivability. Most professional discretionary traders use half-Kelly or smaller."
+  },
+  {
+    "setup_name": "Quarter-Kelly Sizing \u2014 Ultra Conservative Growth",
+    "setup_type": "position_sizing",
+    "market_condition": "volatile",
+    "strategy_style": "multi-style",
+    "keywords": "quarter-Kelly, ultra conservative, position sizing, safety, drawdown",
+    "description": "Use one-quarter of the Kelly Criterion position size. For a 74% WR, 1.5:1 R:R strategy: quarter-Kelly = 12.3% of bankroll, capped at 5% per trade. This produces slow but steady growth with minimal drawdowns. Recommended for: (1) new strategies with limited track records, (2) drawdown recovery mode, (3) uncertain market conditions. You'll never blow up with quarter-Kelly."
+  },
+  {
+    "setup_name": "Kelly With Cap \u2014 Maximum Position Limit",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "Kelly, cap, maximum position, limit, drawdown protection",
+    "description": "Calculate Kelly size but cap at a maximum of 5% of account per trade, regardless of the calculation. Even if Kelly says 15%, risk no more than 5%. This prevents over-concentration in any single trade. Kelly assumes known parameters, but real strategies have estimation error. The cap protects against: (1) overestimated win rate, (2) overestimated R:R ratio, (3) regime changes that invalidate historical stats."
+  },
+  {
+    "setup_name": "Inverse Volatility Sizing \u2014 Risk Parity",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "inverse volatility, risk parity, volatility sizing, equal risk",
+    "description": "Size positions inversely proportional to their volatility. Position size = TargetRisk / (ATR / Price). High-vol assets get smaller positions; low-vol assets get larger positions. This equalizes dollar risk across all positions. On a $10K account: BTC with 3% ATR gets $333 position size, ETH with 2% ATR gets $500, SOL with 5% ATR gets $200. All three positions have equal dollar risk per ATR move."
+  },
+  {
+    "setup_name": "ATR-Based Position Sizing \u2014 Volatility Normalized",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "ATR, position sizing, volatility normalized, dynamic, risk per ATR",
+    "description": "Set stop loss at 2x ATR from entry. Position size = (Account x RiskPercent) / (2 x ATR x ContractSize). This ensures consistent dollar risk regardless of asset volatility. If ATR doubles (volatility doubles), position size halves. If ATR halves, position size doubles. This is the most common professional sizing method because it normalizes risk across all market conditions."
+  },
+  {
+    "setup_name": "Volatility Regime Sizing \u2014 Trend vs Range",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "volatility regime, trend sizing, range sizing, adaptive, market condition",
+    "description": "Size positions based on the current volatility regime. Trending markets: full size (2% risk) because stops are wider but trends are stronger. Ranging markets: 75% size (1.5% risk) because stops are tighter but moves are smaller. Volatile/spiky markets: 50% size (1% risk) because stops get hit more often. Use ADX to detect regime: ADX>30 = trending, ADX 20-30 = ranging, ADX<20 = choppy."
+  },
+  {
+    "setup_name": "Beta-Adjusted Sizing \u2014 Market Beta Normalization",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "beta, market beta, normalization, relative volatility, sizing",
+    "description": "Size positions inversely proportional to beta relative to BTC. BTC beta = 1.0. If ETH has 1.3x beta, use 1/1.3 = 77% of normal position size. If SOL has 2x beta, use 50% of normal size. This ensures all positions contribute equal market risk. Without beta adjustment, high-beta positions dominate portfolio risk. Calculate beta using 30-day regression of asset returns vs BTC returns."
+  },
+  {
+    "setup_name": "Drawdown-Reduced Sizing \u2014 Scale Down After Losses",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "drawdown, reduced sizing, scale down, after losses, protection",
+    "description": "Reduce position size after drawdowns. Start at 2% risk. After a 5% drawdown, reduce to 1.5%. After 10% drawdown, reduce to 1%. After 15% drawdown, reduce to 0.5%. This prevents catastrophic losses during losing streaks and naturally recovers as wins accumulate. The formula: Risk% = BaseRisk x (1 - Drawdown%). At 10% account drawdown from peak: 2% x (1 - 0.10) = 1.8% risk."
+  },
+  {
+    "setup_name": "Consecutive Loss Sizing \u2014 Reduce After Streaks",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "consecutive loss, streak, reduce sizing, drawdown, protection",
+    "description": "After 3 consecutive losses, reduce size by 25%. After 5 consecutive losses, reduce by 50%. After 7 consecutive losses, stop trading for the day. This is a simple heuristic that prevents tilt-driven revenge trading. The logic: consecutive losses either indicate a regime change (strategy temporarily broken) or psychological deterioration (trader making errors). Both warrant smaller sizing."
+  },
+  {
+    "setup_name": "Equity Curve Sizing \u2014 Size With Account Growth",
+    "setup_type": "position_sizing",
+    "market_condition": "trending",
+    "strategy_style": "multi-style",
+    "keywords": "equity curve, sizing, growth, compound, compounding",
+    "description": "Increase position size as the equity curve rises, decrease as it falls. When account is at a new high, use full 2% risk. When 5% below high, use 1.5%. When 10% below high, use 1%. This creates natural compounding: wins generate larger positions, losses generate smaller ones. Over 100 trades with a positive edge, this produces 30-50% more profit than fixed sizing. Always round down position sizes \u2014 never round up."
+  },
+  {
+    "setup_name": "Circuit Breaker Sizing \u2014 Daily and Weekly Limits",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "circuit breaker, daily limit, weekly limit, drawdown, max loss",
+    "description": "Hard limits on daily and weekly losses. Daily: stop trading after losing 2% of account. Weekly: reduce size by 50% after losing 4%, stop entirely after 6%. Monthly: reduce by 75% after losing 8%, stop at 10%. These are non-negotiable rules. Violating them guarantees eventual account blow-up. Track P&L in absolute dollars and as a percentage of the start-of-period account balance."
+  },
+  {
+    "setup_name": "Regime-Adaptive Sizing \u2014 Trend/Range/Volatile",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "regime, adaptive, trend, range, volatile, dynamic sizing",
+    "description": "Trending regime: full size (2% risk), wide stops, long hold periods. Range regime: 75% size (1.5% risk), tight stops, quick exits. Volatile regime: 50% size (1% risk), widest stops, shortest holds. Detect regime using HMM or ADX: ADX>25 + directional = trending, ADX 15-25 = ranging, ATR>2x normal = volatile. The key insight: you can't trade the same size in all regime types \u2014 trending trades produce larger R-multiples but have wider stops."
+  },
+  {
+    "setup_name": "Kill Zone Sizing \u2014 Increase During Active Hours",
+    "setup_type": "position_sizing",
+    "market_condition": "trending",
+    "strategy_style": "intraday",
+    "keywords": "kill zone, active hours, increase size, session, optimal timing",
+    "description": "Use 2% risk during kill zones (London 07-09 UTC, NY 13-16 UTC). Use 1% risk outside kill zones. Kill zones have 65%+ of daily volume and 70%+ of profitable setups. Outside these windows, lower volume produces whippier price action with lower win rates. This sizing method is especially effective for intraday strategies that rely on volume confirmation."
+  },
+  {
+    "setup_name": "Confluence Sizing \u2014 Size With Signal Strength",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "confluence, signal strength, increase size, multiple signals, confidence",
+    "description": "Size positions based on how many signals agree. 2 signals (minimum confluence): 1% risk. 3 signals: 1.5% risk. 4 signals: 2% risk. 5 signals (rare, high conviction): 3% risk. This matches risk to confidence. Low-confluence trades are smaller (limited downside), high-confluence trades are larger (maximize edge). This creates a natural scaling system that exploits the best opportunities hardest."
+  },
+  {
+    "setup_name": "Max Correlated Exposure \u2014 6% Rule",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "correlated exposure, 6% rule, portfolio risk, correlation, position limit",
+    "description": "Total correlated risk must not exceed 6% of account. Three longs on BTC, ETH, and SOL (all correlated to BTC) = combined risk must be under 6%. If each position risks 2%, three positions = 6% which is the maximum. If a fourth correlated setup appears, skip it or reduce all positions to 1.5% each. This prevents correlated blow-ups where everything goes against you simultaneously."
+  },
+  {
+    "setup_name": "Max Open Positions \u2014 5-Position Limit",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "max positions, 5 position, limit, overtrading, focus",
+    "description": "Never hold more than 5 positions simultaneously. More positions dilute edge, increase correlation risk, and split attention. 3-5 positions is the sweet spot for most traders: enough diversification to smooth the equity curve, enough focus to manage each position properly. If a 6th setup appears while you have 5 positions, either skip it or close your weakest position first."
+  },
+  {
+    "setup_name": "Margin Utilization \u2014 30% Maximum",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "margin utilization, 30%, maximum, overleveraging, risk",
+    "description": "Use no more than 30% of available margin at any time. On a $10,000 account with 10x leverage, total notional position should not exceed $30,000 (3x notional leverage). This provides 70% margin buffer for drawdowns, swaps, and emergency exits. Most account blow-ups come from over-leveraging: 5-10x leverage positions that use 80%+ margin. Stay under 30% to survive any market condition."
+  },
+  {
+    "setup_name": "Risk Per Setup Type \u2014 Classify and Size",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "risk per setup, classify, A-grade, B-grade, C-grade, confidence",
+    "description": "Classify each setup by quality and size accordingly. A-grade (5+ confluence, kill zone, trend alignment): 2% risk, full size. B-grade (3-4 confluence, decent timing): 1.5% risk, 75% size. C-grade (2 confluence, off-session): 1% risk, 50% size. D-grade (1 signal, desperation): skip entirely. This ensures your largest positions are on your best setups. Keep a journal tracking A vs B vs C win rates \u2014 the difference is usually dramatic."
+  },
+  {
+    "setup_name": "Win Rate Adaptive Sizing \u2014 Size With Streak",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "win rate, adaptive, streak, increase size, momentum sizing",
+    "description": "After 3 consecutive wins, increase size by 25%. After 5 consecutive wins, increase by 50%. After 1 loss, return to base size. After 2 consecutive losses, reduce by 25%. After 3 consecutive losses, reduce by 50%. This exploits winning streaks (confidence + strategy-market alignment) while protecting during losing streaks. The key insight: wins cluster because the strategy is aligned with the market regime."
+  },
+  {
+    "setup_name": "Pyramiding \u2014 Add to Winners",
+    "setup_type": "position_sizing",
+    "market_condition": "trending",
+    "strategy_style": "swing",
+    "keywords": "pyramiding, add to winners, scale in, trending, position building",
+    "description": "Add to winning positions at each new signal. Start with 50% of full size. Add 25% at each new entry signal (e.g., EMA alignment continuation). Stop for the entire position moves to breakeven after the first pyramid. Maximum 3 pyramids (initial + 2 adds = full size). Never add to losers. Pyramiding works best in strong trends where multiple entry signals appear as the trend progresses. Each add reduces the average entry price for longs."
+  },
+  {
+    "setup_name": "Anti-Martingale \u2014 Double Down After Wins",
+    "setup_type": "position_sizing",
+    "market_condition": "trending",
+    "strategy_style": "multi-style",
+    "keywords": "anti-martingale, double down, after wins, positive progression",
+    "description": "Increase risk by 50% after each win (up to maximum of 4% per trade). After a loss, return to base 2% risk. This exploits the tendency for wins to cluster (when the strategy is aligned with the market regime). This is the opposite of martingale (which doubles after losses and is guaranteed to blow up). Anti-martingale: 2% \u2192 3% \u2192 4.5% \u2192 4% (cap) \u2192 then reset after loss. The key rule: NEVER increase after a loss."
+  },
+  {
+    "setup_name": "Kelly-Layered \u2014 Stack Conservative to Aggressive",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "Kelly, layered, conservative, aggressive, stacking",
+    "description": "Run three simultaneous Kelly calculations: (1) Quarter-Kelly for 60% of bankroll \u2014 conservative core. (2) Half-Kelly for 30% of bankroll \u2014 moderate growth. (3) Full-Kelly for 10% of bankroll \u2014 aggressive speculation. This layered approach ensures 90% of capital is in conservative positions while still having exposure to aggressive growth. Calculate Kelly for each strategy/asset separately and apply the appropriate layer."
+  },
+  {
+    "setup_name": "Volatility Breakout Sizing \u2014 Size With ATR Expansion",
+    "setup_type": "position_sizing",
+    "market_condition": "volatile",
+    "strategy_style": "intraday",
+    "keywords": "volatility breakout, ATR expansion, size, expansion, breakout",
+    "description": "When ATR expands significantly (2x normal), increase position size by 25% and set wider stops. The logic: volatility breakouts produce larger moves, so you want larger positions. But the wider stops ensure you don't get stopped out by the increased noise. Normal ATR position: 1.5% risk, 2x ATR stop. Breakout ATR (2x normal): 2% risk, 3x ATR stop. This captures the larger moves that volatility expansion produces."
+  },
+  {
+    "setup_name": "Drawdown Recovery Sizing \u2014 Conservative Rebuilding",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "drawdown recovery, conservative, rebuilding, position sizing, recovery mode",
+    "description": "After a 10%+ drawdown from peak, switch to recovery mode: reduce all positions to 0.5% risk until the account recovers to within 5% of peak. Then increase to 1% until at new peak. Finally, return to normal 2% sizing. The recovery phase is about survival and steady rebuilding, not aggressive growth. Most traders make the mistake of increasing size to 'make back' losses \u2014 this is how accounts blow up."
+  },
+  {
+    "setup_name": "Leverage-Adjusted Sizing \u2014 Account for Margin Cost",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "leverage, adjusted sizing, margin cost, funding, position",
+    "description": "When using leverage, reduce position size by the funding cost. If funding rate is 0.01% per 8h (0.03% per day), and the average trade is 48 hours, reduce position size by 0.06% to account for the cost. For 10x leverage, this means using 9.94x effective leverage. This seems small but compounds over many trades. Also reduce by any trading fees: if taker fee is 0.075%, your effective margin per trade is risk% minus 0.075."
+  },
+  {
+    "setup_name": "Opportunity Cost Sizing \u2014 Capital Allocation",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "opportunity cost, capital allocation, portfolio, sizing, efficient",
+    "description": "Don't allocate more risk to low-probability setups than high-probability ones. If Setup A has 74% WR and Setup B has 55% WR, but both risk 2%, you're misallocating capital. Opportunity cost sizing: allocate risk proportional to expected value. EV = WR x R_win - (1-WR) x R_loss. Setup A EV = 0.74 x 2R - 0.26 x 1R = 1.22R. Setup B EV = 0.55 x 2R - 0.45 x 1R = 0.65R. Allocate 65% more risk to Setup A."
+  },
+  {
+    "setup_name": "Time-Weighted Sizing \u2014 Reduce Stale Positions",
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "strategy_style": "multi-style",
+    "keywords": "time weighted, stale positions, reduce size, decay, opportunity cost",
+    "description": "Reduce position size by 10% for every 12 hours a trade hasn't reached 0.5R. At 0h: full size. At 12h: 90% size. At 24h: 80% size. At 36h: 70% size. At 48h: close the trade. This applies an opportunity cost decay \u2014 stale positions consume margin that could be deployed elsewhere. Combine with breakeven stops: move stop to breakeven at 12h, then reduce size. This frees capital for fresh setups."
+  }
+]

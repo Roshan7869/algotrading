@@ -1,0 +1,65 @@
+{
+    "max_open_trades": 3,
+    "stake_currency": "INR",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "INR",
+    "dry_run": true,
+    "trading_mode": "spot",
+    "timeframe": "5m",
+    "exchange": {
+        "name": "coindcx",
+        "key": "YOUR_API_KEY",
+        "secret": "YOUR_API_SECRET",
+        "pair_whitelist": [
+            "BTC/INR",
+            "ETH/INR",
+            "SOL/INR"
+        ],
+        "pair_blacklist": [],
+        "ccxt_config": {
+            "ecode": "I",
+            "enableRateLimit": true,
+            "rateLimit": 600
+        },
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "rateLimit": 600
+        }
+    },
+    "strategy": "SampleStrategy",
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "edge": {
+        "enabled": false
+    },
+    "telegram": {
+        "enabled": false
+    },
+    "api_server": {
+        "enabled": false
+    },
+    "bot_name": "coindcx_bot",
+    "initial_state": "running",
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}

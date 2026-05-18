@@ -1,0 +1,420 @@
+{
+  "futures": {
+    "GenStrategy_C001": {
+      "status": "DONE",
+      "elapsed": 50.0,
+      "trades": 1885,
+      "profit_pct": -21.27,
+      "win_rate": 63.2,
+      "dd_pct": 30.54
+    },
+    "GenStrategy_C002": {
+      "status": "DONE",
+      "elapsed": 50.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C003": {
+      "status": "DONE",
+      "elapsed": 70.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C004": {
+      "status": "DONE",
+      "elapsed": 70.0,
+      "trades": 1471,
+      "profit_pct": -40.08,
+      "win_rate": 51.1,
+      "dd_pct": 55.54
+    },
+    "GenStrategy_C005": {
+      "status": "DONE",
+      "elapsed": 55.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C006": {
+      "status": "DONE",
+      "elapsed": 55.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C007": {
+      "status": "DONE",
+      "elapsed": 55.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C008": {
+      "status": "DONE",
+      "elapsed": 55.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C009": {
+      "status": "DONE",
+      "elapsed": 50.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C010": {
+      "status": "DONE",
+      "elapsed": 50.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C011": {
+      "status": "DONE",
+      "elapsed": 60.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C012": {
+      "status": "DONE",
+      "elapsed": 60.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C014": {
+      "status": "DONE",
+      "elapsed": 85.1,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C015": {
+      "status": "DONE",
+      "elapsed": 90.1,
+      "trades": 1885,
+      "profit_pct": -21.27,
+      "win_rate": 63.2,
+      "dd_pct": 30.54
+    },
+    "GenStrategy_C016": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C017": {
+      "status": "DONE",
+      "elapsed": 65.0,
+      "trades": 1775,
+      "profit_pct": -48.51,
+      "win_rate": 55.3,
+      "dd_pct": 61.88
+    },
+    "GenStrategy_C018": {
+      "status": "DONE",
+      "elapsed": 65.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C019": {
+      "status": "DONE",
+      "elapsed": 70.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C020": {
+      "status": "DONE",
+      "elapsed": 75.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C021": {
+      "status": "DONE",
+      "elapsed": 80.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C022": {
+      "status": "DONE",
+      "elapsed": 70.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C023": {
+      "status": "DONE",
+      "elapsed": 75.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C025": {
+      "status": "DONE",
+      "elapsed": 70.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C027": {
+      "status": "DONE",
+      "elapsed": 50.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_C028": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C026": {
+      "status": "DONE",
+      "elapsed": 85.0,
+      "trades": 3698,
+      "profit_pct": -72.66,
+      "win_rate": 60.1,
+      "dd_pct": 80.76
+    },
+    "GenStrategy_N001": {
+      "status": "DONE",
+      "elapsed": 25.0,
+      "trades": 317,
+      "profit_pct": -11.53,
+      "win_rate": 53.9,
+      "dd_pct": 16.57
+    },
+    "GenStrategy_C029": {
+      "status": "DONE",
+      "elapsed": 50.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N002": {
+      "status": "DONE",
+      "elapsed": 45.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N004": {
+      "status": "DONE",
+      "elapsed": 45.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N007": {
+      "status": "DONE",
+      "elapsed": 20.0,
+      "trades": 318,
+      "profit_pct": -8.09,
+      "win_rate": 59.1,
+      "dd_pct": 11.71
+    },
+    "GenStrategy_N005": {
+      "status": "DONE",
+      "elapsed": 45.0,
+      "trades": 1775,
+      "profit_pct": -48.51,
+      "win_rate": 55.3,
+      "dd_pct": 61.88
+    },
+    "GenStrategy_N008": {
+      "status": "DONE",
+      "elapsed": 55.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N009": {
+      "status": "DONE",
+      "elapsed": 60.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N010": {
+      "status": "DONE",
+      "elapsed": 55.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N012": {
+      "status": "DONE",
+      "elapsed": 50.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N013": {
+      "status": "DONE",
+      "elapsed": 45.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N014": {
+      "status": "DONE",
+      "elapsed": 45.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N015": {
+      "status": "DONE",
+      "elapsed": 45.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N016": {
+      "status": "DONE",
+      "elapsed": 50.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N017": {
+      "status": "DONE",
+      "elapsed": 40.0,
+      "trades": 1467,
+      "profit_pct": -43.52,
+      "win_rate": 46.1,
+      "dd_pct": 43.52
+    },
+    "GenStrategy_N018": {
+      "status": "DONE",
+      "elapsed": 20.0,
+      "trades": 12,
+      "profit_pct": -1.97,
+      "win_rate": 41.7,
+      "dd_pct": 2.55
+    },
+    "GenStrategy_N019": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N021": {
+      "status": "DONE",
+      "elapsed": 20.0,
+      "trades": 12,
+      "profit_pct": -1.97,
+      "win_rate": 41.7,
+      "dd_pct": 2.55
+    },
+    "GenStrategy_N020": {
+      "status": "DONE",
+      "elapsed": 40.0,
+      "trades": 693,
+      "profit_pct": 3.0,
+      "win_rate": 64.5,
+      "dd_pct": 24.38
+    },
+    "GenStrategy_N022": {
+      "status": "DONE",
+      "elapsed": 65.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N023": {
+      "status": "DONE",
+      "elapsed": 70.0,
+      "trades": 1775,
+      "profit_pct": -48.51,
+      "win_rate": 55.3,
+      "dd_pct": 61.88
+    },
+    "GenStrategy_N025": {
+      "status": "DONE",
+      "elapsed": 50.0,
+      "trades": 1467,
+      "profit_pct": -43.52,
+      "win_rate": 46.1,
+      "dd_pct": 43.52
+    },
+    "GenStrategy_N024": {
+      "status": "DONE",
+      "elapsed": 65.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N026": {
+      "status": "DONE",
+      "elapsed": 45.0,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "win_rate": 62.7,
+      "dd_pct": 48.53
+    },
+    "GenStrategy_N027": {
+      "status": "DONE",
+      "elapsed": 40.0,
+      "trades": 1104,
+      "profit_pct": -48.46,
+      "win_rate": 61.9,
+      "dd_pct": 48.65
+    },
+    "GenStrategy_N028": {
+      "status": "DONE",
+      "elapsed": 45.0,
+      "trades": 1885,
+      "profit_pct": -21.27,
+      "win_rate": 63.2,
+      "dd_pct": 30.54
+    }
+  }
+}

@@ -1,0 +1,109 @@
+# Unified Algotrading + MiroFish + Redis + Postgres
+# Usage: docker-compose -f docker-compose.unified.yml up -d
+
+services:
+  # ── Core Trading Engine ──
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    container_name: freqtrade
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - "./user_data:/freqtrade/user_data"
+      - "./shared_config:/freqtrade/shared_config:ro"
+    command: >
+      trade
+      --config /freqtrade/user_data/config_unified.json
+      --strategy AroonMomentumEngine_Hybrid
+      --dry-run
+    networks:
+      - trading_net
+    depends_on:
+      - redis
+      - postgres
+
+  # ── Swarm Intelligence / Sentiment ──
+  mirofish:
+    build:
+      context: ../MiroFish
+      dockerfile: Dockerfile
+    container_name: mirofish
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:5001:5001"
+    volumes:
+      - "./shared_config:/app/shared_config:ro"
+      - "./mirofish_uploads:/app/backend/uploads"
+    networks:
+      - trading_net
+
+  # ── Cache ──
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - "redis_data:/data"
+    networks:
+      - trading_net
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+
+  # ── LLM Multi-Agent Decision Engine ──
+  tradingagents:
+    build:
+      context: ./TradingAgents
+      dockerfile: Dockerfile
+    container_name: tradingagents
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - SHARED_CONFIG_DIR=/freqtrade/shared_config
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434/v1
+    volumes:
+      - "./shared_config:/freqtrade/shared_config"
+      - "./TradingAgents:/app"
+    working_dir: /app
+    command: >
+      python3 scripts/tradingagents_scheduler.py
+      --ticker BTC/USDT
+      --interval 600
+      --output /freqtrade/shared_config/tradingagents_signal.json
+      --once
+    networks:
+      - trading_net
+    depends_on:
+      - redis
+      - postgres
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # ── Trade Database ──
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-freqtrade}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-freqtrade}
+      POSTGRES_DB: ${POSTGRES_DB:-freqtrade}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - "postgres_data:/var/lib/postgresql/data"
+    networks:
+      - trading_net
+
+volumes:
+  redis_data:
+  postgres_data:
+
+networks:
+  trading_net:
+    driver: bridge

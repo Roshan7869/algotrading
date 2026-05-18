@@ -1,0 +1,6 @@
+tree 40272e79ac0d94242f5d13aa7faf8c587a092686
+parent 01e2dc17b5c506da86373cee27aa98ac7e3bbd2d
+author Matthias <xmatthias@outlook.com> 1546715094 +0100
+committer Matthias <xmatthias@outlook.com> 1546715094 +0100
+
+Install numpy before py_find_1st

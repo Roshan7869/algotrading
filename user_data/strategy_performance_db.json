@@ -1,0 +1,985 @@
+{
+  "last_updated": "2026-01-22T06:48:28.867471",
+  "total_strategies": 18,
+  "strategies": {
+    "AroonMACDStrategy": {
+      "name": "AroonMACDStrategy",
+      "overall": {
+        "profit_total_pct": 7.830595073308232,
+        "profit_total_abs": 87.60201455123806,
+        "win_rate": 50.84845049130764,
+        "max_drawdown": 0.0,
+        "total_trades": 493,
+        "wins": 258,
+        "losses": 235,
+        "avg_trade_duration": 63.345555555555556,
+        "sharpe_ratio": -18.76926008646304,
+        "sample_count": 105
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -27.73038892747855,
+            "profit_total_abs": -290.70463981377355,
+            "win_rate": 25.56004791853848,
+            "max_drawdown": 0.0,
+            "total_trades": 261,
+            "wins": 94,
+            "losses": 167,
+            "avg_trade_duration": 34.63396226415095,
+            "sharpe_ratio": -26.88247635982904,
+            "sample_count": 53
+          },
+          "score": 0.503
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": 2.1420603119304826,
+            "profit_total_abs": 23.711130565294134,
+            "win_rate": 67.84313725490198,
+            "max_drawdown": 0.0,
+            "total_trades": 53,
+            "wins": 28,
+            "losses": 25,
+            "avg_trade_duration": 28.76960784313726,
+            "sharpe_ratio": -47.27467046694943,
+            "sample_count": 17
+          },
+          "score": 0.7282
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 64.44308773002598,
+            "profit_total_abs": 691.4990919542855,
+            "win_rate": 80.88775510204081,
+            "max_drawdown": 0.0,
+            "total_trades": 179,
+            "wins": 136,
+            "losses": 43,
+            "avg_trade_duration": 123.61714285714287,
+            "sharpe_ratio": 7.361952455156023,
+            "sample_count": 35
+          },
+          "score": 0.9522
+        }
+      },
+      "last_updated": "2026-01-22T06:48:28.867471",
+      "compatibility_group": "momentum"
+    },
+    "TEMA_ADX_CMOStrategy": {
+      "name": "TEMA_ADX_CMOStrategy",
+      "overall": {
+        "profit_total_pct": 15.000677734083922,
+        "profit_total_abs": 167.22095903252753,
+        "win_rate": 31.59340659340661,
+        "max_drawdown": 0.0,
+        "total_trades": 69,
+        "wins": 35,
+        "losses": 34,
+        "avg_trade_duration": 59.300549450549454,
+        "sharpe_ratio": -52.82531130249921,
+        "sample_count": 91
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -70.64914891211066,
+            "profit_total_abs": -766.9635761121739,
+            "win_rate": 1.0869565217391304,
+            "max_drawdown": 0.0,
+            "total_trades": 26,
+            "wins": 1,
+            "losses": 25,
+            "avg_trade_duration": 47.02971014492754,
+            "sharpe_ratio": -95.73133417414489,
+            "sample_count": 23
+          },
+          "score": 0.3527
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 122.62075277220734,
+            "profit_total_abs": 1344.5014691116,
+            "win_rate": 100.0,
+            "max_drawdown": 0.0,
+            "total_trades": 27,
+            "wins": 27,
+            "losses": 0,
+            "avg_trade_duration": 169.61333333333332,
+            "sharpe_ratio": -95.8948627399294,
+            "sample_count": 25
+          },
+          "score": 1.0
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": -8.391857836111113,
+            "profit_total_abs": -83.91857836111112,
+            "win_rate": 38.888888888888886,
+            "max_drawdown": 0.0,
+            "total_trades": 16,
+            "wins": 7,
+            "losses": 9,
+            "avg_trade_duration": 8.25925925925926,
+            "sharpe_ratio": -23.10123044709548,
+            "sample_count": 9
+          },
+          "score": 0.6137
+        }
+      },
+      "last_updated": "2026-01-22T06:48:28.836309",
+      "compatibility_group": "trend"
+    },
+    "VWAPDMIStrategy": {
+      "name": "VWAPDMIStrategy",
+      "overall": {
+        "profit_total_pct": -2.0455989297560766,
+        "profit_total_abs": -9.210084556138606,
+        "win_rate": 28.694869486948694,
+        "max_drawdown": 0.0,
+        "total_trades": 250,
+        "wins": 46,
+        "losses": 204,
+        "avg_trade_duration": 108.05594059405938,
+        "sharpe_ratio": -77.02306958023945,
+        "sample_count": 101
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -67.00541607808564,
+            "profit_total_abs": -714.998612620145,
+            "win_rate": 3.476064997804128,
+            "max_drawdown": 0.0,
+            "total_trades": 211,
+            "wins": 16,
+            "losses": 195,
+            "avg_trade_duration": 76.3804347826087,
+            "sharpe_ratio": -70.54502476015833,
+            "sample_count": 69
+          },
+          "score": 0.3587
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 171.34999790008746,
+            "profit_total_abs": 1877.4972101250003,
+            "win_rate": 100.0,
+            "max_drawdown": 0.0,
+            "total_trades": 28,
+            "wins": 28,
+            "losses": 0,
+            "avg_trade_duration": 183.73076923076923,
+            "sharpe_ratio": -95.92773974901269,
+            "sample_count": 26
+          },
+          "score": 1.0
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": -6.388621319954546,
+            "profit_total_abs": -68.373622105,
+            "win_rate": 9.722222222222221,
+            "max_drawdown": 0.0,
+            "total_trades": 11,
+            "wins": 2,
+            "losses": 9,
+            "avg_trade_duration": 144.4,
+            "sharpe_ratio": -69.60034761315488,
+            "sample_count": 6
+          },
+          "score": 0.5488
+        }
+      },
+      "last_updated": "2026-01-22T06:48:28.802275",
+      "compatibility_group": "mean_reversion"
+    },
+    "WMA_MACDStrategy": {
+      "name": "WMA_MACDStrategy",
+      "overall": {
+        "profit_total_pct": 83.45640895483733,
+        "profit_total_abs": 921.2111628485263,
+        "win_rate": 11.50877192982456,
+        "max_drawdown": 0.0,
+        "total_trades": 87,
+        "wins": 19,
+        "losses": 68,
+        "avg_trade_duration": 74.42719298245616,
+        "sharpe_ratio": -30.376976801714655,
+        "sample_count": 95
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -62.80423573392083,
+            "profit_total_abs": -677.2882983945161,
+            "win_rate": 5.913978494623655,
+            "max_drawdown": 0.0,
+            "total_trades": 71,
+            "wins": 7,
+            "losses": 64,
+            "avg_trade_duration": 129.13978494623652,
+            "sharpe_ratio": -64.11510722429124,
+            "sample_count": 31
+          },
+          "score": 0.3648
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 1233.924858686011,
+            "profit_total_abs": 13559.010603888748,
+            "win_rate": 95.0,
+            "max_drawdown": 0.0,
+            "total_trades": 12,
+            "wins": 10,
+            "losses": 2,
+            "avg_trade_duration": 238.5,
+            "sharpe_ratio": -87.36865759664884,
+            "sample_count": 8
+          },
+          "score": 0.9875
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": 1.2970963243333333,
+            "profit_total_abs": 12.970963243333335,
+            "win_rate": 50.0,
+            "max_drawdown": 0.0,
+            "total_trades": 4,
+            "wins": 2,
+            "losses": 2,
+            "avg_trade_duration": 386.4166666666667,
+            "sharpe_ratio": -66.4317371455568,
+            "sample_count": 3
+          },
+          "score": 0.6202
+        }
+      },
+      "last_updated": "2026-01-22T06:48:28.766615",
+      "compatibility_group": "momentum"
+    },
+    "MultiPairStrategy": {
+      "name": "MultiPairStrategy",
+      "overall": {
+        "profit_total_pct": -10.514078154851553,
+        "profit_total_abs": -111.19021908316452,
+        "win_rate": 13.331762145631645,
+        "max_drawdown": 0.0,
+        "total_trades": 1338,
+        "wins": 426,
+        "losses": 912,
+        "avg_trade_duration": 1.2989451476793252,
+        "sharpe_ratio": -51.13397384064185,
+        "sample_count": 79
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -17.778817548962813,
+            "profit_total_abs": -188.32237781363636,
+            "win_rate": 7.298320769893021,
+            "max_drawdown": 0.0,
+            "total_trades": 812,
+            "wins": 228,
+            "losses": 584,
+            "avg_trade_duration": 1.0712121212121213,
+            "sharpe_ratio": -78.40637241169928,
+            "sample_count": 44
+          },
+          "score": 0.4971
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": -4.133362199581819,
+            "profit_total_abs": -43.7698072405,
+            "win_rate": 28.032726210051788,
+            "max_drawdown": 0.0,
+            "total_trades": 505,
+            "wins": 186,
+            "losses": 319,
+            "avg_trade_duration": 2.3016666666666667,
+            "sharpe_ratio": -31.04084859248211,
+            "sample_count": 20
+          },
+          "score": 0.6035
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 11.441013970909088,
+            "profit_total_abs": 125.85115367999997,
+            "win_rate": 57.14285714285714,
+            "max_drawdown": 0.0,
+            "total_trades": 21,
+            "wins": 12,
+            "losses": 9,
+            "avg_trade_duration": 3.15,
+            "sharpe_ratio": 10.371141517901519,
+            "sample_count": 3
+          },
+          "score": 0.7386
+        }
+      },
+      "last_updated": "2026-01-22T06:48:27.910398",
+      "compatibility_group": "multi"
+    },
+    "UnifiedTrendStrategy": {
+      "name": "UnifiedTrendStrategy",
+      "overall": {
+        "profit_total_pct": -10.881941441650948,
+        "profit_total_abs": -117.62212500765429,
+        "win_rate": 8.683560033207177,
+        "max_drawdown": 0.0,
+        "total_trades": 762,
+        "wins": 236,
+        "losses": 526,
+        "avg_trade_duration": 0.3477366255144033,
+        "sharpe_ratio": -68.10256478271492,
+        "sample_count": 81
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -14.755338613415582,
+            "profit_total_abs": -159.09490437040813,
+            "win_rate": 3.653639061802327,
+            "max_drawdown": 0.0,
+            "total_trades": 278,
+            "wins": 64,
+            "losses": 214,
+            "avg_trade_duration": 0.1619047619047619,
+            "sharpe_ratio": -87.48720802842001,
+            "sample_count": 49
+          },
+          "score": 0.5001
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": -5.658059454155844,
+            "profit_total_abs": -61.8479218382143,
+            "win_rate": 18.726430309338127,
+            "max_drawdown": 0.0,
+            "total_trades": 484,
+            "wins": 172,
+            "losses": 312,
+            "avg_trade_duration": 0.7226190476190476,
+            "sharpe_ratio": -43.90837692883298,
+            "sample_count": 28
+          },
+          "score": 0.5742
+        }
+      },
+      "last_updated": "2026-01-22T06:48:27.951882",
+      "compatibility_group": "trend"
+    },
+    "MeanReversionBBStrategy": {
+      "name": "MeanReversionBBStrategy",
+      "overall": {
+        "profit_total_pct": -14.028271477313952,
+        "profit_total_abs": -141.09315016872094,
+        "win_rate": 15.701619746333902,
+        "max_drawdown": 0.0,
+        "total_trades": 361,
+        "wins": 143,
+        "losses": 218,
+        "avg_trade_duration": 7.768992248062017,
+        "sharpe_ratio": -69.30977754956349,
+        "sample_count": 86
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -60.11966041279543,
+            "profit_total_abs": -620.3891912682142,
+            "win_rate": 23.060290549786348,
+            "max_drawdown": 0.0,
+            "total_trades": 210,
+            "wins": 62,
+            "losses": 148,
+            "avg_trade_duration": 15.838690476190482,
+            "sharpe_ratio": -202.2084391577177,
+            "sample_count": 28
+          },
+          "score": 0.4077
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 77.94916598454546,
+            "profit_total_abs": 857.44082583,
+            "win_rate": 50.0,
+            "max_drawdown": 0.0,
+            "total_trades": 60,
+            "wins": 30,
+            "losses": 30,
+            "avg_trade_duration": 29.599999999999998,
+            "sharpe_ratio": 0.6634788829400241,
+            "sample_count": 6
+          },
+          "score": 0.875
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": 1.8448297203999995,
+            "profit_total_abs": 18.448297204,
+            "win_rate": 80.93023255813952,
+            "max_drawdown": 0.0,
+            "total_trades": 91,
+            "wins": 51,
+            "losses": 40,
+            "avg_trade_duration": 9.41,
+            "sharpe_ratio": -60.55708922880159,
+            "sample_count": 5
+          },
+          "score": 0.7597
+        }
+      },
+      "last_updated": "2026-01-22T06:48:28.559792",
+      "compatibility_group": "mean_reversion"
+    },
+    "WilliamsRSI_MACDStrategy": {
+      "name": "WilliamsRSI_MACDStrategy",
+      "overall": {
+        "profit_total_pct": -27.688784729630434,
+        "profit_total_abs": -303.58600605869566,
+        "win_rate": 1.5217391304347827,
+        "max_drawdown": 0.0,
+        "total_trades": 67,
+        "wins": 4,
+        "losses": 63,
+        "avg_trade_duration": 32.494384057971025,
+        "sharpe_ratio": -45.12455714987676,
+        "sample_count": 92
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -65.1668729643,
+            "profit_total_abs": -713.0744947965001,
+            "win_rate": 0.0,
+            "max_drawdown": 0.0,
+            "total_trades": 48,
+            "wins": 0,
+            "losses": 48,
+            "avg_trade_duration": 45.425000000000004,
+            "sharpe_ratio": -85.76507439551379,
+            "sample_count": 40
+          },
+          "score": 0.35
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": -1.0516968794000001,
+            "profit_total_abs": -10.516968794000004,
+            "win_rate": 10.0,
+            "max_drawdown": 0.0,
+            "total_trades": 14,
+            "wins": 2,
+            "losses": 12,
+            "avg_trade_duration": 66.70833333333333,
+            "sharpe_ratio": -72.16813628261774,
+            "sample_count": 10
+          },
+          "score": 0.5708
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 69.82369224,
+            "profit_total_abs": 698.2369224,
+            "win_rate": 40.0,
+            "max_drawdown": 0.0,
+            "total_trades": 5,
+            "wins": 2,
+            "losses": 3,
+            "avg_trade_duration": 505.4,
+            "sharpe_ratio": 0.8250808580692216,
+            "sample_count": 1
+          },
+          "score": 0.8
+        }
+      },
+      "last_updated": "2026-01-22T06:48:28.703784",
+      "compatibility_group": "momentum"
+    },
+    "ALMA_MACDStrategy": {
+      "name": "ALMA_MACDStrategy",
+      "overall": {
+        "profit_total_pct": -39.560699677887214,
+        "profit_total_abs": -428.2952098949367,
+        "win_rate": 11.756169287814858,
+        "max_drawdown": 0.0,
+        "total_trades": 189,
+        "wins": 26,
+        "losses": 163,
+        "avg_trade_duration": 68.42911392405065,
+        "sharpe_ratio": -84.32315593210949,
+        "sample_count": 79
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -64.69711421957052,
+            "profit_total_abs": -701.3604551342028,
+            "win_rate": 1.9865319865319866,
+            "max_drawdown": 0.0,
+            "total_trades": 171,
+            "wins": 13,
+            "losses": 158,
+            "avg_trade_duration": 53.002173913043464,
+            "sharpe_ratio": -86.44228014797228,
+            "sample_count": 69
+          },
+          "score": 0.355
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 191.85868264446754,
+            "profit_total_abs": 2085.800220242857,
+            "win_rate": 96.42857142857143,
+            "max_drawdown": 0.0,
+            "total_trades": 10,
+            "wins": 9,
+            "losses": 1,
+            "avg_trade_duration": 190.92857142857142,
+            "sharpe_ratio": -85.46538154811104,
+            "sample_count": 7
+          },
+          "score": 0.9911
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": -1.4017239713333336,
+            "profit_total_abs": -14.017239713333332,
+            "win_rate": 38.888888888888886,
+            "max_drawdown": 0.0,
+            "total_trades": 8,
+            "wins": 4,
+            "losses": 4,
+            "avg_trade_duration": 137.41666666666666,
+            "sharpe_ratio": -32.91810586326164,
+            "sample_count": 3
+          },
+          "score": 0.6216
+        }
+      },
+      "last_updated": "2026-01-22T06:48:27.835401",
+      "compatibility_group": "momentum"
+    },
+    "AwesomeMACDRSIStrategy": {
+      "name": "AwesomeMACDRSIStrategy",
+      "overall": {
+        "profit_total_pct": -1.0603382417021276,
+        "profit_total_abs": -10.603382417021276,
+        "win_rate": 1.773049645390071,
+        "max_drawdown": 0.0,
+        "total_trades": 9,
+        "wins": 3,
+        "losses": 6,
+        "avg_trade_duration": 22.45975177304965,
+        "sharpe_ratio": -6.3774234463051425,
+        "sample_count": 94
+      },
+      "by_regime": {
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 50.516537504000006,
+            "profit_total_abs": 505.16537504,
+            "win_rate": 100.0,
+            "max_drawdown": 0.0,
+            "total_trades": 1,
+            "wins": 1,
+            "losses": 0,
+            "avg_trade_duration": 1421.0,
+            "sharpe_ratio": -100.0,
+            "sample_count": 1
+          },
+          "score": 0.91
+        },
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -30.3092568434,
+            "profit_total_abs": -303.09256843400004,
+            "win_rate": 0.0,
+            "max_drawdown": 0.0,
+            "total_trades": 5,
+            "wins": 0,
+            "losses": 5,
+            "avg_trade_duration": 40.8,
+            "sharpe_ratio": -100.0,
+            "sample_count": 5
+          },
+          "score": 0.3788
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": 1.3579519930000001,
+            "profit_total_abs": 13.57951993,
+            "win_rate": 66.66666666666666,
+            "max_drawdown": 0.0,
+            "total_trades": 3,
+            "wins": 2,
+            "losses": 1,
+            "avg_trade_duration": 486.21666666666664,
+            "sharpe_ratio": 0.5221960473164818,
+            "sample_count": 1
+          },
+          "score": 0.6521
+        }
+      },
+      "last_updated": "2026-01-22T06:48:28.656054",
+      "compatibility_group": "momentum"
+    },
+    "Donchian_ADX_CHOPStrategy": {
+      "name": "Donchian_ADX_CHOPStrategy",
+      "overall": {
+        "profit_total_pct": 0.0,
+        "profit_total_abs": 0.0,
+        "win_rate": 0.0,
+        "max_drawdown": 0.0,
+        "total_trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "avg_trade_duration": 0.0,
+        "sharpe_ratio": 0.0,
+        "sample_count": 79
+      },
+      "by_regime": {},
+      "last_updated": "2026-01-22T06:48:28.602796",
+      "compatibility_group": "trend"
+    },
+    "MeanReversionSqueezeStrategy": {
+      "name": "MeanReversionSqueezeStrategy",
+      "overall": {
+        "profit_total_pct": 0.0,
+        "profit_total_abs": 0.0,
+        "win_rate": 0.0,
+        "max_drawdown": 0.0,
+        "total_trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "avg_trade_duration": 0.0,
+        "sharpe_ratio": 0.0,
+        "sample_count": 66
+      },
+      "by_regime": {},
+      "last_updated": "2026-01-22T06:48:28.127249",
+      "compatibility_group": "mean_reversion"
+    },
+    "WhaleMomentumStrategy": {
+      "name": "WhaleMomentumStrategy",
+      "overall": {
+        "profit_total_pct": 0.0,
+        "profit_total_abs": 0.0,
+        "win_rate": 0.0,
+        "max_drawdown": 0.0,
+        "total_trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "avg_trade_duration": 0.0,
+        "sharpe_ratio": 0.0,
+        "sample_count": 63
+      },
+      "by_regime": {},
+      "last_updated": "2026-01-22T06:48:25.437668",
+      "compatibility_group": "fundamental"
+    },
+    "MixtureOfExperts": {
+      "name": "MixtureOfExperts",
+      "overall": {
+        "profit_total_pct": 35.949008696969706,
+        "profit_total_abs": 395.4390956666668,
+        "win_rate": 60.18518518518518,
+        "max_drawdown": 0.0,
+        "total_trades": 42,
+        "wins": 21,
+        "losses": 21,
+        "avg_trade_duration": 14.416666666666666,
+        "sharpe_ratio": -29.004311037849714,
+        "sample_count": 9
+      },
+      "by_regime": {
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 53.36515089681819,
+            "profit_total_abs": 587.0166598650001,
+            "win_rate": 77.77777777777777,
+            "max_drawdown": 0.0,
+            "total_trades": 30,
+            "wins": 18,
+            "losses": 12,
+            "avg_trade_duration": 16.0,
+            "sharpe_ratio": -44.221418080172896,
+            "sample_count": 6
+          },
+          "score": 0.9444
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": 1.1167242972727272,
+            "profit_total_abs": 12.283967269999998,
+            "win_rate": 25.0,
+            "max_drawdown": 0.0,
+            "total_trades": 12,
+            "wins": 3,
+            "losses": 9,
+            "avg_trade_duration": 11.25,
+            "sharpe_ratio": 1.4299030467966471,
+            "sample_count": 3
+          },
+          "score": 0.617
+        }
+      },
+      "last_updated": "2026-01-22T06:48:24.692995",
+      "compatibility_group": "meta"
+    },
+    "EdriExtremePointsStrategy": {
+      "name": "EdriExtremePointsStrategy",
+      "overall": {
+        "profit_total_pct": -39.535432651948064,
+        "profit_total_abs": -434.88975917142864,
+        "win_rate": 0.0,
+        "max_drawdown": 0.0,
+        "total_trades": 9,
+        "wins": 0,
+        "losses": 9,
+        "avg_trade_duration": 0.42857142857142855,
+        "sharpe_ratio": -42.857142857142854,
+        "sample_count": 21
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -92.24934285454547,
+            "profit_total_abs": -1014.7427714000003,
+            "win_rate": 0.0,
+            "max_drawdown": 0.0,
+            "total_trades": 9,
+            "wins": 0,
+            "losses": 9,
+            "avg_trade_duration": 1.0,
+            "sharpe_ratio": -100.0,
+            "sample_count": 9
+          },
+          "score": 0.34
+        }
+      },
+      "last_updated": "2026-01-22T06:48:24.897106",
+      "compatibility_group": "volatility"
+    },
+    "SampleStrategy": {
+      "name": "SampleStrategy",
+      "overall": {
+        "profit_total_pct": -7.85858286163986,
+        "profit_total_abs": -82.61569766269228,
+        "win_rate": 11.412465458518088,
+        "max_drawdown": 0.0,
+        "total_trades": 307,
+        "wins": 128,
+        "losses": 177,
+        "avg_trade_duration": 0.1185897435897436,
+        "sharpe_ratio": -36.49541678064299,
+        "sample_count": 26
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -18.711025480785125,
+            "profit_total_abs": -196.63539982636368,
+            "win_rate": 7.436678818257764,
+            "max_drawdown": 0.0,
+            "total_trades": 286,
+            "wins": 113,
+            "losses": 171,
+            "avg_trade_duration": 0.031818181818181815,
+            "sharpe_ratio": -87.64835881980518,
+            "sample_count": 11
+          },
+          "score": 0.4937
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": 0.4993752953333333,
+            "profit_total_abs": 4.993752953333333,
+            "win_rate": 71.64021164021165,
+            "max_drawdown": 0.0,
+            "total_trades": 21,
+            "wins": 15,
+            "losses": 6,
+            "avg_trade_duration": 0.9111111111111111,
+            "sharpe_ratio": 5.083703573713071,
+            "sample_count": 3
+          },
+          "score": 0.7311
+        }
+      },
+      "last_updated": "2026-01-22T06:48:27.744098",
+      "compatibility_group": "general"
+    },
+    "DCAMartingaleStrategy": {
+      "name": "DCAMartingaleStrategy",
+      "overall": {
+        "profit_total_pct": 0.5274763660863638,
+        "profit_total_abs": 26.488586158999972,
+        "win_rate": 26.666666666666668,
+        "max_drawdown": 0.0,
+        "total_trades": 212,
+        "wins": 22,
+        "losses": 190,
+        "avg_trade_duration": 57.045208333333335,
+        "sharpe_ratio": -74.52997259654911,
+        "sample_count": 80
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -66.7764433918473,
+            "profit_total_abs": -703.353041680566,
+            "win_rate": 0.0,
+            "max_drawdown": 0.0,
+            "total_trades": 184,
+            "wins": 0,
+            "losses": 184,
+            "avg_trade_duration": 52.52798742138365,
+            "sharpe_ratio": -65.33986974802629,
+            "sample_count": 53
+          },
+          "score": 0.35
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 171.91554593688315,
+            "profit_total_abs": 1891.071005305714,
+            "win_rate": 100.0,
+            "max_drawdown": 0.0,
+            "total_trades": 21,
+            "wins": 21,
+            "losses": 0,
+            "avg_trade_duration": 44.0,
+            "sharpe_ratio": -100.0,
+            "sample_count": 21
+          },
+          "score": 1.0
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": -5.775371123945455,
+            "profit_total_abs": -63.13860192599999,
+            "win_rate": 6.666666666666666,
+            "max_drawdown": 0.0,
+            "total_trades": 7,
+            "wins": 1,
+            "losses": 6,
+            "avg_trade_duration": 171.12666666666667,
+            "sharpe_ratio": -79.87694221570771,
+            "sample_count": 5
+          },
+          "score": 0.5136
+        }
+      },
+      "last_updated": "2026-01-22T06:48:28.838255",
+      "compatibility_group": "general"
+    },
+    "GridTradingStrategy": {
+      "name": "GridTradingStrategy",
+      "overall": {
+        "profit_total_pct": -18.79249038040115,
+        "profit_total_abs": -186.22590030301575,
+        "win_rate": 40.746499617811814,
+        "max_drawdown": 0.0,
+        "total_trades": 4014,
+        "wins": 1632,
+        "losses": 2382,
+        "avg_trade_duration": 0.8074074074074074,
+        "sharpe_ratio": -26.62079766006209,
+        "sample_count": 63
+      },
+      "by_regime": {
+        "TRENDING_BEAR": {
+          "regime": "TRENDING_BEAR",
+          "metrics": {
+            "profit_total_pct": -37.02169213354881,
+            "profit_total_abs": -383.3318706074074,
+            "win_rate": 39.22205582192008,
+            "max_drawdown": 0.0,
+            "total_trades": 3903,
+            "wins": 1572,
+            "losses": 2331,
+            "avg_trade_duration": 0.8114197530864198,
+            "sharpe_ratio": -34.9534646135688,
+            "sample_count": 54
+          },
+          "score": 0.5
+        },
+        "TRENDING_BULL": {
+          "regime": "TRENDING_BULL",
+          "metrics": {
+            "profit_total_pct": 288.7774673045455,
+            "profit_total_abs": 3176.5521403500006,
+            "win_rate": 53.84615384615385,
+            "max_drawdown": 0.0,
+            "total_trades": 78,
+            "wins": 42,
+            "losses": 36,
+            "avg_trade_duration": 1.15,
+            "sharpe_ratio": 74.90606026494345,
+            "sample_count": 3
+          },
+          "score": 0.8846
+        },
+        "RANGING": {
+          "regime": "RANGING",
+          "metrics": {
+            "profit_total_pct": -8.514653444545457,
+            "profit_total_abs": -93.66118789000002,
+            "win_rate": 47.91666666666666,
+            "max_drawdown": 0.0,
+            "total_trades": 33,
+            "wins": 18,
+            "losses": 15,
+            "avg_trade_duration": 0.6,
+            "sharpe_ratio": -2.3902240410044673,
+            "sample_count": 6
+          },
+          "score": 0.6357
+        }
+      },
+      "last_updated": "2026-01-22T06:48:28.179572",
+      "compatibility_group": "grid"
+    }
+  }
+}

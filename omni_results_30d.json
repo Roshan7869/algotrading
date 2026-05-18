@@ -1,0 +1,156 @@
+[
+  {
+    "strategy": "VectorOmni_FVG_OB",
+    "trades": 10,
+    "avg_profit": 0.91,
+    "tot_profit_usdt": 1.802,
+    "tot_profit_pct": 1.8,
+    "winrate": 90.0,
+    "wins": 9,
+    "losses": 1,
+    "time_s": 8.4
+  },
+  {
+    "strategy": "VectorStrategy_P3E_KEY_LEVEL_BOOST",
+    "trades": 5,
+    "avg_profit": 0.84,
+    "tot_profit_usdt": 0.837,
+    "tot_profit_pct": 0.84,
+    "winrate": 100.0,
+    "wins": 5,
+    "losses": 0,
+    "time_s": 7.4
+  },
+  {
+    "strategy": "VectorStrategy_P3F_KEY_LEVEL_TIGHT_TRAIL",
+    "trades": 5,
+    "avg_profit": 0.84,
+    "tot_profit_usdt": 0.837,
+    "tot_profit_pct": 0.84,
+    "winrate": 100.0,
+    "wins": 5,
+    "losses": 0,
+    "time_s": 7.6
+  },
+  {
+    "strategy": "VectorStrategy",
+    "trades": 5,
+    "avg_profit": 0.84,
+    "tot_profit_usdt": 0.837,
+    "tot_profit_pct": 0.84,
+    "winrate": 100.0,
+    "wins": 5,
+    "losses": 0,
+    "time_s": 7.8
+  },
+  {
+    "strategy": "VectorOmni_Alistair21",
+    "trades": 5,
+    "avg_profit": 0.84,
+    "tot_profit_usdt": 0.837,
+    "tot_profit_pct": 0.84,
+    "winrate": 100.0,
+    "wins": 5,
+    "losses": 0,
+    "time_s": 8.4
+  },
+  {
+    "strategy": "VectorOmni_MetaLearner",
+    "trades": 5,
+    "avg_profit": 0.84,
+    "tot_profit_usdt": 0.837,
+    "tot_profit_pct": 0.84,
+    "winrate": 100.0,
+    "wins": 5,
+    "losses": 0,
+    "time_s": 11.7
+  },
+  {
+    "strategy": "VectorOmni_ATRBoost",
+    "trades": 5,
+    "avg_profit": 0.48,
+    "tot_profit_usdt": 0.469,
+    "tot_profit_pct": 0.47,
+    "winrate": 80.0,
+    "wins": 4,
+    "losses": 1,
+    "time_s": 8.1
+  },
+  {
+    "strategy": "VectorOmni_RegimeAdaptive",
+    "trades": 4,
+    "avg_profit": 0.59,
+    "tot_profit_usdt": 0.464,
+    "tot_profit_pct": 0.46,
+    "winrate": 100.0,
+    "wins": 4,
+    "losses": 0,
+    "time_s": 7.3
+  },
+  {
+    "strategy": "VectorOmni_LiquidTrap",
+    "trades": 5,
+    "avg_profit": 0.37,
+    "tot_profit_usdt": 0.369,
+    "tot_profit_pct": 0.37,
+    "winrate": 80.0,
+    "wins": 4,
+    "losses": 1,
+    "time_s": 8.0
+  },
+  {
+    "strategy": "VectorOmni_MeanRevEV",
+    "trades": 1,
+    "avg_profit": 0.86,
+    "tot_profit_usdt": 0.169,
+    "tot_profit_pct": 0.17,
+    "winrate": 100.0,
+    "wins": 1,
+    "losses": 0,
+    "time_s": 7.5
+  },
+  {
+    "strategy": "VectorOmni_CandleFilter",
+    "trades": 0,
+    "avg_profit": 0.0,
+    "tot_profit_usdt": 0.0,
+    "tot_profit_pct": 0.0,
+    "winrate": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "time_s": 7.2
+  },
+  {
+    "strategy": "BollingerMeanReversion",
+    "trades": 0,
+    "avg_profit": 0.0,
+    "tot_profit_usdt": 0.0,
+    "tot_profit_pct": 0.0,
+    "winrate": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "time_s": 7.2
+  },
+  {
+    "strategy": "EmaTrendFollowing",
+    "trades": 0,
+    "avg_profit": 0,
+    "tot_profit_usdt": 0,
+    "tot_profit_pct": 0,
+    "winrate": 0,
+    "wins": 0,
+    "losses": 0,
+    "time_s": 10.1
+  },
+  {
+    "strategy": "AroonMomentumEngine_V2",
+    "trades": 0,
+    "avg_profit": 0,
+    "tot_profit_usdt": 0,
+    "tot_profit_pct": 0,
+    "winrate": 0,
+    "wins": 0,
+    "losses": 0,
+    "time_s": 16.7
+  }
+]
