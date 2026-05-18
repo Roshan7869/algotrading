@@ -1,0 +1,38 @@
+{
+  "strategy_name": "BollingerMeanReversion",
+  "params": {
+    "roi": {
+      "0": 0.15,
+      "60": 0.08,
+      "240": 0.04,
+      "720": 0.02
+    },
+    "stoploss": {
+      "stoploss": -0.04
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.015,
+      "trailing_stop_positive_offset": 0.05,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 5
+    },
+    "buy": {
+      "bb_period": 16,
+      "bb_std": 2.1,
+      "bb_width_max": 0.23,
+      "bb_width_min": 0.042,
+      "ema_trend_period": 148,
+      "rsi_oversold": 40
+    },
+    "sell": {
+      "atr_multiplier": 1.3,
+      "risk_reward": 2.6,
+      "rsi_overbought": 67
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-05-14 10:41:11.645396+00:00"
+}

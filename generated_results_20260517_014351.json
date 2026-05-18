@@ -1,0 +1,420 @@
+{
+  "spot": {
+    "GenStrategy_C001": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C002": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C003": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C004": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C005": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C006": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C007": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C008": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C009": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C010": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C011": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C012": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C014": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C015": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C016": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C017": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C018": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C019": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C020": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C021": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C022": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C023": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C025": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C026": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C027": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C028": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C029": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N001": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N002": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N004": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N005": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N007": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N008": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N009": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N010": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N012": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N013": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N014": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N015": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N016": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N017": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N018": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N019": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N020": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N021": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N022": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N023": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N024": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N025": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N026": {
+      "status": "ZERO_TRADES",
+      "elapsed": 25.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N027": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N028": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-05-17T03:25:00",
+  "data_source": "futures batch backtest (17 pairs, 20250701-20260517)",
+  "total_strategies": 52,
+  "rankings": [
+    {
+      "rank": 1,
+      "strategy": "GenStrategy_N020",
+      "verdict": "promising",
+      "trades": 693,
+      "profit_pct": 3.0,
+      "win_rate": 64.5,
+      "drawdown_pct": 24.38,
+      "recommendation": "Hyperopt candidate — only profitable strategy. Tune stoploss and trailing params.",
+      "source": "natural_group",
+      "name": "20-Year Trader Reveals His Exact 3-Phase Market Entry"
+    },
+    {
+      "rank": 2,
+      "strategy": "GenStrategy_N007",
+      "verdict": "underperforming",
+      "trades": 318,
+      "profit_pct": -8.09,
+      "win_rate": 59.1,
+      "drawdown_pct": 11.71,
+      "recommendation": "Best risk profile (11.7% DD). Needs entry optimization to flip profitable.",
+      "source": "natural_group",
+      "name": "Candlesticks & Candlestick Patterns"
+    },
+    {
+      "rank": 3,
+      "strategy": "GenStrategy_N001",
+      "verdict": "underperforming",
+      "trades": 317,
+      "profit_pct": -11.53,
+      "win_rate": 53.9,
+      "drawdown_pct": 16.57,
+      "recommendation": "Reasonable DD, needs better exit logic.",
+      "source": "natural_group",
+      "name": "Complete Technical Analysis Guide"
+    },
+    {
+      "rank": 4,
+      "strategy": "GenStrategy_N018",
+      "verdict": "underperforming",
+      "trades": 12,
+      "profit_pct": -1.97,
+      "win_rate": 41.7,
+      "drawdown_pct": 2.55,
+      "recommendation": "Too few trades to evaluate. Likely overfiltered.",
+      "source": "natural_group",
+      "name": "How to Build a Profitable Trading Strategy From Scratch"
+    },
+    {
+      "rank": 5,
+      "strategy": "GenStrategy_N021",
+      "verdict": "underperforming",
+      "trades": 12,
+      "profit_pct": -1.97,
+      "win_rate": 41.7,
+      "drawdown_pct": 2.55,
+      "recommendation": "Too few trades to evaluate.",
+      "source": "natural_group",
+      "name": "Dylan O'Neal VIX Strategy"
+    }
+  ],
+  "clusters": {
+    "differentiated_strategies": [
+      "N020", "N007", "N001", "N018", "N021",
+      "C001", "C015", "N028", "C004", "N017",
+      "N025", "N027", "C017", "N005", "N023", "C026"
+    ],
+    "clone_cluster_identical_results": {
+      "strategies": 30,
+      "trades": 1698,
+      "profit_pct": -34.88,
+      "cause": "Entry pattern detector fell back to generic BB+ADX+volume breakout template due to insufficiently distinctive chunk text"
+    },
+    "zero_trades": ["C016", "C028", "N019"]
+  },
+  "summary": {
+    "production_ready": 0,
+    "needs_hyperopt": 0,
+    "promising": 1,
+    "underperforming": 7,
+    "high_drawdown": 41,
+    "insufficient_trades": 3,
+    "best_strategy": "GenStrategy_N020",
+    "best_profit_pct": 3.0,
+    "total_profit_all_strategies_pct": -1629.18
+  }
+}

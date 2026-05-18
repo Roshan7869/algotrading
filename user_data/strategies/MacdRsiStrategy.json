@@ -1,0 +1,38 @@
+{
+  "strategy_name": "MacdRsiStrategy",
+  "params": {
+    "roi": {
+      "0": 0.25,
+      "120": 0.1,
+      "360": 0.05,
+      "720": 0.02
+    },
+    "stoploss": {
+      "stoploss": -0.05
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.06,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 5
+    },
+    "buy": {
+      "macd_fast": 9,
+      "macd_signal": 11,
+      "macd_slow": 20,
+      "rsi_buy_threshold": 42,
+      "rsi_oversold": 18
+    },
+    "sell": {
+      "atr_multiplier": 2.7,
+      "risk_reward": 2.7,
+      "rsi_overbought": 85,
+      "rsi_sell_threshold": 61
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-05-14 10:22:05.651936+00:00"
+}

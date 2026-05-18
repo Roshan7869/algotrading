@@ -1,0 +1,40 @@
+{
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "max_open_trades": 3,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "cancel_open_orders_on_exit": true,
+    "unfilledtimeout": {"entry": 10, "exit": 10},
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {"enableRateLimit": true},
+        "ccxt_async_config": {"enableRateLimit": true},
+        "pair_whitelist": [
+            "OP/USDT:USDT",
+            "ARB/USDT:USDT",
+            "KAS/USDT:USDT",
+            "WLD/USDT:USDT",
+            "SUI/USDT:USDT",
+            "ENA/USDT:USDT",
+            "TRX/USDT:USDT",
+            "LINK/USDT:USDT",
+            "SOL/USDT:USDT",
+            "BTC/USDT:USDT",
+            "1000SHIB/USDT:USDT"
+        ],
+        "pair_blacklist": ["AVAX/USDT:USDT", "DOT/USDT:USDT", "XLM/USDT:USDT", "XRP/USDT:USDT", "DOGE/USDT:USDT", "NEAR/USDT:USDT", "ALGO/USDT:USDT", "ETH/USDT:USDT"]
+    },
+    "entry_pricing": {"price_side": "other", "use_order_book": true, "order_book_top": 1},
+    "exit_pricing": {"price_side": "other", "use_order_book": true, "order_book_top": 1},
+    "timeframe": "1h",
+    "futures_funding_rate": 0,
+    "futures_fee_open": 0.0002,
+    "futures_fee_close": 0.0002,
+    "pairlists": [{"method": "StaticPairList"}]
+}

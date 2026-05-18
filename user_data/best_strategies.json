@@ -1,0 +1,5 @@
+{
+    "TRENDING_BULL": "WMA_MACDStrategy",
+    "TRENDING_BEAR": "UnifiedTrendStrategy",
+    "RANGING": "AroonMACDStrategy"
+}

@@ -1,0 +1,98 @@
+{
+  "timerange": "20180101-20260517 (8-year)",
+  "pairs": "BTC/USDT:USDT, ETH/USDT:USDT, XRP/USDT:USDT, DOGE/USDT:USDT (config.json)",
+  "description": "All 8 new VectorOmni strategies vs champion P3E_KEY_LEVEL_BOOST on 8-year futures backtest",
+  "timestamp": "2026-05-17",
+  "strategies": [
+    {
+      "rank": 1,
+      "strategy": "VectorOmni_FVG_OB",
+      "trades": 303,
+      "avg_profit_pct": 2.8,
+      "total_profit_pct": 428.91,
+      "win_rate_pct": 87.1,
+      "drawdown_pct": 3.26,
+      "innovation": "FVG + Order Block + MSS as 3 additional confluence signals (8 total)"
+    },
+    {
+      "rank": 2,
+      "strategy": "VectorStrategy_P3E_KEY_LEVEL_BOOST",
+      "trades": 140,
+      "avg_profit_pct": 1.75,
+      "total_profit_pct": 62.09,
+      "win_rate_pct": 90.7,
+      "drawdown_pct": 2.3,
+      "innovation": "CHAMPION BASELINE - 5-pillar confluence + key level boost"
+    },
+    {
+      "rank": 3,
+      "strategy": "VectorOmni_Alistair21",
+      "trades": 140,
+      "avg_profit_pct": 1.75,
+      "total_profit_pct": 62.09,
+      "win_rate_pct": 90.7,
+      "drawdown_pct": 2.3,
+      "innovation": "21 EMA pullback + consolidation breakout (same base engine in this window)"
+    },
+    {
+      "rank": 4,
+      "strategy": "VectorOmni_MetaLearner",
+      "trades": 140,
+      "avg_profit_pct": 1.75,
+      "total_profit_pct": 62.09,
+      "win_rate_pct": 90.7,
+      "drawdown_pct": 2.3,
+      "innovation": "Circuit breaker + signal quality tracking (same base engine in this window)"
+    },
+    {
+      "rank": 5,
+      "strategy": "VectorOmni_RegimeAdaptive",
+      "trades": 114,
+      "avg_profit_pct": 1.65,
+      "total_profit_pct": 44.81,
+      "win_rate_pct": 89.5,
+      "drawdown_pct": 2.4,
+      "innovation": "ADX + ATR percentile regime detection (fixed V2 degradation)"
+    },
+    {
+      "rank": 6,
+      "strategy": "VectorOmni_MeanRevEV",
+      "trades": 63,
+      "avg_profit_pct": 2.16,
+      "total_profit_pct": 30.71,
+      "win_rate_pct": 90.5,
+      "drawdown_pct": 1.25,
+      "innovation": "Expected Value framework + multi-variable disequilibrium stacking"
+    },
+    {
+      "rank": 7,
+      "strategy": "VectorOmni_CandleFilter",
+      "trades": 4,
+      "avg_profit_pct": 3.09,
+      "total_profit_pct": 2.46,
+      "win_rate_pct": 100.0,
+      "drawdown_pct": 0.0,
+      "innovation": "13 TA-Lib candle patterns + session kill zone filters"
+    },
+    {
+      "rank": 8,
+      "strategy": "VectorOmni_LiquidTrap",
+      "trades": 146,
+      "avg_profit_pct": 0.07,
+      "total_profit_pct": 1.9,
+      "win_rate_pct": 43.2,
+      "drawdown_pct": 6.59,
+      "innovation": "Liquidity trap wick sweep detection (needs tuning)"
+    },
+    {
+      "rank": 9,
+      "strategy": "VectorOmni_ATRBoost",
+      "trades": 146,
+      "avg_profit_pct": 0.02,
+      "total_profit_pct": 0.46,
+      "win_rate_pct": 42.5,
+      "drawdown_pct": 6.42,
+      "innovation": "ATR dynamic stoploss from Kronos_RiskManaged (needs tuning)"
+    }
+  ]
+}

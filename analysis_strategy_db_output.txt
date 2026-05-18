@@ -1,0 +1,270 @@
+
+> build · deepseek-v4-flash:cloud
+
+→ Read strategy_db
+✱ Glob "strategy/**/*.md" in . · 4 matches
+✱ Glob "strategy_db/**/*.py" in . · 9 matches
+✱ Glob "strategy/**/*.txt" in . · 47 matches
+→ Read strategy_db/ingest.py
+→ Read strategy_db/gcode_bridge.py
+→ Read strategy_db/runtime_bridge.py
+→ Read strategy_db/search.py
+→ Read strategy_db/to_config.py
+→ Read strategy_db/query.py
+→ Read strategy_db/strategy_agents.py
+→ Read strategy_db/schema.py
+→ Read strategy_db/config.py
+
+$ cd /home/roshan/Downloads/Algotrading && python3 -c "
+import chromadb
+from chromadb.config import Settings
+from strategy_db.config import DB_DIR, COLLECTION_NAME
+
+client = chromadb.PersistentClient(path=DB_DIR, settings=Settings(anonymized_tel
+emetry=False))
+collection = client.get_collection(name=COLLECTION_NAME)
+
+# Get all data
+all_data = collection.get(include=['metadatas', 'documents', 'distances'])
+total = len(all_data['ids'])
+print(f'Total records: {total}')
+
+# 5 sample records
+print('\n=== 5 SAMPLE RECORDS ===')
+for i in range(min(5, total)):
+    m = all_data['metadatas'][i]
+    print(f'\n--- Record {i+1} ---')
+    print(f'  ID: {all_data[\"ids\"][i]}')
+    print(f'  setup_name: {m.get(\"setup_name\",\"\")}')
+    print(f'  setup_type: {m.get(\"setup_type\",\"\")}')
+    print(f'  market_condition: {m.get(\"market_condition\",\"\")}')
+    print(f'  timeframe: {m.get(\"timeframe\",\"\")}')
+    print(f'  strategy_style: {m.get(\"strategy_style\",\"\")}')
+    print(f'  channel_name: {m.get(\"channel_name\",\"\")}')
+    print(f'  video_title: {m.get(\"video_title\",\"\")}')
+    print(f'  risk_reward: {m.get(\"risk_reward\",\"\")}')
+    print(f'  keywords: {m.get(\"keywords\",\"\")}')
+    print(f'  assets: {m.get(\"assets\",\"\")}')
+    print(f'  author_concept: {m.get(\"author_concept\",\"\")}')
+    print(f'  chunk_text (first 200): {all_data[\"documents\"][i][:200]}')
+"
+
+Traceback (most recent call last):
+  File "<string>", line 10, in <module>
+  File "/home/roshan/.local/lib/python3.12/site-packages/chromadb/api/models/Col
+lection.py", line 154, in get
+    get_request = self._validate_and_prepare_get_request(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roshan/.local/lib/python3.12/site-packages/chromadb/api/models/Col
+lectionCommon.py", line 103, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roshan/.local/lib/python3.12/site-packages/chromadb/api/models/Col
+lectionCommon.py", line 274, in _validate_and_prepare_get_request
+    validate_include(include=include, dissalowed=["distances"])
+  File "/home/roshan/.local/lib/python3.12/site-packages/chromadb/api/types.py",
+ line 1346, in validate_include
+    raise ValueError(
+ValueError: Include item cannot be one of distances, got distances in get.
+
+$ cd /home/roshan/Downloads/Algotrading && python3 -c "
+import chromadb
+from chromadb.config import Settings
+from strategy_db.config import DB_DIR, COLLECTION_NAME
+from collections import Counter
+
+client = chromadb.PersistentClient(path=DB_DIR, settings=Settings(anonymized_tel
+emetry=False))
+collection = client.get_collection(name=COLLECTION_NAME)
+all_data = collection.get(include=['metadatas'])
+
+# Count by setup_type
+setup_types = Counter()
+# Count by market_condition
+market_conds = Counter()
+
+for m in all_data['metadatas']:
+    st = m.get('setup_type', 'unknown')
+    mc = m.get('market_condition', 'unknown')
+    setup_types[st] += 1
+    market_conds[mc] += 1
+
+print('=== COUNT BY SETUP-TYPE ===')
+for k, v in sorted(setup_types.items()):
+    print(f'  {k}: {v}')
+
+print()
+print('=== COUNT BY MARKET-CONDITION ===')
+for k, v in sorted(market_conds.items()):
+    print(f'  {k}: {v}')
+
+print(f'\nTotal: {sum(setup_types.values())}')
+" 2>&1
+
+=== COUNT BY SETUP-TYPE ===
+  confirmation: 35
+  entry: 101
+  exit: 5
+  filter: 83
+  market_structure: 89
+  psychology: 47
+  risk_management: 58
+  trade_management: 25
+
+=== COUNT BY MARKET-CONDITION ===
+  any: 202
+  bear: 4
+  breakout: 17
+  breakout | reversal: 1
+  breakout | trending: 2
+  breakout | volatile: 1
+  bull_peak: 1
+  ranging: 14
+  ranging | reversal: 1
+  reversal: 86
+  reversal | pullback_end: 1
+  reversal | ranging: 1
+  trending: 75
+  trending | reversal: 12
+  trending | volatile: 2
+  volatile: 21
+  volatile | breakout: 1
+  volatile | reversal: 1
+
+Total: 443
+
+• Read all strategy .txt files General Agent
+
+$ cd /home/roshan/Downloads/Algotrading && python3 -c "
+import chromadb
+from chromadb.config import Settings
+from strategy_db.config import DB_DIR, COLLECTION_NAME
+
+client = chromadb.PersistentClient(path=DB_DIR, settings=Settings(anonymized_tel
+emetry=False))
+collection = client.get_collection(name=COLLECTION_NAME)
+
+# Get all data
+all_data = collection.get(include=['metadatas', 'documents'])
+total = len(all_data['ids'])
+print(f'Total records: {total}')
+
+print('\n=== 5 SAMPLE RECORDS ===')
+for i in range(min(5, total)):
+    m = all_data['metadatas'][i]
+    print(f'\n--- Record {i+1} ---')
+    print(f'  ID: {all_data[\"ids\"][i]}')
+    for k in ['setup_name','setup_type','market_condition','timeframe',
+              'strategy_style','channel_name','video_title','risk_reward',
+              'keywords','assets','author_concept']:
+        print(f'  {k}: {m.get(k,\"\")}')
+    print(f'  chunk_text (first 250): {all_data[\"documents\"][i][:250]}')
+"
+
+Total records: 443
+
+=== 5 SAMPLE RECORDS ===
+
+--- Record 1 ---
+  ID: Luke Belmar Investing Strategy_1_0
+  setup_name: Contrarian Value Investing Framework
+  setup_type: entry
+  market_condition: reversal
+  timeframe: swing
+  strategy_style: swing
+  channel_name: not specified
+  video_title: not specified
+  risk_reward: structurally asymmetric in favor of buyer; not explicitly quantif
+ied
+  keywords: contrarian,value_investing,swing_trade,conviction,asymmetric_risk_re
+ward
+  assets: stocks,crypto
+  author_concept: False
+  chunk_text (first 250): Setup: Contrarian Value Investing Framework
+Type: entry
+The speaker outlines a contrarian value investing approach where the core entry
+signal is a stock or asset trading at multi-year lows relative to its historical
+ price, combined with a fundamenta
+
+--- Record 2 ---
+  ID: Luke Belmar Investing Strategy_2_1
+  setup_name: Proxy Investment via Strategic Partnership Announcement
+  setup_type: entry
+  market_condition: breakout
+  timeframe: intraday to swing
+  strategy_style: swing
+  channel_name: not specified
+  video_title: not specified
+  risk_reward: not specified
+  keywords: proxy_investment,catalyst_trade,strategic_partnership,fundamentals,M
+icrosoft,OpenAI
+  assets: stocks
+  author_concept: False
+  chunk_text (first 250): Setup: Proxy Investment via Strategic Partnership Anno
+uncement
+Type: entry
+When a major strategic investment is publicly announced between two companies, b
+uying the publicly traded entity that is deploying capital into a high-growth pr
+ivate asset ser
+
+--- Record 3 ---
+  ID: Luke Belmar Investing Strategy_3_2
+  setup_name: Leverage Play via Bitcoin-Correlated Equity
+  setup_type: entry
+  market_condition: trending
+  timeframe: positional
+  strategy_style: positional
+  channel_name: not specified
+  video_title: not specified
+  risk_reward: not specified
+  keywords: MicroStrategy,MSTR,Bitcoin_proxy,leverage_play,positional,value_inve
+sting
+  assets: stocks,crypto
+  author_concept: False
+  chunk_text (first 250): Setup: Leverage Play via Bitcoin-Correlated Equity
+Type: entry
+MicroStrategy (MSTR) is identified as a leveraged proxy trade on Bitcoin's long-
+term trajectory. The thesis is binary: if Bitcoin eventually reaches new all-tim
+e highs — which the speaker
+
+--- Record 4 ---
+  ID: Luke Belmar Investing Strategy_4_3
+  setup_name: Sector Expertise as Earnings Catalyst Edge
+  setup_type: confirmation
+  market_condition: trending
+  timeframe: swing
+  strategy_style: swing
+  channel_name: not specified
+  video_title: not specified
+  risk_reward: not specified
+  keywords: earnings_catalyst,sector_edge,Meta,Shopify,pre-earnings_trade,e-comm
+erce
+  assets: stocks
+  author_concept: False
+  chunk_text (first 250): Setup: Sector Expertise as Earnings Catalyst Edge
+Type: confirmation
+The speaker uses deep operating knowledge within e-commerce to front-run earning
+s catalysts. The edge is that someone actively managing Facebook ad campaigns an
+d running e-commerce
+
+--- Record 5 ---
+  ID: The Best Crypto Projects_5_4
+  setup_name: Crypto Cycle Round-Trip Prevention Strategy
+  setup_type: trade_management
+  market_condition: volatile
+  timeframe: positional
+  strategy_style: positional
+  channel_name: not specified
+  video_title: not specified
+  risk_reward: not specified
+  keywords: crypto_cycle,round_trip_prevention,bear_market_entry,bull_market_exi
+t,cycle_trading
+  assets: crypto
+  author_concept: False
+  chunk_text (first 250): Setup: Crypto Cycle Round-Trip Prevention Strategy
+Type: trade_management
+The speaker describes a structured approach to avoid the common crypto pattern o
+f riding gains to the top and then losing everything during the subsequent bear
+market — a patte
+
+

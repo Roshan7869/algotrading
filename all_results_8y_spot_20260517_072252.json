@@ -1,0 +1,582 @@
+{
+  "existing_spot_8y": {
+    "AroonMomentumEngine_Hybrid": {
+      "status": "NO_DATA",
+      "elapsed": 80.1,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "BollingerMeanReversion": {
+      "status": "NO_DATA",
+      "elapsed": 100.1,
+      "trades": 240,
+      "profit_pct": -51.23,
+      "win_rate": 55.4,
+      "dd_pct": 51.99
+    },
+    "DmiAdxStrategy": {
+      "status": "NO_DATA",
+      "elapsed": 85.3,
+      "trades": 14,
+      "profit_pct": -0.47,
+      "win_rate": 28.6,
+      "dd_pct": 3.5
+    },
+    "AroonMomentumEngine_V2": {
+      "status": "NO_DATA",
+      "elapsed": 200.4,
+      "trades": 87,
+      "profit_pct": -50.58,
+      "win_rate": 43.7,
+      "dd_pct": 50.58
+    },
+    "EmaTrendFollowing": {
+      "status": "NO_DATA",
+      "elapsed": 105.3,
+      "trades": 252,
+      "profit_pct": -49.86,
+      "win_rate": 48.8,
+      "dd_pct": 52.25
+    },
+    "MacdRsiStrategy": {
+      "status": "NO_DATA",
+      "elapsed": 80.1,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "RsiDivergenceStrategy": {
+      "status": "NO_DATA",
+      "elapsed": 115.2,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "VectorStrategy": {
+      "status": "DONE",
+      "elapsed": 115.3,
+      "trades": 1274,
+      "profit_pct": 135.26,
+      "win_rate": 74.7,
+      "dd_pct": 12.45
+    },
+    "VectorStrategy_GODMODE_BROKEN": {
+      "status": "ZERO_TRADES",
+      "elapsed": 20.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "SupertrendEmaStrategy": {
+      "status": "NO_DATA",
+      "elapsed": 180.4,
+      "trades": 210,
+      "profit_pct": -32.75,
+      "win_rate": 59.5,
+      "dd_pct": 42.25
+    },
+    "VectorStrategyV2": {
+      "status": "DONE",
+      "elapsed": 125.2,
+      "trades": 202,
+      "profit_pct": -3.29,
+      "win_rate": 63.9,
+      "dd_pct": 11.85
+    },
+    "VectorStrategy_P3A_RSI_DIVERGENCE_EXIT": {
+      "status": "DONE",
+      "elapsed": 85.1,
+      "trades": 202,
+      "profit_pct": 0.3,
+      "win_rate": 51.0,
+      "dd_pct": 5.41
+    },
+    "VectorStrategy_P3B_TIGHTER_TRAIL": {
+      "status": "DONE",
+      "elapsed": 80.0,
+      "trades": 201,
+      "profit_pct": -4.87,
+      "win_rate": 63.7,
+      "dd_pct": 13.0
+    },
+    "VectorStrategy_P3C_WIDER_TRAIL": {
+      "status": "DONE",
+      "elapsed": 80.2,
+      "trades": 202,
+      "profit_pct": -0.84,
+      "win_rate": 63.4,
+      "dd_pct": 11.43
+    },
+    "VectorStrategy_P3D_KILL_ZONE_FILTER": {
+      "status": "DONE",
+      "elapsed": 90.1,
+      "trades": 202,
+      "profit_pct": -2.12,
+      "win_rate": 63.4,
+      "dd_pct": 11.57
+    },
+    "VectorStrategy_P3D_KILL_ZONE_FORCED": {
+      "status": "DONE",
+      "elapsed": 90.1,
+      "trades": 202,
+      "profit_pct": -2.12,
+      "win_rate": 63.4,
+      "dd_pct": 11.57
+    },
+    "VectorStrategy_P3E_KEY_LEVEL_BOOST": {
+      "status": "DONE",
+      "elapsed": 105.1,
+      "trades": 1279,
+      "profit_pct": 178.91,
+      "win_rate": 74.6,
+      "dd_pct": 14.7
+    },
+    "VectorStrategy_P3F_KEY_LEVEL_TIGHT_TRAIL": {
+      "status": "DONE",
+      "elapsed": 105.1,
+      "trades": 1274,
+      "profit_pct": 135.26,
+      "win_rate": 74.7,
+      "dd_pct": 12.45
+    },
+    "ensemble_strategy": {
+      "status": "ZERO_TRADES",
+      "elapsed": 10.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "VectorStrategy_P3E_HYPEROPT": {
+      "status": "DONE",
+      "elapsed": 340.2,
+      "trades": 17232,
+      "profit_pct": 2489.64,
+      "win_rate": 75.4,
+      "dd_pct": 24.45
+    }
+  },
+  "generated_spot_8y": {
+    "GenStrategy_C001": {
+      "status": "NO_DATA",
+      "elapsed": 80.1,
+      "trades": 382,
+      "profit_pct": -50.36,
+      "win_rate": 57.9,
+      "dd_pct": 51.12
+    },
+    "GenStrategy_C002": {
+      "status": "NO_DATA",
+      "elapsed": 100.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C003": {
+      "status": "NO_DATA",
+      "elapsed": 100.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C004": {
+      "status": "NO_DATA",
+      "elapsed": 75.0,
+      "trades": 213,
+      "profit_pct": -50.73,
+      "win_rate": 40.8,
+      "dd_pct": 53.04
+    },
+    "GenStrategy_C005": {
+      "status": "NO_DATA",
+      "elapsed": 90.0,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C006": {
+      "status": "NO_DATA",
+      "elapsed": 90.0,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C007": {
+      "status": "NO_DATA",
+      "elapsed": 90.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C008": {
+      "status": "NO_DATA",
+      "elapsed": 105.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C009": {
+      "status": "NO_DATA",
+      "elapsed": 105.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C010": {
+      "status": "NO_DATA",
+      "elapsed": 110.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C014": {
+      "status": "ZERO_TRADES",
+      "elapsed": 15.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C011": {
+      "status": "NO_DATA",
+      "elapsed": 110.0,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C012": {
+      "status": "NO_DATA",
+      "elapsed": 110.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C015": {
+      "status": "NO_DATA",
+      "elapsed": 85.0,
+      "trades": 382,
+      "profit_pct": -50.36,
+      "win_rate": 57.9,
+      "dd_pct": 51.12
+    },
+    "GenStrategy_C016": {
+      "status": "NO_DATA",
+      "elapsed": 65.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C017": {
+      "status": "NO_DATA",
+      "elapsed": 90.0,
+      "trades": 155,
+      "profit_pct": -50.61,
+      "win_rate": 47.7,
+      "dd_pct": 51.92
+    },
+    "GenStrategy_C018": {
+      "status": "NO_DATA",
+      "elapsed": 105.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C019": {
+      "status": "NO_DATA",
+      "elapsed": 100.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C020": {
+      "status": "NO_DATA",
+      "elapsed": 100.6,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C021": {
+      "status": "NO_DATA",
+      "elapsed": 110.6,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C022": {
+      "status": "NO_DATA",
+      "elapsed": 110.6,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C023": {
+      "status": "NO_DATA",
+      "elapsed": 105.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C025": {
+      "status": "NO_DATA",
+      "elapsed": 100.2,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C026": {
+      "status": "NO_DATA",
+      "elapsed": 90.2,
+      "trades": 90,
+      "profit_pct": -50.62,
+      "win_rate": 56.7,
+      "dd_pct": 51.45
+    },
+    "GenStrategy_C027": {
+      "status": "NO_DATA",
+      "elapsed": 100.2,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_C028": {
+      "status": "NO_DATA",
+      "elapsed": 65.1,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_C029": {
+      "status": "NO_DATA",
+      "elapsed": 110.4,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N001": {
+      "status": "NO_DATA",
+      "elapsed": 90.4,
+      "trades": 202,
+      "profit_pct": -49.76,
+      "win_rate": 39.6,
+      "dd_pct": 50.5
+    },
+    "GenStrategy_N002": {
+      "status": "NO_DATA",
+      "elapsed": 105.4,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N005": {
+      "status": "NO_DATA",
+      "elapsed": 80.1,
+      "trades": 155,
+      "profit_pct": -50.61,
+      "win_rate": 47.7,
+      "dd_pct": 51.92
+    },
+    "GenStrategy_N004": {
+      "status": "NO_DATA",
+      "elapsed": 100.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N007": {
+      "status": "NO_DATA",
+      "elapsed": 115.2,
+      "trades": 848,
+      "profit_pct": -51.55,
+      "win_rate": 57.2,
+      "dd_pct": 52.73
+    },
+    "GenStrategy_N008": {
+      "status": "NO_DATA",
+      "elapsed": 110.2,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N009": {
+      "status": "NO_DATA",
+      "elapsed": 105.2,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N010": {
+      "status": "NO_DATA",
+      "elapsed": 105.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N012": {
+      "status": "NO_DATA",
+      "elapsed": 110.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N013": {
+      "status": "NO_DATA",
+      "elapsed": 115.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N014": {
+      "status": "NO_DATA",
+      "elapsed": 105.4,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N015": {
+      "status": "NO_DATA",
+      "elapsed": 100.4,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N016": {
+      "status": "NO_DATA",
+      "elapsed": 105.4,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N017": {
+      "status": "NO_DATA",
+      "elapsed": 80.1,
+      "trades": 251,
+      "profit_pct": -49.95,
+      "win_rate": 48.2,
+      "dd_pct": 52.32
+    },
+    "GenStrategy_N019": {
+      "status": "NO_DATA",
+      "elapsed": 45.0,
+      "trades": 0,
+      "profit_pct": 0.0,
+      "win_rate": 0.0,
+      "dd_pct": 0.0
+    },
+    "GenStrategy_N018": {
+      "status": "NO_DATA",
+      "elapsed": 85.1,
+      "trades": 56,
+      "profit_pct": -14.23,
+      "win_rate": 42.9,
+      "dd_pct": 17.11
+    },
+    "GenStrategy_N020": {
+      "status": "NO_DATA",
+      "elapsed": 90.1,
+      "trades": 497,
+      "profit_pct": -50.57,
+      "win_rate": 53.5,
+      "dd_pct": 52.54
+    },
+    "GenStrategy_N021": {
+      "status": "NO_DATA",
+      "elapsed": 85.1,
+      "trades": 56,
+      "profit_pct": -14.23,
+      "win_rate": 42.9,
+      "dd_pct": 17.11
+    },
+    "GenStrategy_N022": {
+      "status": "NO_DATA",
+      "elapsed": 100.1,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N023": {
+      "status": "NO_DATA",
+      "elapsed": 85.1,
+      "trades": 155,
+      "profit_pct": -50.61,
+      "win_rate": 47.7,
+      "dd_pct": 51.92
+    },
+    "GenStrategy_N024": {
+      "status": "NO_DATA",
+      "elapsed": 110.3,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N025": {
+      "status": "NO_DATA",
+      "elapsed": 100.3,
+      "trades": 251,
+      "profit_pct": -49.95,
+      "win_rate": 48.2,
+      "dd_pct": 52.32
+    },
+    "GenStrategy_N026": {
+      "status": "NO_DATA",
+      "elapsed": 165.2,
+      "trades": 697,
+      "profit_pct": -49.9,
+      "win_rate": 59.7,
+      "dd_pct": 50.96
+    },
+    "GenStrategy_N027": {
+      "status": "NO_DATA",
+      "elapsed": 145.2,
+      "trades": 176,
+      "profit_pct": -49.9,
+      "win_rate": 58.5,
+      "dd_pct": 54.42
+    },
+    "GenStrategy_N028": {
+      "status": "NO_DATA",
+      "elapsed": 140.2,
+      "trades": 382,
+      "profit_pct": -50.36,
+      "win_rate": 57.9,
+      "dd_pct": 51.12
+    }
+  }
+}

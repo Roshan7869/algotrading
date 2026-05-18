@@ -1,0 +1,53 @@
+{
+  "timerange": "20250817-20260517",
+  "pairs": "BTC/USDT:USDT ETH/USDT:USDT XRP/USDT:USDT DOGE/USDT:USDT",
+  "config": "user_data/config.json",
+  "timestamp": "2026-05-17T13:37:27.584798",
+  "results": {
+    "VectorStrategy_P3E_KEY_LEVEL_BOOST": {
+      "result": "OK",
+      "time_s": 12.5,
+      "total_raw": "\u2502 Total trade volume                     \u2502 4476.127 USDT                             \u2502"
+    },
+    "VectorOmni_LiquidTrap": {
+      "result": "OK",
+      "time_s": 13.1,
+      "total_raw": "\u2502 Total trade volume                     \u2502 3733.826 USDT                             \u2502"
+    },
+    "VectorOmni_ATRBoost": {
+      "result": "OK",
+      "time_s": 16.8,
+      "total_raw": "\u2502 Total trade volume                     \u2502 3720.096 USDT                             \u2502"
+    },
+    "VectorOmni_CandleFilter": {
+      "result": "OK",
+      "time_s": 12.2,
+      "total_raw": "\u2502 Total trade volume                     \u2502 600.958 USDT                              \u2502"
+    },
+    "VectorOmni_RegimeAdaptive": {
+      "result": "OK",
+      "time_s": 12.5,
+      "total_raw": "\u2502 Total trade volume                     \u2502 3478.758 USDT                             \u2502"
+    },
+    "VectorOmni_FVG_OB": {
+      "result": "OK",
+      "time_s": 15.1,
+      "total_raw": "\u2502 Total trade volume                     \u2502 19485.898 USDT                            \u2502"
+    },
+    "VectorOmni_MeanRevEV": {
+      "result": "OK",
+      "time_s": 13.1,
+      "total_raw": "\u2502 Total trade volume                     \u2502 2203.203 USDT                             \u2502"
+    },
+    "VectorOmni_Alistair21": {
+      "result": "OK",
+      "time_s": 12.9,
+      "total_raw": "\u2502 Total trade volume                     \u2502 4476.127 USDT                             \u2502"
+    },
+    "VectorOmni_MetaLearner": {
+      "result": "OK",
+      "time_s": 13.6,
+      "total_raw": "\u2502 Total trade volume                     \u2502 4476.127 USDT                             \u2502"
+    }
+  }
+}

@@ -1,0 +1,228 @@
+﻿{
+    "timerange":  "20250403-20260128",
+    "strategies_tested":  41,
+    "top_strategies":  [
+                           "Stockbee_EP_Strategy",
+                           "ParabolicSARMomentumStrategy",
+                           "DAVEY_01_EURO_NIGHT_ADAPTED",
+                           "MomentumBreakoutStrategy",
+                           "WilliamsRSI_MACDStrategy",
+                           "DualCCIPullbackStrategy",
+                           "ChrisVerma_GapShort_Strategy",
+                           "RSIDCAMomentumScalerStrategy",
+                           "MeanReversionBBStrategy",
+                           "ALMAMACDMomentumCrossStrategy"
+                       ],
+    "results":  {
+                    "ALMA_MACDStrategy":  {
+                                              "SOL/USDT:USDT":  "SUCCESS",
+                                              "DOGE/USDT:USDT":  "SUCCESS",
+                                              "XRP/USDT:USDT":  "SUCCESS"
+                                          },
+                    "MixtureOfExperts":  {
+                                             "SOL/USDT:USDT":  "FAILED",
+                                             "DOGE/USDT:USDT":  "FAILED",
+                                             "XRP/USDT:USDT":  "FAILED"
+                                         },
+                    "EMA8_13_21_MACDStrategy":  {
+                                                    "SOL/USDT:USDT":  "SUCCESS",
+                                                    "DOGE/USDT:USDT":  "SUCCESS",
+                                                    "XRP/USDT:USDT":  "SUCCESS"
+                                                },
+                    "IchimokuCloudTrendStrategy":  {
+                                                       "SOL/USDT:USDT":  "SUCCESS",
+                                                       "DOGE/USDT:USDT":  "SUCCESS",
+                                                       "XRP/USDT:USDT":  "SUCCESS"
+                                                   },
+                    "MarcoAcetoni_LiquidityTrap_Strategy":  {
+                                                                "SOL/USDT:USDT":  "SUCCESS",
+                                                                "DOGE/USDT:USDT":  "SUCCESS",
+                                                                "XRP/USDT:USDT":  "SUCCESS"
+                                                            },
+                    "AroonMomentumStrategy":  {
+                                                  "SOL/USDT:USDT":  "SUCCESS",
+                                                  "DOGE/USDT:USDT":  "SUCCESS",
+                                                  "XRP/USDT:USDT":  "SUCCESS"
+                                              },
+                    "QuantTactics_Supertrend_Strategy":  {
+                                                             "SOL/USDT:USDT":  "SUCCESS",
+                                                             "DOGE/USDT:USDT":  "SUCCESS",
+                                                             "XRP/USDT:USDT":  "SUCCESS"
+                                                         },
+                    "StrategyOrchestratorStrategy":  {
+                                                         "SOL/USDT:USDT":  "FAILED",
+                                                         "DOGE/USDT:USDT":  "FAILED",
+                                                         "XRP/USDT:USDT":  "FAILED"
+                                                     },
+                    "DAVEY_02_EURO_DAY_ADAPTED":  {
+                                                      "SOL/USDT:USDT":  "SUCCESS",
+                                                      "DOGE/USDT:USDT":  "SUCCESS",
+                                                      "XRP/USDT:USDT":  "SUCCESS"
+                                                  },
+                    "WMA_MACDStrategy":  {
+                                             "SOL/USDT:USDT":  "SUCCESS",
+                                             "DOGE/USDT:USDT":  "SUCCESS",
+                                             "XRP/USDT:USDT":  "SUCCESS"
+                                         },
+                    "WhaleMomentumStrategy":  {
+                                                  "SOL/USDT:USDT":  "SUCCESS",
+                                                  "DOGE/USDT:USDT":  "SUCCESS",
+                                                  "XRP/USDT:USDT":  "SUCCESS"
+                                              },
+                    "DCAMartingaleStrategy":  {
+                                                  "SOL/USDT:USDT":  "SUCCESS",
+                                                  "DOGE/USDT:USDT":  "SUCCESS",
+                                                  "XRP/USDT:USDT":  "SUCCESS"
+                                              },
+                    "SupertrendEMAMomentumStrategy":  {
+                                                          "SOL/USDT:USDT":  "FAILED",
+                                                          "DOGE/USDT:USDT":  "FAILED",
+                                                          "XRP/USDT:USDT":  "FAILED"
+                                                      },
+                    "VWAPDMIStrategy":  {
+                                            "SOL/USDT:USDT":  "SUCCESS",
+                                            "DOGE/USDT:USDT":  "SUCCESS",
+                                            "XRP/USDT:USDT":  "SUCCESS"
+                                        },
+                    "ADXSMAChannelStrategy":  {
+                                                  "SOL/USDT:USDT":  "FAILED",
+                                                  "DOGE/USDT:USDT":  "FAILED",
+                                                  "XRP/USDT:USDT":  "FAILED"
+                                              },
+                    "EdriExtremePointsStrategy":  {
+                                                      "SOL/USDT:USDT":  "SUCCESS",
+                                                      "DOGE/USDT:USDT":  "SUCCESS",
+                                                      "XRP/USDT:USDT":  "SUCCESS"
+                                                  },
+                    "ADXOBVMomentumStrategy":  {
+                                                   "SOL/USDT:USDT":  "SUCCESS",
+                                                   "DOGE/USDT:USDT":  "SUCCESS",
+                                                   "XRP/USDT:USDT":  "SUCCESS"
+                                               },
+                    "AroonMACDStrategy":  {
+                                              "SOL/USDT:USDT":  "SUCCESS",
+                                              "DOGE/USDT:USDT":  "SUCCESS",
+                                              "XRP/USDT:USDT":  "SUCCESS"
+                                          },
+                    "FibonacciEMATrendStrategy":  {
+                                                      "SOL/USDT:USDT":  "FAILED",
+                                                      "DOGE/USDT:USDT":  "FAILED",
+                                                      "XRP/USDT:USDT":  "FAILED"
+                                                  },
+                    "ChrisVerma_GapShort_Strategy":  {
+                                                         "SOL/USDT:USDT":  "SUCCESS",
+                                                         "DOGE/USDT:USDT":  "SUCCESS",
+                                                         "XRP/USDT:USDT":  "SUCCESS"
+                                                     },
+                    "DualCCIPullbackStrategy":  {
+                                                    "SOL/USDT:USDT":  "SUCCESS",
+                                                    "DOGE/USDT:USDT":  "SUCCESS",
+                                                    "XRP/USDT:USDT":  "SUCCESS"
+                                                },
+                    "MeanReversionBBStrategy":  {
+                                                    "SOL/USDT:USDT":  "SUCCESS",
+                                                    "DOGE/USDT:USDT":  "SUCCESS",
+                                                    "XRP/USDT:USDT":  "SUCCESS"
+                                                },
+                    "RSIDCAMomentumScalerStrategy":  {
+                                                         "SOL/USDT:USDT":  "SUCCESS",
+                                                         "DOGE/USDT:USDT":  "SUCCESS",
+                                                         "XRP/USDT:USDT":  "SUCCESS"
+                                                     },
+                    "WilliamsRSI_MACDStrategy":  {
+                                                     "SOL/USDT:USDT":  "SUCCESS",
+                                                     "DOGE/USDT:USDT":  "SUCCESS",
+                                                     "XRP/USDT:USDT":  "SUCCESS"
+                                                 },
+                    "ParabolicSARMomentumStrategy":  {
+                                                         "SOL/USDT:USDT":  "SUCCESS",
+                                                         "DOGE/USDT:USDT":  "SUCCESS",
+                                                         "XRP/USDT:USDT":  "SUCCESS"
+                                                     },
+                    "Stockbee_EP_Strategy":  {
+                                                 "SOL/USDT:USDT":  "SUCCESS",
+                                                 "DOGE/USDT:USDT":  "SUCCESS",
+                                                 "XRP/USDT:USDT":  "SUCCESS"
+                                             },
+                    "MomentumBreakoutStrategy":  {
+                                                     "SOL/USDT:USDT":  "SUCCESS",
+                                                     "DOGE/USDT:USDT":  "SUCCESS",
+                                                     "XRP/USDT:USDT":  "SUCCESS"
+                                                 },
+                    "DAVEY_01_EURO_NIGHT_ADAPTED":  {
+                                                        "SOL/USDT:USDT":  "SUCCESS",
+                                                        "DOGE/USDT:USDT":  "SUCCESS",
+                                                        "XRP/USDT:USDT":  "SUCCESS"
+                                                    },
+                    "LLM_Regime_Strategy":  {
+                                                "SOL/USDT:USDT":  "SUCCESS",
+                                                "DOGE/USDT:USDT":  "SUCCESS",
+                                                "XRP/USDT:USDT":  "SUCCESS"
+                                            },
+                    "MeanReversionSqueezeStrategy":  {
+                                                         "SOL/USDT:USDT":  "SUCCESS",
+                                                         "DOGE/USDT:USDT":  "SUCCESS",
+                                                         "XRP/USDT:USDT":  "SUCCESS"
+                                                     },
+                    "RSISMAMomentumStrategy":  {
+                                                   "SOL/USDT:USDT":  "SUCCESS",
+                                                   "DOGE/USDT:USDT":  "SUCCESS",
+                                                   "XRP/USDT:USDT":  "SUCCESS"
+                                               },
+                    "UnifiedTrendStrategy":  {
+                                                 "SOL/USDT:USDT":  "SUCCESS",
+                                                 "DOGE/USDT:USDT":  "SUCCESS",
+                                                 "XRP/USDT:USDT":  "SUCCESS"
+                                             },
+                    "ForestKnight_VPE_Strategy":  {
+                                                      "SOL/USDT:USDT":  "SUCCESS",
+                                                      "DOGE/USDT:USDT":  "SUCCESS",
+                                                      "XRP/USDT:USDT":  "SUCCESS"
+                                                  },
+                    "TripleMAStrategy":  {
+                                             "SOL/USDT:USDT":  "SUCCESS",
+                                             "DOGE/USDT:USDT":  "SUCCESS",
+                                             "XRP/USDT:USDT":  "SUCCESS"
+                                         },
+                    "TEMA_ADX_CMOStrategy":  {
+                                                 "SOL/USDT:USDT":  "FAILED",
+                                                 "DOGE/USDT:USDT":  "FAILED",
+                                                 "XRP/USDT:USDT":  "FAILED"
+                                             },
+                    "StochasticMomentumDipBuyerStrategy":  {
+                                                               "SOL/USDT:USDT":  "SUCCESS",
+                                                               "DOGE/USDT:USDT":  "SUCCESS",
+                                                               "XRP/USDT:USDT":  "SUCCESS"
+                                                           },
+                    "AwesomeMACDRSIStrategy":  {
+                                                   "SOL/USDT:USDT":  "FAILED",
+                                                   "DOGE/USDT:USDT":  "FAILED",
+                                                   "XRP/USDT:USDT":  "FAILED"
+                                               },
+                    "ALMAMACDMomentumCrossStrategy":  {
+                                                          "SOL/USDT:USDT":  "SUCCESS",
+                                                          "DOGE/USDT:USDT":  "SUCCESS",
+                                                          "XRP/USDT:USDT":  "SUCCESS"
+                                                      },
+                    "AuditTestStrategy":  {
+                                              "SOL/USDT:USDT":  "FAILED",
+                                              "DOGE/USDT:USDT":  "FAILED",
+                                              "XRP/USDT:USDT":  "SUCCESS"
+                                          },
+                    "Donchian_ADX_CHOPStrategy":  {
+                                                      "SOL/USDT:USDT":  "SUCCESS",
+                                                      "DOGE/USDT:USDT":  "SUCCESS",
+                                                      "XRP/USDT:USDT":  "SUCCESS"
+                                                  },
+                    "DAVEY_03_WC_2005_DAILY":  {
+                                                   "SOL/USDT:USDT":  "SUCCESS",
+                                                   "DOGE/USDT:USDT":  "SUCCESS",
+                                                   "XRP/USDT:USDT":  "SUCCESS"
+                                               }
+                },
+    "pairs":  [
+                  "XRP/USDT:USDT",
+                  "DOGE/USDT:USDT",
+                  "SOL/USDT:USDT"
+              ]
+}

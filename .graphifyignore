@@ -1,0 +1,20 @@
+# Exclude noisy directories from knowledge graph
+tests/
+docs/
+ft_client/
+docker/
+Algo @ 2/
+financial-services-plugins/
+freqtrade/rpc/api_server/ui/
+freqtrade/test_framework/
+freqtrade/tests/
+user_data/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.git/
+graphify-out/
+*.log
+*.sqlite
+*.db
