@@ -1,5 +1,9 @@
 {
-  "sentiment_score": 0.6,
-  "_timestamp": "2026-05-14T11:45:45.301930+00:00",
-  "_written_by": "signal_bus:343553"
+  "sentiment_score": 0.608,
+  "raw_score": 0.215,
+  "article_count": 20,
+  "dominant": "bullish",
+  "recent_articles": 10,
+  "_timestamp": "2026-05-18T18:43:25.789725+00:00",
+  "_written_by": "signal_bus:160001"
 }
