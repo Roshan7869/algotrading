@@ -1,0 +1,29 @@
+{
+    "strategy_name": "IVB_ORB_Crypto_V5",
+    "params": {
+        "roi": {"0": 100},
+        "max_open_trades": {"max_open_trades": 3},
+        "buy": {
+            "leverage_num": 5.0,
+            "orb_start_hour_utc": 13,
+            "delta_zscore_threshold": 2.0,
+            "max_orb_atr_ratio": 2.9,
+            "min_orb_range_pct": 0.6,
+            "orb_duration": 12,
+            "volume_mult": 1.9
+        },
+        "sell": {
+            "bez_threshold": 0.016,
+            "trail_after_bez": 0.005
+        },
+        "stoploss": {"stoploss": -0.08},
+        "trailing": {
+            "trailing_stop": true,
+            "trailing_stop_positive": 0.01,
+            "trailing_stop_positive_offset": 0.097,
+            "trailing_only_offset_is_reached": false
+        }
+    },
+    "ft_stratparam_v": 1,
+    "export_time": "2026-05-19 08:20:34.113194+00:00"
+}

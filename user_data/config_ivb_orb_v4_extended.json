@@ -1,0 +1,55 @@
+{
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "max_open_trades": 3,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "dry_run_wallet": 100,
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "pair_whitelist": [
+            "BTC/USDT:USDT",
+            "ETH/USDT:USDT",
+            "SOL/USDT:USDT",
+            "XRP/USDT:USDT",
+            "NEAR/USDT:USDT",
+            "ZEC/USDT:USDT",
+            "ATOM/USDT:USDT",
+            "STORJ/USDT:USDT",
+            "DOGE/USDT:USDT",
+            "LTC/USDT:USDT",
+            "LINK/USDT:USDT",
+            "AVAX/USDT:USDT",
+            "ADA/USDT:USDT",
+            "OP/USDT:USDT",
+            "ARB/USDT:USDT",
+            "APT/USDT:USDT",
+            "FIL/USDT:USDT"
+        ],
+        "pair_blacklist": []
+    },
+    "pairlists": [
+        {"method": "StaticPairList"}
+    ],
+    "entry_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exit_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "order_types": {
+        "entry": "market",
+        "exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+    },
+    "timeframe": "5m",
+    "datadir": "user_data/data/binance",
+    "user_data_dir": "user_data"
+}
