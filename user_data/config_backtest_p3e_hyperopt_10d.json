@@ -1,0 +1,68 @@
+{
+  "strategy": "VectorStrategy_P3E_HYPEROPT",
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "max_open_trades": 3,
+  "stake_currency": "USDT",
+  "stake_amount": 50,
+  "tradable_balance_ratio": 0.7,
+  "dry_run_wallet": 1000,
+  "timeframe": "1h",
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "ccxt_config": {
+      "enableRateLimit": true
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true
+    },
+    "pair_whitelist": [
+      "NEAR/USDT:USDT",
+      "VET/USDT:USDT",
+      "ENA/USDT:USDT",
+      "ONDO/USDT:USDT",
+      "DOT/USDT:USDT",
+      "LINK/USDT:USDT",
+      "WLD/USDT:USDT",
+      "ARB/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "1000SHIB/USDT:USDT",
+      "OP/USDT:USDT",
+      "KAS/USDT:USDT",
+      "SUI/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "TRX/USDT:USDT",
+      "XLM/USDT:USDT"
+    ],
+    "pair_blacklist": [
+      "AAVE/USDT:USDT",
+      "HBAR/USDT:USDT",
+      "XMR/USDT:USDT",
+      "XTZ/USDT:USDT",
+      "ZEC/USDT:USDT",
+      "1000PEPE/USDT:USDT",
+      "SOL/USDT:USDT",
+      "BCH/USDT:USDT",
+      "RENDER/USDT:USDT"
+    ]
+  },
+  "entry_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "leverage": 3
+}
