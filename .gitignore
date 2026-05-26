@@ -17,3 +17,4 @@ user_data/backtest_results*/
 financial-services-plugins/
 graphify-out/
 *.pkl
+user_data/hyperopt_results/*.fthypt
