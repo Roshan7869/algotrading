@@ -1,0 +1,1 @@
+"""Freqtrade client SDK — local package root."""

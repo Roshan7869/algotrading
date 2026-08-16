@@ -1,0 +1,308 @@
+[
+  {
+    "strategy": "BOS_V1_ShortTop9",
+    "profit_pct": 7.18,
+    "trades": 9,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": 71.83,
+    "elapsed_s": 7.9
+  },
+  {
+    "strategy": "BOS_V2_Short_SL8",
+    "profit_pct": 7.18,
+    "trades": 9,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": 71.83,
+    "elapsed_s": 8.1
+  },
+  {
+    "strategy": "BOS_FRVP_LVN_VWAP",
+    "profit_pct": 6.65,
+    "trades": 10,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": 66.454,
+    "elapsed_s": 7.6
+  },
+  {
+    "strategy": "BOS_V5_Hyperopt",
+    "profit_pct": 6.23,
+    "trades": 10,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": 62.277,
+    "elapsed_s": 7.3
+  },
+  {
+    "strategy": "BOS_V2_Short_SL4",
+    "profit_pct": 4.39,
+    "trades": 9,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": 43.948,
+    "elapsed_s": 7.4
+  },
+  {
+    "strategy": "BOS_FRVP_LVN_VWAP_Short",
+    "profit_pct": 3.68,
+    "trades": 8,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": 36.755,
+    "elapsed_s": 7.0
+  },
+  {
+    "strategy": "BOS_V2_Short_SL6",
+    "profit_pct": 2.91,
+    "trades": 9,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": 29.13,
+    "elapsed_s": 7.3
+  },
+  {
+    "strategy": "BOS_V3_LateTrailMerge",
+    "profit_pct": 1.99,
+    "trades": 2,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": 19.94,
+    "elapsed_s": 7.7
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiLong",
+    "profit_pct": 0.33,
+    "trades": 10,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": 3.298,
+    "elapsed_s": 7.5
+  },
+  {
+    "strategy": "HedgeShortV1FixedTP",
+    "profit_pct": -0.43,
+    "trades": 4,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -4.311,
+    "elapsed_s": 7.7
+  },
+  {
+    "strategy": "HedgeShortV4MACDExit",
+    "profit_pct": -0.6,
+    "trades": 6,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -6.004,
+    "elapsed_s": 7.5
+  },
+  {
+    "strategy": "HedgeChampionP3F",
+    "profit_pct": -0.91,
+    "trades": 1,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -9.081,
+    "elapsed_s": 7.4
+  },
+  {
+    "strategy": "HedgeShortV3ATRTP",
+    "profit_pct": -0.93,
+    "trades": 6,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -9.328,
+    "elapsed_s": 7.1
+  },
+  {
+    "strategy": "Hedge07WinRateAdaptive",
+    "profit_pct": -1.1,
+    "trades": 1,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -10.982,
+    "elapsed_s": 7.0
+  },
+  {
+    "strategy": "HedgeShortV5RSIExit",
+    "profit_pct": -1.2,
+    "trades": 6,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -11.97,
+    "elapsed_s": 9.7
+  },
+  {
+    "strategy": "Hedge02RiskToZero",
+    "profit_pct": -2.19,
+    "trades": 2,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -21.856,
+    "elapsed_s": 7.2
+  },
+  {
+    "strategy": "Hedge04ConsecLossProtect",
+    "profit_pct": -2.19,
+    "trades": 2,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -21.856,
+    "elapsed_s": 6.8
+  },
+  {
+    "strategy": "HedgeMeta7in1",
+    "profit_pct": -2.19,
+    "trades": 2,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -21.856,
+    "elapsed_s": 6.8
+  },
+  {
+    "strategy": "HedgeShortV6Hybrid",
+    "profit_pct": -2.56,
+    "trades": 6,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -25.649,
+    "elapsed_s": 7.6
+  },
+  {
+    "strategy": "HedgeShortV2Trail",
+    "profit_pct": -2.98,
+    "trades": 6,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -29.765,
+    "elapsed_s": 7.3
+  },
+  {
+    "strategy": "Hedge01FixedFractional",
+    "profit_pct": -4.65,
+    "trades": 4,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -46.55,
+    "elapsed_s": 6.7
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiShort",
+    "profit_pct": -9.88,
+    "trades": 11,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -98.836,
+    "elapsed_s": 7.1
+  },
+  {
+    "strategy": "HedgeShortV1Baseline",
+    "profit_pct": -9.88,
+    "trades": 11,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -98.836,
+    "elapsed_s": 7.0
+  },
+  {
+    "strategy": "HedgeShortV2WideTrail",
+    "profit_pct": -9.88,
+    "trades": 11,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -98.836,
+    "elapsed_s": 7.4
+  },
+  {
+    "strategy": "HedgeShortV4Cascade",
+    "profit_pct": -9.88,
+    "trades": 11,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -98.836,
+    "elapsed_s": 7.3
+  },
+  {
+    "strategy": "HedgeShortV5PureTrail",
+    "profit_pct": -9.88,
+    "trades": 11,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -98.836,
+    "elapsed_s": 7.5
+  },
+  {
+    "strategy": "HedgeShortV6LateTrail",
+    "profit_pct": -9.88,
+    "trades": 11,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -98.836,
+    "elapsed_s": 7.7
+  },
+  {
+    "strategy": "HedgeShortV3ATRTrail",
+    "profit_pct": -11.73,
+    "trades": 11,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": -117.341,
+    "elapsed_s": 7.4
+  },
+  {
+    "strategy": "Hedge03HalfKelly",
+    "profit_pct": null,
+    "trades": null,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": null,
+    "elapsed_s": 7.2
+  },
+  {
+    "strategy": "Hedge05ScaleOut",
+    "profit_pct": null,
+    "trades": null,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": null,
+    "elapsed_s": 6.9
+  },
+  {
+    "strategy": "Hedge06AntiMartingale",
+    "profit_pct": null,
+    "trades": null,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": null,
+    "elapsed_s": 6.5
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsi",
+    "profit_pct": null,
+    "trades": null,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": null,
+    "elapsed_s": 7.0
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiV2",
+    "profit_pct": null,
+    "trades": null,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": null,
+    "elapsed_s": 6.8
+  },
+  {
+    "strategy": "BOSV4ShortStrict",
+    "profit_pct": null,
+    "trades": null,
+    "winrate": null,
+    "dd_pct": null,
+    "profit_usdt": null,
+    "elapsed_s": 7.3
+  }
+]

@@ -1,0 +1,17 @@
+[package]
+name = "ws-bridge"
+version = "0.1.0"
+edition = "2024"
+description = "Rust WS + indicators + Redis bridge for Algotrading"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = { version = "0.24", features = ["native-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+redis = { version = "0.27", features = ["tokio-comp"] }
+chrono = { version = "0.4", features = ["serde"] }
+futures-util = "0.3"
+data.workspace = true
+log = "0.4"
+env_logger = "0.11"

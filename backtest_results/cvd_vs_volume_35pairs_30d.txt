@@ -1,0 +1,26 @@
+CVD-Enhanced vs Volume-Confirmed Backtest Comparison
+=====================================================
+Config: config_cvd_all.json (35 pairs with CVD data)
+Timerange: 2026-04-24 to 2026-05-20 (26 days)
+Params: 12x leverage, 8% stop loss, unlimited stake, 1h timeframe
+
+CVD-Enhanced (BOS_FRVP_LVN_VWAP_CVD):
+  Trades: 2174 | Win%: 38.5% | Profit: -$82.99 (-8.30%)
+  Shorts: +$31.22 | Longs: -$114.21
+  Drawdown: $257.88 (25.79%)
+  Best: OP +$28.72, XTZ +$25.22, 1000PEPE +$25.06
+
+Volume-Confirmed (BOS_FRVP_LVN_VWAP_VolConfirm):
+  Trades: 1802 | Win%: 37.0% | Profit: +$6.11 (+0.61%)
+  Shorts: +$71.73 | Longs: -$65.62
+  Drawdown: $167.03 (16.64%)
+  Best: FIL +$26.06, BIO +$25.62, ZEC +$22.49
+
+Delta (CVD - Volume):
+  Trades: +372 | Win%: +1.5pp | Profit: -$89.10
+  Drawdown: +$90.84
+
+Conclusion: CVD confirmation added 372 more trades but they were
+net loss-making. CVD fails to scale - it's pair-dependent.
+Volume-confirmed is marginally profitable (+0.61%) with lower
+drawdown (16.64% vs 25.79%).
