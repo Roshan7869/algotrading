@@ -1,0 +1,21 @@
+{
+  "__source": ".opencode/mcp-shared.json",
+  "__docs": "Edit .opencode/mcp-shared.json instead of this file",
+  "mcpServers": {
+    "strategy-kb": {
+      "command": "python3",
+      "args": ["/home/roshan/Downloads/Algotrading/strategy_db/mcp_server.py"],
+      "env": {
+        "PYTHONPATH": "/home/roshan/Downloads/Algotrading"
+      }
+    },
+    "nexus": {
+      "command": "/home/roshan/nexus/venv/bin/python",
+      "args": ["/home/roshan/nexus/server/nexus-mcp-enhanced.py"],
+      "env": {
+        "NEXUS_DB_PATH": "/home/roshan/nexus/db/nexus.db",
+        "PYTHONPATH": "/home/roshan/nexus"
+      }
+    }
+  }
+}

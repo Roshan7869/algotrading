@@ -1,0 +1,236 @@
+[
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T21:45:49.789643+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.1,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T21:45:49.789617+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T21:45:49.826722+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.07500000000000001,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T21:45:49.826675+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T21:46:14.981337+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.1,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T21:46:14.981316+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T21:46:15.027860+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.07500000000000001,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T21:46:15.027837+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T21:50:16.041491+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.1,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T21:50:16.041443+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T21:50:18.014006+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.07500000000000001,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T21:50:18.013979+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T22:55:52.714541+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.1,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T22:55:52.714512+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T22:55:55.419368+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.07500000000000001,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T22:55:55.419346+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T22:57:53.771782+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.1,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T22:57:53.771739+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T22:57:56.075678+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.07500000000000001,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T22:57:56.075656+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T23:06:21.812656+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.1,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T23:06:21.812627+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T23:06:24.218652+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.07500000000000001,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T23:06:24.218626+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T23:10:35.481691+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.1,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T23:10:35.481661+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T23:10:37.678786+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.07500000000000001,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T23:10:37.678753+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T23:31:54.370922+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.1,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T23:31:54.370893+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T23:31:56.870221+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.07500000000000001,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T23:31:56.870201+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T23:34:29.443675+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.1,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T23:34:29.443644+00:00"
+    }
+  },
+  {
+    "type": "commands",
+    "timestamp": "2026-05-18T23:34:31.590255+00:00",
+    "data": {
+      "action": "entry",
+      "pair": "BTC/USDT",
+      "side": "long",
+      "amount": 0.07500000000000001,
+      "price": 50000,
+      "strategy": "test_strat",
+      "timestamp": "2026-05-18T23:34:31.590229+00:00"
+    }
+  }
+]

@@ -1,0 +1,48 @@
+# Macro Scan Swarm
+# Macroeconomic + alternative data analysis for top-down trading context.
+# Ideal for: morning briefing, regime detection, market trend analysis
+
+name: macro_scan
+description: Macroeconomic and alternative data analysis for market context
+topology: mesh
+max_agents: 3
+strategy: research
+
+agents:
+  - role: macro_analyst
+    model: deepseek-v4
+    prompt: |
+      Analyze macroeconomic conditions:
+      - Interest rate trends (Fed, ECB)
+      - Inflation data
+      - GDP growth forecasts
+      - Geopolitical events
+      Output market bias: BULLISH/BEARISH/NEUTRAL with rationale.
+    tools: [mcp_get_news]
+
+  - role: regime_classifier
+    model: deepseek-v4
+    prompt: |
+      Classify current market regime:
+      - Trending (uptrend/downtrend)
+      - Ranging
+      - Volatile
+      - Reversal
+      Use ATR, ADX, and price action for classification.
+      Recommend strategy type for current regime.
+    tools: [mcp_get_ohlcv, mcp_get_ta]
+
+  - role: alternative_data_analyst
+    model: deepseek-v4
+    prompt: |
+      Analyze alternative data signals:
+      - On-chain metrics (if crypto)
+      - Volume profile
+      - Correlation shifts
+      - Market breadth
+    tools: [mcp_get_quote, mcp_get_ohlcv]
+
+trigger:
+  type: time
+  at: "0 6 * * 1-5"
+  description: Weekdays at 06:00 UTC

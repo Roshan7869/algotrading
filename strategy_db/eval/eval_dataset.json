@@ -1,0 +1,2704 @@
+[
+  {
+    "query_id": "eval_001",
+    "query": "FVG entry strategy",
+    "relevant_chunk_ids": [
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept",
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept",
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept"
+    ]
+  },
+  {
+    "query_id": "eval_002",
+    "query": "how to place stop loss after FVG",
+    "relevant_chunk_ids": [
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept",
+      "ATR-Based Stop Loss and Target Sizing"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept",
+      "ATR-Based Stop Loss and Target Sizing"
+    ]
+  },
+  {
+    "query_id": "eval_003",
+    "query": "BOS break of structure trading",
+    "relevant_chunk_ids": [
+      "Trend Continuation Rule \u2014 Major Swing Low Must Hold (Uptrend)",
+      "Trend Continuation Rule \u2014 Major Swing Low Must Hold (Uptrend)"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Trend Continuation Rule \u2014 Major Swing Low Must Hold (Uptrend)",
+      "Trend Continuation Rule \u2014 Major Swing Low Must Hold (Uptrend)"
+    ]
+  },
+  {
+    "query_id": "eval_004",
+    "query": "ICT silver bullet setup",
+    "relevant_chunk_ids": [
+      "Kill Zone Time Filter \u2014 Only Trade Active Hours",
+      "ICT Framework Overview \u2014 Simplified Institutional Blueprint"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Kill Zone Time Filter \u2014 Only Trade Active Hours",
+      "ICT Framework Overview \u2014 Simplified Institutional Blueprint"
+    ]
+  },
+  {
+    "query_id": "eval_005",
+    "query": "SMC order block entry strategy",
+    "relevant_chunk_ids": [
+      "Order Block (OB) \u2014 Institutional Entry Zone Identification",
+      "ICT Framework Overview \u2014 Simplified Institutional Blueprint"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Order Block (OB) \u2014 Institutional Entry Zone Identification",
+      "ICT Framework Overview \u2014 Simplified Institutional Blueprint"
+    ]
+  },
+  {
+    "query_id": "eval_006",
+    "query": "how much to risk per trade",
+    "relevant_chunk_ids": [
+      "Fixed Fractional Sizing \u2014 1% Risk Per Trade",
+      "2% Daily Max Stop Loss"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Fixed Fractional Sizing \u2014 1% Risk Per Trade",
+      "2% Daily Max Stop Loss"
+    ]
+  },
+  {
+    "query_id": "eval_007",
+    "query": "R:R ratio target setting",
+    "relevant_chunk_ids": [
+      "Risk-Reward Target \u2014 Fixed R-Multiple Exit",
+      "Asymmetric Risk Portfolio Construction"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Risk-Reward Target \u2014 Fixed R-Multiple Exit",
+      "Asymmetric Risk Portfolio Construction"
+    ]
+  },
+  {
+    "query_id": "eval_008",
+    "query": "liquidity grab false breakout",
+    "relevant_chunk_ids": [
+      "Liquidity Sweep Reversal with Stop Placement Below Swept Low",
+      "Stop Hunt Reversal Exit \u2014 False Breakout"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Liquidity Sweep Reversal with Stop Placement Below Swept Low",
+      "Stop Hunt Reversal Exit \u2014 False Breakout"
+    ]
+  },
+  {
+    "query_id": "eval_009",
+    "query": "supply and demand zone trading",
+    "relevant_chunk_ids": [
+      "Market Structure Demand (Drop-Base-Rally) Pullback Long",
+      "Auction Area Framework \u2014 Core Trading Concept"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Market Structure Demand (Drop-Base-Rally) Pullback Long",
+      "Auction Area Framework \u2014 Core Trading Concept"
+    ]
+  },
+  {
+    "query_id": "eval_010",
+    "query": "trailing stop loss using ATR",
+    "relevant_chunk_ids": [
+      "Trailing Stop \u2014 ATR Multiple Exit",
+      "ATR-Based Stop Loss and Target Sizing"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Trailing Stop \u2014 ATR Multiple Exit",
+      "ATR-Based Stop Loss and Target Sizing"
+    ]
+  },
+  {
+    "query_id": "eval_011",
+    "query": "mean reversion strategy bollinger bands",
+    "relevant_chunk_ids": [
+      "Bollinger %b Reversal Exit \u2014 Overbought/Oversold Exit",
+      "Bollinger Band Width Expansion Exit \u2014 Move Complete"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Bollinger %b Reversal Exit \u2014 Overbought/Oversold Exit",
+      "Bollinger Band Width Expansion Exit \u2014 Move Complete"
+    ]
+  },
+  {
+    "query_id": "eval_012",
+    "query": "trend following EMA crossover system",
+    "relevant_chunk_ids": [
+      "EMA Crossover Exit \u2014 Trend Death Signal",
+      "8/21/34 Moving Averages as Exit Aid and Trend Strength Gauge"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "EMA Crossover Exit \u2014 Trend Death Signal",
+      "8/21/34 Moving Averages as Exit Aid and Trend Strength Gauge"
+    ]
+  },
+  {
+    "query_id": "eval_013",
+    "query": "RSI divergence reversal signal",
+    "relevant_chunk_ids": [
+      "RSI Divergence Exit \u2014 Momentum Exhaustion",
+      "Divergence Exhaustion \u2014 Multi-Indicator Convergence"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "RSI Divergence Exit \u2014 Momentum Exhaustion",
+      "Divergence Exhaustion \u2014 Multi-Indicator Convergence"
+    ]
+  },
+  {
+    "query_id": "eval_014",
+    "query": "Fibonacci retracement entry strategy",
+    "relevant_chunk_ids": [
+      "Fibonacci Extension Target \u2014 1.272 and 1.618",
+      "38.2% Candle \u2014 Fibonacci Body Validation Rule"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Fibonacci Extension Target \u2014 1.272 and 1.618",
+      "38.2% Candle \u2014 Fibonacci Body Validation Rule"
+    ]
+  },
+  {
+    "query_id": "eval_015",
+    "query": "market structure shift identification",
+    "relevant_chunk_ids": [
+      "Market Structure Shift (MSS) \u2014 Entry Trigger Confirmation",
+      "Break and Retest \u2014 Trend Continuation Entry"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Market Structure Shift (MSS) \u2014 Entry Trigger Confirmation",
+      "Break and Retest \u2014 Trend Continuation Entry"
+    ]
+  },
+  {
+    "query_id": "eval_016",
+    "query": "position sizing for small account",
+    "relevant_chunk_ids": [
+      "Fixed Fractional Sizing \u2014 0.5% Risk (Conservative)",
+      "Quarter-Kelly Sizing \u2014 Ultra Conservative Growth"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Fixed Fractional Sizing \u2014 0.5% Risk (Conservative)",
+      "Quarter-Kelly Sizing \u2014 Ultra Conservative Growth"
+    ]
+  },
+  {
+    "query_id": "eval_017",
+    "query": "how to exit a winning trade",
+    "relevant_chunk_ids": [
+      "Scale Out 1/3 \u2014 Three-Tier Profit Taking",
+      "Half Position Trailing \u2014 Split Exit Strategy"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Scale Out 1/3 \u2014 Three-Tier Profit Taking",
+      "Half Position Trailing \u2014 Split Exit Strategy"
+    ]
+  },
+  {
+    "query_id": "eval_018",
+    "query": "trading psychology fear of missing out",
+    "relevant_chunk_ids": [
+      "33/33/33 Rule: Mindset, Risk, Strategy",
+      "Avoid Trading From Financial Need"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "33/33/33 Rule: Mindset, Risk, Strategy",
+      "Avoid Trading From Financial Need"
+    ]
+  },
+  {
+    "query_id": "eval_019",
+    "query": "how to handle consecutive losses",
+    "relevant_chunk_ids": [
+      "Consecutive Loss Sizing \u2014 Reduce After Streaks",
+      "Drawdown-Reduced Sizing \u2014 Scale Down After Losses"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Consecutive Loss Sizing \u2014 Reduce After Streaks",
+      "Drawdown-Reduced Sizing \u2014 Scale Down After Losses"
+    ]
+  },
+  {
+    "query_id": "eval_020",
+    "query": "New York session trading strategy",
+    "relevant_chunk_ids": [
+      "New York Kill Zone \u2014 AM Session Power Moves",
+      "NYSE Open Momentum Burst \u2014 First 30 Minutes"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "New York Kill Zone \u2014 AM Session Power Moves",
+      "NYSE Open Momentum Burst \u2014 First 30 Minutes"
+    ]
+  },
+  {
+    "query_id": "eval_021",
+    "query": "London kill zone entry technique",
+    "relevant_chunk_ids": [
+      "London Kill Zone \u2014 Pre-Open Momentum Sweep",
+      "London-New York Overlap \u2014 Peak Volume Window"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "London Kill Zone \u2014 Pre-Open Momentum Sweep",
+      "London-New York Overlap \u2014 Peak Volume Window"
+    ]
+  },
+  {
+    "query_id": "eval_022",
+    "query": "Asian session range breakout",
+    "relevant_chunk_ids": [
+      "Asian Session Range \u2014 Low Volatility Accumulation",
+      "Asian Range Liquidity Sweep \u2014 Smart Money Entry Model"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Asian Session Range \u2014 Low Volatility Accumulation",
+      "Asian Range Liquidity Sweep \u2014 Smart Money Entry Model"
+    ]
+  },
+  {
+    "query_id": "eval_023",
+    "query": "breaker block reversal entry",
+    "relevant_chunk_ids": [
+      "Breaker Block \u2014 Failed Order Block as Reversal Zone",
+      "Order Block (OB) \u2014 Institutional Entry Zone Identification"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Breaker Block \u2014 Failed Order Block as Reversal Zone",
+      "Order Block (OB) \u2014 Institutional Entry Zone Identification"
+    ]
+  },
+  {
+    "query_id": "eval_024",
+    "query": "volume profile absorption detection",
+    "relevant_chunk_ids": [
+      "Absorption Pattern \u2014 Passive Order Detection at Support/Resistance",
+      "Absorption \u2013 High Volume, No Follow-Through"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Absorption Pattern \u2014 Passive Order Detection at Support/Resistance",
+      "Absorption \u2013 High Volume, No Follow-Through"
+    ]
+  },
+  {
+    "query_id": "eval_025",
+    "query": "how to backtest a trading strategy",
+    "relevant_chunk_ids": [
+      "Backtesting Protocol \u2014 100-Trade CEST Validation",
+      "Back Testing Process \u2014 100 Trades, Spreadsheet, TradingView Dual Chart"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Backtesting Protocol \u2014 100-Trade CEST Validation",
+      "Back Testing Process \u2014 100 Trades, Spreadsheet, TradingView Dual Chart"
+    ]
+  },
+  {
+    "query_id": "eval_026",
+    "query": "daily max loss limit rule",
+    "relevant_chunk_ids": [
+      "Daily Max Loss Exit \u2014 Circuit Breaker",
+      "2% Daily Max Stop Loss"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Daily Max Loss Exit \u2014 Circuit Breaker",
+      "2% Daily Max Stop Loss"
+    ]
+  },
+  {
+    "query_id": "eval_027",
+    "query": "VWAP reversion exit strategy",
+    "relevant_chunk_ids": [
+      "VWAP Reversion Exit \u2014 Price Returns to Value",
+      "Anchored VWAP from Trend Turn Candle \u2014 Exit and Bias Management Tool"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "VWAP Reversion Exit \u2014 Price Returns to Value",
+      "Anchored VWAP from Trend Turn Candle \u2014 Exit and Bias Management Tool"
+    ]
+  },
+  {
+    "query_id": "eval_028",
+    "query": "opening range breakout strategy",
+    "relevant_chunk_ids": [
+      "Opening Range Exit \u2014 First 15 Minutes Range",
+      "Open Drive Failure Exit \u2014 Trend Bar Reversal"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Opening Range Exit \u2014 First 15 Minutes Range",
+      "Open Drive Failure Exit \u2014 Trend Bar Reversal"
+    ]
+  },
+  {
+    "query_id": "eval_029",
+    "query": "parabolic SAR trailing stop",
+    "relevant_chunk_ids": [
+      "Parabolic SAR Trailing Exit",
+      "Trailing Stop \u2014 ATR Multiple Exit"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Parabolic SAR Trailing Exit",
+      "Trailing Stop \u2014 ATR Multiple Exit"
+    ]
+  },
+  {
+    "query_id": "eval_030",
+    "query": "Kill Zone time filter",
+    "relevant_chunk_ids": [
+      "Kill Zone Time Filter \u2014 Strict Time-Based Trade Filtering",
+      "Kill Zone Sizing \u2014 Increase During Active Hours"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Kill Zone Time Filter \u2014 Strict Time-Based Trade Filtering",
+      "Kill Zone Sizing \u2014 Increase During Active Hours"
+    ]
+  },
+  {
+    "query_id": "eval_031",
+    "query": "Kelly criterion position sizing",
+    "relevant_chunk_ids": [
+      "Kelly Criterion \u2014 Optimal f Position Sizing",
+      "Kelly With Cap \u2014 Maximum Position Limit"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Kelly Criterion \u2014 Optimal f Position Sizing",
+      "Kelly With Cap \u2014 Maximum Position Limit"
+    ]
+  },
+  {
+    "query_id": "eval_032",
+    "query": "how to avoid overtrading",
+    "relevant_chunk_ids": [
+      "Accept Limited Attempts Per Day",
+      "33/33/33 Rule: Mindset, Risk, Strategy"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Accept Limited Attempts Per Day",
+      "33/33/33 Rule: Mindset, Risk, Strategy"
+    ]
+  },
+  {
+    "query_id": "eval_033",
+    "query": "bitcoin long term compounding projection",
+    "relevant_chunk_ids": [
+      "Bitcoin Long-Term Compounding Return Estimate",
+      "Back 10 Years Compounding \u2014 Real Returns Occur in Later Cycles"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Bitcoin Long-Term Compounding Return Estimate",
+      "Back 10 Years Compounding \u2014 Real Returns Occur in Later Cycles"
+    ]
+  },
+  {
+    "query_id": "eval_034",
+    "query": "CEST framework conditions entry stop target",
+    "relevant_chunk_ids": [
+      "CEST Framework \u2014 Conditions, Entry, Stop, Target Strategy Builder",
+      "CEST Framework \u2014 Strategy Building Structure"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "CEST Framework \u2014 Conditions, Entry, Stop, Target Strategy Builder",
+      "CEST Framework \u2014 Strategy Building Structure"
+    ]
+  },
+  {
+    "query_id": "eval_035",
+    "query": "chandelier exit trailing stop",
+    "relevant_chunk_ids": [
+      "Chandelier Exit \u2014 Highest High Trailing",
+      "Trailing Stop \u2014 ATR Multiple Exit"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Chandelier Exit \u2014 Highest High Trailing",
+      "Trailing Stop \u2014 ATR Multiple Exit"
+    ]
+  },
+  {
+    "query_id": "eval_036",
+    "query": "correlation risk management multiple positions",
+    "relevant_chunk_ids": [
+      "Correlation Risk Exit \u2014 Multiple Positions Same Direction",
+      "Max Correlated Exposure \u2014 6% Rule"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Correlation Risk Exit \u2014 Multiple Positions Same Direction",
+      "Max Correlated Exposure \u2014 6% Rule"
+    ]
+  },
+  {
+    "query_id": "eval_037",
+    "query": "bearish liquidity trap after equal highs",
+    "relevant_chunk_ids": [
+      "Bearish Liquidity Trap \u2014 Short Setup After Sweep of Equal Highs",
+      "Liquidity Sweep Reversal with Stop Placement Below Swept Low"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Bearish Liquidity Trap \u2014 Short Setup After Sweep of Equal Highs",
+      "Liquidity Sweep Reversal with Stop Placement Below Swept Low"
+    ]
+  },
+  {
+    "query_id": "eval_038",
+    "query": "market regime adaptive position sizing",
+    "relevant_chunk_ids": [
+      "Regime-Adaptive Sizing \u2014 Trend/Range/Volatile",
+      "Adapt to market regime"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Regime-Adaptive Sizing \u2014 Trend/Range/Volatile",
+      "Adapt to market regime"
+    ]
+  },
+  {
+    "query_id": "eval_039",
+    "query": "trading psychology discipline routine",
+    "relevant_chunk_ids": [
+      "33/33/33 Rule: Mindset, Risk, Strategy",
+      "Algorithmic Trading Advantages Over Manual Trading"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "33/33/33 Rule: Mindset, Risk, Strategy",
+      "Algorithmic Trading Advantages Over Manual Trading"
+    ]
+  },
+  {
+    "query_id": "eval_040",
+    "query": "volatility adjusted stop loss VIX",
+    "relevant_chunk_ids": [
+      "Volatility-Adjusted Trailing Stop \u2014 VIX Regime",
+      "ATR-Based Stop Loss on Execution Timeframe"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Volatility-Adjusted Trailing Stop \u2014 VIX Regime",
+      "ATR-Based Stop Loss on Execution Timeframe"
+    ]
+  },
+  {
+    "query_id": "eval_041",
+    "query": "gap fill exit overnight gap target",
+    "relevant_chunk_ids": [
+      "Gap Fill Exit \u2014 Overnight Gap Target",
+      "Crypto Weekend Gap Risk \u2014 Friday Close to Sunday Open"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Gap Fill Exit \u2014 Overnight Gap Target",
+      "Crypto Weekend Gap Risk \u2014 Friday Close to Sunday Open"
+    ]
+  },
+  {
+    "query_id": "eval_042",
+    "query": "choppy vs trending market filter",
+    "relevant_chunk_ids": [
+      "Choppy vs Trending Market Filter",
+      "Regime Change Exit \u2014 Trend to Range Transition"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Choppy vs Trending Market Filter",
+      "Regime Change Exit \u2014 Trend to Range Transition"
+    ]
+  },
+  {
+    "query_id": "eval_043",
+    "query": "time based exit N bar expiration",
+    "relevant_chunk_ids": [
+      "Time-Based Exit \u2014 N-Bar Expiration",
+      "Time-Based Profit Target \u2014 Maximum Hold Duration by R"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Time-Based Exit \u2014 N-Bar Expiration",
+      "Time-Based Profit Target \u2014 Maximum Hold Duration by R"
+    ]
+  },
+  {
+    "query_id": "eval_044",
+    "query": "200 MA structure confluence area of value",
+    "relevant_chunk_ids": [
+      "200 MA + Structure Confluence \u2014 High-Probability Area of Value",
+      "50 EMA + Market Structure \u2014 A+ Setup Qualifier"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "200 MA + Structure Confluence \u2014 High-Probability Area of Value",
+      "50 EMA + Market Structure \u2014 A+ Setup Qualifier"
+    ]
+  },
+  {
+    "query_id": "eval_045",
+    "query": "news event exit pre announcement close",
+    "relevant_chunk_ids": [
+      "News Event Exit \u2014 Pre-Announcement Close",
+      "Pre-News Position Squaring \u2014 30 Minutes Before Major Data"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "News Event Exit \u2014 Pre-Announcement Close",
+      "Pre-News Position Squaring \u2014 30 Minutes Before Major Data"
+    ]
+  },
+  {
+    "query_id": "eval_046",
+    "query": "weekly loss limit circuit breaker",
+    "relevant_chunk_ids": [
+      "Weekly Loss Limit \u2014 Drawdown Protection",
+      "Circuit Breaker Exit \u2014 Drawdown Chain"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Weekly Loss Limit \u2014 Drawdown Protection",
+      "Circuit Breaker Exit \u2014 Drawdown Chain"
+    ]
+  },
+  {
+    "query_id": "eval_047",
+    "query": "scale out 50 30 20 profit taking",
+    "relevant_chunk_ids": [
+      "Scale Out 50-30-20 \u2014 Conservative-Aggressive Split",
+      "Scale Out 1/3 \u2014 Three-Tier Profit Taking"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Scale Out 50-30-20 \u2014 Conservative-Aggressive Split",
+      "Scale Out 1/3 \u2014 Three-Tier Profit Taking"
+    ]
+  },
+  {
+    "query_id": "eval_048",
+    "query": "fair value gap",
+    "relevant_chunk_ids": [
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept",
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept",
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept"
+    ]
+  },
+  {
+    "query_id": "eval_049",
+    "query": "orderblock",
+    "relevant_chunk_ids": [
+      "Order Block (OB) \u2014 Institutional Entry Zone Identification",
+      "Breaker Block \u2014 Failed Order Block as Reversal Zone"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Order Block (OB) \u2014 Institutional Entry Zone Identification",
+      "Breaker Block \u2014 Failed Order Block as Reversal Zone"
+    ]
+  },
+  {
+    "query_id": "eval_050",
+    "query": "how to compound a small trading account over years with consistent low risk per trade and avoid emotional decision making during drawdowns",
+    "relevant_chunk_ids": [
+      "Fixed Fractional Sizing \u2014 0.5% Risk (Conservative)",
+      "Back 10 Years Compounding \u2014 Real Returns Occur in Later Cycles",
+      "33/33/33 Rule: Mindset, Risk, Strategy"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Fixed Fractional Sizing \u2014 0.5% Risk (Conservative)",
+      "Back 10 Years Compounding \u2014 Real Returns Occur in Later Cycles",
+      "33/33/33 Rule: Mindset, Risk, Strategy"
+    ]
+  },
+  {
+    "query_id": "eval_051",
+    "query": "FVG entry in trending market",
+    "relevant_chunk_ids": [
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept"
+    ],
+    "setup_type": "entry",
+    "market_condition": "trending",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Fair Value Gap (FVG) \u2014 Imbalance Entry and Magnet Concept"
+    ]
+  },
+  {
+    "query_id": "eval_052",
+    "query": "Order block entry setup",
+    "relevant_chunk_ids": [
+      "Order Block (OB) \u2014 Institutional Entry Zone Identification"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Order Block (OB) \u2014 Institutional Entry Zone Identification"
+    ]
+  },
+  {
+    "query_id": "eval_053",
+    "query": "Break of compression squeeze entry",
+    "relevant_chunk_ids": [
+      "Break of Compression / Squeeze"
+    ],
+    "setup_type": "entry",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Break of Compression / Squeeze"
+    ]
+  },
+  {
+    "query_id": "eval_054",
+    "query": "Liquidity sweep reversal entry",
+    "relevant_chunk_ids": [
+      "Liquidity Sweep Reversal with Stop Placement Below Swept Low"
+    ],
+    "setup_type": "entry",
+    "market_condition": "ranging",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Liquidity Sweep Reversal with Stop Placement Below Swept Low"
+    ]
+  },
+  {
+    "query_id": "eval_055",
+    "query": "Optimal Trade Entry Fibonacci model",
+    "relevant_chunk_ids": [
+      "Optimal Trade Entry (OTE) \u2014 Fibonacci Entry Model"
+    ],
+    "setup_type": "entry",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Optimal Trade Entry (OTE) \u2014 Fibonacci Entry Model"
+    ]
+  },
+  {
+    "query_id": "eval_056",
+    "query": "Asian range liquidity sweep smart money",
+    "relevant_chunk_ids": [
+      "Asian Range Liquidity Sweep \u2014 Smart Money Entry Model"
+    ],
+    "setup_type": "entry",
+    "market_condition": "ranging",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Asian Range Liquidity Sweep \u2014 Smart Money Entry Model"
+    ]
+  },
+  {
+    "query_id": "eval_057",
+    "query": "Breaker block failed order block reversal",
+    "relevant_chunk_ids": [
+      "Breaker Block \u2014 Failed Order Block as Reversal Zone"
+    ],
+    "setup_type": "entry",
+    "market_condition": "reversal",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Breaker Block \u2014 Failed Order Block as Reversal Zone"
+    ]
+  },
+  {
+    "query_id": "eval_058",
+    "query": "Double bottom at 50 MA entry",
+    "relevant_chunk_ids": [
+      "Double Bottom / Double Top at 50 MA \u2014 Full CEST Strategy"
+    ],
+    "setup_type": "entry",
+    "market_condition": "reversal",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Double Bottom / Double Top at 50 MA \u2014 Full CEST Strategy"
+    ]
+  },
+  {
+    "query_id": "eval_059",
+    "query": "Market structure shift MSS entry trigger",
+    "relevant_chunk_ids": [
+      "Market Structure Shift (MSS) \u2014 Entry Trigger Confirmation"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Market Structure Shift (MSS) \u2014 Entry Trigger Confirmation"
+    ]
+  },
+  {
+    "query_id": "eval_060",
+    "query": "LVN low volume node rebalance entry",
+    "relevant_chunk_ids": [
+      "Low Volume Node (LVN) Rebalance"
+    ],
+    "setup_type": "entry",
+    "market_condition": "ranging",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Low Volume Node (LVN) Rebalance"
+    ]
+  },
+  {
+    "query_id": "eval_061",
+    "query": "Kill zone time filter entry window",
+    "relevant_chunk_ids": [
+      "Kill Zone Time Filter \u2014 Only Trade Active Hours"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Kill Zone Time Filter \u2014 Only Trade Active Hours"
+    ]
+  },
+  {
+    "query_id": "eval_062",
+    "query": "Engulfing candle trend continuation entry",
+    "relevant_chunk_ids": [
+      "Engulfing Candle \u2014 Trend Continuation Entry"
+    ],
+    "setup_type": "entry",
+    "market_condition": "trending",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Engulfing Candle \u2014 Trend Continuation Entry"
+    ]
+  },
+  {
+    "query_id": "eval_063",
+    "query": "First red day intraday entry protocol",
+    "relevant_chunk_ids": [
+      "First Red Day Intraday Entry Protocol \u2014 Three Entry Tiers"
+    ],
+    "setup_type": "entry",
+    "market_condition": "reversal",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "First Red Day Intraday Entry Protocol \u2014 Three Entry Tiers"
+    ]
+  },
+  {
+    "query_id": "eval_064",
+    "query": "Opening range breakout trend follow",
+    "relevant_chunk_ids": [
+      "Opening Range Breakout Intraday Trend Follow"
+    ],
+    "setup_type": "entry",
+    "market_condition": "breakout",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Opening Range Breakout Intraday Trend Follow"
+    ]
+  },
+  {
+    "query_id": "eval_065",
+    "query": "21 EMA pullback entry strategy",
+    "relevant_chunk_ids": [
+      "Entry 1 \u2014 21 EMA Pullback Entry"
+    ],
+    "setup_type": "entry",
+    "market_condition": "trending",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Entry 1 \u2014 21 EMA Pullback Entry"
+    ]
+  },
+  {
+    "query_id": "eval_066",
+    "query": "Consolidation breakout entry",
+    "relevant_chunk_ids": [
+      "Entry 2 \u2014 Consolidation Breakout Entry"
+    ],
+    "setup_type": "entry",
+    "market_condition": "breakout",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Entry 2 \u2014 Consolidation Breakout Entry"
+    ]
+  },
+  {
+    "query_id": "eval_067",
+    "query": "ICT AMD framework accumulation manipulation distribution",
+    "relevant_chunk_ids": [
+      "AMD Framework (Accumulation Manipulation Distribution)"
+    ],
+    "setup_type": "entry",
+    "market_condition": "ranging",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "AMD Framework (Accumulation Manipulation Distribution)"
+    ]
+  },
+  {
+    "query_id": "eval_068",
+    "query": "Power of 3 PO3 accumulation manipulation distribution",
+    "relevant_chunk_ids": [
+      "Power of 3 (PO3) \u2014 Accumulation, Manipulation, Distribution Sequence"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Power of 3 (PO3) \u2014 Accumulation, Manipulation, Distribution Sequence"
+    ]
+  },
+  {
+    "query_id": "eval_069",
+    "query": "Premium and discount zones entry timing",
+    "relevant_chunk_ids": [
+      "Premium and Discount Zones \u2014 Directional Bias for Entry Timing"
+    ],
+    "setup_type": "entry",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Premium and Discount Zones \u2014 Directional Bias for Entry Timing"
+    ]
+  },
+  {
+    "query_id": "eval_070",
+    "query": "Previous day low swing failure long entry",
+    "relevant_chunk_ids": [
+      "Previous Day Low Swing Failure Long"
+    ],
+    "setup_type": "entry",
+    "market_condition": "reversal",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Previous Day Low Swing Failure Long"
+    ]
+  },
+  {
+    "query_id": "eval_071",
+    "query": "ATR trailing stop exit management",
+    "relevant_chunk_ids": [
+      "Trailing Stop \u2014 ATR Multiple Exit"
+    ],
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Trailing Stop \u2014 ATR Multiple Exit"
+    ]
+  },
+  {
+    "query_id": "eval_072",
+    "query": "Risk reward target fixed R multiple exit",
+    "relevant_chunk_ids": [
+      "Risk-Reward Target \u2014 Fixed R-Multiple Exit"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Risk-Reward Target \u2014 Fixed R-Multiple Exit"
+    ]
+  },
+  {
+    "query_id": "eval_073",
+    "query": "RSI divergence momentum exhaustion exit",
+    "relevant_chunk_ids": [
+      "RSI Divergence Exit \u2014 Momentum Exhaustion"
+    ],
+    "setup_type": "exit",
+    "market_condition": "reversal",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "RSI Divergence Exit \u2014 Momentum Exhaustion"
+    ]
+  },
+  {
+    "query_id": "eval_074",
+    "query": "Volume exhaustion selling climax exit",
+    "relevant_chunk_ids": [
+      "Volume Exhaustion Exit \u2014 Selling/Buying Climax"
+    ],
+    "setup_type": "exit",
+    "market_condition": "volatile",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Volume Exhaustion Exit \u2014 Selling/Buying Climax"
+    ]
+  },
+  {
+    "query_id": "eval_075",
+    "query": "Scale out 50-30-20 profit taking",
+    "relevant_chunk_ids": [
+      "Scale Out 50-30-20 \u2014 Conservative-Aggressive Split"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Scale Out 50-30-20 \u2014 Conservative-Aggressive Split"
+    ]
+  },
+  {
+    "query_id": "eval_076",
+    "query": "Daily max loss circuit breaker exit",
+    "relevant_chunk_ids": [
+      "Daily Max Loss Exit \u2014 Circuit Breaker"
+    ],
+    "setup_type": "exit",
+    "market_condition": "volatile",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Daily Max Loss Exit \u2014 Circuit Breaker"
+    ]
+  },
+  {
+    "query_id": "eval_077",
+    "query": "Session close end of day exit",
+    "relevant_chunk_ids": [
+      "Session Close Exit \u2014 End of Day"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Session Close Exit \u2014 End of Day"
+    ]
+  },
+  {
+    "query_id": "eval_078",
+    "query": "Chandelier exit highest high trailing",
+    "relevant_chunk_ids": [
+      "Chandelier Exit \u2014 Highest High Trailing"
+    ],
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Chandelier Exit \u2014 Highest High Trailing"
+    ]
+  },
+  {
+    "query_id": "eval_079",
+    "query": "VWAP reversion exit price returns to value",
+    "relevant_chunk_ids": [
+      "VWAP Reversion Exit \u2014 Price Returns to Value"
+    ],
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "VWAP Reversion Exit \u2014 Price Returns to Value"
+    ]
+  },
+  {
+    "query_id": "eval_080",
+    "query": "Parabolic SAR trailing exit",
+    "relevant_chunk_ids": [
+      "Parabolic SAR Trailing Exit"
+    ],
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Parabolic SAR Trailing Exit"
+    ]
+  },
+  {
+    "query_id": "eval_081",
+    "query": "Gap fill overnight gap target exit",
+    "relevant_chunk_ids": [
+      "Gap Fill Exit \u2014 Overnight Gap Target"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Gap Fill Exit \u2014 Overnight Gap Target"
+    ]
+  },
+  {
+    "query_id": "eval_082",
+    "query": "News event pre-announcement close exit",
+    "relevant_chunk_ids": [
+      "News Event Exit \u2014 Pre-Announcement Close"
+    ],
+    "setup_type": "exit",
+    "market_condition": "volatile",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "News Event Exit \u2014 Pre-Announcement Close"
+    ]
+  },
+  {
+    "query_id": "eval_083",
+    "query": "Half position trailing split exit strategy",
+    "relevant_chunk_ids": [
+      "Half Position Trailing \u2014 Split Exit Strategy"
+    ],
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Half Position Trailing \u2014 Split Exit Strategy"
+    ]
+  },
+  {
+    "query_id": "eval_084",
+    "query": "ADX decline trend strength fading exit",
+    "relevant_chunk_ids": [
+      "ADX Decline Exit \u2014 Trend Strength Fading"
+    ],
+    "setup_type": "exit",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "ADX Decline Exit \u2014 Trend Strength Fading"
+    ]
+  },
+  {
+    "query_id": "eval_085",
+    "query": "Stop hunt reversal false breakout exit",
+    "relevant_chunk_ids": [
+      "Stop Hunt Reversal Exit \u2014 False Breakout"
+    ],
+    "setup_type": "exit",
+    "market_condition": "reversal",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Stop Hunt Reversal Exit \u2014 False Breakout"
+    ]
+  },
+  {
+    "query_id": "eval_086",
+    "query": "Maximum duration 48 hour cap exit",
+    "relevant_chunk_ids": [
+      "Maximum Duration Exit \u2014 48-Hour Cap"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Maximum Duration Exit \u2014 48-Hour Cap"
+    ]
+  },
+  {
+    "query_id": "eval_087",
+    "query": "Time based profit taking exit",
+    "relevant_chunk_ids": [
+      "Time-Based Profit Taking"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Time-Based Profit Taking"
+    ]
+  },
+  {
+    "query_id": "eval_088",
+    "query": "Bollinger band width expansion move complete exit",
+    "relevant_chunk_ids": [
+      "Bollinger Band Width Expansion Exit \u2014 Move Complete"
+    ],
+    "setup_type": "exit",
+    "market_condition": "volatile",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Bollinger Band Width Expansion Exit \u2014 Move Complete"
+    ]
+  },
+  {
+    "query_id": "eval_089",
+    "query": "Weekend flat exit clear before Saturday",
+    "relevant_chunk_ids": [
+      "Weekend Flat Exit \u2014 Clear Before Saturday"
+    ],
+    "setup_type": "exit",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Weekend Flat Exit \u2014 Clear Before Saturday"
+    ]
+  },
+  {
+    "query_id": "eval_090",
+    "query": "Dead trade no progress signal exit",
+    "relevant_chunk_ids": [
+      "Dead Trade Exit \u2014 No Progress Signal"
+    ],
+    "setup_type": "exit",
+    "market_condition": "ranging",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Dead Trade Exit \u2014 No Progress Signal"
+    ]
+  },
+  {
+    "query_id": "eval_091",
+    "query": "Fixed fractional 1 percent risk per trade",
+    "relevant_chunk_ids": [
+      "Fixed Fractional Sizing \u2014 1% Risk Per Trade"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Fixed Fractional Sizing \u2014 1% Risk Per Trade"
+    ]
+  },
+  {
+    "query_id": "eval_092",
+    "query": "Kelly criterion optimal position sizing",
+    "relevant_chunk_ids": [
+      "Kelly Criterion \u2014 Optimal f Position Sizing"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Kelly Criterion \u2014 Optimal f Position Sizing"
+    ]
+  },
+  {
+    "query_id": "eval_093",
+    "query": "ATR based stop loss and target sizing",
+    "relevant_chunk_ids": [
+      "ATR-Based Stop Loss and Target Sizing"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "volatile",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "ATR-Based Stop Loss and Target Sizing"
+    ]
+  },
+  {
+    "query_id": "eval_094",
+    "query": "Risk to zero ASAP trailing",
+    "relevant_chunk_ids": [
+      "Risk to Zero ASAP"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Risk to Zero ASAP"
+    ]
+  },
+  {
+    "query_id": "eval_095",
+    "query": "Maximum drawdown tolerance recovery math",
+    "relevant_chunk_ids": [
+      "Maximum Drawdown Tolerance and Recovery Math"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Maximum Drawdown Tolerance and Recovery Math"
+    ]
+  },
+  {
+    "query_id": "eval_096",
+    "query": "2 percent daily max stop loss",
+    "relevant_chunk_ids": [
+      "2% Daily Max Stop Loss"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "2% Daily Max Stop Loss"
+    ]
+  },
+  {
+    "query_id": "eval_097",
+    "query": "Weekly loss limit drawdown protection",
+    "relevant_chunk_ids": [
+      "Weekly Loss Limit \u2014 Drawdown Protection"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Weekly Loss Limit \u2014 Drawdown Protection"
+    ]
+  },
+  {
+    "query_id": "eval_098",
+    "query": "Stop loss placement structural stop beyond wick",
+    "relevant_chunk_ids": [
+      "Stop Loss Placement \u2014 Structural Stop Beyond Wick Extreme"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Stop Loss Placement \u2014 Structural Stop Beyond Wick Extreme"
+    ]
+  },
+  {
+    "query_id": "eval_099",
+    "query": "Risk of ruin calculator breakout trading",
+    "relevant_chunk_ids": [
+      "Risk of Ruin Calculator for Breakout Trading"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "breakout",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Risk of Ruin Calculator for Breakout Trading"
+    ]
+  },
+  {
+    "query_id": "eval_100",
+    "query": "Circuit breaker sizing daily weekly limits",
+    "relevant_chunk_ids": [
+      "Circuit Breaker Sizing \u2014 Daily and Weekly Limits"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "volatile",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Circuit Breaker Sizing \u2014 Daily and Weekly Limits"
+    ]
+  },
+  {
+    "query_id": "eval_101",
+    "query": "Max correlated exposure 6 percent rule",
+    "relevant_chunk_ids": [
+      "Max Correlated Exposure \u2014 6% Rule"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Max Correlated Exposure \u2014 6% Rule"
+    ]
+  },
+  {
+    "query_id": "eval_102",
+    "query": "Max open positions 5 position limit",
+    "relevant_chunk_ids": [
+      "Max Open Positions \u2014 5-Position Limit"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Max Open Positions \u2014 5-Position Limit"
+    ]
+  },
+  {
+    "query_id": "eval_103",
+    "query": "Risk per setup type classify and size",
+    "relevant_chunk_ids": [
+      "Risk Per Setup Type \u2014 Classify and Size"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Risk Per Setup Type \u2014 Classify and Size"
+    ]
+  },
+  {
+    "query_id": "eval_104",
+    "query": "No leverage capital preservation base rule",
+    "relevant_chunk_ids": [
+      "No Leverage \u2014 Capital Preservation as Base Rule"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "No Leverage \u2014 Capital Preservation as Base Rule"
+    ]
+  },
+  {
+    "query_id": "eval_105",
+    "query": "Leverage mechanics account blow up risk",
+    "relevant_chunk_ids": [
+      "Leverage Mechanics and Account Blow-Up Risk"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "volatile",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Leverage Mechanics and Account Blow-Up Risk"
+    ]
+  },
+  {
+    "query_id": "eval_106",
+    "query": "Breakeven stop rule volatility dependent",
+    "relevant_chunk_ids": [
+      "Break-Even Stop Rule \u2014 Volatility-Dependent Application"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Break-Even Stop Rule \u2014 Volatility-Dependent Application"
+    ]
+  },
+  {
+    "query_id": "eval_107",
+    "query": "Risk adjusted return UPI Sharpe ratio",
+    "relevant_chunk_ids": [
+      "Risk-Adjusted Return: UPI and Sharpe Ratio"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Risk-Adjusted Return: UPI and Sharpe Ratio"
+    ]
+  },
+  {
+    "query_id": "eval_108",
+    "query": "Avoid round number obvious level stop placement",
+    "relevant_chunk_ids": [
+      "Avoid Round Number and Obvious Level Stop Placement"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Avoid Round Number and Obvious Level Stop Placement"
+    ]
+  },
+  {
+    "query_id": "eval_109",
+    "query": "Adaptive stop loss setup weakening",
+    "relevant_chunk_ids": [
+      "Adaptive Stop Loss (Setup Weakening)"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Adaptive Stop Loss (Setup Weakening)"
+    ]
+  },
+  {
+    "query_id": "eval_110",
+    "query": "Wide fixed percentage stop manipulation survival",
+    "relevant_chunk_ids": [
+      "Wide Fixed-Percentage Stop \u2014 Manipulation Survival Stop Logic"
+    ],
+    "setup_type": "risk_management",
+    "market_condition": "volatile",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Wide Fixed-Percentage Stop \u2014 Manipulation Survival Stop Logic"
+    ]
+  },
+  {
+    "query_id": "eval_111",
+    "query": "Break of structure BOS trading",
+    "relevant_chunk_ids": [
+      "Trend Continuation Rule \u2014 Major Swing Low Must Hold (Uptrend)"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "trending",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Trend Continuation Rule \u2014 Major Swing Low Must Hold (Uptrend)"
+    ]
+  },
+  {
+    "query_id": "eval_112",
+    "query": "Change of character CHoCH reversal",
+    "relevant_chunk_ids": [
+      "Market Structure Shift (MSS) \u2014 Entry Trigger Confirmation"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "reversal",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Market Structure Shift (MSS) \u2014 Entry Trigger Confirmation"
+    ]
+  },
+  {
+    "query_id": "eval_113",
+    "query": "Draw on liquidity DOL identifying target",
+    "relevant_chunk_ids": [
+      "Draw on Liquidity (DOL) \u2014 Identifying the Trade Target Before Entry"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Draw on Liquidity (DOL) \u2014 Identifying the Trade Target Before Entry"
+    ]
+  },
+  {
+    "query_id": "eval_114",
+    "query": "Higher low failure exit trend structure break",
+    "relevant_chunk_ids": [
+      "Higher Low Failure Exit \u2014 Trend Structure Break"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Higher Low Failure Exit \u2014 Trend Structure Break"
+    ]
+  },
+  {
+    "query_id": "eval_115",
+    "query": "Swing high low identification 3 candle rule",
+    "relevant_chunk_ids": [
+      "Swing High/Low Identification Rules \u2014 3-Candle Rule on Real Charts"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Swing High/Low Identification Rules \u2014 3-Candle Rule on Real Charts"
+    ]
+  },
+  {
+    "query_id": "eval_116",
+    "query": "Trend continuation rule major swing low must hold",
+    "relevant_chunk_ids": [
+      "Trend Continuation Rule \u2014 Major Swing Low Must Hold (Uptrend)"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Trend Continuation Rule \u2014 Major Swing Low Must Hold (Uptrend)"
+    ]
+  },
+  {
+    "query_id": "eval_117",
+    "query": "Auction area framework core trading concept",
+    "relevant_chunk_ids": [
+      "Auction Area Framework \u2014 Core Trading Concept"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "ranging",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Auction Area Framework \u2014 Core Trading Concept"
+    ]
+  },
+  {
+    "query_id": "eval_118",
+    "query": "Volume profile high low value area framework",
+    "relevant_chunk_ids": [
+      "Volume Profile High/Low Value Area Framework"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Volume Profile High/Low Value Area Framework"
+    ]
+  },
+  {
+    "query_id": "eval_119",
+    "query": "Low volume node why they form",
+    "relevant_chunk_ids": [
+      "Why Low Volume Nodes Form"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "ranging",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Why Low Volume Nodes Form"
+    ]
+  },
+  {
+    "query_id": "eval_120",
+    "query": "Fair value gap context filter interpretation",
+    "relevant_chunk_ids": [
+      "Context Filter for Fair Value Gap Interpretation"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Context Filter for Fair Value Gap Interpretation"
+    ]
+  },
+  {
+    "query_id": "eval_121",
+    "query": "Identifying liquidity pools stop clusters",
+    "relevant_chunk_ids": [
+      "Identifying Liquidity Pools \u2014 Where Stop Clusters Form"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Identifying Liquidity Pools \u2014 Where Stop Clusters Form"
+    ]
+  },
+  {
+    "query_id": "eval_122",
+    "query": "Reversal identification break of most recent swing",
+    "relevant_chunk_ids": [
+      "Reversal Identification \u2014 Break of Most Recent Major Swing Level"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "reversal",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Reversal Identification \u2014 Break of Most Recent Major Swing Level"
+    ]
+  },
+  {
+    "query_id": "eval_123",
+    "query": "Sideways principle market condition framework",
+    "relevant_chunk_ids": [
+      "Sideways Principle \u2014 Market Condition Framework"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "ranging",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Sideways Principle \u2014 Market Condition Framework"
+    ]
+  },
+  {
+    "query_id": "eval_124",
+    "query": "Three phase market environment classification",
+    "relevant_chunk_ids": [
+      "Three-Phase Market Environment Classification Framework"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Three-Phase Market Environment Classification Framework"
+    ]
+  },
+  {
+    "query_id": "eval_125",
+    "query": "Objective trend identification impulsive pullback",
+    "relevant_chunk_ids": [
+      "Objective Trend Identification via Impulsive-Pullback Structure"
+    ],
+    "setup_type": "market_structure",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Objective Trend Identification via Impulsive-Pullback Structure"
+    ]
+  },
+  {
+    "query_id": "eval_126",
+    "query": "Three traits of successful trader",
+    "relevant_chunk_ids": [
+      "Three Traits of a Successful Trader"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Three Traits of a Successful Trader"
+    ]
+  },
+  {
+    "query_id": "eval_127",
+    "query": "Triangle trading success strategy risk psychology",
+    "relevant_chunk_ids": [
+      "Triangle of Trading Success \u2014 Strategy, Risk Management, Psychology"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Triangle of Trading Success \u2014 Strategy, Risk Management, Psychology"
+    ]
+  },
+  {
+    "query_id": "eval_128",
+    "query": "Emotional EV A+ setup selectivity",
+    "relevant_chunk_ids": [
+      "Emotional EV \u2014 A+ Setup Selectivity When Sub-Optimal"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Emotional EV \u2014 A+ Setup Selectivity When Sub-Optimal"
+    ]
+  },
+  {
+    "query_id": "eval_129",
+    "query": "Yerkes Dodson performance curve malfunctioning mind",
+    "relevant_chunk_ids": [
+      "Yerkes-Dodson Performance Curve (Malfunctioning Mind)"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Yerkes-Dodson Performance Curve (Malfunctioning Mind)"
+    ]
+  },
+  {
+    "query_id": "eval_130",
+    "query": "Statistical edge mindset single trade outcome random",
+    "relevant_chunk_ids": [
+      "Statistical Edge Mindset \u2014 Single Trade Outcome Is Random"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Statistical Edge Mindset \u2014 Single Trade Outcome Is Random"
+    ]
+  },
+  {
+    "query_id": "eval_131",
+    "query": "Patience as competitive advantage waiting for setup",
+    "relevant_chunk_ids": [
+      "Patience as Competitive Advantage \u2014 Waiting for the Setup"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Patience as Competitive Advantage \u2014 Waiting for the Setup"
+    ]
+  },
+  {
+    "query_id": "eval_132",
+    "query": "Overtrading discipline entry quality filter",
+    "relevant_chunk_ids": [
+      "Overtrading Discipline & Entry Quality Filter"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Overtrading Discipline & Entry Quality Filter"
+    ]
+  },
+  {
+    "query_id": "eval_133",
+    "query": "Revenge trading progressive emotional escalation",
+    "relevant_chunk_ids": [
+      "Progressive Emotional Escalation to Revenge Trading"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Progressive Emotional Escalation to Revenge Trading"
+    ]
+  },
+  {
+    "query_id": "eval_134",
+    "query": "Setup grading system A+ A B C framework",
+    "relevant_chunk_ids": [
+      "Setup Grading System \u2014 A+/A/B/C Framework"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Setup Grading System \u2014 A+/A/B/C Framework"
+    ]
+  },
+  {
+    "query_id": "eval_135",
+    "query": "Money as lagging indicator input focused execution",
+    "relevant_chunk_ids": [
+      "Money as Lagging Indicator \u2014 Input-Focused Execution"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Money as Lagging Indicator \u2014 Input-Focused Execution"
+    ]
+  },
+  {
+    "query_id": "eval_136",
+    "query": "Pre-defined exit rules psychological anchor",
+    "relevant_chunk_ids": [
+      "Pre-Defined Exit Rules as Psychological Anchor"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Pre-Defined Exit Rules as Psychological Anchor"
+    ]
+  },
+  {
+    "query_id": "eval_137",
+    "query": "Working memory capacity in-zone cognition",
+    "relevant_chunk_ids": [
+      "Working Memory Capacity and In-Zone Cognition"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Working Memory Capacity and In-Zone Cognition"
+    ]
+  },
+  {
+    "query_id": "eval_138",
+    "query": "Elevated emotional baseline carried-over baggage",
+    "relevant_chunk_ids": [
+      "Elevated Emotional Baseline \u2014 Carried-Over Baggage"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Elevated Emotional Baseline \u2014 Carried-Over Baggage"
+    ]
+  },
+  {
+    "query_id": "eval_139",
+    "query": "Sit out when market context unclear",
+    "relevant_chunk_ids": [
+      "Sit Out When Market Context Is Unclear"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Sit Out When Market Context Is Unclear"
+    ]
+  },
+  {
+    "query_id": "eval_140",
+    "query": "Scalping requires patience",
+    "relevant_chunk_ids": [
+      "Scalping Requires Patience"
+    ],
+    "setup_type": "psychology",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Scalping Requires Patience"
+    ]
+  },
+  {
+    "query_id": "eval_141",
+    "query": "Kelly criterion fractional position sizing",
+    "relevant_chunk_ids": [
+      "Kelly Criterion Fractional Position Sizing"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Kelly Criterion Fractional Position Sizing"
+    ]
+  },
+  {
+    "query_id": "eval_142",
+    "query": "ATR based position sizing volatility normalized",
+    "relevant_chunk_ids": [
+      "ATR-Based Position Sizing \u2014 Volatility Normalized"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "volatile",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "ATR-Based Position Sizing \u2014 Volatility Normalized"
+    ]
+  },
+  {
+    "query_id": "eval_143",
+    "query": "Regime adaptive sizing trend range volatile",
+    "relevant_chunk_ids": [
+      "Regime-Adaptive Sizing \u2014 Trend/Range/Volatile"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Regime-Adaptive Sizing \u2014 Trend/Range/Volatile"
+    ]
+  },
+  {
+    "query_id": "eval_144",
+    "query": "Win rate adaptive sizing size with streak",
+    "relevant_chunk_ids": [
+      "Win Rate Adaptive Sizing \u2014 Size With Streak"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Win Rate Adaptive Sizing \u2014 Size With Streak"
+    ]
+  },
+  {
+    "query_id": "eval_145",
+    "query": "Kill zone sizing increase during active hours",
+    "relevant_chunk_ids": [
+      "Kill Zone Sizing \u2014 Increase During Active Hours"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Kill Zone Sizing \u2014 Increase During Active Hours"
+    ]
+  },
+  {
+    "query_id": "eval_146",
+    "query": "Volatility breakout sizing ATR expansion",
+    "relevant_chunk_ids": [
+      "Volatility Breakout Sizing \u2014 Size With ATR Expansion"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "breakout",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Volatility Breakout Sizing \u2014 Size With ATR Expansion"
+    ]
+  },
+  {
+    "query_id": "eval_147",
+    "query": "Drawdown recovery sizing conservative rebuilding",
+    "relevant_chunk_ids": [
+      "Drawdown Recovery Sizing \u2014 Conservative Rebuilding"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Drawdown Recovery Sizing \u2014 Conservative Rebuilding"
+    ]
+  },
+  {
+    "query_id": "eval_148",
+    "query": "Confluence sizing size with signal strength",
+    "relevant_chunk_ids": [
+      "Confluence Sizing \u2014 Size With Signal Strength"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Confluence Sizing \u2014 Size With Signal Strength"
+    ]
+  },
+  {
+    "query_id": "eval_149",
+    "query": "Inverse volatility sizing risk parity",
+    "relevant_chunk_ids": [
+      "Inverse Volatility Sizing \u2014 Risk Parity"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Inverse Volatility Sizing \u2014 Risk Parity"
+    ]
+  },
+  {
+    "query_id": "eval_150",
+    "query": "Margin utilization 30 percent maximum",
+    "relevant_chunk_ids": [
+      "Margin Utilization \u2014 30% Maximum"
+    ],
+    "setup_type": "position_sizing",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Margin Utilization \u2014 30% Maximum"
+    ]
+  },
+  {
+    "query_id": "eval_151",
+    "query": "Scale out one third three tier profit taking",
+    "relevant_chunk_ids": [
+      "Scale Out 1/3 \u2014 Three-Tier Profit Taking"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Scale Out 1/3 \u2014 Three-Tier Profit Taking"
+    ]
+  },
+  {
+    "query_id": "eval_152",
+    "query": "Pyramiding add to winners",
+    "relevant_chunk_ids": [
+      "Pyramiding \u2014 Add to Winners"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Pyramiding \u2014 Add to Winners"
+    ]
+  },
+  {
+    "query_id": "eval_153",
+    "query": "Trade management break even at 0.2 scaling trailing",
+    "relevant_chunk_ids": [
+      "Trade Management \u2014 Break-Even at 0.2, Scaling, and Trailing"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Trade Management \u2014 Break-Even at 0.2, Scaling, and Trailing"
+    ]
+  },
+  {
+    "query_id": "eval_154",
+    "query": "Structure based trailing stop management",
+    "relevant_chunk_ids": [
+      "Structure-Based Trailing Stop Management"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Structure-Based Trailing Stop Management"
+    ]
+  },
+  {
+    "query_id": "eval_155",
+    "query": "Recycling range trade amplify winners minimize losses",
+    "relevant_chunk_ids": [
+      "Recycling \u2014 Range Trade to Amplify Winners and Minimize Losses"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "ranging",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Recycling \u2014 Range Trade to Amplify Winners and Minimize Losses"
+    ]
+  },
+  {
+    "query_id": "eval_156",
+    "query": "Scaling out at resistance liquidity based exit",
+    "relevant_chunk_ids": [
+      "Scaling Out at Resistance \u2014 Liquidity-Based Exit"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "ranging",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Scaling Out at Resistance \u2014 Liquidity-Based Exit"
+    ]
+  },
+  {
+    "query_id": "eval_157",
+    "query": "Profit locking re-entry on compression break",
+    "relevant_chunk_ids": [
+      "Profit Locking + Re-Entry on Compression Break"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "breakout",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Profit Locking + Re-Entry on Compression Break"
+    ]
+  },
+  {
+    "query_id": "eval_158",
+    "query": "EP trade management stop trail protocol",
+    "relevant_chunk_ids": [
+      "EP Trade Management \u2013 Stop Trail Protocol"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "EP Trade Management \u2013 Stop Trail Protocol"
+    ]
+  },
+  {
+    "query_id": "eval_159",
+    "query": "Set and forget for late session",
+    "relevant_chunk_ids": [
+      "Set and Forget for Late Session"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Set and Forget for Late Session"
+    ]
+  },
+  {
+    "query_id": "eval_160",
+    "query": "Use profit to re-enter after exit",
+    "relevant_chunk_ids": [
+      "Use Profit to Re-Enter After Exit"
+    ],
+    "setup_type": "trade_management",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Use Profit to Re-Enter After Exit"
+    ]
+  },
+  {
+    "query_id": "eval_161",
+    "query": "Trade inefficient markets alpha generation",
+    "relevant_chunk_ids": [
+      "Trade inefficient markets"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Trade inefficient markets"
+    ]
+  },
+  {
+    "query_id": "eval_162",
+    "query": "Long term horizon edge over institutions",
+    "relevant_chunk_ids": [
+      "Long Time Horizon as Primary Edge Over Institutions"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Long Time Horizon as Primary Edge Over Institutions"
+    ]
+  },
+  {
+    "query_id": "eval_163",
+    "query": "Never borrow conviction",
+    "relevant_chunk_ids": [
+      "Never Borrow Conviction"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Never Borrow Conviction"
+    ]
+  },
+  {
+    "query_id": "eval_164",
+    "query": "Order flow first principle",
+    "relevant_chunk_ids": [
+      "Order Flow First Principle"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Order Flow First Principle"
+    ]
+  },
+  {
+    "query_id": "eval_165",
+    "query": "Market DNA foundation",
+    "relevant_chunk_ids": [
+      "Market DNA foundation"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Market DNA foundation"
+    ]
+  },
+  {
+    "query_id": "eval_166",
+    "query": "Average win to loss over win rate",
+    "relevant_chunk_ids": [
+      "Average Win to Loss Over Win Rate"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Average Win to Loss Over Win Rate"
+    ]
+  },
+  {
+    "query_id": "eval_167",
+    "query": "Profit factor over 1.5 performance metric",
+    "relevant_chunk_ids": [
+      "Profit Factor > 1.5 \u2014 Performance Metric Priority Over Win Rate"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Profit Factor > 1.5 \u2014 Performance Metric Priority Over Win Rate"
+    ]
+  },
+  {
+    "query_id": "eval_168",
+    "query": "Data and reps build trust in the edge",
+    "relevant_chunk_ids": [
+      "Data and Reps Build Trust in the Edge"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Data and Reps Build Trust in the Edge"
+    ]
+  },
+  {
+    "query_id": "eval_169",
+    "query": "Why based journaling",
+    "relevant_chunk_ids": [
+      "Why-based journaling"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Why-based journaling"
+    ]
+  },
+  {
+    "query_id": "eval_170",
+    "query": "Adapt to market regime",
+    "relevant_chunk_ids": [
+      "Adapt to market regime"
+    ],
+    "setup_type": "philosophy",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Adapt to market regime"
+    ]
+  },
+  {
+    "query_id": "eval_171",
+    "query": "Choppy vs trending market filter",
+    "relevant_chunk_ids": [
+      "Choppy vs Trending Market Filter"
+    ],
+    "setup_type": "filter",
+    "market_condition": "ranging",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Choppy vs Trending Market Filter"
+    ]
+  },
+  {
+    "query_id": "eval_172",
+    "query": "Kill zone time filter strict session",
+    "relevant_chunk_ids": [
+      "Kill Zone Time Filter \u2014 Strict Time-Based Trade Filtering"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Kill Zone Time Filter \u2014 Strict Time-Based Trade Filtering"
+    ]
+  },
+  {
+    "query_id": "eval_173",
+    "query": "High probability day red folder news",
+    "relevant_chunk_ids": [
+      "High Probability Day Identification \u2014 Red Folder News Sessions"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "High Probability Day Identification \u2014 Red Folder News Sessions"
+    ]
+  },
+  {
+    "query_id": "eval_174",
+    "query": "Low probability day no red folder news filter",
+    "relevant_chunk_ids": [
+      "Low Probability Day Filter \u2014 No Red Folder News"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Low Probability Day Filter \u2014 No Red Folder News"
+    ]
+  },
+  {
+    "query_id": "eval_175",
+    "query": "Moving average trend filter 20 50 200 EMA",
+    "relevant_chunk_ids": [
+      "Moving Average Trend Filter \u2014 20 / 50 / 200 EMA"
+    ],
+    "setup_type": "filter",
+    "market_condition": "trending",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Moving Average Trend Filter \u2014 20 / 50 / 200 EMA"
+    ]
+  },
+  {
+    "query_id": "eval_176",
+    "query": "Session VWAP alignment multi-timeframe confirmation",
+    "relevant_chunk_ids": [
+      "Session VWAP Alignment \u2014 Multi-Timeframe Confirmation"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Session VWAP Alignment \u2014 Multi-Timeframe Confirmation"
+    ]
+  },
+  {
+    "query_id": "eval_177",
+    "query": "Consolidation avoidance sit on hands rule",
+    "relevant_chunk_ids": [
+      "Consolidation Avoidance \u2014 Sit on Hands Rule"
+    ],
+    "setup_type": "filter",
+    "market_condition": "ranging",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Consolidation Avoidance \u2014 Sit on Hands Rule"
+    ]
+  },
+  {
+    "query_id": "eval_178",
+    "query": "Retail sentiment filter runner confirmation",
+    "relevant_chunk_ids": [
+      "Retail Sentiment Filter \u2014 Runner Confirmation"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Retail Sentiment Filter \u2014 Runner Confirmation"
+    ]
+  },
+  {
+    "query_id": "eval_179",
+    "query": "Pre-session macro sentiment filter yield gold news",
+    "relevant_chunk_ids": [
+      "Pre-Session Macro Sentiment Filter \u2014 Yield, Gold, News Alignment"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Pre-Session Macro Sentiment Filter \u2014 Yield, Gold, News Alignment"
+    ]
+  },
+  {
+    "query_id": "eval_180",
+    "query": "VIX ES inverse correlation foundation",
+    "relevant_chunk_ids": [
+      "VIX-ES Inverse Correlation Foundation"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "VIX-ES Inverse Correlation Foundation"
+    ]
+  },
+  {
+    "query_id": "eval_181",
+    "query": "Session based volatility compression pre breakout",
+    "relevant_chunk_ids": [
+      "Session-based Volatility Compression \u2014 Pre-Breakout Accumulation"
+    ],
+    "setup_type": "filter",
+    "market_condition": "breakout",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Session-based Volatility Compression \u2014 Pre-Breakout Accumulation"
+    ]
+  },
+  {
+    "query_id": "eval_182",
+    "query": "First hour only time window filter",
+    "relevant_chunk_ids": [
+      "First Hour Only \u2014 Time Window Filter"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "First Hour Only \u2014 Time Window Filter"
+    ]
+  },
+  {
+    "query_id": "eval_183",
+    "query": "Time window trading filter",
+    "relevant_chunk_ids": [
+      "Time Window Trading Filter"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Time Window Trading Filter"
+    ]
+  },
+  {
+    "query_id": "eval_184",
+    "query": "Low probability day filter post large expansion",
+    "relevant_chunk_ids": [
+      "Low Probability Day Filter \u2014 Post Large Expansion Day"
+    ],
+    "setup_type": "filter",
+    "market_condition": "volatile",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Low Probability Day Filter \u2014 Post Large Expansion Day"
+    ]
+  },
+  {
+    "query_id": "eval_185",
+    "query": "Session liquidity filter on buy days",
+    "relevant_chunk_ids": [
+      "Session Liquidity Filter on Buy Days"
+    ],
+    "setup_type": "filter",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Session Liquidity Filter on Buy Days"
+    ]
+  },
+  {
+    "query_id": "eval_186",
+    "query": "Asian session range low volatility accumulation",
+    "relevant_chunk_ids": [
+      "Asian Session Range \u2014 Low Volatility Accumulation"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "ranging",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Asian Session Range \u2014 Low Volatility Accumulation"
+    ]
+  },
+  {
+    "query_id": "eval_187",
+    "query": "London kill zone pre-open momentum sweep",
+    "relevant_chunk_ids": [
+      "London Kill Zone \u2014 Pre-Open Momentum Sweep"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "London Kill Zone \u2014 Pre-Open Momentum Sweep"
+    ]
+  },
+  {
+    "query_id": "eval_188",
+    "query": "New York kill zone AM session power moves",
+    "relevant_chunk_ids": [
+      "New York Kill Zone \u2014 AM Session Power Moves"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "New York Kill Zone \u2014 AM Session Power Moves"
+    ]
+  },
+  {
+    "query_id": "eval_189",
+    "query": "London New York overlap peak volume",
+    "relevant_chunk_ids": [
+      "London-New York Overlap \u2014 Peak Volume Window"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "volatile",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "London-New York Overlap \u2014 Peak Volume Window"
+    ]
+  },
+  {
+    "query_id": "eval_190",
+    "query": "Daily session profiling AMD kill zone sequencing",
+    "relevant_chunk_ids": [
+      "Daily Session Profiling \u2014 AMD Kill Zone Sequencing"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "any",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Daily Session Profiling \u2014 AMD Kill Zone Sequencing"
+    ]
+  },
+  {
+    "query_id": "eval_191",
+    "query": "NY afternoon push trend continuation or reversal",
+    "relevant_chunk_ids": [
+      "NY Afternoon Push \u2014 Trend Continuation or Reversal"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "trending",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "NY Afternoon Push \u2014 Trend Continuation or Reversal"
+    ]
+  },
+  {
+    "query_id": "eval_192",
+    "query": "Post NY lunch drift low probability zone",
+    "relevant_chunk_ids": [
+      "Post-NY Lunch Drift \u2014 Low Probability Zone"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "ranging",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "Post-NY Lunch Drift \u2014 Low Probability Zone"
+    ]
+  },
+  {
+    "query_id": "eval_193",
+    "query": "Midnight open Asian range deviation framework",
+    "relevant_chunk_ids": [
+      "Midnight Open and Asian Range Deviation Framework"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "ranging",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Midnight Open and Asian Range Deviation Framework"
+    ]
+  },
+  {
+    "query_id": "eval_194",
+    "query": "Weekly open kill zone Sunday Monday institutional",
+    "relevant_chunk_ids": [
+      "Weekly Open Kill Zone \u2014 Sunday/Monday Institutional Entry"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Weekly Open Kill Zone \u2014 Sunday/Monday Institutional Entry"
+    ]
+  },
+  {
+    "query_id": "eval_195",
+    "query": "End of week close Friday profit taking reversal",
+    "relevant_chunk_ids": [
+      "End-of-Week Close \u2014 Friday Profit Taking and Reversal"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "End-of-Week Close \u2014 Friday Profit Taking and Reversal"
+    ]
+  },
+  {
+    "query_id": "eval_196",
+    "query": "London fix 10:00 EST institutional window",
+    "relevant_chunk_ids": [
+      "London Fix \u2014 10:00 EST Institutional Window"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "any",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "London Fix \u2014 10:00 EST Institutional Window"
+    ]
+  },
+  {
+    "query_id": "eval_197",
+    "query": "NYSE open momentum burst first 30 minutes",
+    "relevant_chunk_ids": [
+      "NYSE Open Momentum Burst \u2014 First 30 Minutes"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "breakout",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "NYSE Open Momentum Burst \u2014 First 30 Minutes"
+    ]
+  },
+  {
+    "query_id": "eval_198",
+    "query": "Asian London transition range breakout",
+    "relevant_chunk_ids": [
+      "Asian-London Transition \u2014 Range Breakout Setup"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "breakout",
+    "difficulty": "hard",
+    "gold_chunk_ids": [
+      "Asian-London Transition \u2014 Range Breakout Setup"
+    ]
+  },
+  {
+    "query_id": "eval_199",
+    "query": "Lunch time liquidity build before event repricing",
+    "relevant_chunk_ids": [
+      "Lunch-Time Liquidity Build Before Event Repricing"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "volatile",
+    "difficulty": "medium",
+    "gold_chunk_ids": [
+      "Lunch-Time Liquidity Build Before Event Repricing"
+    ]
+  },
+  {
+    "query_id": "eval_200",
+    "query": "5 PM spread warning intraday session risk",
+    "relevant_chunk_ids": [
+      "5 PM Spread Warning \u2014 Intraday Session Risk Rule"
+    ],
+    "setup_type": "session_filter",
+    "market_condition": "any",
+    "difficulty": "easy",
+    "gold_chunk_ids": [
+      "5 PM Spread Warning \u2014 Intraday Session Risk Rule"
+    ]
+  }
+]

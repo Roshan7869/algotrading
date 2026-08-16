@@ -1,0 +1,45 @@
+[
+  {
+    "type": "signals",
+    "timestamp": "2026-05-22T10:41:12.057312+00:00",
+    "data": {
+      "pair": "BTC/USDT",
+      "side": "buy",
+      "price": 50000.0,
+      "amount": 0.1,
+      "strategy": "int_test",
+      "signal_id": "sig_1779446472_BTC_USDT"
+    }
+  },
+  {
+    "type": "signals",
+    "timestamp": "2026-05-22T10:41:12.999328+00:00",
+    "data": {
+      "pair": "BTC/USDT",
+      "side": "buy",
+      "price": 50000.0,
+      "amount": 0.1,
+      "strategy": "roundtrip_test",
+      "signal_id": "sig_1779446472_BTC_USDT"
+    }
+  },
+  {
+    "type": "signals",
+    "timestamp": "2026-05-22T20:43:35.730163+00:00",
+    "data": {
+      "test": true
+    }
+  },
+  {
+    "type": "signals",
+    "timestamp": "2026-05-22T20:43:35.747661+00:00",
+    "data": {
+      "pair": "BTC/USDT",
+      "side": "long",
+      "price": 50000,
+      "amount": 0.1,
+      "strategy": "test_strat",
+      "signal_id": "sig_1779482615_BTC_USDT"
+    }
+  }
+]

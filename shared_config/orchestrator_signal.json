@@ -1,0 +1,12 @@
+{
+  "pair": "BTC/USDT",
+  "action": "NEUTRAL",
+  "confidence": 0.2733,
+  "direction": "short",
+  "source": "consensus",
+  "price": null,
+  "leverage": 1.0,
+  "reason": "Consensus of 4 generators: miroshark, tradingagents, macro_analyst, kronos",
+  "timestamp": "2026-05-18T22:54:14.333191+00:00",
+  "metadata": {}
+}

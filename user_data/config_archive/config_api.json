@@ -1,0 +1,1 @@
+{"api_server":{"enabled":true,"listen_ip_address":"0.0.0.0","listen_port":8080,"verbosity":"error","enable_openapi":true,"jwt_secret_key":"freqtrade-secret-key-change-me","CORS_origins":["*"],"username":"freqtrader","password":"SuperSecurePassword"}}

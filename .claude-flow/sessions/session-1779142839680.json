@@ -1,0 +1,14 @@
+{
+  "id": "session-1779142839680",
+  "startedAt": "2026-05-18T22:20:39.680Z",
+  "cwd": "/home/roshan/Downloads/Algotrading",
+  "context": {},
+  "metrics": {
+    "edits": 5,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  },
+  "endedAt": "2026-05-19T06:26:52.700Z",
+  "duration": 29173020
+}

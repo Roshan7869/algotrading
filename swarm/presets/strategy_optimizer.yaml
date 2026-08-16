@@ -1,0 +1,41 @@
+# Strategy Optimizer Swarm
+# 3 agents compare and optimize strategies in parallel.
+# Ideal for: weekly strategy tuning, parameter optimization
+
+name: strategy_optimizer
+description: 3 agents running parallel backtests to find optimal strategy parameters
+topology: mesh
+max_agents: 3
+strategy: optimization
+
+agents:
+  - role: backtest_runner
+    model: deepseek-v4
+    prompt: |
+      Run walkforward backtest on the specified strategy.
+      Return Sharpe ratio, max drawdown, win rate, total trades.
+    tools: [execute_backtest]
+    parallel_runs: 3
+
+  - role: parameter_tuner
+    model: deepseek-v4
+    prompt: |
+      Given backtest results, suggest parameter adjustments:
+      - Increase/decrease indicator periods
+      - Adjust entry/exit thresholds
+      - Modify stoploss/take-profit levels
+      Propose 3 variants for next backtest round.
+    tools: [execute_backtest]
+
+  - role: performance_analyzer
+    model: deepseek-v4
+    prompt: |
+      Aggregate all backtest results. Rank by Sharpe ratio.
+      Flag any strategy with max drawdown > 20%.
+      Recommend top 2 strategies for live deployment.
+    tools: [trade_status]
+
+schedule: weekly Sunday 12:00 UTC
+trigger:
+  type: time
+  at: "0 12 * * 0"

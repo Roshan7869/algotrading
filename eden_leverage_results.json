@@ -1,0 +1,716 @@
+[
+  {
+    "strategy": "BOS_V2_Short_SL6",
+    "leverage": 18,
+    "profit_pct": 16.19,
+    "profit_usdt": 161.917,
+    "trades": 9
+  },
+  {
+    "strategy": "BOS_V1_ShortTop9",
+    "leverage": 18,
+    "profit_pct": 15.24,
+    "profit_usdt": 152.404,
+    "trades": 9
+  },
+  {
+    "strategy": "BOS_V2_Short_SL8",
+    "leverage": 18,
+    "profit_pct": 15.24,
+    "profit_usdt": 152.404,
+    "trades": 9
+  },
+  {
+    "strategy": "BOS_FRVP_LVN_VWAP",
+    "leverage": 18,
+    "profit_pct": 15.11,
+    "profit_usdt": 151.146,
+    "trades": 10
+  },
+  {
+    "strategy": "BOS_FRVP_LVN_VWAP_Short",
+    "leverage": 18,
+    "profit_pct": 14.49,
+    "profit_usdt": 144.875,
+    "trades": 8
+  },
+  {
+    "strategy": "BOS_V5_Hyperopt",
+    "leverage": 18,
+    "profit_pct": 14.14,
+    "profit_usdt": 141.408,
+    "trades": 10
+  },
+  {
+    "strategy": "BOS_V2_Short_SL4",
+    "leverage": 18,
+    "profit_pct": 12.29,
+    "profit_usdt": 122.852,
+    "trades": 10
+  },
+  {
+    "strategy": "BOS_FRVP_LVN_VWAP_Short",
+    "leverage": 12,
+    "profit_pct": 8.5,
+    "profit_usdt": 85.014,
+    "trades": 8
+  },
+  {
+    "strategy": "BOS_V1_ShortTop9",
+    "leverage": 12,
+    "profit_pct": 7.99,
+    "profit_usdt": 79.917,
+    "trades": 9
+  },
+  {
+    "strategy": "BOS_V2_Short_SL8",
+    "leverage": 12,
+    "profit_pct": 7.99,
+    "profit_usdt": 79.917,
+    "trades": 9
+  },
+  {
+    "strategy": "BOS_FRVP_LVN_VWAP",
+    "leverage": 12,
+    "profit_pct": 7.58,
+    "profit_usdt": 75.778,
+    "trades": 10
+  },
+  {
+    "strategy": "BOS_V2_Short_SL4",
+    "leverage": 12,
+    "profit_pct": 7.45,
+    "profit_usdt": 74.466,
+    "trades": 9
+  },
+  {
+    "strategy": "BOS_V5_Hyperopt",
+    "leverage": 12,
+    "profit_pct": 7.01,
+    "profit_usdt": 70.149,
+    "trades": 10
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiLong",
+    "leverage": 6,
+    "profit_pct": 6.4,
+    "profit_usdt": 63.951,
+    "trades": 10
+  },
+  {
+    "strategy": "BOS_V2_Short_SL6",
+    "leverage": 12,
+    "profit_pct": 6.2,
+    "profit_usdt": 62.008,
+    "trades": 9
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiLong",
+    "leverage": 12,
+    "profit_pct": 5.25,
+    "profit_usdt": 52.515,
+    "trades": 10
+  },
+  {
+    "strategy": "BOS_V3_LateTrailMerge",
+    "leverage": 12,
+    "profit_pct": 4.7,
+    "profit_usdt": 46.961,
+    "trades": 3
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiLong",
+    "leverage": 18,
+    "profit_pct": 3.71,
+    "profit_usdt": 37.123,
+    "trades": 11
+  },
+  {
+    "strategy": "BOS_V1_ShortTop9",
+    "leverage": 6,
+    "profit_pct": 3.27,
+    "profit_usdt": 32.733,
+    "trades": 6
+  },
+  {
+    "strategy": "BOS_V2_Short_SL8",
+    "leverage": 6,
+    "profit_pct": 3.27,
+    "profit_usdt": 32.733,
+    "trades": 6
+  },
+  {
+    "strategy": "BOS_V3_LateTrailMerge",
+    "leverage": 18,
+    "profit_pct": 3.26,
+    "profit_usdt": 32.62,
+    "trades": 3
+  },
+  {
+    "strategy": "BOS_V2_Short_SL6",
+    "leverage": 6,
+    "profit_pct": 3.1,
+    "profit_usdt": 31.024,
+    "trades": 7
+  },
+  {
+    "strategy": "BOS_FRVP_LVN_VWAP_Short",
+    "leverage": 6,
+    "profit_pct": 2.96,
+    "profit_usdt": 29.638,
+    "trades": 7
+  },
+  {
+    "strategy": "BOS_FRVP_LVN_VWAP",
+    "leverage": 6,
+    "profit_pct": 2.54,
+    "profit_usdt": 25.443,
+    "trades": 7
+  },
+  {
+    "strategy": "BOS_V5_Hyperopt",
+    "leverage": 6,
+    "profit_pct": 2.39,
+    "profit_usdt": 23.905,
+    "trades": 7
+  },
+  {
+    "strategy": "BOS_V2_Short_SL4",
+    "leverage": 6,
+    "profit_pct": 2.32,
+    "profit_usdt": 23.178,
+    "trades": 7
+  },
+  {
+    "strategy": "BOS_V3_LateTrailMerge",
+    "leverage": 6,
+    "profit_pct": 1.88,
+    "profit_usdt": 18.819,
+    "trades": 1
+  },
+  {
+    "strategy": "HedgeShortV1FixedTP",
+    "leverage": 6,
+    "profit_pct": -0.43,
+    "profit_usdt": -4.311,
+    "trades": 4
+  },
+  {
+    "strategy": "HedgeShortV1FixedTP",
+    "leverage": 12,
+    "profit_pct": -0.43,
+    "profit_usdt": -4.311,
+    "trades": 4
+  },
+  {
+    "strategy": "HedgeShortV1FixedTP",
+    "leverage": 18,
+    "profit_pct": -0.43,
+    "profit_usdt": -4.311,
+    "trades": 4
+  },
+  {
+    "strategy": "HedgeShortV4MACDExit",
+    "leverage": 6,
+    "profit_pct": -0.6,
+    "profit_usdt": -6.004,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV4MACDExit",
+    "leverage": 12,
+    "profit_pct": -0.6,
+    "profit_usdt": -6.004,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV4MACDExit",
+    "leverage": 18,
+    "profit_pct": -0.6,
+    "profit_usdt": -6.004,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeChampionP3F",
+    "leverage": 18,
+    "profit_pct": -0.83,
+    "profit_usdt": -8.282,
+    "trades": 1
+  },
+  {
+    "strategy": "HedgeChampionP3F",
+    "leverage": 12,
+    "profit_pct": -0.89,
+    "profit_usdt": -8.881,
+    "trades": 1
+  },
+  {
+    "strategy": "HedgeShortV3ATRTP",
+    "leverage": 6,
+    "profit_pct": -0.93,
+    "profit_usdt": -9.328,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV3ATRTP",
+    "leverage": 12,
+    "profit_pct": -0.93,
+    "profit_usdt": -9.328,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV3ATRTP",
+    "leverage": 18,
+    "profit_pct": -0.93,
+    "profit_usdt": -9.328,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeChampionP3F",
+    "leverage": 6,
+    "profit_pct": -0.95,
+    "profit_usdt": -9.481,
+    "trades": 1
+  },
+  {
+    "strategy": "Hedge07WinRateAdaptive",
+    "leverage": 6,
+    "profit_pct": -1.05,
+    "profit_usdt": -10.482,
+    "trades": 1
+  },
+  {
+    "strategy": "Hedge07WinRateAdaptive",
+    "leverage": 12,
+    "profit_pct": -1.11,
+    "profit_usdt": -11.082,
+    "trades": 1
+  },
+  {
+    "strategy": "Hedge07WinRateAdaptive",
+    "leverage": 18,
+    "profit_pct": -1.17,
+    "profit_usdt": -11.682,
+    "trades": 1
+  },
+  {
+    "strategy": "HedgeShortV5RSIExit",
+    "leverage": 6,
+    "profit_pct": -1.2,
+    "profit_usdt": -11.97,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV5RSIExit",
+    "leverage": 12,
+    "profit_pct": -1.2,
+    "profit_usdt": -11.97,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV5RSIExit",
+    "leverage": 18,
+    "profit_pct": -1.2,
+    "profit_usdt": -11.97,
+    "trades": 6
+  },
+  {
+    "strategy": "Hedge02RiskToZero",
+    "leverage": 6,
+    "profit_pct": -2.09,
+    "profit_usdt": -20.93,
+    "trades": 2
+  },
+  {
+    "strategy": "Hedge04ConsecLossProtect",
+    "leverage": 6,
+    "profit_pct": -2.09,
+    "profit_usdt": -20.93,
+    "trades": 2
+  },
+  {
+    "strategy": "HedgeMeta7in1",
+    "leverage": 6,
+    "profit_pct": -2.09,
+    "profit_usdt": -20.93,
+    "trades": 2
+  },
+  {
+    "strategy": "Hedge02RiskToZero",
+    "leverage": 12,
+    "profit_pct": -2.2,
+    "profit_usdt": -22.011,
+    "trades": 2
+  },
+  {
+    "strategy": "Hedge04ConsecLossProtect",
+    "leverage": 12,
+    "profit_pct": -2.2,
+    "profit_usdt": -22.011,
+    "trades": 2
+  },
+  {
+    "strategy": "HedgeMeta7in1",
+    "leverage": 12,
+    "profit_pct": -2.2,
+    "profit_usdt": -22.011,
+    "trades": 2
+  },
+  {
+    "strategy": "Hedge02RiskToZero",
+    "leverage": 18,
+    "profit_pct": -2.33,
+    "profit_usdt": -23.304,
+    "trades": 2
+  },
+  {
+    "strategy": "Hedge04ConsecLossProtect",
+    "leverage": 18,
+    "profit_pct": -2.33,
+    "profit_usdt": -23.304,
+    "trades": 2
+  },
+  {
+    "strategy": "HedgeMeta7in1",
+    "leverage": 18,
+    "profit_pct": -2.33,
+    "profit_usdt": -23.304,
+    "trades": 2
+  },
+  {
+    "strategy": "HedgeShortV6Hybrid",
+    "leverage": 6,
+    "profit_pct": -2.56,
+    "profit_usdt": -25.649,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV6Hybrid",
+    "leverage": 12,
+    "profit_pct": -2.56,
+    "profit_usdt": -25.649,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV6Hybrid",
+    "leverage": 18,
+    "profit_pct": -2.56,
+    "profit_usdt": -25.649,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV2Trail",
+    "leverage": 6,
+    "profit_pct": -2.98,
+    "profit_usdt": -29.765,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV2Trail",
+    "leverage": 12,
+    "profit_pct": -2.98,
+    "profit_usdt": -29.765,
+    "trades": 6
+  },
+  {
+    "strategy": "HedgeShortV2Trail",
+    "leverage": 18,
+    "profit_pct": -2.98,
+    "profit_usdt": -29.765,
+    "trades": 6
+  },
+  {
+    "strategy": "Hedge01FixedFractional",
+    "leverage": 6,
+    "profit_pct": -4.37,
+    "profit_usdt": -43.714,
+    "trades": 4
+  },
+  {
+    "strategy": "Hedge01FixedFractional",
+    "leverage": 12,
+    "profit_pct": -4.81,
+    "profit_usdt": -48.099,
+    "trades": 4
+  },
+  {
+    "strategy": "Hedge01FixedFractional",
+    "leverage": 18,
+    "profit_pct": -5.23,
+    "profit_usdt": -52.302,
+    "trades": 4
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiShort",
+    "leverage": 6,
+    "profit_pct": -9.75,
+    "profit_usdt": -97.495,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV1Baseline",
+    "leverage": 6,
+    "profit_pct": -9.75,
+    "profit_usdt": -97.495,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV2WideTrail",
+    "leverage": 6,
+    "profit_pct": -9.75,
+    "profit_usdt": -97.495,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV5PureTrail",
+    "leverage": 6,
+    "profit_pct": -9.75,
+    "profit_usdt": -97.495,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV3ATRTrail",
+    "leverage": 6,
+    "profit_pct": -11.22,
+    "profit_usdt": -112.246,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV4Cascade",
+    "leverage": 6,
+    "profit_pct": -11.22,
+    "profit_usdt": -112.246,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV6LateTrail",
+    "leverage": 6,
+    "profit_pct": -11.22,
+    "profit_usdt": -112.246,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiShort",
+    "leverage": 12,
+    "profit_pct": -11.99,
+    "profit_usdt": -119.873,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV1Baseline",
+    "leverage": 12,
+    "profit_pct": -11.99,
+    "profit_usdt": -119.873,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV2WideTrail",
+    "leverage": 12,
+    "profit_pct": -11.99,
+    "profit_usdt": -119.873,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV3ATRTrail",
+    "leverage": 12,
+    "profit_pct": -11.99,
+    "profit_usdt": -119.873,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV4Cascade",
+    "leverage": 12,
+    "profit_pct": -11.99,
+    "profit_usdt": -119.873,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV5PureTrail",
+    "leverage": 12,
+    "profit_pct": -11.99,
+    "profit_usdt": -119.873,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV6LateTrail",
+    "leverage": 12,
+    "profit_pct": -11.99,
+    "profit_usdt": -119.873,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiShort",
+    "leverage": 18,
+    "profit_pct": -12.71,
+    "profit_usdt": -127.078,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV1Baseline",
+    "leverage": 18,
+    "profit_pct": -12.71,
+    "profit_usdt": -127.078,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV2WideTrail",
+    "leverage": 18,
+    "profit_pct": -12.71,
+    "profit_usdt": -127.078,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV3ATRTrail",
+    "leverage": 18,
+    "profit_pct": -12.71,
+    "profit_usdt": -127.078,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV4Cascade",
+    "leverage": 18,
+    "profit_pct": -12.71,
+    "profit_usdt": -127.078,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV5PureTrail",
+    "leverage": 18,
+    "profit_pct": -12.71,
+    "profit_usdt": -127.078,
+    "trades": 11
+  },
+  {
+    "strategy": "HedgeShortV6LateTrail",
+    "leverage": 18,
+    "profit_pct": -12.71,
+    "profit_usdt": -127.078,
+    "trades": 11
+  },
+  {
+    "strategy": "Hedge05ScaleOut",
+    "leverage": 6,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "Hedge06AntiMartingale",
+    "leverage": 6,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsi",
+    "leverage": 6,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiV2",
+    "leverage": 6,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "BOSV4ShortStrict",
+    "leverage": 6,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "Hedge03HalfKelly",
+    "leverage": 6,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "Hedge05ScaleOut",
+    "leverage": 12,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "Hedge06AntiMartingale",
+    "leverage": 12,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsi",
+    "leverage": 12,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiV2",
+    "leverage": 12,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "BOSV4ShortStrict",
+    "leverage": 12,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "Hedge03HalfKelly",
+    "leverage": 12,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "Hedge05ScaleOut",
+    "leverage": 18,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "Hedge06AntiMartingale",
+    "leverage": 18,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsi",
+    "leverage": 18,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "HedgeMomentumMacdRsiV2",
+    "leverage": 18,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "BOSV4ShortStrict",
+    "leverage": 18,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  },
+  {
+    "strategy": "Hedge03HalfKelly",
+    "leverage": 18,
+    "profit_pct": null,
+    "profit_usdt": null,
+    "trades": null
+  }
+]
