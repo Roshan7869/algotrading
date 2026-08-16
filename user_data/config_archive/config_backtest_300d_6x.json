@@ -1,0 +1,116 @@
+{
+  "strategy": "AroonMomentumEngine_Hybrid",
+  "strategy_path": "user_data/strategies/",
+  "max_open_trades": 7,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.7,
+  "fiat_display_currency": "USD",
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+  "cancel_open_orders_on_exit": false,
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "entry_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0.0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": [
+      "RENDER/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "1000PEPE/USDT:USDT",
+      "ENA/USDT:USDT",
+      "TON/USDT:USDT",
+      "SOL/USDT:USDT",
+      "DOT/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "LINK/USDT:USDT",
+      "OP/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "TRX/USDT:USDT",
+      "XLM/USDT:USDT",
+      "BCH/USDT:USDT",
+      "1000SHIB/USDT:USDT",
+      "SUI/USDT:USDT",
+      "ONDO/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "VET/USDT:USDT",
+      "HBAR/USDT:USDT",
+      "KAS/USDT:USDT",
+      "XTZ/USDT:USDT",
+      "MTV/USDT:USDT",
+      "WLD/USDT:USDT",
+      "ARB/USDT:USDT",
+      "ZEC/USDT:USDT",
+      "XMR/USDT:USDT",
+      "EOS/USDT:USDT"
+    ],
+    "pair_blacklist": []
+  },
+  "minimal_roi": {
+    "0": 1.0,
+    "120": 0.5,
+    "240": 0.2,
+    "720": 0.05,
+    "1440": 0.01
+  },
+  "stoploss": -0.1,
+  "trailing_stop": true,
+  "trailing_stop_positive": 0.02,
+  "trailing_stop_positive_offset": 0.05,
+  "trailing_only_offset_is_reached": true,
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "edge": {
+    "enabled": false
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "freqtrader",
+    "password": "password"
+  },
+  "bot_name": "Backtest_300d_6x_7030",
+  "initial_state": "running",
+  "force_entry_enable": false,
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "leverage": 6,
+  "timeframe": "1h",
+  "stoploss_on_exchange": true,
+  "stoploss_on_exchange_interval": 60
+}

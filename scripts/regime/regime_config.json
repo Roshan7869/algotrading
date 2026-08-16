@@ -1,0 +1,10 @@
+{
+  "mapping": {
+    "trending_up": "EmaTrendFollowing",
+    "trending_down": "DmiAdxStrategy",
+    "ranging": "BollingerMeanReversion",
+    "volatile": "EnsembleStrategy",
+    "unknown": "AroonMomentumEngine_Hybrid"
+  },
+  "description": "Regime-to-strategy assignment matrix. Updated by regime_router.py --map"
+}

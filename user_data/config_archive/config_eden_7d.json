@@ -1,0 +1,37 @@
+{
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "exchange": {
+    "name": "binance",
+    "pair_whitelist": [
+      "EDEN/USDT:USDT"
+    ],
+    "pair_blacklists": []
+  },
+  "max_open_trades": 7,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.7,
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+  "timeframe": "1h",
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "stoploss_on_exchange": true,
+  "stoploss_on_exchange_interval": 60
+}

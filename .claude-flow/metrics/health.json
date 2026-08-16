@@ -1,0 +1,20 @@
+{
+  "status": "healthy",
+  "timestamp": "2026-05-22T01:59:30+05:30",
+  "disk": {
+    "usage_pct": 50,
+    "free": "178G"
+  },
+  "memory": {
+    "total_mb": 15858,
+    "used_mb": 5361,
+    "usage_pct": 33
+  },
+  "processes": {
+    "node": 2,
+    "agentic_flow": 1
+  },
+  "load_avg": 5.76,
+  "fd_used": 5,
+  "warnings": ""
+}

@@ -1,0 +1,8 @@
+{
+  "base_model": "all-MiniLM-L6-v2",
+  "dim": 384,
+  "epochs": 8,
+  "batch_size": 64,
+  "lr": 0.002,
+  "train_pairs": 1966
+}

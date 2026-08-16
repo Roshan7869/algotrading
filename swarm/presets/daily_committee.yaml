@@ -1,0 +1,44 @@
+# Daily Committee Swarm
+# CEO + 3 analysts review market conditions and form consensus trades.
+# Ideal for: normal market conditions, daily strategy selection
+
+name: daily_committee
+description: CEO + 3 analysts forming consensus trades from multi-perspective analysis
+topology: hierarchical-mesh
+max_agents: 4
+strategy: development
+
+agents:
+  - role: ceo_analyst
+    model: deepseek-v4
+    prompt: |
+      You are the CEO analyst. Review all signals from sub-analysts.
+      Make the final trading decision with position sizing recommendation.
+      Priority: capital preservation > consistent returns > aggressive growth.
+    tools: [trade_status, execute_backtest, check_learning_status]
+
+  - role: technical_analyst
+    model: deepseek-v4
+    prompt: |
+      You are the technical analyst. Analyze price action, indicators,
+      support/resistance levels. Output BUY/SELL/HOLD with confidence 0-1.
+    tools: [mcp_get_quote, mcp_get_ohlcv, mcp_get_ta]
+
+  - role: sentiment_analyst
+    model: deepseek-v4
+    prompt: |
+      You are the sentiment analyst. Analyze market sentiment from news,
+      social media, and fear/greed indicators.
+    tools: [mcp_get_news]
+
+  - role: risk_analyst
+    model: deepseek-v4
+    prompt: |
+      You are the risk analyst. Check circuit breaker state, drawdown,
+      and current risk tier. Recommend position size limits.
+    tools: [trade_status, check_learning_status]
+
+schedule: daily 08:00 UTC
+trigger:
+  type: time
+  at: "08:00 * * * *"

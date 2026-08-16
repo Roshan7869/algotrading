@@ -1,0 +1,45 @@
+# Crisis Response Swarm
+# Emergency drawdown management — triggers when circuit breaker hits HIGH or KILL.
+# Goal: assess damage, liquidate positions, generate post-mortem.
+
+name: crisis_response
+description: Emergency drawdown swarm triggered by circuit breaker HIGH/KILL events
+topology: hierarchical-mesh
+max_agents: 3
+strategy: crisis
+
+agents:
+  - role: crisis_manager
+    model: deepseek-v4
+    prompt: |
+      You are the crisis manager. Coordinate emergency response.
+      1. Immediately assess all open positions
+      2. Recommend liquidation priority (most at risk first)
+      3. Calculate total exposure
+      4. Pause all new entries
+      Do NOT wait for consensus — act decisively.
+    tools: [trade_status, adjust_config]
+
+  - role: damage_assessor
+    model: deepseek-v4
+    prompt: |
+      Calculate total damage: realized PnL, unrealized PnL,
+      drawdown percentage, remaining buying power.
+      Report in structured format.
+    tools: [trade_status]
+
+  - role: postmortem_analyst
+    model: deepseek-v4
+    prompt: |
+      After crisis contained, analyze root cause:
+      1. What triggered the drawdown?
+      2. Was the circuit breaker respected?
+      3. What learning loop signals were missed?
+      4. Recommendations to prevent recurrence
+    tools: [check_learning_status]
+
+trigger:
+  type: event
+  event: circuit_breaker_high_or_kill
+  auto_activate: true
+  cooldown_minutes: 60

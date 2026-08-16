@@ -1,0 +1,22 @@
+[
+  {
+    "type": "risk",
+    "timestamp": "2026-05-22T10:41:12.374275+00:00",
+    "data": {
+      "event": "integration_test",
+      "message": "test message",
+      "details": {
+        "source": "pytest"
+      }
+    }
+  },
+  {
+    "type": "risk",
+    "timestamp": "2026-05-22T20:43:35.756278+00:00",
+    "data": {
+      "event": "drawdown_breach",
+      "message": "Drawdown exceeded 20%",
+      "details": {}
+    }
+  }
+]
