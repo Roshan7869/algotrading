@@ -1,0 +1,10 @@
+{
+  "slack_webhook_url": "",
+  "generic_webhook_url": "",
+  "min_pnl_alert": 50.0,
+  "max_signal_age": 300,
+  "alert_on_critical_breaker": true,
+  "alert_on_warning_breaker": true,
+  "alert_on_large_pnl": true,
+  "alert_on_stale_signals": true
+}

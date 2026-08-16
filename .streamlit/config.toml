@@ -1,0 +1,20 @@
+[server]
+port = 8501
+headless = true
+address = "0.0.0.0"
+gatherUsageStats = false
+
+[browser]
+gatherUsageStats = false
+
+[runner]
+# Ensure project root is on sys.path for imports like from engine.*, from ui.*
+# This replaces the manual PYTHONPATH export requirement
+fastReruns = true
+
+[theme]
+base = "dark"
+primaryColor = "#00d4ff"
+backgroundColor = "#0e1117"
+secondaryBackgroundColor = "#1a1d23"
+textColor = "#e1e4e8"

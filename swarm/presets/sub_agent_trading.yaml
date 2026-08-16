@@ -1,0 +1,61 @@
+# Sub-Agent Trading Swarm
+# Parallel overseer for sub-agents: monitoring, health checks, and trade execution.
+# Runs continuously alongside the main trading loop.
+
+name: sub_agent_trading
+description: Parallel sub-agent overseer running health checks and executing trades
+topology: hierarchical-mesh
+max_agents: 5
+strategy: monitoring
+
+agents:
+  - role: overseer
+    model: deepseek-v4
+    prompt: |
+      You are the sub-agent overseer. Coordinate all sub-agents:
+      1. Monitor agent heartbeats every 60s
+      2. Detect stale/failed agents
+      3. Restart failed agents
+      4. Report overall swarm health
+    tools: [trade_status]
+    heartbeat_ttl: 120
+
+  - role: signal_processor
+    model: deepseek-v4
+    prompt: |
+      Process signals from the Redis signal bus.
+      Forward valid signals through the risk gate.
+      Publish approved trades to the commands channel.
+    tools: [trade_status, check_learning_status]
+
+  - role: learning_sync
+    model: deepseek-v4
+    prompt: |
+      Sync trade outcomes from the signal bus to ChromaDB.
+      Query similar setups before each trade.
+      Flag low-confidence setups (win rate < 40%).
+    tools: [check_learning_status, record_learning_outcome]
+
+  - role: health_monitor
+    model: deepseek-v4
+    prompt: |
+      Monitor system health:
+      - Redis connection
+      - ChromaDB availability
+      - MCP server status
+      - Freqtrade process
+      Report anomalies immediately.
+    tools: [trade_status]
+
+  - role: trade_executor
+    model: deepseek-v4
+    prompt: |
+      Execute approved trades through Freqtrade bridge.
+      Verify execution confirmation.
+      Record outcome to learning loop.
+    tools: [trade_status, feed_trade_outcome, record_learning_outcome]
+
+trigger:
+  type: continuous
+  polling_interval: 60
+  agent_timeout: 300

@@ -1,0 +1,9 @@
+{
+  "agents": {
+    "miroshark": {"status": "idle", "last_heartbeat": "2026-01-01T00:00:00Z", "health": "ok"},
+    "trading_agents": {"status": "idle", "last_heartbeat": "2026-01-01T00:00:00Z", "health": "ok"},
+    "macro_analyst": {"status": "idle", "last_heartbeat": "2026-01-01T00:00:00Z", "health": "ok"},
+    "kronos": {"status": "idle", "last_heartbeat": "2026-01-01T00:00:00Z", "health": "ok"}
+  },
+  "last_updated": "2026-01-01T00:00:00Z"
+}

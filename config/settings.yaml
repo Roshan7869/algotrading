@@ -1,0 +1,145 @@
+# =============================================================================
+# Algotrading Unified Settings
+# =============================================================================
+# Consolidated from shared_config/*.json runtime state files.
+# These represent LIVE runtime state — DO NOT hardcode trading parameters here.
+# =============================================================================
+
+# ─── Active Strategy ─────────────────────────────────────────────────────────
+active_strategy:
+  strategy: EmaTrendFollowing
+  name: EmaTrendFollowing
+
+# ─── Market Regime ───────────────────────────────────────────────────────────
+market_regime:
+  pair: BTC/USDT:USDT
+  regime: volatile
+  regime_probs:
+    trending_up: 0.0
+    ranging: 0.0
+    volatile: 1.0
+    trending_down: 0.0
+  regime_duration_hours: 1
+  regime_stability: 1.0
+  volatility_20: 0.0018
+  returns_20: -0.0006
+  regime_multiplier: 0.5
+
+# ─── Circuit Breaker ─────────────────────────────────────────────────────────
+circuit_breaker:
+  state: NORMAL
+  drawdown_pct: 0.0
+  daily_pnl_pct: 0.0
+  weekly_pnl_pct: 0.0
+  monthly_pnl_pct: 0.0
+  daily_trades: 0
+  weekly_trades: 0
+  monthly_trades: 0
+  max_drawdown_pct: 20.0
+  max_trades_per_day: 5
+  halt_strategy: block_all_entries
+  transition_reason: All systems go
+
+# ─── Sentiment ───────────────────────────────────────────────────────────────
+sentiment:
+  sentiment_score: 0.608
+  raw_score: 0.215
+  article_count: 20
+  dominant: bullish
+  recent_articles: 10
+
+# ─── Outcome Feedback ────────────────────────────────────────────────────────
+outcome_feedback:
+  win_rate: 0.6733
+  total_trades: 150
+  wins: 101
+  avg_r_multiple: 0.6803
+  long_win_rate: 0.4167
+  short_win_rate: 0.8471
+  long_trades: 60
+  short_trades: 85
+  regime_stats:
+    trending_up:
+      trades: 66
+      wins: 59
+      win_rate: 0.8939
+    ranging:
+      trades: 12
+      wins: 10
+      win_rate: 0.8333
+    volatile:
+      trades: 20
+      wins: 17
+      win_rate: 0.85
+    trending_down:
+      trades: 21
+      wins: 15
+      win_rate: 0.7143
+    unknown:
+      trades: 31
+      wins: 0
+      win_rate: 0.0
+  status: ok
+
+# ─── Leverage ────────────────────────────────────────────────────────────────
+leverage_signal:
+  leverage: 1.0
+
+# ─── Agent Health ────────────────────────────────────────────────────────────
+agent_health:
+  agents:
+    miroshark:
+      status: idle
+      health: ok
+    trading_agents:
+      status: idle
+      health: ok
+    macro_analyst:
+      status: idle
+      health: ok
+    kronos:
+      status: idle
+      health: ok
+
+# ─── Hedge State ─────────────────────────────────────────────────────────────
+hedge_state:
+  composite_score: 1.0
+  tier: NORMAL
+  drawdown_breached: false
+  hedge_ratio: 0.0
+
+# ─── Alerter ─────────────────────────────────────────────────────────────────
+alerter:
+  slack_webhook_url: ""
+  generic_webhook_url: ""
+  min_pnl_alert: 50.0
+  max_signal_age: 300
+  alert_on_critical_breaker: true
+  alert_on_warning_breaker: true
+  alert_on_large_pnl: true
+  alert_on_stale_signals: true
+
+# ─── LLM Cache ───────────────────────────────────────────────────────────────
+llm_cache:
+  ttl_seconds: 300
+
+# ─── Miroshark Brain ─────────────────────────────────────────────────────────
+miroshark_brain:
+  action: NEUTRAL
+  confidence: 0.5931
+  direction: short
+  suggested_leverage: 3.0
+
+# ─── TradingAgents Signal ────────────────────────────────────────────────────
+tradingagents_signal:
+  rating: Buy
+  risk_assessment:
+    approval: true
+
+# ─── Orchestrator ────────────────────────────────────────────────────────────
+orchestrator:
+  pair: BTC/USDT
+  action: NEUTRAL
+  confidence: 0.2733
+  direction: short
+  leverage: 1.0

@@ -1,0 +1,86 @@
+{
+  "pair": "ETH/USDT",
+  "timestamp": "2026-05-22T10:33:49.488002+00:00",
+  "consensus": {
+    "pair": "ETH/USDT",
+    "action": "NEUTRAL",
+    "confidence": 0.2672,
+    "direction": "short",
+    "source": "consensus",
+    "price": null,
+    "leverage": 1.0,
+    "reason": "Consensus of 4 generators: miroshark, tradingagents, macro_analyst, kronos",
+    "timestamp": "2026-05-22T10:33:49.157154+00:00",
+    "metadata": {}
+  },
+  "signals": [
+    {
+      "pair": "ETH/USDT",
+      "action": "NEUTRAL",
+      "confidence": 0.5688,
+      "direction": "short",
+      "source": "miroshark",
+      "price": null,
+      "leverage": 3.0,
+      "reason": "regime=volatile (score=0.175, stability=1.00); sentiment=bullish (score=0.7296); outcomes: WR=70.14% over 144 trades (score=0.7814); agents: Neutral (score=0.5); circuit_breaker: UNKNOWN (score=1.0); composite=0.569 \u2192 action=NEUTRAL, direction=short",
+      "timestamp": "2026-05-22T10:33:41.225370+00:00",
+      "metadata": {}
+    },
+    {
+      "pair": "ETH/USDT",
+      "action": "NEUTRAL",
+      "confidence": 0.5,
+      "direction": "neutral",
+      "source": "tradingagents",
+      "price": null,
+      "leverage": 1.0,
+      "reason": "From tradingagents_signal.json",
+      "timestamp": "2026-05-22T10:33:41.225464+00:00",
+      "metadata": {}
+    },
+    {
+      "pair": "ETH/USDT",
+      "action": "NEUTRAL",
+      "confidence": 0.0,
+      "direction": "neutral",
+      "source": "macro_analyst",
+      "price": 0,
+      "leverage": 1.0,
+      "reason": "no clear signal",
+      "timestamp": "2026-05-22T10:33:45.884829+00:00",
+      "metadata": {
+        "score": 0.0,
+        "rsi": 50,
+        "change_pct": 0
+      }
+    },
+    {
+      "pair": "ETH/USDT",
+      "action": "NEUTRAL",
+      "confidence": 0.0,
+      "direction": "neutral",
+      "source": "kronos",
+      "price": null,
+      "leverage": 1.0,
+      "reason": "No Kronos strategies found in registry",
+      "timestamp": "2026-05-22T10:33:45.904583+00:00",
+      "metadata": {}
+    }
+  ],
+  "risk_gate": {
+    "blocked": true,
+    "tier": 3,
+    "reason": "Circuit breaker HALT/LIQUIDATE (tier 3)"
+  },
+  "learning_gate": {
+    "blocked": true,
+    "reason": "Learning gate blocked: Win rate 0% < 40% threshold (0 similar trade(s))",
+    "win_rate": 0.0
+  },
+  "blocked": true,
+  "block_reasons": [
+    "Circuit breaker HALT/LIQUIDATE (tier 3)",
+    "Learning gate blocked: Win rate 0% < 40% threshold (0 similar trade(s))"
+  ],
+  "published": false
+}

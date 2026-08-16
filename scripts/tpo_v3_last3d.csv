@@ -1,0 +1,2 @@
+pair,entry_date,exit_date,side,entry_price,sl,tp1,tp2,tp3,exit_reason,pnl,r_multiple,exit_bar_close,sweep_val,sweep_vah,poc
+BCH,2026-05-15 03:00:00+00:00,2026-05-15 13:00:00+00:00,short,435.7,438.851,432.549,429.3981,426.2472,tp3,6.9321,2.2,424.9,433.6583,437.975,436.5875

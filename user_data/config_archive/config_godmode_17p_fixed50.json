@@ -1,0 +1,52 @@
+{
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "exchange": {
+    "name": "binance",
+    "pair_whitelist": [
+      "1000PEPE/USDT:USDT",
+      "1000SHIB/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "ARB/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "BCH/USDT:USDT",
+      "BTC/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "DOT/USDT:USDT",
+      "ENA/USDT:USDT",
+      "ETH/USDT:USDT",
+      "KAS/USDT:USDT",
+      "LINK/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "SOL/USDT:USDT",
+      "XRP/USDT:USDT"
+    ],
+    "pair_blacklists": []
+  },
+  "max_open_trades": 3,
+  "stake_currency": "USDT",
+  "stake_amount": 50,
+  "tradable_balance_ratio": 0.7,
+  "dry_run": true,
+  "timeframe": "1h",
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "stoploss_on_exchange": true,
+  "stoploss_on_exchange_interval": 60
+}

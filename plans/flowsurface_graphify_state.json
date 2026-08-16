@@ -1,0 +1,161 @@
+{
+  "plan_id": "flowsurface_integration_v1",
+  "created": "2026-05-21T19:45:00Z",
+  "last_updated": "2026-05-21T20:45:00Z",
+  "total_blocks": 12,
+  "current_level": 5,
+  "completed_levels": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "blocks": {
+    "P0": {
+      "status": "completed",
+      "started": "2026-05-21T19:45:00Z",
+      "completed": "2026-05-21T19:55:00Z",
+      "files_changed": [
+        "flowsurface_src/src/connector/local.rs",
+        "flowsurface_src/src/connector.rs"
+      ],
+      "output_sha": null
+    },
+    "P1": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T19:55:00Z",
+      "files_changed": [
+        "engine/flowsurface_bridge.py"
+      ],
+      "output_sha": null
+    },
+    "P2": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:10:00Z",
+      "files_changed": [
+        "data/chart.rs",
+        "data/chart/orderflow.rs",
+        "data/chart/volumeprofile.rs",
+        "data/chart/indicator.rs",
+        "data/layout/pane.rs"
+      ],
+      "output_sha": null
+    },
+    "P3": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:10:00Z",
+      "files_changed": [
+        "data/chart.rs",
+        "data/chart/volumeprofile.rs",
+        "data/chart/orderflow.rs",
+        "data/layout/pane.rs"
+      ],
+      "output_sha": null
+    },
+    "P4": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:15:00Z",
+      "files_changed": [
+        "src/chart/orderflow.rs",
+        "src/chart.rs"
+      ],
+      "output_sha": null
+    },
+    "P5": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:15:00Z",
+      "files_changed": [
+        "src/chart/volumeprofile.rs",
+        "src/chart.rs"
+      ],
+      "output_sha": null
+    },
+    "P6": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:30:00Z",
+      "files_changed": [
+        "src/chart/indicator/orderflow.rs",
+        "src/chart/indicator.rs"
+      ],
+      "output_sha": null
+    },
+    "P7": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:30:00Z",
+      "files_changed": [
+        "src/chart/indicator/orderflow.rs"
+      ],
+      "output_sha": null
+    },
+    "P8": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:30:00Z",
+      "files_changed": [
+        "src/chart/indicator/orderflow.rs"
+      ],
+      "output_sha": null
+    },
+    "P9": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:30:00Z",
+      "files_changed": [
+        "src/screen/dashboard.rs",
+        "src/screen/dashboard/pane.rs",
+        "src/chart.rs"
+      ],
+      "output_sha": null
+    },
+    "P10": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:30:00Z",
+      "files_changed": [
+        "src/screen/dashboard/pane.rs"
+      ],
+      "output_sha": null
+    },
+    "P11": {
+      "status": "pending_deps",
+      "started": null,
+      "completed": null,
+      "files_changed": [],
+      "output_sha": null,
+      "blocker": "Requires: sudo apt install libasound2-dev (alsa-sys build dep for rodio audio)"
+    },
+    "P12": {
+      "status": "completed",
+      "started": null,
+      "completed": "2026-05-21T20:45:00Z",
+      "files_changed": [
+        "ui/pages/11_flowsurface.py"
+      ],
+      "output_sha": null
+    },
+    "P13": {
+      "status": "pending",
+      "started": null,
+      "completed": null,
+      "files_changed": [],
+      "output_sha": null
+    },
+    "P14": {
+      "status": "pending",
+      "started": null,
+      "completed": null,
+      "files_changed": [],
+      "output_sha": null
+    }
+  },
+  "context_snapshots": [],
+  "checkpoint_history": []
+}
