@@ -4,7 +4,7 @@
 import subprocess
 import json
 
-CONFIG_FILE = "user_data/config_backtest_100.json"
+CONFIG_FILE = "user_data/config_backtest.json"
 STRATEGY = "AroonMomentumEngine_Shorts"
 DOCKER_CMD = "docker compose -f infrastructure/docker-compose.backtest.yml run --rm freqtrade-backtest"
 

@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-11-19T12:12:21+00:00",
+  "state": "PAUSED",
+  "action": "stop_bot",
+  "mode": "mock",
+  "polls": 2,
+  "drawdown": 0.04,
+  "drawdown_pct": 4.0,
+  "pause_threshold_pct": 4.0,
+  "balance": 960.0,
+  "peak_balance": 1000.0,
+  "breaker_state": "OK",
+  "source": "mock",
+  "reasons": [
+    "drawdown 4.00% >= pause threshold 4.00%"
+  ],
+  "stop_method": "mock:stop"
+}

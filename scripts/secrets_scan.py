@@ -1,0 +1,569 @@
+#!/usr/bin/env python3
+"""Secret gate with an allowlist (EXECUTION_PLAN 0.4).
+
+Detects three shapes and refuses them unless they are obviously placeholders:
+
+  alnum_token_64       exactly 64 [A-Za-z0-9] characters (binance API key shape)
+  hex_40_64            bare 40-64 hex characters (binance secret / hmac shapes)
+  secret_assignment    api_key|secret|token|password|jwt = "value" with 8+ chars
+
+Allowlist (a match is *not* a finding when):
+  * the value is an env placeholder — ``${FREQTRADE_API_PASSWORD}``, ``${VAR:-x}``
+  * the value is a documented placeholder — ``<your-key>``, ``CHANGEME``, ``xxxx``
+  * the line carries the inline pragma ``secrets:allow`` (or detect-secrets'
+    ``pragma: allowlist secret``)
+  * the path matches the built-in default ignores or a ``.secretsignore`` glob
+
+Modes
+-----
+staged (default)   ``git diff --cached -U0``; only added lines are scanned, so a
+                   secret that is merely *moved* or *deleted* does not re-fail.
+``--all [ROOT]``   walk a tree, skipping .git/.venv/node_modules/attic/
+                   user_data/data and binary artifacts.
+``--files P ...``  scan explicit files (tests, ad-hoc checks).
+``--diff-file P``  parse a unified diff from disk (offline tests, pre-push bots).
+
+Exit codes: 0 clean, 1 findings, 2 usage/IO error.
+
+Usage
+-----
+  python scripts/secrets_scan.py                     # staged changes
+  python scripts/secrets_scan.py --all               # whole repo
+  python scripts/secrets_scan.py --all --json        # machine-readable
+  python scripts/secrets_scan.py --init-ignore       # write .secretsignore
+"""
+
+from __future__ import annotations
+
+import argparse
+import fnmatch
+import json
+import os
+import re
+import subprocess
+import sys
+from dataclasses import dataclass, field
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
+EXIT_CLEAN = 0
+EXIT_FINDINGS = 1
+EXIT_USAGE = 2
+
+# --- patterns ---------------------------------------------------------------
+
+ASSIGNMENT_RE = re.compile(
+    r"(?i)\b(api[_-]?key|secret|token|password|jwt)\b\s*[:=]\s*['\"]([^'\"]{8,})['\"]"
+)
+ALNUM64_RE = re.compile(r"(?<![A-Za-z0-9])[A-Za-z0-9]{64}(?![A-Za-z0-9])")
+HEX_RE = re.compile(r"(?<![A-Za-z0-9])[A-Fa-f0-9]{40,64}(?![A-Za-z0-9])")
+
+PATTERN_PRIORITY = {"secret_assignment": 0, "hex_40_64": 1, "alnum_token_64": 2}
+
+# Bare tokens are only evidence when the *context* is not obviously a hash.
+# These markers mean "identifier/checksum", not "credential": git SHAs, cargo
+# checksums, etags, run ids, notebook output hashes. Assignment matches
+# (``secret = "<value>"``) are never exempted by context — only by placeholders.
+CHECKSUM_MARKERS_RE = re.compile(
+    r"(?i)(checksum|integrity|digest|sha1|sha256|sha512|md5|hash|commit|revision|"
+    r"rev-parse|git_sha|run_id|blob|tree|parent|etag|\bHEAD\b|\bsha\b|manifest[ _-]?hash)"
+)
+URL_SPAN_RE = re.compile(r"(?i)https?://[^\s'\"<>\)\]]+")
+ASSET_SUFFIX_RE = re.compile(r"(?i)\.(jpg|jpeg|png|gif|webp|svg|avif|ico)\b")
+
+# --- allowlists -------------------------------------------------------------
+
+PLACEHOLDER_VALUE_RE = re.compile(r"^\$\{[A-Za-z_][A-Za-z0-9_]*(?:[:?\-][^}]*)?\}$")
+BRACKET_PLACEHOLDER_RE = re.compile(r"^<[A-Za-z0-9_\- ]{1,64}>$")
+DOTTED_PLACEHOLDER_RE = re.compile(
+    r"(?i)^(changeme|change_me|replace_me|replaceme|your[_-]?[a-z0-9_]*|redacted|dummy|"
+    r"placeholder|example|todo|x{4,}|\*{4,}|\.{3,}|-+)$"
+)
+# Single brace-delimited template field: f"{var}" / f"{token(24)}" — no quotes
+# inside, so a literal secret can never hide in one.
+FORMAT_FIELD_RE = re.compile(r"^\{[^{}'\"\s][^{}'\"]{0,118}\}$")
+INLINE_ALLOW_RE = re.compile(r"(?i)(secrets:\s*allow|pragma:\s*allowlist\s+secret)")
+
+# Paths never scanned. `.secretsignore` can add more; it cannot remove these.
+DEFAULT_IGNORES = (
+    ".git/",
+    ".venv/",
+    "venv/",
+    "node_modules/",
+    "attic/",
+    "reports/",
+    "__pycache__/",
+    ".mypy_cache/",
+    ".pytest_cache/",
+    ".ruff_cache/",
+    ".git-rewrite/",
+    "user_data/data/",
+    "*.feather",
+    "*.sqlite",
+    "*.sqlite-wal",
+    "*.sqlite-shm",
+    "*.db",
+    "*.zip",
+    "*.gz",
+    "*.tar",
+    "*.tgz",
+    "*.7z",
+    "*.parquet",
+    "*.pkl",
+    "*.npy",
+    "*.npz",
+    "*.onnx",
+    # checksum containers: every line is a hash, never a credential
+    "*.lock",
+    "Cargo.lock",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "yarn.lock",
+    "poetry.lock",
+    # public key / signature blobs (base64 of a public key is not a secret)
+    "*.asc",
+    "*.gpg",
+    "*.pub",
+    "*.sum",
+    "*.sha256",
+    "*.png",
+    "*.jpg",
+    "*.jpeg",
+    "*.gif",
+    "*.ico",
+    "*.pdf",
+    "*.woff",
+    "*.woff2",
+    "*.ttf",
+    "*.so",
+    "*.dll",
+    "*.exe",
+    "*.pyd",
+    "*.pyc",
+    "*.bin",
+    "*.log",
+)
+
+IGNORE_FILE_NAME = ".secretsignore"
+IGNORE_TEMPLATE = """\
+# .secretsignore — glob paths the secret scanner must not read (one per line).
+# Generated by `python scripts/secrets_scan.py --init-ignore`.
+# Comments (#) and blank lines are ignored. Patterns are case-insensitive.
+.venv/
+attic/
+reports/
+"""
+
+SKIP_DIR_NAMES = {
+    ".git",
+    ".venv",
+    "venv",
+    "node_modules",
+    "attic",
+    "__pycache__",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".git-rewrite",
+    "htmlcov",
+    ".tox",
+    ".eggs",
+}
+
+MAX_BYTES = 16 * 1024 * 1024
+
+
+# ------------------------------------------------------------------- findings
+
+
+@dataclass
+class Finding:
+    path: str
+    line: int
+    pattern: str
+    match: str
+    key: str = ""
+    context: str = ""
+
+    @property
+    def masked(self) -> str:
+        """First 4 characters plus an ellipsis — never the whole secret."""
+        text = self.match or ""
+        head = text[:4]
+        return f"{head}...(len={len(text)})"
+
+    def __str__(self) -> str:
+        key = f" key={self.key}" if self.key else ""
+        return f"{self.path}:{self.line}: pattern={self.pattern}{key} match={self.masked}"
+
+    def as_dict(self) -> dict:
+        return {
+            "path": self.path,
+            "line": self.line,
+            "pattern": self.pattern,
+            "key": self.key,
+            "masked": self.masked,
+        }
+
+
+def is_placeholder(value: str) -> bool:
+    """True when a matched value is an obvious placeholder, not a credential."""
+    text = (value or "").strip()
+    if not text:
+        return True
+    if PLACEHOLDER_VALUE_RE.match(text):
+        return True
+    if BRACKET_PLACEHOLDER_RE.match(text):
+        return True
+    if DOTTED_PLACEHOLDER_RE.match(text):
+        return True
+    if FORMAT_FIELD_RE.match(text):
+        return True
+    return bool(text.startswith("${") and text.endswith("}") and text.count("${") == 1)
+
+
+def token_context_exempt(line: str, start: int, end: int, token: str) -> bool:
+    """True when a *bare* token is an identifier/checksum rather than a credential."""
+    if token.isdigit():
+        return True
+    if CHECKSUM_MARKERS_RE.search(line):
+        return True
+    if start > 0 and line[start - 1] == "@":  # action pin: uses: owner/action@<sha>
+        return True
+    if any(match.start() <= start < match.end() for match in URL_SPAN_RE.finditer(line)):
+        return True  # asset / object id inside a URL path
+    if ASSET_SUFFIX_RE.match(line[end:]):  # <hash>.jpg
+        return True
+    return False
+
+
+def scan_text(text: str, path: str = "<text>", start_line: int = 1) -> list[Finding]:
+    """Scan a block of text. Returns findings with 1-based line numbers."""
+    findings: list[Finding] = []
+    for offset, line in enumerate(text.splitlines()):
+        lineno = start_line + offset
+        if INLINE_ALLOW_RE.search(line):
+            continue
+
+        spans: list[tuple[int, int, str, str, str]] = []  # start, end, pattern, match, key
+        for match in ALNUM64_RE.finditer(line):
+            if token_context_exempt(line, match.start(), match.end(), match.group(0)):
+                continue
+            spans.append((match.start(), match.end(), "alnum_token_64", match.group(0), ""))
+        for match in HEX_RE.finditer(line):
+            if token_context_exempt(line, match.start(), match.end(), match.group(0)):
+                continue
+            spans.append((match.start(), match.end(), "hex_40_64", match.group(0), ""))
+        for match in ASSIGNMENT_RE.finditer(line):
+            key = match.group(1).lower().replace("-", "_")
+            value = match.group(2)
+            if is_placeholder(value):
+                continue
+            spans.append((match.start(), match.end(), "secret_assignment", value, key))
+
+        # One finding per span: keep the most specific pattern, drop spans that a
+        # longer match already covers (a 64-hex secret is also 64 alnum chars).
+        best: dict[tuple[int, int], tuple[int, int, str, str, str]] = {}
+        for span in spans:
+            key = (span[0], span[1])
+            if key not in best or PATTERN_PRIORITY[span[2]] < PATTERN_PRIORITY[best[key][2]]:
+                best[key] = span
+        kept: list[tuple[int, int, str, str, str]] = []
+        for span in sorted(best.values(), key=lambda item: (item[0], -item[1])):
+            if any(other[0] <= span[0] and span[1] <= other[1] for other in kept):
+                continue
+            kept.append(span)
+
+        for start, _end, pattern, value, key in kept:
+            findings.append(Finding(path=path, line=lineno, pattern=pattern, match=value,
+                                    key=key, context=safe_context(line, start)))
+    return findings
+
+
+def safe_context(line: str, start: int, width: int = 18) -> str:
+    """A short, already-masked context window around a hit."""
+    lo = max(0, start - width)
+    return line[lo:start].strip()[:40]
+
+
+# -------------------------------------------------------------------- ignores
+
+
+def load_ignore_patterns(root: Path) -> list[str]:
+    """Built-in defaults plus any .secretsignore entries (root, then cwd)."""
+    patterns = list(DEFAULT_IGNORES)
+    for candidate in (Path(root) / IGNORE_FILE_NAME, Path.cwd() / IGNORE_FILE_NAME):
+        try:
+            raw = candidate.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for line in raw.splitlines():
+            entry = line.strip()
+            if not entry or entry.startswith("#"):
+                continue
+            patterns.append(entry)
+    return patterns
+
+
+def _matches_pattern(relpath: str, pattern: str) -> bool:
+    rel = relpath.replace("\\", "/").lstrip("./")
+    pat = pattern.replace("\\", "/").strip().lstrip("./")
+    if not pat:
+        return False
+    if pat.endswith("/"):
+        directory = pat.rstrip("/")
+        if rel == directory or rel.startswith(directory + "/"):
+            return True
+        return f"/{directory}/" in f"/{rel}/"
+    # A bare directory name matches anywhere in the path.
+    if "/" not in pat and "*" not in pat:
+        return pat in rel.split("/")
+    return fnmatch.fnmatch(rel.lower(), pat.lower()) or fnmatch.fnmatch(
+        rel.rsplit("/", 1)[-1].lower(), pat.lower()
+    )
+
+
+def is_ignored(relpath: str, patterns: list[str]) -> bool:
+    return any(_matches_pattern(relpath, pattern) for pattern in patterns)
+
+
+def iter_tree_files(root: Path, patterns: list[str], include_nested: bool = False):
+    """Yield (path, relpath) for every scannable file under root."""
+    root = Path(root)
+    for dirpath, dirnames, filenames in os.walk(root):
+        keep = []
+        for name in sorted(dirnames):
+            if name.lower() in SKIP_DIR_NAMES:
+                continue
+            candidate = Path(dirpath, name)
+            if is_ignored(str(candidate.relative_to(root)), patterns):
+                continue
+            # A nested checkout has its own gate; do not re-scan a vendored clone.
+            if not include_nested and (candidate / ".git").exists():
+                continue
+            keep.append(name)
+        dirnames[:] = keep
+        for filename in sorted(filenames):
+            path = Path(dirpath, filename)
+            rel = str(path.relative_to(root))
+            if is_ignored(rel, patterns):
+                continue
+            yield path, rel
+
+
+def read_text(path: Path) -> str | None:
+    """Read a file as text, or None when it is binary/oversized."""
+    try:
+        if path.stat().st_size > MAX_BYTES:
+            return None
+        raw = path.read_bytes()
+    except OSError:
+        return None
+    if b"\x00" in raw[:8192]:
+        return None
+    return raw.decode("utf-8", "replace")
+
+
+# ----------------------------------------------------------------------- diffs
+
+
+@dataclass
+class DiffLine:
+    path: str
+    line: int
+    text: str
+
+
+HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@")
+
+
+def _clean_diff_path(raw: str) -> str:
+    text = raw.strip().split("\t")[0]
+    if text.startswith('"') and text.endswith('"'):
+        text = text[1:-1]
+    for prefix in ("b/", "a/"):
+        if text.startswith(prefix):
+            return text[len(prefix):]
+    return text
+
+
+def parse_added_lines(diff_text: str) -> list[DiffLine]:
+    """Extract added lines (with their post-image line numbers) from a diff."""
+    added: list[DiffLine] = []
+    path: str | None = None
+    lineno = 0
+    for raw in diff_text.splitlines():
+        if raw.startswith("+++ "):
+            candidate = _clean_diff_path(raw[4:])
+            path = None if candidate == "/dev/null" else candidate
+            lineno = 0
+            continue
+        if raw.startswith("--- "):
+            continue
+        hunk = HUNK_RE.match(raw)
+        if hunk:
+            lineno = int(hunk.group(1))
+            continue
+        if path is None:
+            continue
+        if raw.startswith("+"):
+            added.append(DiffLine(path=path, line=lineno, text=raw[1:]))
+            lineno += 1
+        elif raw.startswith(" "):
+            lineno += 1
+    return added
+
+
+def staged_diff() -> str:
+    proc = subprocess.run(
+        ["git", "diff", "--cached", "-U0", "--no-color", "--no-ext-diff"],
+        cwd=str(REPO_ROOT),
+        capture_output=True,
+        text=True,
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(f"git diff --cached failed: {proc.stderr.strip()}")
+    return proc.stdout
+
+
+# ------------------------------------------------------------------------ scan
+
+
+@dataclass
+class ScanResult:
+    findings: list[Finding] = field(default_factory=list)
+    files_scanned: int = 0
+    files_skipped: int = 0
+    truncated: list[str] = field(default_factory=list)
+
+    def as_dict(self) -> dict:
+        return {
+            "findings": [finding.as_dict() for finding in self.findings],
+            "count": len(self.findings),
+            "files_scanned": self.files_scanned,
+            "files_skipped": self.files_skipped,
+            "truncated": self.truncated,
+        }
+
+
+def scan_paths(paths, root: Path = REPO_ROOT, patterns: list[str] | None = None) -> ScanResult:
+    patterns = patterns if patterns is not None else load_ignore_patterns(root)
+    result = ScanResult()
+    for path in paths:
+        path = Path(path)
+        try:
+            rel = str(path.resolve().relative_to(Path(root).resolve()))
+        except ValueError:
+            rel = str(path)
+        if is_ignored(rel, patterns):
+            result.files_skipped += 1
+            continue
+        text = read_text(path)
+        if text is None:
+            print(f"secrets_scan: skipped unreadable/binary file: {rel}", file=sys.stderr)
+            result.files_skipped += 1
+            continue
+        result.files_scanned += 1
+        result.findings.extend(scan_text(text, path=rel))
+    return result
+
+
+def scan_tree(root: Path = REPO_ROOT, include_nested: bool = False) -> ScanResult:
+    root = Path(root)
+    patterns = load_ignore_patterns(root)
+    result = ScanResult()
+    for path, rel in iter_tree_files(root, patterns, include_nested=include_nested):
+        text = read_text(path)
+        if text is None:
+            result.files_skipped += 1
+            continue
+        result.files_scanned += 1
+        result.findings.extend(scan_text(text, path=rel))
+    return result
+
+
+def scan_diff_text(diff_text: str) -> ScanResult:
+    result = ScanResult()
+    patterns = load_ignore_patterns(REPO_ROOT)
+    lines: dict[str, list[DiffLine]] = {}
+    for entry in parse_added_lines(diff_text):
+        lines.setdefault(entry.path, []).append(entry)
+    for path, entries in lines.items():
+        if is_ignored(path, patterns):
+            result.files_skipped += 1
+            continue
+        result.files_scanned += 1
+        for entry in entries:
+            result.findings.extend(scan_text(entry.text, path=path, start_line=entry.line))
+    # scan_text numbers from start_line for one line; that is correct because
+    # each added line is scanned on its own.
+    return result
+
+
+# ------------------------------------------------------------------------- cli
+
+
+def report(result: ScanResult, as_json: bool = False, quiet: bool = False) -> None:
+    if as_json:
+        print(json.dumps(result.as_dict(), indent=2))
+        return
+    for finding in result.findings:
+        print(str(finding))
+    if not quiet or result.findings:
+        print(
+            f"secrets_scan: {len(result.findings)} finding(s); "
+            f"{result.files_scanned} file(s) scanned, {result.files_skipped} skipped",
+            file=sys.stderr if result.findings else sys.stdout,
+        )
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Secret gate with allowlist.")
+    parser.add_argument("--all", nargs="?", const=str(REPO_ROOT), metavar="ROOT",
+                        help="scan a directory tree (default: repo root)")
+    parser.add_argument("--files", nargs="+", metavar="PATH", help="scan explicit files")
+    parser.add_argument("--diff-file", metavar="PATH", help="scan a unified diff from disk")
+    parser.add_argument("--stdin-diff", action="store_true", help="scan a diff from stdin")
+    parser.add_argument("--json", action="store_true", help="machine-readable output")
+    parser.add_argument("--quiet", action="store_true", help="only print on findings")
+    parser.add_argument("--include-nested", action="store_true",
+                        help="also scan nested checkouts that carry their own .git")
+    parser.add_argument("--init-ignore", action="store_true",
+                        help=f"write {IGNORE_FILE_NAME} from the template and exit")
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+
+    if args.init_ignore:
+        target = Path.cwd() / IGNORE_FILE_NAME
+        if target.exists():
+            print(f"secrets_scan: {target} already exists; left untouched")
+            return EXIT_CLEAN
+        target.write_text(IGNORE_TEMPLATE, encoding="utf-8")
+        print(f"secrets_scan: wrote {target}")
+        return EXIT_CLEAN
+
+    try:
+        if args.diff_file:
+            result = scan_diff_text(Path(args.diff_file).read_text(encoding="utf-8", errors="replace"))
+        elif args.stdin_diff:
+            result = scan_diff_text(sys.stdin.read())
+        elif args.files:
+            result = scan_paths(args.files)
+        elif args.all:
+            result = scan_tree(Path(args.all), include_nested=args.include_nested)
+        else:
+            result = scan_diff_text(staged_diff())
+    except (RuntimeError, OSError) as exc:
+        print(f"secrets_scan: error: {exc}", file=sys.stderr)
+        return EXIT_USAGE
+
+    report(result, as_json=args.json, quiet=args.quiet)
+    return EXIT_FINDINGS if result.findings else EXIT_CLEAN
+
+
+if __name__ == "__main__":
+    sys.exit(main())

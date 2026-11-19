@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "fee_model": "fee_model: 10bps all-in (fee + slippage proxy)",
+  "sealed": true,
+  "opened": false,
+  "stage_window": {
+    "start": "20260701",
+    "end_inclusive": "run_date",
+    "timerange": "20260701-20261120",
+    "note": "SEALED \u2014 metrics go only to HOLDOUT_SEALED.json until --open-holdout"
+  },
+  "results": [
+    {
+      "strategy": "BollingerMeanReversion",
+      "stage": "holdout",
+      "status": "insufficient_data",
+      "timerange": "20260701-20261120",
+      "note": "no pair has >= 100 candles in this window; backtest skipped (data refresh pending)",
+      "metrics": {
+        "trades": 0,
+        "trades_long": null,
+        "trades_short": null,
+        "profit_abs": null,
+        "profit_pct": null,
+        "winrate_pct": null,
+        "expectancy_abs": null,
+        "expectancy_pct": null,
+        "max_drawdown_pct": null,
+        "max_drawdown_abs": null,
+        "sharpe": null,
+        "sortino": null,
+        "calmar": null,
+        "profit_factor": null,
+        "cagr_pct": null,
+        "trades_per_day": null,
+        "avg_duration_s": null,
+        "starting_balance": null,
+        "final_balance": null,
+        "max_open_trades": null,
+        "stake_amount": null,
+        "backtest_start": null,
+        "backtest_end": null,
+        "timerange": null,
+        "timeframe": null,
+        "pairs_in_report": 0,
+        "pairs_traded": 0,
+        "per_pair": []
+      }
+    }
+  ],
+  "seal": {
+    "note": "Holdout metrics are sealed. Selection (Phase 2.1) must not read this file. Opening requires --open-holdout (Phase 2.4, once).",
+    "sealed_hash": "sha256:6076762049a299262efda941e5662b10f26364d7b6537571c8ef8db0ebade863",
+    "git_sha": "bc9157a2a39066554bc6fe59395daadd45945c62",
+    "fee_model": "fee_model: 10bps all-in (fee + slippage proxy)"
+  }
+}

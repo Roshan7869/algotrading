@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "fee_model": "fee_model: 10bps all-in (fee + slippage proxy)",
+  "stages": [],
+  "results": []
+}

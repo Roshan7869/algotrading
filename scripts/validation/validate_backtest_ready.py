@@ -45,7 +45,7 @@ def main():
     print("=" * 60)
 
     # Load config
-    config_path = "user_data/config_market_ready.json"
+    config_path = "user_data/config_dryrun.json"
     valid, config = check_config_valid(config_path)
 
     if not valid:

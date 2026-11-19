@@ -19,8 +19,8 @@ from pathlib import Path
 from datetime import datetime
 
 # Configuration
-CONFIG_FILE = "user_data/config_backtest_300day_STANDARD.json"
-KEYS_FILE = "user_data/config_live_analysis.json"
+CONFIG_FILE = "user_data/config_backtest.json"
+KEYS_FILE = "user_data/config_dryrun.json"
 STRATEGY = "AroonMomentumEngine"
 DAYS = 300
 TIMEFRAMES = ["1h", "4h"]

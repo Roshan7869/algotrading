@@ -1,4 +1,5 @@
 {
+    "_comment": "CANONICAL CONFIG 3/3 - DRY-RUN (paper). Purpose: the Phase 2.3 paper-trading session on the 20-pair futures universe; writes tradesv3.dryrun.sqlite. Owner: Phase 1.2 of EXECUTION_PLAN.md; launched by scripts/supervise.py (Phase 0.3). dry_run=true is mandatory here - never arm this file (plan anti-goal 5). LEVERAGE: strategy leverage() callbacks decide; the 'leverage' key is advisory only (read by repo scripts, not by freqtrade) - docs/leverage-matrix.md. STOPLOSS: config-level value OVERRIDES the strategy attribute (strategy_resolver.py:106-114).",
     "max_open_trades": 3,
     "stake_currency": "USDT",
     "stake_amount": "unlimited",
@@ -79,5 +80,7 @@
     },
     "stoploss_on_exchange": true,
     "stoploss_on_exchange_interval": 60,
-    "leverage": 3
+    "leverage": 3,
+    "stoploss": -0.05,
+    "db_url": "sqlite:///tradesv3.dryrun.sqlite"
 }

@@ -44,7 +44,7 @@ def parse_args():
         dest="config",
         type=str,
         metavar="PATH",
-        default="config.json",
+        default="user_data/config_dryrun.json",
     )
     parser.add_argument(
         "-l",

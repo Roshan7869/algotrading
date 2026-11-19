@@ -90,7 +90,7 @@ async def main_async(args: argparse.Namespace) -> int:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Parallel Ollama/Freqtrade market agent runner")
-    parser.add_argument("--config", default="user_data/config_market_ready.json")
+    parser.add_argument("--config", default="user_data/config_dryrun.json")
     parser.add_argument("--mode", choices=["observe", "telegram_confirm", "paper_execute", "live_execute"], default="observe")
     parser.add_argument("--pairs", default="")
     parser.add_argument("--max-pairs", type=int, default=3)

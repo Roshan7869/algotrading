@@ -214,7 +214,7 @@ def main():
 
     # Get config path from args
     if len(sys.argv) < 2:
-        config_path = "user_data/config_live_trading_6x.json"
+        config_path = "user_data/config_dryrun.json"
         print(f"No config specified, using default: {config_path}")
     else:
         config_path = sys.argv[1]

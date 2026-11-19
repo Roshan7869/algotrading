@@ -34,18 +34,18 @@ DOCKER_CMD="docker run --rm --env-file $(pwd)/.env -v $(pwd)/user_data:/freqtrad
 case $choice in
     1)
         echo "Starting Data Download (300 Days)..."
-        $DOCKER_CMD download-data --config /freqtrade/user_data/config_backtest_300d_10x.json --days 300
+        $DOCKER_CMD download-data --config /freqtrade/user_data/config_backtest.json --days 300
         ;;
     2)
         echo "Starting Backtest (10x Optimized Strategy)..."
-        $DOCKER_CMD backtesting --config /freqtrade/user_data/config_backtest_300d_10x.json --strategy AroonMomentumEngine_Hybrid
+        $DOCKER_CMD backtesting --config /freqtrade/user_data/config_backtest.json --strategy AroonMomentumEngine_Hybrid
         ;;
     3)
         echo "======================================================="
         echo "   STARTING FAULT-TOLERANT ORCHESTRATOR"
         echo "======================================================="
         echo ""
-        echo "Config: config_live_trading_10x.json"
+        echo "Config: config_dryrun.json"
         echo "Leverage: 10x | Stoploss: -12%"
         echo "Features: Auto-recovery, Isolated Telegram, Health Monitoring"
         echo ""
@@ -60,7 +60,7 @@ case $choice in
         echo ""
         echo "[2/3] Starting Trading Orchestrator..."
         echo ""
-        python3 scripts/trading_orchestrator.py user_data/config_live_trading_10x.json
+        python3 scripts/trading_orchestrator.py user_data/config_dryrun.json
         
         echo ""
         echo "[3/3] Orchestrator stopped."
@@ -68,15 +68,15 @@ case $choice in
     4)
         echo "Starting Simulation (Last 2 Days)..."
         # Download recent data
-        $DOCKER_CMD download-data --config /freqtrade/user_data/config_dryrun_wsl_10x.json --days 2
+        $DOCKER_CMD download-data --config /freqtrade/user_data/config_dryrun.json --days 2
         # Backtest
-        $DOCKER_CMD backtesting --config /freqtrade/user_data/config_dryrun_wsl_10x.json --strategy AroonMomentumEngine_Hybrid
+        $DOCKER_CMD backtesting --config /freqtrade/user_data/config_dryrun.json --strategy AroonMomentumEngine_Hybrid
         ;;
     5)
         echo "Starting Live Dry-Run (Direct Docker - Legacy Mode)..."
         echo "WARNING: No fault tolerance! Use Option 3 for production."
         echo "Press Ctrl+C to stop."
-        $DOCKER_CMD trade --config /freqtrade/user_data/config_live_trading_10x.json --strategy AroonMomentumEngine_Hybrid
+        $DOCKER_CMD trade --config /freqtrade/user_data/config_dryrun.json --strategy AroonMomentumEngine_Hybrid
         ;;
     6)
         echo "Exiting..."

@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Phase 0.4 secret gate — full-tree scan before anything leaves the machine.
+# Deliberately broader than pre-commit: it also catches secrets that entered
+# through a merge, a rebase, or a commit made with --no-verify.
+set -u
+
+ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+cd "$ROOT" || exit 2
+
+if [ -n "${SECRETS_SCAN_PYTHON:-}" ]; then
+  PY="$SECRETS_SCAN_PYTHON"
+elif [ -x ".venv/Scripts/python.exe" ]; then
+  PY=".venv/Scripts/python.exe"
+elif [ -x ".venv/bin/python" ]; then
+  PY=".venv/bin/python"
+else
+  PY="python"
+fi
+
+echo "pre-push: scanning the working tree for credentials (scripts/secrets_scan.py --all)"
+"$PY" scripts/secrets_scan.py --all
+rc=$?
+if [ "$rc" -ne 0 ]; then
+  echo "pre-push: blocked by the secret gate (see findings above)." >&2
+  exit "$rc"
+fi
+
+CHAIN="$ROOT/.git/hooks/pre-push"
+if [ -x "$CHAIN" ] && [ "${SECRETS_SCAN_CHAINED:-0}" != "1" ]; then
+  SECRETS_SCAN_CHAINED=1 exec "$CHAIN" "$@"
+fi
+
+exit 0

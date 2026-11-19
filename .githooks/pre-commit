@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Phase 0.4 secret gate — staged changes only.
+# Logic lives in scripts/secrets_scan.py; this wrapper only finds the interpreter.
+set -u
+
+ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+cd "$ROOT" || exit 2
+
+if [ -n "${SECRETS_SCAN_PYTHON:-}" ]; then
+  PY="$SECRETS_SCAN_PYTHON"
+elif [ -x ".venv/Scripts/python.exe" ]; then
+  PY=".venv/Scripts/python.exe"
+elif [ -x ".venv/bin/python" ]; then
+  PY=".venv/bin/python"
+else
+  PY="python"
+fi
+
+"$PY" scripts/secrets_scan.py "$@"
+rc=$?
+if [ "$rc" -ne 0 ]; then
+  echo "pre-commit: blocked by the secret gate (see findings above)." >&2
+  echo "pre-commit: if the match is a placeholder, use \${ENV_VAR} or add 'secrets:allow'." >&2
+  exit "$rc"
+fi
+
+# Coexist with the pre-commit framework: chain to its hook when one is installed
+# at the default path (core.hooksPath points here, so git no longer calls it).
+CHAIN="$ROOT/.git/hooks/pre-commit"
+if [ -x "$CHAIN" ] && [ "${SECRETS_SCAN_CHAINED:-0}" != "1" ]; then
+  SECRETS_SCAN_CHAINED=1 exec "$CHAIN" "$@"
+fi
+
+exit 0

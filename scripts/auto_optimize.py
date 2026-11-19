@@ -25,7 +25,7 @@ from typing import Optional
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
 STRATEGIES_DIR = PROJECT_ROOT / "user_data" / "strategies"
 HISTORY_DIR = PROJECT_ROOT / "user_data" / "optimization_history"
-CONFIG_PATH = PROJECT_ROOT / "user_data" / "config_multi_backtest_365d.json"
+CONFIG_PATH = PROJECT_ROOT / "user_data" / "config_backtest.json"
 
 HYPEROPT_RESULTS_DIR = PROJECT_ROOT / "user_data" / "hyperopt_results"
 BACKTEST_RESULTS_DIR = PROJECT_ROOT / "user_data" / "backtest_results"

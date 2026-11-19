@@ -38,7 +38,7 @@ API_PASSWORD_FILE = Path.home() / ".config" / "freqtrade" / "api_password"
 API_CONFIG_CANDIDATES = (
     REPO_ROOT / "user_data" / "config.json",
     REPO_ROOT / "user_data" / "config_live_real.json",
-    REPO_ROOT / "user_data" / "config_api.json",
+    REPO_ROOT / "user_data" / "config_dryrun.json",
 )
 
 WARNING_DD = 0.25

@@ -29,7 +29,7 @@ def parse_period(period: str) -> int:
     raise ValueError(f"Invalid period: {period}")
 
 
-def run_backtest(strategy: str, start: str, end: str, config: str = "user_data/config_base.json") -> dict:
+def run_backtest(strategy: str, start: str, end: str, config: str = "user_data/config_backtest.json") -> dict:
     """Run a single Freqtrade backtest and extract metrics."""
     cmd = [
         sys.executable, "-m", "freqtrade", "backtesting",

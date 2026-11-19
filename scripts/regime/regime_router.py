@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SHARED_DIR = BASE_DIR / "shared_config"
 REGIME_PATH = SHARED_DIR / "market_regime.json"
 CONFIG_PATH = SHARED_DIR / "regime_config.json"
-FREQTRADE_CONFIG = BASE_DIR / "user_data" / "config_base.json"
+FREQTRADE_CONFIG = BASE_DIR / "user_data" / "config_dryrun.json"
 
 DEFAULT_MAP = {
     "trending_up": "EmaTrendFollowing",

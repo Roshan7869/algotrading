@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "fee_model": "fee_model: 10bps all-in (fee + slippage proxy)",
+  "stages": [
+    "train"
+  ],
+  "results": [
+    {
+      "strategy": "EmaTrendFollowing",
+      "stage": "train",
+      "status": "ok",
+      "timerange": "20251001-20251120",
+      "metrics": {
+        "trades": 20,
+        "trades_long": 20,
+        "trades_short": 0,
+        "profit_abs": 132.053331,
+        "profit_pct": 1.320533,
+        "winrate_pct": 60.0,
+        "expectancy_abs": 6.602667,
+        "expectancy_pct": 0.305033,
+        "max_drawdown_pct": 5.320937,
+        "max_drawdown_abs": 569.418576,
+        "sharpe": 0.394234,
+        "sortino": 17.750273,
+        "calmar": 9.482824,
+        "profit_factor": 1.113753,
+        "cagr_pct": 10.050371,
+        "trades_per_day": 0.4,
+        "avg_duration_s": 52200.0,
+        "starting_balance": 10000.0,
+        "final_balance": 10132.05,
+        "max_open_trades": 2,
+        "stake_amount": "unlimited",
+        "backtest_start": "2025-10-01 00:00:00",
+        "backtest_end": "2025-11-20 00:00:00",
+        "timerange": "20251001-20251120",
+        "timeframe": "1h",
+        "pairs_in_report": 2,
+        "pairs_traded": 2,
+        "per_pair": [
+          {
+            "pair": "BTC/USDT:USDT",
+            "trades": 11,
+            "profit_abs": 449.795925,
+            "profit_pct": 4.497959,
+            "winrate_pct": 72.727273,
+            "expectancy_abs": 40.890539,
+            "expectancy_pct": 1.635168,
+            "max_drawdown_pct": 1.488421,
+            "profit_factor": 2.043874,
+            "sharpe": 1.469696
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "trades": 9,
+            "profit_abs": -317.742594,
+            "profit_pct": -3.177426,
+            "winrate_pct": 44.444444,
+            "expectancy_abs": -35.304733,
+            "expectancy_pct": -1.320686,
+            "max_drawdown_pct": 5.595386,
+            "profit_factor": 0.564729,
+            "sharpe": -0.945301
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 #!/bin/bash
 # Quick start script for fault-tolerant trading system
-# Uses config_live_trading_10x.json with 10x leverage and -12% stoploss
+# Uses config_dryrun.json with 10x leverage and -12% stoploss
 
 clear
 echo "======================================================="
@@ -15,12 +15,12 @@ bash scripts/kill_zombies.sh
 
 echo ""
 echo "[2/3] Starting Trading Orchestrator..."
-echo "Config: config_live_trading_10x.json"
+echo "Config: config_dryrun.json"
 echo "Press Ctrl+C to stop gracefully"
 echo ""
 
 # Step 2: Start orchestrator with default 10x config
-python3 scripts/trading_orchestrator.py user_data/config_live_trading_10x.json
+python3 scripts/trading_orchestrator.py user_data/config_dryrun.json
 
 echo ""
 echo "[3/3] Orchestrator stopped."

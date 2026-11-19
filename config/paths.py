@@ -47,6 +47,6 @@ SCRIPTS_DIR: Path = PROJECT_ROOT / "scripts"
 OPTIMISATION_DIR: Path = PROJECT_ROOT / "strat_optimisation"
 
 # ── Convenience Shortcuts ────────────────────────────────────────────────────
-CONFIG_JSON: Path = USER_DATA_DIR / "config.json"
+CONFIG_JSON: Path = USER_DATA_DIR / "config_dryrun.json"
 ENV_FILE: Path = PROJECT_ROOT / ".env"
 DOCKER_COMPOSE: Path = PROJECT_ROOT / "docker-compose.yml"

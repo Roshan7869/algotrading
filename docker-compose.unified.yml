@@ -15,7 +15,7 @@ services:
       - "./shared_config:/freqtrade/shared_config:ro"
     command: >
       trade
-      --config /freqtrade/user_data/config_unified.json
+      --config /freqtrade/user_data/config_dryrun.json
       --strategy AroonMomentumEngine_Hybrid
       --dry-run
     networks:

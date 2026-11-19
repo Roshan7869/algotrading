@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-19T12:18:57Z",
+  "output_dir": "scoreboard-smoke-B",
+  "git_sha": "bc9157a2a39066554bc6fe59395daadd45945c62",
+  "git_sha_short": "bc9157a2a",
+  "freqtrade_version": "freqtrade 2026.5-dev-bc9157a2a",
+  "python_version": "3.13.18",
+  "config_path": "user_data/config_backtest.json",
+  "config_sha256": "sha256:6714efeaa4b23c9162dd463819729816d2feb691916f93469419b9a95fc962cb",
+  "userdir": "user_data",
+  "fee_model": "fee_model: 10bps all-in (fee + slippage proxy)",
+  "fee_ratio": 0.001,
+  "fee_note": "--fee is charged on entry and exit; 10 bps all-in per side-equivalent (exchange fee + slippage proxy, no native slippage in the backtester)",
+  "timeframe": "1h",
+  "strategies": [
+    "EmaTrendFollowing"
+  ],
+  "stages_run": [
+    "train"
+  ],
+  "selection_stage": "validation",
+  "universe": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT"
+  ],
+  "universe_requested": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "XRP/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "BNB/USDT:USDT",
+    "ADA/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "LTC/USDT:USDT",
+    "TRX/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "APT/USDT:USDT",
+    "ARB/USDT:USDT",
+    "OP/USDT:USDT",
+    "SUI/USDT:USDT",
+    "INJ/USDT:USDT",
+    "SEI/USDT:USDT"
+  ],
+  "universe_unresolved": [],
+  "substitutions": [],
+  "stage_bounds": {
+    "train": {
+      "start": "20250101",
+      "end": "20251231",
+      "timerange": "20250101-20260101"
+    },
+    "validation": {
+      "start": "20260101",
+      "end": "20260630",
+      "timerange": "20260101-20260701"
+    },
+    "holdout": {
+      "start": "20260701",
+      "end": "run_date",
+      "timerange": "20260701-RUN_DATE"
+    }
+  },
+  "smoke": {
+    "limit": 2,
+    "timerange_override": "20251001-20251120",
+    "pairs": null
+  },
+  "data_manifest": {
+    "pairs": {
+      "BTC/USDT:USDT": {
+        "file": "BTC_USDT_USDT-1h-futures.feather",
+        "readable": true,
+        "rows_total": 63091,
+        "first_candle": "2019-09-08T17:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "stages": {
+          "train": {
+            "rows": 8760,
+            "first_candle": "2025-01-01T00:00:00+00:00",
+            "last_candle": "2025-12-31T23:00:00+00:00",
+            "covered": true
+          },
+          "validation": {
+            "rows": 4344,
+            "first_candle": "2026-01-01T00:00:00+00:00",
+            "last_candle": "2026-06-30T23:00:00+00:00",
+            "covered": true
+          },
+          "holdout": {
+            "rows": 3396,
+            "first_candle": "2026-07-01T00:00:00+00:00",
+            "last_candle": "2026-11-19T11:00:00+00:00",
+            "covered": true
+          }
+        }
+      },
+      "ETH/USDT:USDT": {
+        "file": "ETH_USDT_USDT-1h-futures.feather",
+        "readable": true,
+        "rows_total": 61181,
+        "first_candle": "2019-11-27T07:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "stages": {
+          "train": {
+            "rows": 8760,
+            "first_candle": "2025-01-01T00:00:00+00:00",
+            "last_candle": "2025-12-31T23:00:00+00:00",
+            "covered": true
+          },
+          "validation": {
+            "rows": 4344,
+            "first_candle": "2026-01-01T00:00:00+00:00",
+            "last_candle": "2026-06-30T23:00:00+00:00",
+            "covered": true
+          },
+          "holdout": {
+            "rows": 3396,
+            "first_candle": "2026-07-01T00:00:00+00:00",
+            "last_candle": "2026-11-19T11:00:00+00:00",
+            "covered": true
+          }
+        }
+      }
+    },
+    "totals": {
+      "train": {
+        "pairs_covered": 2,
+        "pairs_total": 2,
+        "rows": 17520,
+        "sufficient_data": true
+      },
+      "validation": {
+        "pairs_covered": 2,
+        "pairs_total": 2,
+        "rows": 8688,
+        "sufficient_data": true
+      },
+      "holdout": {
+        "pairs_covered": 2,
+        "pairs_total": 2,
+        "rows": 6792,
+        "sufficient_data": true
+      }
+    },
+    "min_stage_candles": 100,
+    "min_pair_rows": 500
+  },
+  "manifest_hash_scope": "sha256 over: schema_version, git_sha, freqtrade_version, config_path, config_sha256, fee_model, fee_ratio, timeframe, strategies, stages_run, universe, substitutions, stage boundaries, and the per-stage candle coverage per pair for the stages actually run. EXCLUDED: timestamps, output paths, full-file row counts/last-candle (a data refresh that only appends candles outside the scored windows must not change the hash).",
+  "manifest_hash": "sha256:9200ac0a3b2691dd83133fc92006e682539a56792d9bf3dffa189a9a47bf0f35",
+  "runs": [
+    {
+      "label": "train__EmaTrendFollowing",
+      "returncode": 0,
+      "elapsed_s": 5.63,
+      "timed_out": false,
+      "command": "D:\\dev\\algotrading\\.venv\\Scripts\\freqtrade.exe backtesting --strategy EmaTrendFollowing -c user_data/config_backtest.json --userdir user_data --timerange 20251001-20251120 --fee 0.001 --cache none --export trades --backtest-directory reports/scoreboard-smoke-B/raw/train__EmaTrendFollowing --timeframe 1h -p BTC/USDT:USDT ETH/USDT:USDT"
+    }
+  ]
+}
