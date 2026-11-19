@@ -52,3 +52,10 @@ cd strategy_db && ..\.venv\Scripts\python.exe ingest.py            # rebuild Chr
 - Bridge: `scripts/trading_agents_bridge.py` writes `shared_config/tradingagents_signal.json` (replaces placeholder refresh_agents.py)
 - Keys: `C:\Users\khatr\.config\tradingagents\env.ps1` — fill ONE provider line
 - Verify: `TradingAgents\.venv\Scripts\python.exe scripts\trading_agents_bridge.py --check`
+
+## Research harness (2026-11-19)
+
+- `research/harness.py` — deterministic 3-layer pipeline: ChromaDB strategy KB + Obsidian finance vault (via nexus) + platform data check
+- Subcommands: `kb`, `vault`, `brief` — briefs land in `D:\finance-vault\FINANCE\12-Research\` and are auto-reindexed
+- Run: `.venv\Scripts\python.exe research\harness.py brief "liquidity trap" --ticker BTC/USDT`
+- Docs: `FINANCE/11-Algotrading/research-harness.md` (nexus --vault finance search research-harness)
