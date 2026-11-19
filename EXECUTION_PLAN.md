@@ -201,3 +201,13 @@ post-stop-fix −0.93%/trade. Walkforward smoke: −1.115%/trade, CI [−1.74%, 
 windows → loud FAIL. **2.3 dry-run does not launch; Phase 3 stays gated.** Decision memo:
 `reports/decisions/no-edge-memo-20261119.md`. Root cause: cost drag (20bps round trip vs
 1h trade frequency) × 3x leverage. Next: cost-aware redesign (user decision).
+
+### 2026-11-19 — key rotation declined by user
+The user declined rotating the Binance key — recorded as an accepted risk in the memo (§Key
+rotation). No authenticated path exists in the plan until a Phase 2 PASS, so nothing today uses
+that credential family.
+
+### 2026-11-19 — Phase 0.1 COMPLETE (push landed + verified)
+Rewritten history pushed; remote `main` = local HEAD (`aa505d8fd`), 31,840 commits, single branch,
+0 open PRs, 0 forks. Secret-value proof: `git log origin/main -S` both prefixes = 0 hits; tree
+grep = 0. Bundle backups retained (`pre_rewrite_backup.bundle`, `pre_purge_backup_20261119.bundle`).

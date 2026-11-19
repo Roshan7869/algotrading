@@ -54,6 +54,17 @@ callbacks triple the bleed. The old fake results (+21,300%/+3.6M%) hid this enti
 - EnsembleStrategy crash (`_SignalBus.read`, line 241) recorded as no_result; fixing it is
   Phase 3.2 work behind the consumer gate.
 
+## Key rotation — DECLINED by user (2026-11-19)
+
+The user explicitly declined to rotate the Binance API key. Recorded as an **accepted risk**, not
+a resolved item. Facts as they stand (verified 2026-11-19 13:2x UTC): the value is absent from
+the local history AND **the rewritten push landed — remote `main` = `aa505d8fd`, 31,840 commits,
+`git log -S` for both prefixes = 0, tree grep = 0, forks = 0, 0 open PRs**. GitHub may retain
+unreferenced objects server-side for a period; closed PR refs (#1, #10, #11) may remain reachable
+internally. If the key is ever used again (any authenticated call), it must be a NEW key, not the
+leaked one. The plan's phases 2.3+/3 remain gated on the Phase 2 PASS regardless, so no
+authenticated path exists today.
+
 ## Artifacts
 
 - `reports/scoreboard-20261119-1229/` · `reports/phase2/2.1/` · `reports/phase2/2.2/` ·

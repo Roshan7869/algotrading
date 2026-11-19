@@ -1,6 +1,28 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# SUPERVISE-PREFLIGHT — circuit-breaker preflight guard (Phase 0.3 wiring; the
+# exact command documented in reports/phase0/PHASE0_REPORT.md §5). Fail-closed:
+# an unreadable balance reports UNKNOWN, which also refuses the start. Only the
+# start/restart paths are gated, so `stop`/`status` always work.
+_supervise_preflight() {
+    local root py
+    root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    py="python3"
+    if [ -x "$root/.venv/Scripts/python.exe" ]; then
+        py="$root/.venv/Scripts/python.exe"
+    elif [ -x "$root/.venv/bin/python" ]; then
+        py="$root/.venv/bin/python"
+    fi
+    if ! ( cd "$root" && "$py" scripts/supervise.py --preflight --config user_data/config_dryrun.json ); then
+        echo "circuit breaker not OK — refusing to start" >&2
+        exit 1
+    fi
+}
+case "${1:-help}" in
+    start|restart) _supervise_preflight ;;
+esac
+
 ALGOTRADING_DIR="/home/roshan/Downloads/Algotrading"
 NEXUS_DIR="/home/roshan/nexus"
 LOG_DIR="/tmp/algotrading_logs"

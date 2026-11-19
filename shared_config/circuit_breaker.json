@@ -1,14 +1,8 @@
 {
-  "state": "PAUSED",
-  "drawdown_pct": 0.0,
-  "timestamp": "",
-  "daily_pnl_pct": 0.0,
-  "weekly_pnl_pct": -8.17,
-  "monthly_pnl_pct": -33.21,
-  "daily_trades": 0,
-  "weekly_trades": 10,
-  "monthly_trades": 48,
-  "_timestamp": "2026-05-16T17:41:28.725548+00:00",
-  "_written_by": "VectorStrategy",
-  "transition_reason": "Weekly drawdown -8.17% > 4.0%"
+  "timestamp": "2026-11-19T13:28:40.092978+00:00",
+  "state": "UNKNOWN",
+  "drawdown_pct": null,
+  "current_balance": null,
+  "peak_balance": null,
+  "action": "fail_closed_do_not_trade"
 }

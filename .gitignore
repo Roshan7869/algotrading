@@ -30,3 +30,6 @@ attic/*
 !attic/configs/
 attic/configs/*
 !attic/configs/*.md
+!attic/docs-history/
+attic/docs-history/*
+!attic/docs-history/MOVED.md
