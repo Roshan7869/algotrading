@@ -18,3 +18,6 @@ financial-services-plugins/
 graphify-out/
 *.pkl
 user_data/hyperopt_results/*.fthypt
+
+# runtime artifacts
+nexus/reflection.db

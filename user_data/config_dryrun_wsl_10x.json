@@ -86,10 +86,11 @@
     },
     "api_server": {
         "enabled": true,
-        "listen_ip_address": "0.0.0.0",
+        "listen_ip_address": "127.0.0.1",
         "listen_port": 8080,
         "username": "freqtrader",
-        "password": "password"
+        "password": "${FREQTRADE_API_PASSWORD}",
+        "jwt_secret": "${FREQTRADE_JWT_SECRET}"
     },
     "bot_name": "DryRun_WSL_10x",
     "initial_state": "running",

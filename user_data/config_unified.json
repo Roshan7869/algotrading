@@ -65,10 +65,11 @@
     },
     "api_server": {
         "enabled": true,
-        "listen_ip_address": "0.0.0.0",
+        "listen_ip_address": "127.0.0.1",
         "listen_port": 8080,
         "username": "freqtrade",
-        "password": "${API_SERVER_PASSWORD}"
+        "password": "${FREQTRADE_API_PASSWORD}",
+        "jwt_secret": "${FREQTRADE_JWT_SECRET}"
     },
     "db_url": "postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}"
 }

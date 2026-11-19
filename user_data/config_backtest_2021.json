@@ -45,8 +45,8 @@
         "pair_blacklist": []
     },
     "minimal_roi": {
-        "0": 0.20,
-        "60": 0.10,
+        "0": 0.2,
+        "60": 0.1,
         "180": 0.05,
         "360": 0.02,
         "720": 0.01
@@ -74,7 +74,8 @@
         "listen_ip_address": "127.0.0.1",
         "listen_port": 8080,
         "username": "freqtrader",
-        "password": "freqtrade"
+        "password": "${FREQTRADE_API_PASSWORD}",
+        "jwt_secret": "${FREQTRADE_JWT_SECRET}"
     },
     "bot_name": "XRP_SOL_DOGE_2021_Backtest",
     "initial_state": "running",

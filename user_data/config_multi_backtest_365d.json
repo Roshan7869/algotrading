@@ -76,10 +76,11 @@
         "listen_ip_address": "127.0.0.1",
         "listen_port": 8080,
         "verbosity": "error",
-        "jwt_secret_key": "somethingRandomSomethingRandom123",
+        "jwt_secret_key": "${FREQTRADE_JWT_SECRET}",
         "CORS_origins": [],
         "username": "freqtrader",
-        "password": "password"
+        "password": "${FREQTRADE_API_PASSWORD}",
+        "jwt_secret": "${FREQTRADE_JWT_SECRET}"
     },
     "bot_name": "multi_strategy_365d",
     "initial_state": "running",

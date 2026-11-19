@@ -18,7 +18,7 @@
 ### 1.1 Security Audit — CRITICAL FAILURES
 
 **CRITICAL-1: Hardcoded API Keys in `.env`**
-- Binance API Key: `<REDACTED-2026-11-19>KmMszzMHr2lxwD2KJzt3QwfrvyDwnolGsvwZeK4v1hO3XsXpANyDAK`
+- Binance API Key: `<REDACTED-2026-11-19>`
 - Binance API Secret: `<REDACTED-2026-11-19>`
 - Telegram Token: `7553420615:AAGXB2ORviX1AA1gXpSfwZC0l8tZKWjHW7M`
 - Telegram Chat ID: `1990546056`

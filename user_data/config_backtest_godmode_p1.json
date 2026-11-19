@@ -70,7 +70,7 @@
         ]
     },
     "minimal_roi": {
-        "0": 0.10,
+        "0": 0.1,
         "30": 0.06,
         "120": 0.04,
         "360": 0.02,
@@ -99,7 +99,8 @@
         "listen_ip_address": "127.0.0.1",
         "listen_port": 8080,
         "username": "freqtrader",
-        "password": "password"
+        "password": "${FREQTRADE_API_PASSWORD}",
+        "jwt_secret": "${FREQTRADE_JWT_SECRET}"
     },
     "bot_name": "GODMODE_Phase1_Optimized_3x",
     "initial_state": "running",

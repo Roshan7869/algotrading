@@ -55,7 +55,10 @@
         "enabled": false
     },
     "api_server": {
-        "enabled": false
+        "enabled": false,
+        "listen_ip_address": "127.0.0.1",
+        "password": "${FREQTRADE_API_PASSWORD}",
+        "jwt_secret": "${FREQTRADE_JWT_SECRET}"
     },
     "bot_name": "coindcx_bot",
     "initial_state": "running",
