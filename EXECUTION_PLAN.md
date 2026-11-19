@@ -211,3 +211,13 @@ that credential family.
 Rewritten history pushed; remote `main` = local HEAD (`aa505d8fd`), 31,840 commits, single branch,
 0 open PRs, 0 forks. Secret-value proof: `git log origin/main -S` both prefixes = 0 hits; tree
 grep = 0. Bundle backups retained (`pre_rewrite_backup.bundle`, `pre_purge_backup_20261119.bundle`).
+
+### 2026-11-19 — Phase 4.1 / 4.2 / 4.3 (partial — AGENTS.md blocked)
+4.1: README rewritten with the honest FAIL status; 48 old docs → `attic/docs-history/`
+(MOVED.md tracked, 73 entries incl. superseded refs); `.claude-flow/` session dumps attic'd.
+**AGENTS.md edit DENIED by the agent-instruction file protection** — file untouched; proposed
+content saved at `reports/phase4/docs/AGENTS_MD_PROPOSED.md` pending explicit user approval.
+Stale `/home/roshan` refs remain only in AGENTS.md + old analysis scripts + editor tool configs.
+4.2/4.3: `scripts/make_check.py` PASS 27.55 s (7 loadable / 19 quarantined none loadable;
+configs PASS; secrets 0/1514; smoke ok); `scripts/kb_coverage.py` baseline 10.13% (62/612 chunks),
+3× target 30.39%; `start_local.sh` +22-line fail-closed breaker preflight.
