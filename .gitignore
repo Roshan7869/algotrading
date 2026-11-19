@@ -13,7 +13,8 @@ user_data/backtest_results*/
 .DS_Store
 *.swp
 *.swo
-*~TradingAgents/
+*~
+TradingAgents/
 financial-services-plugins/
 graphify-out/
 *.pkl
@@ -24,3 +25,8 @@ nexus/reflection.db
 
 # vendored upstream clone (own git repo)
 TradingAgents/
+attic/*
+!attic/README.md
+!attic/configs/
+attic/configs/*
+!attic/configs/*.md
