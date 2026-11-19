@@ -1,0 +1,2 @@
+window,strategy,pair,open_date,close_date,profit_ratio,profit_abs,is_short,leverage,exit_reason,enter_tag,funding_fees,stake_amount
+2024-01,DmiAdxStrategy,XRP/USDT:USDT,2024-01-08 01:00:00+00:00,2024-01-08 01:00:00+00:00,-0.055799,-138.240024,False,3.0,stop_loss,dmi_adx_long,0.0,2474.99

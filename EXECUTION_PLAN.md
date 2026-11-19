@@ -197,8 +197,10 @@ enumerate at execution. F30 deliverables-as-state → all NEW files marked.
 ### 2026-11-19 — Phase 2 gate: **FAIL (no edge)**
 Executed 2.1+2.2. SupertrendEma quarantined (lookahead: 4h merge on raw stamp; 19 files total).
 BollingerMR baseline invalidated (hyperopt params 2026-05-14 overlap validation 2026H1);
-post-stop-fix −0.93%/trade. Walkforward smoke: −1.115%/trade, CI [−1.74%, −0.47%], 0% positive
-windows → loud FAIL. **2.3 dry-run does not launch; Phase 3 stays gated.** Decision memo:
+post-stop-fix −0.93%/trade. Full walkforward matrix: 35 OOS windows, manifest `sha256:d8e181a1…`,
+**all strategies FAIL** (Aroon_V2 −0.93%/trade CI [−1.00,−0.85]; EmaTrend −1.00% [−1.19,−0.82];
+BollingerMR −1.02% [−1.36,−0.67]; three have zero/single-digit OOS trades).
+**2.3 dry-run does not launch; Phase 3 stays gated.** Decision memo:
 `reports/decisions/no-edge-memo-20261119.md`. Root cause: cost drag (20bps round trip vs
 1h trade frequency) × 3x leverage. Next: cost-aware redesign (user decision).
 

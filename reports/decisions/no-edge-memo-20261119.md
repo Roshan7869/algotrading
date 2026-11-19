@@ -21,10 +21,16 @@ launch; Phase 3 stays gated; nothing approaches live.
      Jan–Jun 2026 validation window. Stop-logic fixes applied (3 fixes: price-terms stops,
      tight-only ratchet, enabling flag); post-fix validation −0.928%/trade (−0.17% on the
      most favorable re-pricing of same-candle fills) — negative under every reading.
-3. **Walkforward** (`research/walkforward.py`, 22 unit tests, verify PASS at 4dp):
-   - Smoke on EmaTrend: 3 OOS months, 300 trades, **−1.115%/trade, bootstrap 95% CI
-     [−1.736%, −0.468%], 0% positive windows** → loud `WALKFORWARD FAIL`, exit 1.
-   - Full 2024-01→2026-11 matrix running; its CI gate cannot pass on the above evidence.
+3. **Walkforward** (`research/walkforward.py`, 22 unit tests, verify PASS at 4dp) — **full matrix
+   complete**: 35 monthly OOS windows (2024-01→2026-11, 6-month rolling train, per-strategy
+   processes), manifest `sha256:d8e181a1…`, 2324 s:
+   - Aroon_Momentum_V2: 14,332 trades, **−0.9255%/trade, CI [−0.9986, −0.8530]**, 2.9% positive windows
+   - EmaTrend: 4,454 trades, **−1.0032%, CI [−1.1868, −0.8191]**, 5.7% positive windows
+   - BollingerMR: 730 trades, **−1.0177%, CI [−1.3647, −0.6668]**, 20.0% positive windows
+   - Aroon_Hybrid / Ensemble / Supertrend: 0 OOS trades; DmiAdx: 1 trade; MacdRsi: 4 trades (all
+     below the 30-trade minimum) → **every strategy FAIL**. The three real-sample CIs sit entirely
+     below zero: this is not noise, it is a structural cost problem.
+   - Smoke earlier: EmaTrend 3 windows −1.115%/trade, CI [−1.736, −0.468], 0% positive windows.
 
 ## Root cause of the failure (the useful part)
 

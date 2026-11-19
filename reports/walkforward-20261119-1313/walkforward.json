@@ -1,0 +1,3090 @@
+{
+  "schema_version": 1,
+  "artifact": "walkforward",
+  "phase": "2.2",
+  "git_sha": "ee24d04f3da193f2732da8a066d11cd0e9137e82",
+  "fee_model": "fee_model: 10bps all-in (fee + slippage proxy)",
+  "fee_ratio": 0.001,
+  "timeframe": "1h",
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 42,
+    "alpha": 0.05,
+    "unit": "trade",
+    "method": "percentile bootstrap of the mean over concatenated OOS trades"
+  },
+  "gate_rule": "PASS iff bootstrap 95% CI lower bound of the aggregate out-of-sample expectancy per trade is > 0 AND n_trades >= 30 AND n_windows_with_trades >= 2",
+  "gate": {
+    "verdict": "FAIL",
+    "passed": false,
+    "rule": "PASS iff bootstrap 95% CI lower bound of the aggregate out-of-sample expectancy per trade is > 0 AND n_trades >= 30 AND n_windows_with_trades >= 2",
+    "failed_strategies": [
+      "AroonMomentumEngine_Hybrid",
+      "AroonMomentumEngine_V2",
+      "BollingerMeanReversion",
+      "DmiAdxStrategy",
+      "EmaTrendFollowing",
+      "EnsembleStrategy",
+      "MacdRsiStrategy",
+      "SupertrendEmaStrategy"
+    ],
+    "banner": "WALKFORWARD FAIL: no OOS edge at 10bps"
+  },
+  "windows_run": 35,
+  "windows_insufficient": 0,
+  "strategies": [
+    "AroonMomentumEngine_Hybrid",
+    "AroonMomentumEngine_V2",
+    "BollingerMeanReversion",
+    "DmiAdxStrategy",
+    "EmaTrendFollowing",
+    "EnsembleStrategy",
+    "MacdRsiStrategy",
+    "SupertrendEmaStrategy"
+  ],
+  "aggregate": {
+    "AroonMomentumEngine_Hybrid": {
+      "strategy": "AroonMomentumEngine_Hybrid",
+      "gate": "FAIL",
+      "gate_reasons": [
+        "no out-of-sample trades",
+        "n_trades=0 < min_trades=30",
+        "windows_with_trades=0 < 2"
+      ],
+      "n_trades": 0,
+      "n_windows_run": 35,
+      "n_windows_evaluated": 35,
+      "n_windows_with_trades": 0,
+      "n_windows_no_result": 0,
+      "pct_positive_windows": 0.0,
+      "pct_positive_windows_basis": "windows where a backtest result existed (0-trade windows count as non-positive)",
+      "expectancy_per_trade": null,
+      "expectancy_per_trade_pct": null,
+      "median_trade": null,
+      "std_trade": null,
+      "ci_low": null,
+      "ci_high": null,
+      "ci_low_pct": null,
+      "ci_high_pct": null,
+      "bootstrap": {
+        "resamples": 10000,
+        "seed": 42,
+        "alpha": 0.05,
+        "unit": "trade"
+      },
+      "window_bootstrap": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "n_windows": 0
+      },
+      "mean_window_profit_pct": 0.0,
+      "windows": [
+        {
+          "window": "2024-01",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-02",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-03",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-04",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-05",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-06",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-07",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-08",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-09",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-10",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-12",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-01",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-02",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-03",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-04",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-05",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-06",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-07",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-08",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-09",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-10",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-12",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-01",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-02",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-03",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-04",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-05",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-06",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-07",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-08",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-09",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-10",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        }
+      ]
+    },
+    "AroonMomentumEngine_V2": {
+      "strategy": "AroonMomentumEngine_V2",
+      "gate": "FAIL",
+      "gate_reasons": [
+        "ci_low=-0.009986 <= 0"
+      ],
+      "n_trades": 14332,
+      "n_windows_run": 35,
+      "n_windows_evaluated": 35,
+      "n_windows_with_trades": 35,
+      "n_windows_no_result": 0,
+      "pct_positive_windows": 2.86,
+      "pct_positive_windows_basis": "windows where a backtest result existed (0-trade windows count as non-positive)",
+      "expectancy_per_trade": -0.0092546,
+      "expectancy_per_trade_pct": -0.92546,
+      "median_trade": -0.017565,
+      "std_trade": 0.04448954,
+      "ci_low": -0.00998641,
+      "ci_high": -0.00853027,
+      "ci_low_pct": -0.998641,
+      "ci_high_pct": -0.853027,
+      "bootstrap": {
+        "resamples": 10000,
+        "seed": 42,
+        "alpha": 0.05,
+        "unit": "trade"
+      },
+      "window_bootstrap": {
+        "mean": -0.0085721,
+        "ci_low": -0.01020383,
+        "ci_high": -0.00691809,
+        "n_windows": 35,
+        "resamples": 10000,
+        "seed": 43
+      },
+      "mean_window_profit_pct": -53.095017,
+      "windows": [
+        {
+          "window": "2024-01",
+          "status": "ok",
+          "trades": 507,
+          "profit_pct": -80.368907,
+          "expectancy_pct": -1.297267,
+          "winrate_pct": 36.883629,
+          "max_drawdown_pct": 81.952708,
+          "window_expectancy_pct": -1.297266
+        },
+        {
+          "window": "2024-02",
+          "status": "ok",
+          "trades": 381,
+          "profit_pct": -41.943647,
+          "expectancy_pct": -0.546088,
+          "winrate_pct": 47.506562,
+          "max_drawdown_pct": 53.305039,
+          "window_expectancy_pct": -0.546086
+        },
+        {
+          "window": "2024-03",
+          "status": "ok",
+          "trades": 741,
+          "profit_pct": -92.876733,
+          "expectancy_pct": -1.393523,
+          "winrate_pct": 37.246964,
+          "max_drawdown_pct": 93.104631,
+          "window_expectancy_pct": -1.393521
+        },
+        {
+          "window": "2024-04",
+          "status": "ok",
+          "trades": 521,
+          "profit_pct": -86.178838,
+          "expectancy_pct": -1.519466,
+          "winrate_pct": 35.316699,
+          "max_drawdown_pct": 86.660937,
+          "window_expectancy_pct": -1.519465
+        },
+        {
+          "window": "2024-05",
+          "status": "ok",
+          "trades": 412,
+          "profit_pct": -59.871809,
+          "expectancy_pct": -0.847538,
+          "winrate_pct": 43.203883,
+          "max_drawdown_pct": 60.390674,
+          "window_expectancy_pct": -0.847537
+        },
+        {
+          "window": "2024-06",
+          "status": "ok",
+          "trades": 316,
+          "profit_pct": -61.527671,
+          "expectancy_pct": -1.188459,
+          "winrate_pct": 33.860759,
+          "max_drawdown_pct": 64.801362,
+          "window_expectancy_pct": -1.188459
+        },
+        {
+          "window": "2024-07",
+          "status": "ok",
+          "trades": 394,
+          "profit_pct": -41.021912,
+          "expectancy_pct": -0.496965,
+          "winrate_pct": 49.492386,
+          "max_drawdown_pct": 46.525319,
+          "window_expectancy_pct": -0.496963
+        },
+        {
+          "window": "2024-08",
+          "status": "ok",
+          "trades": 521,
+          "profit_pct": -80.883646,
+          "expectancy_pct": -1.289495,
+          "winrate_pct": 37.8119,
+          "max_drawdown_pct": 80.883646,
+          "window_expectancy_pct": -1.289494
+        },
+        {
+          "window": "2024-09",
+          "status": "ok",
+          "trades": 298,
+          "profit_pct": -23.556173,
+          "expectancy_pct": -0.367666,
+          "winrate_pct": 46.979866,
+          "max_drawdown_pct": 42.292816,
+          "window_expectancy_pct": -0.367666
+        },
+        {
+          "window": "2024-10",
+          "status": "ok",
+          "trades": 291,
+          "profit_pct": -35.970346,
+          "expectancy_pct": -0.591557,
+          "winrate_pct": 48.453608,
+          "max_drawdown_pct": 39.054537,
+          "window_expectancy_pct": -0.591555
+        },
+        {
+          "window": "2024-11",
+          "status": "ok",
+          "trades": 808,
+          "profit_pct": -78.531382,
+          "expectancy_pct": -0.743214,
+          "winrate_pct": 42.574257,
+          "max_drawdown_pct": 87.859522,
+          "window_expectancy_pct": -0.743214
+        },
+        {
+          "window": "2024-12",
+          "status": "ok",
+          "trades": 709,
+          "profit_pct": -95.203994,
+          "expectancy_pct": -1.696922,
+          "winrate_pct": 32.299013,
+          "max_drawdown_pct": 95.41541,
+          "window_expectancy_pct": -1.69692
+        },
+        {
+          "window": "2025-01",
+          "status": "ok",
+          "trades": 500,
+          "profit_pct": -77.507331,
+          "expectancy_pct": -1.175211,
+          "winrate_pct": 39.2,
+          "max_drawdown_pct": 81.52987,
+          "window_expectancy_pct": -1.175213
+        },
+        {
+          "window": "2025-02",
+          "status": "ok",
+          "trades": 549,
+          "profit_pct": -83.010136,
+          "expectancy_pct": -1.272406,
+          "winrate_pct": 37.15847,
+          "max_drawdown_pct": 85.088129,
+          "window_expectancy_pct": -1.272403
+        },
+        {
+          "window": "2025-03",
+          "status": "ok",
+          "trades": 509,
+          "profit_pct": -25.336456,
+          "expectancy_pct": -0.172934,
+          "winrate_pct": 46.365422,
+          "max_drawdown_pct": 67.349228,
+          "window_expectancy_pct": -0.172934
+        },
+        {
+          "window": "2025-04",
+          "status": "ok",
+          "trades": 410,
+          "profit_pct": -38.041455,
+          "expectancy_pct": -0.463268,
+          "winrate_pct": 42.439024,
+          "max_drawdown_pct": 43.987521,
+          "window_expectancy_pct": -0.463269
+        },
+        {
+          "window": "2025-05",
+          "status": "ok",
+          "trades": 406,
+          "profit_pct": -58.669645,
+          "expectancy_pct": -0.875382,
+          "winrate_pct": 40.147783,
+          "max_drawdown_pct": 68.774455,
+          "window_expectancy_pct": -0.87538
+        },
+        {
+          "window": "2025-06",
+          "status": "ok",
+          "trades": 308,
+          "profit_pct": -48.615059,
+          "expectancy_pct": -0.832918,
+          "winrate_pct": 42.857143,
+          "max_drawdown_pct": 59.871668,
+          "window_expectancy_pct": -0.832918
+        },
+        {
+          "window": "2025-07",
+          "status": "ok",
+          "trades": 405,
+          "profit_pct": -46.917928,
+          "expectancy_pct": -0.576414,
+          "winrate_pct": 47.901235,
+          "max_drawdown_pct": 62.641063,
+          "window_expectancy_pct": -0.576414
+        },
+        {
+          "window": "2025-08",
+          "status": "ok",
+          "trades": 335,
+          "profit_pct": -55.938563,
+          "expectancy_pct": -0.932124,
+          "winrate_pct": 42.985075,
+          "max_drawdown_pct": 55.938563,
+          "window_expectancy_pct": -0.932124
+        },
+        {
+          "window": "2025-09",
+          "status": "ok",
+          "trades": 239,
+          "profit_pct": -34.614453,
+          "expectancy_pct": -0.700829,
+          "winrate_pct": 45.188285,
+          "max_drawdown_pct": 37.756597,
+          "window_expectancy_pct": -0.700825
+        },
+        {
+          "window": "2025-10",
+          "status": "ok",
+          "trades": 446,
+          "profit_pct": -75.345334,
+          "expectancy_pct": -1.278268,
+          "winrate_pct": 40.58296,
+          "max_drawdown_pct": 80.810572,
+          "window_expectancy_pct": -1.278267
+        },
+        {
+          "window": "2025-11",
+          "status": "ok",
+          "trades": 457,
+          "profit_pct": -81.412362,
+          "expectancy_pct": -1.418586,
+          "winrate_pct": 36.323851,
+          "max_drawdown_pct": 82.1037,
+          "window_expectancy_pct": -1.418589
+        },
+        {
+          "window": "2025-12",
+          "status": "ok",
+          "trades": 354,
+          "profit_pct": -46.591165,
+          "expectancy_pct": -0.683247,
+          "winrate_pct": 40.677966,
+          "max_drawdown_pct": 63.433957,
+          "window_expectancy_pct": -0.683243
+        },
+        {
+          "window": "2026-01",
+          "status": "ok",
+          "trades": 291,
+          "profit_pct": -49.951052,
+          "expectancy_pct": -0.91304,
+          "winrate_pct": 40.549828,
+          "max_drawdown_pct": 59.942693,
+          "window_expectancy_pct": -0.913043
+        },
+        {
+          "window": "2026-02",
+          "status": "ok",
+          "trades": 462,
+          "profit_pct": -80.827811,
+          "expectancy_pct": -1.391608,
+          "winrate_pct": 35.930736,
+          "max_drawdown_pct": 82.252797,
+          "window_expectancy_pct": -1.39161
+        },
+        {
+          "window": "2026-03",
+          "status": "ok",
+          "trades": 352,
+          "profit_pct": -30.695804,
+          "expectancy_pct": -0.36531,
+          "winrate_pct": 42.897727,
+          "max_drawdown_pct": 48.239555,
+          "window_expectancy_pct": -0.365312
+        },
+        {
+          "window": "2026-04",
+          "status": "ok",
+          "trades": 255,
+          "profit_pct": -5.063326,
+          "expectancy_pct": -0.047158,
+          "winrate_pct": 52.54902,
+          "max_drawdown_pct": 22.33482,
+          "window_expectancy_pct": -0.047155
+        },
+        {
+          "window": "2026-05",
+          "status": "ok",
+          "trades": 275,
+          "profit_pct": -25.801981,
+          "expectancy_pct": -0.416416,
+          "winrate_pct": 45.818182,
+          "max_drawdown_pct": 41.991955,
+          "window_expectancy_pct": -0.416416
+        },
+        {
+          "window": "2026-06",
+          "status": "ok",
+          "trades": 394,
+          "profit_pct": -77.52838,
+          "expectancy_pct": -1.49143,
+          "winrate_pct": 32.994924,
+          "max_drawdown_pct": 78.120571,
+          "window_expectancy_pct": -1.491433
+        },
+        {
+          "window": "2026-07",
+          "status": "ok",
+          "trades": 258,
+          "profit_pct": 4.513462,
+          "expectancy_pct": 0.100883,
+          "winrate_pct": 51.937984,
+          "max_drawdown_pct": 18.087481,
+          "window_expectancy_pct": 0.100884
+        },
+        {
+          "window": "2026-08",
+          "status": "ok",
+          "trades": 346,
+          "profit_pct": -15.271506,
+          "expectancy_pct": -0.146164,
+          "winrate_pct": 47.976879,
+          "max_drawdown_pct": 41.722993,
+          "window_expectancy_pct": -0.146166
+        },
+        {
+          "window": "2026-09",
+          "status": "ok",
+          "trades": 377,
+          "profit_pct": -9.386336,
+          "expectancy_pct": -0.07678,
+          "winrate_pct": 49.602122,
+          "max_drawdown_pct": 28.213856,
+          "window_expectancy_pct": -0.07678
+        },
+        {
+          "window": "2026-10",
+          "status": "ok",
+          "trades": 308,
+          "profit_pct": -69.267891,
+          "expectancy_pct": -1.541802,
+          "winrate_pct": 31.168831,
+          "max_drawdown_pct": 69.527426,
+          "window_expectancy_pct": -1.541799
+        },
+        {
+          "window": "2026-11",
+          "status": "ok",
+          "trades": 197,
+          "profit_pct": -49.110038,
+          "expectancy_pct": -1.353786,
+          "winrate_pct": 32.994924,
+          "max_drawdown_pct": 49.915038,
+          "window_expectancy_pct": -1.353786
+        }
+      ]
+    },
+    "BollingerMeanReversion": {
+      "strategy": "BollingerMeanReversion",
+      "gate": "FAIL",
+      "gate_reasons": [
+        "ci_low=-0.013647 <= 0"
+      ],
+      "n_trades": 730,
+      "n_windows_run": 35,
+      "n_windows_evaluated": 35,
+      "n_windows_with_trades": 33,
+      "n_windows_no_result": 0,
+      "pct_positive_windows": 20.0,
+      "pct_positive_windows_basis": "windows where a backtest result existed (0-trade windows count as non-positive)",
+      "expectancy_per_trade": -0.01017729,
+      "expectancy_per_trade_pct": -1.017729,
+      "median_trade": -0.02098,
+      "std_trade": 0.04730916,
+      "ci_low": -0.01364654,
+      "ci_high": -0.00666751,
+      "ci_low_pct": -1.364654,
+      "ci_high_pct": -0.666751,
+      "bootstrap": {
+        "resamples": 10000,
+        "seed": 42,
+        "alpha": 0.05,
+        "unit": "trade"
+      },
+      "window_bootstrap": {
+        "mean": -0.01166566,
+        "ci_low": -0.01666523,
+        "ci_high": -0.0068109,
+        "n_windows": 33,
+        "resamples": 10000,
+        "seed": 43
+      },
+      "mean_window_profit_pct": -5.048068,
+      "windows": [
+        {
+          "window": "2024-01",
+          "status": "ok",
+          "trades": 24,
+          "profit_pct": -13.284724,
+          "expectancy_pct": -2.325609,
+          "winrate_pct": 25.0,
+          "max_drawdown_pct": 16.900213,
+          "window_expectancy_pct": -2.325592
+        },
+        {
+          "window": "2024-02",
+          "status": "ok",
+          "trades": 23,
+          "profit_pct": 5.154983,
+          "expectancy_pct": 0.906962,
+          "winrate_pct": 69.565217,
+          "max_drawdown_pct": 3.581172,
+          "window_expectancy_pct": 0.90697
+        },
+        {
+          "window": "2024-03",
+          "status": "ok",
+          "trades": 45,
+          "profit_pct": -16.360023,
+          "expectancy_pct": -1.566953,
+          "winrate_pct": 35.555556,
+          "max_drawdown_pct": 18.2266,
+          "window_expectancy_pct": -1.566953
+        },
+        {
+          "window": "2024-04",
+          "status": "ok",
+          "trades": 7,
+          "profit_pct": -7.045752,
+          "expectancy_pct": -4.179822,
+          "winrate_pct": 14.285714,
+          "max_drawdown_pct": 7.045752,
+          "window_expectancy_pct": -4.1798
+        },
+        {
+          "window": "2024-05",
+          "status": "ok",
+          "trades": 25,
+          "profit_pct": -6.035937,
+          "expectancy_pct": -0.94533,
+          "winrate_pct": 44.0,
+          "max_drawdown_pct": 10.199391,
+          "window_expectancy_pct": -0.945332
+        },
+        {
+          "window": "2024-06",
+          "status": "ok",
+          "trades": 2,
+          "profit_pct": -0.534249,
+          "expectancy_pct": -1.078438,
+          "winrate_pct": 50.0,
+          "max_drawdown_pct": 1.38345,
+          "window_expectancy_pct": -1.0784
+        },
+        {
+          "window": "2024-07",
+          "status": "ok",
+          "trades": 21,
+          "profit_pct": 0.406912,
+          "expectancy_pct": 0.102715,
+          "winrate_pct": 52.380952,
+          "max_drawdown_pct": 3.704359,
+          "window_expectancy_pct": 0.102705
+        },
+        {
+          "window": "2024-08",
+          "status": "ok",
+          "trades": 25,
+          "profit_pct": -12.659409,
+          "expectancy_pct": -2.131169,
+          "winrate_pct": 36.0,
+          "max_drawdown_pct": 12.659409,
+          "window_expectancy_pct": -2.131164
+        },
+        {
+          "window": "2024-09",
+          "status": "ok",
+          "trades": 25,
+          "profit_pct": 0.872332,
+          "expectancy_pct": 0.163482,
+          "winrate_pct": 52.0,
+          "max_drawdown_pct": 4.665882,
+          "window_expectancy_pct": 0.16348
+        },
+        {
+          "window": "2024-10",
+          "status": "ok",
+          "trades": 20,
+          "profit_pct": -9.834905,
+          "expectancy_pct": -2.065308,
+          "winrate_pct": 30.0,
+          "max_drawdown_pct": 10.730612,
+          "window_expectancy_pct": -2.06531
+        },
+        {
+          "window": "2024-11",
+          "status": "ok",
+          "trades": 85,
+          "profit_pct": -23.514657,
+          "expectancy_pct": -1.228094,
+          "winrate_pct": 31.764706,
+          "max_drawdown_pct": 33.256373,
+          "window_expectancy_pct": -1.228096
+        },
+        {
+          "window": "2024-12",
+          "status": "ok",
+          "trades": 28,
+          "profit_pct": -8.70576,
+          "expectancy_pct": -1.278567,
+          "winrate_pct": 28.571429,
+          "max_drawdown_pct": 8.70576,
+          "window_expectancy_pct": -1.278554
+        },
+        {
+          "window": "2025-01",
+          "status": "ok",
+          "trades": 30,
+          "profit_pct": -20.796822,
+          "expectancy_pct": -3.101126,
+          "winrate_pct": 13.333333,
+          "max_drawdown_pct": 22.599757,
+          "window_expectancy_pct": -3.10112
+        },
+        {
+          "window": "2025-02",
+          "status": "ok",
+          "trades": 4,
+          "profit_pct": -1.283581,
+          "expectancy_pct": -1.273405,
+          "winrate_pct": 50.0,
+          "max_drawdown_pct": 2.747619,
+          "window_expectancy_pct": -1.2734
+        },
+        {
+          "window": "2025-03",
+          "status": "ok",
+          "trades": 19,
+          "profit_pct": -0.812072,
+          "expectancy_pct": -0.145595,
+          "winrate_pct": 47.368421,
+          "max_drawdown_pct": 3.740439,
+          "window_expectancy_pct": -0.145595
+        },
+        {
+          "window": "2025-04",
+          "status": "ok",
+          "trades": 31,
+          "profit_pct": -2.210794,
+          "expectancy_pct": -0.240293,
+          "winrate_pct": 51.612903,
+          "max_drawdown_pct": 7.755829,
+          "window_expectancy_pct": -0.24029
+        },
+        {
+          "window": "2025-05",
+          "status": "ok",
+          "trades": 41,
+          "profit_pct": -1.611235,
+          "expectancy_pct": -0.118257,
+          "winrate_pct": 48.780488,
+          "max_drawdown_pct": 13.106911,
+          "window_expectancy_pct": -0.118254
+        },
+        {
+          "window": "2025-06",
+          "status": "ok",
+          "trades": 13,
+          "profit_pct": -5.450328,
+          "expectancy_pct": -1.669029,
+          "winrate_pct": 23.076923,
+          "max_drawdown_pct": 7.992365,
+          "window_expectancy_pct": -1.669015
+        },
+        {
+          "window": "2025-07",
+          "status": "ok",
+          "trades": 47,
+          "profit_pct": 1.435481,
+          "expectancy_pct": 0.175624,
+          "winrate_pct": 53.191489,
+          "max_drawdown_pct": 5.45689,
+          "window_expectancy_pct": 0.175621
+        },
+        {
+          "window": "2025-08",
+          "status": "ok",
+          "trades": 25,
+          "profit_pct": -10.317137,
+          "expectancy_pct": -1.710813,
+          "winrate_pct": 36.0,
+          "max_drawdown_pct": 15.967487,
+          "window_expectancy_pct": -1.710808
+        },
+        {
+          "window": "2025-09",
+          "status": "ok",
+          "trades": 11,
+          "profit_pct": -2.291249,
+          "expectancy_pct": -0.789695,
+          "winrate_pct": 54.545455,
+          "max_drawdown_pct": 5.283697,
+          "window_expectancy_pct": -0.7897
+        },
+        {
+          "window": "2025-10",
+          "status": "ok",
+          "trades": 13,
+          "profit_pct": -4.062958,
+          "expectancy_pct": -1.250151,
+          "winrate_pct": 38.461538,
+          "max_drawdown_pct": 6.760483,
+          "window_expectancy_pct": -1.250146
+        },
+        {
+          "window": "2025-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-12",
+          "status": "ok",
+          "trades": 7,
+          "profit_pct": -1.344725,
+          "expectancy_pct": -0.752429,
+          "winrate_pct": 42.857143,
+          "max_drawdown_pct": 3.683158,
+          "window_expectancy_pct": -0.752414
+        },
+        {
+          "window": "2026-01",
+          "status": "ok",
+          "trades": 18,
+          "profit_pct": 8.089024,
+          "expectancy_pct": 1.81972,
+          "winrate_pct": 66.666667,
+          "max_drawdown_pct": 3.13982,
+          "window_expectancy_pct": 1.819711
+        },
+        {
+          "window": "2026-02",
+          "status": "ok",
+          "trades": 6,
+          "profit_pct": -0.461195,
+          "expectancy_pct": -0.241967,
+          "winrate_pct": 50.0,
+          "max_drawdown_pct": 4.06809,
+          "window_expectancy_pct": -0.241967
+        },
+        {
+          "window": "2026-03",
+          "status": "ok",
+          "trades": 12,
+          "profit_pct": -6.632975,
+          "expectancy_pct": -2.256482,
+          "winrate_pct": 33.333333,
+          "max_drawdown_pct": 9.222025,
+          "window_expectancy_pct": -2.256483
+        },
+        {
+          "window": "2026-04",
+          "status": "ok",
+          "trades": 22,
+          "profit_pct": -15.919081,
+          "expectancy_pct": -3.134831,
+          "winrate_pct": 18.181818,
+          "max_drawdown_pct": 16.952923,
+          "window_expectancy_pct": -3.134827
+        },
+        {
+          "window": "2026-05",
+          "status": "ok",
+          "trades": 9,
+          "profit_pct": -1.662615,
+          "expectancy_pct": -0.727168,
+          "winrate_pct": 33.333333,
+          "max_drawdown_pct": 3.543405,
+          "window_expectancy_pct": -0.727156
+        },
+        {
+          "window": "2026-06",
+          "status": "ok",
+          "trades": 5,
+          "profit_pct": 0.079416,
+          "expectancy_pct": 0.105139,
+          "winrate_pct": 60.0,
+          "max_drawdown_pct": 2.515984,
+          "window_expectancy_pct": 0.10514
+        },
+        {
+          "window": "2026-07",
+          "status": "ok",
+          "trades": 14,
+          "profit_pct": 1.262534,
+          "expectancy_pct": 0.435816,
+          "winrate_pct": 57.142857,
+          "max_drawdown_pct": 3.930171,
+          "window_expectancy_pct": 0.435807
+        },
+        {
+          "window": "2026-08",
+          "status": "ok",
+          "trades": 24,
+          "profit_pct": -8.228892,
+          "expectancy_pct": -1.401085,
+          "winrate_pct": 41.666667,
+          "max_drawdown_pct": 11.849279,
+          "window_expectancy_pct": -1.401088
+        },
+        {
+          "window": "2026-09",
+          "status": "ok",
+          "trades": 48,
+          "profit_pct": -11.548661,
+          "expectancy_pct": -1.051259,
+          "winrate_pct": 45.833333,
+          "max_drawdown_pct": 18.8275,
+          "window_expectancy_pct": -1.051252
+        },
+        {
+          "window": "2026-10",
+          "status": "ok",
+          "trades": 1,
+          "profit_pct": -1.373329,
+          "expectancy_pct": -5.54342,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 1.373329,
+          "window_expectancy_pct": -5.5434
+        },
+        {
+          "window": "2026-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        }
+      ]
+    },
+    "DmiAdxStrategy": {
+      "strategy": "DmiAdxStrategy",
+      "gate": "FAIL",
+      "gate_reasons": [
+        "n_trades=1 < min_trades=30",
+        "windows_with_trades=1 < 2",
+        "ci_low=-0.055799 <= 0"
+      ],
+      "n_trades": 1,
+      "n_windows_run": 35,
+      "n_windows_evaluated": 35,
+      "n_windows_with_trades": 1,
+      "n_windows_no_result": 0,
+      "pct_positive_windows": 0.0,
+      "pct_positive_windows_basis": "windows where a backtest result existed (0-trade windows count as non-positive)",
+      "expectancy_per_trade": -0.055799,
+      "expectancy_per_trade_pct": -5.5799,
+      "median_trade": -0.055799,
+      "std_trade": null,
+      "ci_low": -0.055799,
+      "ci_high": -0.055799,
+      "ci_low_pct": -5.5799,
+      "ci_high_pct": -5.5799,
+      "bootstrap": {
+        "resamples": 10000,
+        "seed": 42,
+        "alpha": 0.05,
+        "unit": "trade"
+      },
+      "window_bootstrap": {
+        "mean": -0.055799,
+        "ci_low": null,
+        "ci_high": null,
+        "n_windows": 1
+      },
+      "mean_window_profit_pct": -0.039497,
+      "windows": [
+        {
+          "window": "2024-01",
+          "status": "ok",
+          "trades": 1,
+          "profit_pct": -1.3824,
+          "expectancy_pct": -5.579899,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 1.3824,
+          "window_expectancy_pct": -5.5799
+        },
+        {
+          "window": "2024-02",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-03",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-04",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-05",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-06",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-07",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-08",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-09",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-10",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-12",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-01",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-02",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-03",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-04",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-05",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-06",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-07",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-08",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-09",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-10",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-12",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-01",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-02",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-03",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-04",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-05",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-06",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-07",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-08",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-09",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-10",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        }
+      ]
+    },
+    "EmaTrendFollowing": {
+      "strategy": "EmaTrendFollowing",
+      "gate": "FAIL",
+      "gate_reasons": [
+        "ci_low=-0.011868 <= 0"
+      ],
+      "n_trades": 4454,
+      "n_windows_run": 35,
+      "n_windows_evaluated": 35,
+      "n_windows_with_trades": 35,
+      "n_windows_no_result": 0,
+      "pct_positive_windows": 5.71,
+      "pct_positive_windows_basis": "windows where a backtest result existed (0-trade windows count as non-positive)",
+      "expectancy_per_trade": -0.01003243,
+      "expectancy_per_trade_pct": -1.003243,
+      "median_trade": -0.0556105,
+      "std_trade": 0.06267589,
+      "ci_low": -0.01186753,
+      "ci_high": -0.00819064,
+      "ci_low_pct": -1.186753,
+      "ci_high_pct": -0.819064,
+      "bootstrap": {
+        "resamples": 10000,
+        "seed": 42,
+        "alpha": 0.05,
+        "unit": "trade"
+      },
+      "window_bootstrap": {
+        "mean": -0.01313555,
+        "ci_low": -0.01685805,
+        "ci_high": -0.00955594,
+        "n_windows": 35,
+        "resamples": 10000,
+        "seed": 43
+      },
+      "mean_window_profit_pct": -26.236235,
+      "windows": [
+        {
+          "window": "2024-01",
+          "status": "ok",
+          "trades": 180,
+          "profit_pct": -51.425143,
+          "expectancy_pct": -1.526983,
+          "winrate_pct": 28.888889,
+          "max_drawdown_pct": 51.425143,
+          "window_expectancy_pct": -1.526984
+        },
+        {
+          "window": "2024-02",
+          "status": "ok",
+          "trades": 242,
+          "profit_pct": -15.40191,
+          "expectancy_pct": -0.202657,
+          "winrate_pct": 43.38843,
+          "max_drawdown_pct": 25.060507,
+          "window_expectancy_pct": -0.202657
+        },
+        {
+          "window": "2024-03",
+          "status": "ok",
+          "trades": 292,
+          "profit_pct": -67.329432,
+          "expectancy_pct": -1.455299,
+          "winrate_pct": 30.479452,
+          "max_drawdown_pct": 70.756393,
+          "window_expectancy_pct": -1.4553
+        },
+        {
+          "window": "2024-04",
+          "status": "ok",
+          "trades": 74,
+          "profit_pct": -29.708875,
+          "expectancy_pct": -1.838037,
+          "winrate_pct": 31.081081,
+          "max_drawdown_pct": 30.175402,
+          "window_expectancy_pct": -1.838036
+        },
+        {
+          "window": "2024-05",
+          "status": "ok",
+          "trades": 144,
+          "profit_pct": -20.671901,
+          "expectancy_pct": -0.574631,
+          "winrate_pct": 39.583333,
+          "max_drawdown_pct": 32.428367,
+          "window_expectancy_pct": -0.574629
+        },
+        {
+          "window": "2024-06",
+          "status": "ok",
+          "trades": 34,
+          "profit_pct": -4.232714,
+          "expectancy_pct": -0.461365,
+          "winrate_pct": 38.235294,
+          "max_drawdown_pct": 12.99009,
+          "window_expectancy_pct": -0.461365
+        },
+        {
+          "window": "2024-07",
+          "status": "ok",
+          "trades": 146,
+          "profit_pct": -30.746567,
+          "expectancy_pct": -0.93431,
+          "winrate_pct": 39.726027,
+          "max_drawdown_pct": 39.787925,
+          "window_expectancy_pct": -0.934307
+        },
+        {
+          "window": "2024-08",
+          "status": "ok",
+          "trades": 124,
+          "profit_pct": -31.691135,
+          "expectancy_pct": -1.139956,
+          "winrate_pct": 36.290323,
+          "max_drawdown_pct": 46.622006,
+          "window_expectancy_pct": -1.139958
+        },
+        {
+          "window": "2024-09",
+          "status": "ok",
+          "trades": 153,
+          "profit_pct": -11.122387,
+          "expectancy_pct": -0.215607,
+          "winrate_pct": 44.444444,
+          "max_drawdown_pct": 22.8817,
+          "window_expectancy_pct": -0.215612
+        },
+        {
+          "window": "2024-10",
+          "status": "ok",
+          "trades": 145,
+          "profit_pct": -45.377961,
+          "expectancy_pct": -1.631733,
+          "winrate_pct": 33.793103,
+          "max_drawdown_pct": 46.914697,
+          "window_expectancy_pct": -1.631734
+        },
+        {
+          "window": "2024-11",
+          "status": "ok",
+          "trades": 466,
+          "profit_pct": -70.960568,
+          "expectancy_pct": -1.056159,
+          "winrate_pct": 32.403433,
+          "max_drawdown_pct": 80.189696,
+          "window_expectancy_pct": -1.056157
+        },
+        {
+          "window": "2024-12",
+          "status": "ok",
+          "trades": 111,
+          "profit_pct": -28.216113,
+          "expectancy_pct": -1.113607,
+          "winrate_pct": 30.630631,
+          "max_drawdown_pct": 29.385287,
+          "window_expectancy_pct": -1.113607
+        },
+        {
+          "window": "2025-01",
+          "status": "ok",
+          "trades": 149,
+          "profit_pct": -11.497762,
+          "expectancy_pct": -0.219633,
+          "winrate_pct": 42.281879,
+          "max_drawdown_pct": 30.705481,
+          "window_expectancy_pct": -0.219627
+        },
+        {
+          "window": "2025-02",
+          "status": "ok",
+          "trades": 51,
+          "profit_pct": -32.42339,
+          "expectancy_pct": -3.00139,
+          "winrate_pct": 19.607843,
+          "max_drawdown_pct": 37.004643,
+          "window_expectancy_pct": -3.001388
+        },
+        {
+          "window": "2025-03",
+          "status": "ok",
+          "trades": 83,
+          "profit_pct": -23.010798,
+          "expectancy_pct": -1.196356,
+          "winrate_pct": 36.144578,
+          "max_drawdown_pct": 27.383292,
+          "window_expectancy_pct": -1.196358
+        },
+        {
+          "window": "2025-04",
+          "status": "ok",
+          "trades": 135,
+          "profit_pct": -18.535562,
+          "expectancy_pct": -0.527476,
+          "winrate_pct": 40.740741,
+          "max_drawdown_pct": 28.286691,
+          "window_expectancy_pct": -0.527476
+        },
+        {
+          "window": "2025-05",
+          "status": "ok",
+          "trades": 178,
+          "profit_pct": -45.476724,
+          "expectancy_pct": -1.266504,
+          "winrate_pct": 33.707865,
+          "max_drawdown_pct": 61.713905,
+          "window_expectancy_pct": -1.266502
+        },
+        {
+          "window": "2025-06",
+          "status": "ok",
+          "trades": 83,
+          "profit_pct": -18.944924,
+          "expectancy_pct": -0.944669,
+          "winrate_pct": 38.554217,
+          "max_drawdown_pct": 24.197174,
+          "window_expectancy_pct": -0.944676
+        },
+        {
+          "window": "2025-07",
+          "status": "ok",
+          "trades": 231,
+          "profit_pct": -38.129792,
+          "expectancy_pct": -0.757819,
+          "winrate_pct": 39.393939,
+          "max_drawdown_pct": 51.354915,
+          "window_expectancy_pct": -0.757818
+        },
+        {
+          "window": "2025-08",
+          "status": "ok",
+          "trades": 87,
+          "profit_pct": -33.618355,
+          "expectancy_pct": -1.82533,
+          "winrate_pct": 32.183908,
+          "max_drawdown_pct": 41.935779,
+          "window_expectancy_pct": -1.825331
+        },
+        {
+          "window": "2025-09",
+          "status": "ok",
+          "trades": 114,
+          "profit_pct": -26.880135,
+          "expectancy_pct": -1.048377,
+          "winrate_pct": 38.596491,
+          "max_drawdown_pct": 27.292749,
+          "window_expectancy_pct": -1.048376
+        },
+        {
+          "window": "2025-10",
+          "status": "ok",
+          "trades": 99,
+          "profit_pct": -14.843131,
+          "expectancy_pct": -0.568114,
+          "winrate_pct": 42.424242,
+          "max_drawdown_pct": 31.559651,
+          "window_expectancy_pct": -0.568115
+        },
+        {
+          "window": "2025-11",
+          "status": "ok",
+          "trades": 21,
+          "profit_pct": -10.133167,
+          "expectancy_pct": -2.025457,
+          "winrate_pct": 28.571429,
+          "max_drawdown_pct": 10.133167,
+          "window_expectancy_pct": -2.025457
+        },
+        {
+          "window": "2025-12",
+          "status": "ok",
+          "trades": 75,
+          "profit_pct": -50.74913,
+          "expectancy_pct": -3.745208,
+          "winrate_pct": 13.333333,
+          "max_drawdown_pct": 50.74913,
+          "window_expectancy_pct": -3.745208
+        },
+        {
+          "window": "2026-01",
+          "status": "ok",
+          "trades": 104,
+          "profit_pct": -4.58274,
+          "expectancy_pct": -0.066789,
+          "winrate_pct": 49.038462,
+          "max_drawdown_pct": 30.213452,
+          "window_expectancy_pct": -0.066796
+        },
+        {
+          "window": "2026-02",
+          "status": "ok",
+          "trades": 24,
+          "profit_pct": -21.476804,
+          "expectancy_pct": -4.021959,
+          "winrate_pct": 12.5,
+          "max_drawdown_pct": 23.467443,
+          "window_expectancy_pct": -4.021967
+        },
+        {
+          "window": "2026-03",
+          "status": "ok",
+          "trades": 106,
+          "profit_pct": -30.354537,
+          "expectancy_pct": -1.281271,
+          "winrate_pct": 36.792453,
+          "max_drawdown_pct": 33.95617,
+          "window_expectancy_pct": -1.281274
+        },
+        {
+          "window": "2026-04",
+          "status": "ok",
+          "trades": 154,
+          "profit_pct": -45.908504,
+          "expectancy_pct": -1.515992,
+          "winrate_pct": 35.064935,
+          "max_drawdown_pct": 45.908504,
+          "window_expectancy_pct": -1.515986
+        },
+        {
+          "window": "2026-05",
+          "status": "ok",
+          "trades": 111,
+          "profit_pct": 4.569227,
+          "expectancy_pct": 0.245829,
+          "winrate_pct": 45.945946,
+          "max_drawdown_pct": 23.596778,
+          "window_expectancy_pct": 0.245829
+        },
+        {
+          "window": "2026-06",
+          "status": "ok",
+          "trades": 30,
+          "profit_pct": -10.668254,
+          "expectancy_pct": -1.46977,
+          "winrate_pct": 36.666667,
+          "max_drawdown_pct": 13.900012,
+          "window_expectancy_pct": -1.469773
+        },
+        {
+          "window": "2026-07",
+          "status": "ok",
+          "trades": 106,
+          "profit_pct": -33.570189,
+          "expectancy_pct": -1.497942,
+          "winrate_pct": 38.679245,
+          "max_drawdown_pct": 40.699636,
+          "window_expectancy_pct": -1.497938
+        },
+        {
+          "window": "2026-08",
+          "status": "ok",
+          "trades": 133,
+          "profit_pct": 14.982812,
+          "expectancy_pct": 0.564584,
+          "winrate_pct": 46.616541,
+          "max_drawdown_pct": 30.849387,
+          "window_expectancy_pct": 0.564586
+        },
+        {
+          "window": "2026-09",
+          "status": "ok",
+          "trades": 213,
+          "profit_pct": -23.320256,
+          "expectancy_pct": -0.420888,
+          "winrate_pct": 38.497653,
+          "max_drawdown_pct": 27.841901,
+          "window_expectancy_pct": -0.420888
+        },
+        {
+          "window": "2026-10",
+          "status": "ok",
+          "trades": 49,
+          "profit_pct": -29.16021,
+          "expectancy_pct": -2.745062,
+          "winrate_pct": 22.44898,
+          "max_drawdown_pct": 30.121228,
+          "window_expectancy_pct": -2.745065
+        },
+        {
+          "window": "2026-11",
+          "status": "ok",
+          "trades": 7,
+          "profit_pct": -7.651209,
+          "expectancy_pct": -4.488442,
+          "winrate_pct": 14.285714,
+          "max_drawdown_pct": 8.119213,
+          "window_expectancy_pct": -4.488457
+        }
+      ]
+    },
+    "EnsembleStrategy": {
+      "strategy": "EnsembleStrategy",
+      "gate": "FAIL",
+      "gate_reasons": [
+        "no out-of-sample trades",
+        "n_trades=0 < min_trades=30",
+        "windows_with_trades=0 < 2"
+      ],
+      "n_trades": 0,
+      "n_windows_run": 35,
+      "n_windows_evaluated": 0,
+      "n_windows_with_trades": 0,
+      "n_windows_no_result": 35,
+      "pct_positive_windows": null,
+      "pct_positive_windows_basis": "windows where a backtest result existed (0-trade windows count as non-positive)",
+      "expectancy_per_trade": null,
+      "expectancy_per_trade_pct": null,
+      "median_trade": null,
+      "std_trade": null,
+      "ci_low": null,
+      "ci_high": null,
+      "ci_low_pct": null,
+      "ci_high_pct": null,
+      "bootstrap": {
+        "resamples": 10000,
+        "seed": 42,
+        "alpha": 0.05,
+        "unit": "trade"
+      },
+      "window_bootstrap": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "n_windows": 0
+      },
+      "mean_window_profit_pct": null,
+      "windows": [
+        {
+          "window": "2024-01",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-02",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-03",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-04",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-05",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-06",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-07",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-08",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-09",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-10",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-11",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-12",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-01",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-02",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-03",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-04",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-05",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-06",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-07",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-08",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-09",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-10",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-11",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-12",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-01",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-02",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-03",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-04",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-05",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-06",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-07",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-08",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-09",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-10",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-11",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        }
+      ]
+    },
+    "MacdRsiStrategy": {
+      "strategy": "MacdRsiStrategy",
+      "gate": "FAIL",
+      "gate_reasons": [
+        "n_trades=4 < min_trades=30",
+        "ci_low=-0.056054 <= 0"
+      ],
+      "n_trades": 4,
+      "n_windows_run": 35,
+      "n_windows_evaluated": 35,
+      "n_windows_with_trades": 3,
+      "n_windows_no_result": 0,
+      "pct_positive_windows": 2.86,
+      "pct_positive_windows_basis": "windows where a backtest result existed (0-trade windows count as non-positive)",
+      "expectancy_per_trade": -0.01266875,
+      "expectancy_per_trade_pct": -1.266875,
+      "median_trade": -0.0557875,
+      "std_trade": 0.08648134,
+      "ci_low": -0.05605375,
+      "ci_high": 0.073835,
+      "ci_low_pct": -5.605375,
+      "ci_high_pct": 7.3835,
+      "bootstrap": {
+        "resamples": 10000,
+        "seed": 42,
+        "alpha": 0.05,
+        "unit": "trade"
+      },
+      "window_bootstrap": {
+        "mean": 0.00175983,
+        "ci_low": -0.0559545,
+        "ci_high": 0.117053,
+        "n_windows": 3,
+        "resamples": 10000,
+        "seed": 43
+      },
+      "mean_window_profit_pct": -0.035177,
+      "windows": [
+        {
+          "window": "2024-01",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-02",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-03",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-04",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-05",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-06",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-07",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-08",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-09",
+          "status": "ok",
+          "trades": 1,
+          "profit_pct": 2.899936,
+          "expectancy_pct": 11.705258,
+          "winrate_pct": 100.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": 11.7053
+        },
+        {
+          "window": "2024-10",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2024-12",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-01",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-02",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-03",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-04",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-05",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-06",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-07",
+          "status": "ok",
+          "trades": 1,
+          "profit_pct": -1.382874,
+          "expectancy_pct": -5.581861,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 1.382874,
+          "window_expectancy_pct": -5.5819
+        },
+        {
+          "window": "2025-08",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-09",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-10",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2025-12",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-01",
+          "status": "ok",
+          "trades": 2,
+          "profit_pct": -2.748242,
+          "expectancy_pct": -5.595468,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 2.748242,
+          "window_expectancy_pct": -5.59545
+        },
+        {
+          "window": "2026-02",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-03",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-04",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-05",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-06",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-07",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-08",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-09",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-10",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        },
+        {
+          "window": "2026-11",
+          "status": "no_trades",
+          "trades": 0,
+          "profit_pct": 0.0,
+          "expectancy_pct": 0.0,
+          "winrate_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "window_expectancy_pct": null
+        }
+      ]
+    },
+    "SupertrendEmaStrategy": {
+      "strategy": "SupertrendEmaStrategy",
+      "gate": "FAIL",
+      "gate_reasons": [
+        "no out-of-sample trades",
+        "n_trades=0 < min_trades=30",
+        "windows_with_trades=0 < 2"
+      ],
+      "n_trades": 0,
+      "n_windows_run": 35,
+      "n_windows_evaluated": 0,
+      "n_windows_with_trades": 0,
+      "n_windows_no_result": 35,
+      "pct_positive_windows": null,
+      "pct_positive_windows_basis": "windows where a backtest result existed (0-trade windows count as non-positive)",
+      "expectancy_per_trade": null,
+      "expectancy_per_trade_pct": null,
+      "median_trade": null,
+      "std_trade": null,
+      "ci_low": null,
+      "ci_high": null,
+      "ci_low_pct": null,
+      "ci_high_pct": null,
+      "bootstrap": {
+        "resamples": 10000,
+        "seed": 42,
+        "alpha": 0.05,
+        "unit": "trade"
+      },
+      "window_bootstrap": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "n_windows": 0
+      },
+      "mean_window_profit_pct": null,
+      "windows": [
+        {
+          "window": "2024-01",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-02",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-03",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-04",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-05",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-06",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-07",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-08",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-09",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-10",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-11",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2024-12",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-01",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-02",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-03",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-04",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-05",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-06",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-07",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-08",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-09",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-10",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-11",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-12",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-01",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-02",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-03",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-04",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-05",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-06",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-07",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-08",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-09",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-10",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2026-11",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        }
+      ]
+    }
+  }
+}
