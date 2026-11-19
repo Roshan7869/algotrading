@@ -44,3 +44,11 @@ cd strategy_db && ..\.venv\Scripts\python.exe ingest.py            # rebuild Chr
 - `Algo @ 2/MoondevRED` = data artifacts only (`_engine` holds `_data_storage`, no runnable code).
 - Config sprawl is real: 49+ JSON configs in `user_data/`; `config_backtest.json` = futures, `config_spot.json` = spot.
 - Rebuild the KB after changing `strategy/*.txt` or `strategy_db/source_data/*.json`.
+
+## TradingAgents (2026-11-19)
+
+- Vendored clone of TauricResearch/TradingAgents v0.7.1 at `TradingAgents/` (own git repo — update: `git -C TradingAgents pull`)
+- Own venv: `TradingAgents/.venv` (py3.13, `uv pip install -e .`)
+- Bridge: `scripts/trading_agents_bridge.py` writes `shared_config/tradingagents_signal.json` (replaces placeholder refresh_agents.py)
+- Keys: `C:\Users\khatr\.config\tradingagents\env.ps1` — fill ONE provider line
+- Verify: `TradingAgents\.venv\Scripts\python.exe scripts\trading_agents_bridge.py --check`

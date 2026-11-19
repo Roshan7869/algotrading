@@ -21,3 +21,6 @@ user_data/hyperopt_results/*.fthypt
 
 # runtime artifacts
 nexus/reflection.db
+
+# vendored upstream clone (own git repo)
+TradingAgents/
