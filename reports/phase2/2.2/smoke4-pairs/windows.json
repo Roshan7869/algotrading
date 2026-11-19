@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "fee_model": "fee_model: 10bps all-in (fee + slippage proxy)",
+  "windows": [
+    {
+      "window": "2024-01",
+      "index": 1,
+      "status": "ok",
+      "train_timerange": "20230701-20240101",
+      "test_timerange": "20240101-20240201",
+      "partial": false,
+      "pairs_used": 1,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "skipped_pairs": [
+        {
+          "pair": "HYPE/USDT:USDT",
+          "test_rows": 0,
+          "train_rows": 0,
+          "reason": "insufficient data in window (test_rows=0 < 100, train_rows=0 < 100)"
+        }
+      ],
+      "elapsed_s": 4.6,
+      "results": {
+        "EmaTrendFollowing": {
+          "status": "ok",
+          "metrics": {
+            "trades": 15,
+            "trades_long": 15,
+            "trades_short": 0,
+            "profit_abs": -874.374262,
+            "profit_pct": -8.743743,
+            "winrate_pct": 26.666667,
+            "expectancy_abs": -58.291617,
+            "expectancy_pct": -2.425964,
+            "max_drawdown_pct": 8.743743,
+            "max_drawdown_abs": 874.374262,
+            "sharpe": -4.109407,
+            "sortino": -126.013642,
+            "calmar": -61.628946,
+            "profit_factor": 0.40562,
+            "cagr_pct": -65.949398,
+            "trades_per_day": 0.48,
+            "avg_duration_s": 31440.0,
+            "starting_balance": 10000.0,
+            "final_balance": 9125.63,
+            "max_open_trades": 1,
+            "stake_amount": "unlimited",
+            "backtest_start": "2024-01-01 00:00:00",
+            "backtest_end": "2024-02-01 00:00:00",
+            "timerange": "20240101-20240201",
+            "timeframe": "1h",
+            "pairs_in_report": 1,
+            "pairs_traded": 1,
+            "per_pair": [
+              {
+                "pair": "BTC/USDT:USDT",
+                "trades": 15,
+                "profit_abs": -874.374262,
+                "profit_pct": -8.743743,
+                "winrate_pct": 26.666667,
+                "expectancy_abs": -58.291617,
+                "expectancy_pct": -2.425964,
+                "max_drawdown_pct": 8.743743,
+                "profit_factor": 0.40562,
+                "sharpe": -4.109407
+              }
+            ]
+          },
+          "note": null
+        }
+      }
+    }
+  ]
+}

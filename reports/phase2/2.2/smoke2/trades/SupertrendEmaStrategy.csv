@@ -1,0 +1,3 @@
+window,strategy,pair,open_date,close_date,profit_ratio,profit_abs,is_short,leverage,exit_reason,enter_tag,funding_fees,stake_amount
+2025-07,SupertrendEmaStrategy,TRX/USDT:USDT,2025-07-29 10:00:00+00:00,2025-07-29 11:00:00+00:00,0.066096,163.749827,False,3.0,trailing_stop_loss,supertrend_long,0.0,2474.97
+2025-10,SupertrendEmaStrategy,LTC/USDT:USDT,2025-10-27 16:00:00+00:00,2025-10-27 20:00:00+00:00,-0.05591,-138.514887,False,3.0,stop_loss,supertrend_long,-0.742493,2474.99

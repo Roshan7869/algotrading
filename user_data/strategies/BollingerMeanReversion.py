@@ -16,7 +16,7 @@ from freqtrade.strategy import (
 
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.strategy import merge_informative_pair
+from freqtrade.strategy import merge_informative_pair, stoploss_from_absolute
 from signal_bus_mixin import SignalBusMixin
 
 
@@ -34,6 +34,10 @@ class BollingerMeanReversion(IStrategy, SignalBusMixin):
     }
 
     stoploss = -0.04
+    # Phase 2.1: without this flag freqtrade never calls custom_stoploss()
+    # (freqtrade/strategy/interface.py:85 default False, :1551 the only call site), so the
+    # ATR stop below was dead code and every trade ran on the raw config stoploss only.
+    use_custom_stoploss = True
     trailing_stop = True
     trailing_stop_positive = 0.015
     trailing_stop_positive_offset = 0.05
@@ -169,6 +173,21 @@ class BollingerMeanReversion(IStrategy, SignalBusMixin):
         return dataframe
 
     def custom_stoploss(self, pair, trade, current_time, current_rate, current_profit, **kwargs) -> float:
+        # Phase 2.1 stop logic — three defects fixed, all in price terms:
+        #  1. LEVERAGE DIVISION. freqtrade divides every stoploss ratio by the trade's leverage
+        #     before it becomes a price distance (persistence/trade_model.py adjust_stop_loss:
+        #     `current_price * (1 - abs(stoploss / leverage))`, :833-837). The distance computed
+        #     below is already a *price* distance, so it must be converted with
+        #     stoploss_from_absolute(), which multiplies by leverage for exactly this reason
+        #     (strategy_helper.py:156-185). The old code returned the raw price percentage, so at
+        #     3x the stop sat one third of the intended ATR distance from entry.
+        #  2. TIGHT-ONLY RATCHET. `max(stop_loss_pct, self.stoploss)` clamped the ATR stop to the
+        #     fixed config stop whenever ATR x multiplier was the wider stop (both values are
+        #     negative, so max() keeps the tighter one) — the ATR stop could never be honoured.
+        #     Tightening needs no clamp here: freqtrade's own adjust_stop_loss() never loosens an
+        #     existing stop, which is the only ratchet that should exist.
+        #  3. The `use_custom_stoploss = True` class flag above is what makes this method run at
+        #     all; it was missing before.
         dataframe, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
         if len(dataframe) < 1:
             return self.stoploss
@@ -183,15 +202,24 @@ class BollingerMeanReversion(IStrategy, SignalBusMixin):
         if pd.isna(atr_value) or atr_value <= 0:
             return self.stoploss
 
+        # Entry-anchored stop price: 1.3 ATR (sell-space parameter) away from the fill, on the
+        # loss side. Never re-anchored to the current rate, so the stop price is stable and the
+        # ratio below only changes because current_rate moved.
         stop_distance = atr_value * self.atr_multiplier.value
         if trade.is_short:
             stop_price = trade.open_rate + stop_distance
-            stop_loss_pct = -((stop_price - current_rate) / current_rate)
         else:
             stop_price = trade.open_rate - stop_distance
-            stop_loss_pct = -((current_rate - stop_price) / current_rate)
 
-        return max(stop_loss_pct, self.stoploss)
+        # stoploss_from_absolute() returns 0 when that stop price is already through the current
+        # rate; freqtrade then skips the custom stop for this candle (interface.py:1563, `0` is
+        # falsy) and the previously set stop stays in force.
+        return -stoploss_from_absolute(
+            stop_price,
+            current_rate,
+            is_short=trade.is_short,
+            leverage=trade.leverage or 1.0,
+        )
 
     def custom_exit(self, pair, trade, current_time, current_rate, current_profit, **kwargs) -> Optional[Union[str, bool]]:
         dataframe, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)

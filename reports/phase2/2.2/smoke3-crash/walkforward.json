@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "artifact": "walkforward",
+  "phase": "2.2",
+  "git_sha": "9fd8eca2b2793bd7d79452ab92c8376671673746",
+  "fee_model": "fee_model: 10bps all-in (fee + slippage proxy)",
+  "fee_ratio": 0.001,
+  "timeframe": "1h",
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 42,
+    "alpha": 0.05,
+    "unit": "trade",
+    "method": "percentile bootstrap of the mean over concatenated OOS trades"
+  },
+  "gate_rule": "PASS iff bootstrap 95% CI lower bound of the aggregate out-of-sample expectancy per trade is > 0 AND n_trades >= 30 AND n_windows_with_trades >= 2",
+  "gate": {
+    "verdict": "FAIL",
+    "passed": false,
+    "rule": "PASS iff bootstrap 95% CI lower bound of the aggregate out-of-sample expectancy per trade is > 0 AND n_trades >= 30 AND n_windows_with_trades >= 2",
+    "failed_strategies": [
+      "EnsembleStrategy"
+    ],
+    "banner": "WALKFORWARD FAIL: no OOS edge at 10bps"
+  },
+  "windows_run": 2,
+  "windows_insufficient": 0,
+  "strategies": [
+    "EnsembleStrategy"
+  ],
+  "aggregate": {
+    "EnsembleStrategy": {
+      "strategy": "EnsembleStrategy",
+      "gate": "FAIL",
+      "gate_reasons": [
+        "no out-of-sample trades",
+        "n_trades=0 < min_trades=30",
+        "windows_with_trades=0 < 2"
+      ],
+      "n_trades": 0,
+      "n_windows_run": 2,
+      "n_windows_evaluated": 0,
+      "n_windows_with_trades": 0,
+      "n_windows_no_result": 2,
+      "pct_positive_windows": null,
+      "pct_positive_windows_basis": "windows where a backtest result existed (0-trade windows count as non-positive)",
+      "expectancy_per_trade": null,
+      "expectancy_per_trade_pct": null,
+      "median_trade": null,
+      "std_trade": null,
+      "ci_low": null,
+      "ci_high": null,
+      "ci_low_pct": null,
+      "ci_high_pct": null,
+      "bootstrap": {
+        "resamples": 10000,
+        "seed": 42,
+        "alpha": 0.05,
+        "unit": "trade"
+      },
+      "window_bootstrap": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "n_windows": 0
+      },
+      "mean_window_profit_pct": null,
+      "windows": [
+        {
+          "window": "2025-09",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        },
+        {
+          "window": "2025-10",
+          "status": "no_result",
+          "trades": 0,
+          "profit_pct": null,
+          "expectancy_pct": null,
+          "winrate_pct": null,
+          "max_drawdown_pct": null
+        }
+      ]
+    }
+  }
+}

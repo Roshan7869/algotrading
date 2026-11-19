@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "artifact": "walkforward",
+  "phase": "2.2",
+  "generated_at_utc": "2026-11-19T13:10:55Z",
+  "output_dir": "smoke3-crash",
+  "git_sha": "9fd8eca2b2793bd7d79452ab92c8376671673746",
+  "git_sha_short": "9fd8eca2b",
+  "freqtrade_version": "freqtrade 2026.5-dev-9fd8eca2b",
+  "python_version": "3.13.18",
+  "config_path": "user_data/config_backtest.json",
+  "config_sha256": "sha256:26e14c8c2f8c419eca3266f0fefd3be92a3c2f77b8599fa6fde8c5dc9a532b2a",
+  "userdir": "user_data",
+  "fee_model": "fee_model: 10bps all-in (fee + slippage proxy)",
+  "fee_ratio": 0.001,
+  "fee_note": "--fee is charged on entry and exit; 10 bps all-in per side-equivalent (exchange fee + slippage proxy, no native slippage in the backtester)",
+  "timeframe": "1h",
+  "run_mode": "per-strategy",
+  "strategies": [
+    "EnsembleStrategy"
+  ],
+  "universe": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "XRP/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "BNB/USDT:USDT",
+    "ADA/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "LTC/USDT:USDT",
+    "TRX/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "APT/USDT:USDT",
+    "ARB/USDT:USDT",
+    "OP/USDT:USDT",
+    "SUI/USDT:USDT",
+    "INJ/USDT:USDT",
+    "SEI/USDT:USDT"
+  ],
+  "universe_source": "reports/scoreboard-20261119-1229/UNIVERSE.json",
+  "windows_spec": {
+    "start": "20250901",
+    "end_inclusive": "20251101",
+    "end_mode": "explicit",
+    "train_months": 3,
+    "test_months": 1,
+    "count": 2,
+    "partial_windows": [],
+    "dropped_windows": [
+      {
+        "label": "2025-11",
+        "timerange": "20251101-20251102",
+        "reason": "clipped tail window shorter than 7 days"
+      }
+    ]
+  },
+  "windows": [
+    {
+      "index": 1,
+      "label": "2025-09",
+      "train": {
+        "start": "20250601",
+        "end_inclusive": "20250831",
+        "timerange": "20250601-20250901"
+      },
+      "test": {
+        "start": "20250901",
+        "end_inclusive": "20250930",
+        "timerange": "20250901-20251001"
+      },
+      "train_months": 3,
+      "partial": false
+    },
+    {
+      "index": 2,
+      "label": "2025-10",
+      "train": {
+        "start": "20250701",
+        "end_inclusive": "20250930",
+        "timerange": "20250701-20251001"
+      },
+      "test": {
+        "start": "20251001",
+        "end_inclusive": "20251031",
+        "timerange": "20251001-20251101"
+      },
+      "train_months": 3,
+      "partial": false
+    }
+  ],
+  "windows_run": 2,
+  "windows_insufficient": 0,
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 42,
+    "alpha": 0.05,
+    "unit": "trade",
+    "method": "percentile bootstrap of the mean over concatenated OOS trades"
+  },
+  "gate_rule": "PASS iff bootstrap 95% CI lower bound of the aggregate out-of-sample expectancy per trade is > 0 AND n_trades >= 30 AND n_windows_with_trades >= 2",
+  "min_trades": 30,
+  "data_manifest": {
+    "pairs": {
+      "BTC/USDT:USDT": {
+        "rows_total": 63091,
+        "first_candle": "2019-09-08T17:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "ETH/USDT:USDT": {
+        "rows_total": 61181,
+        "first_candle": "2019-11-27T07:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "SOL/USDT:USDT": {
+        "rows_total": 54173,
+        "first_candle": "2020-09-14T07:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "XRP/USDT:USDT": {
+        "rows_total": 60220,
+        "first_candle": "2020-01-06T08:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "DOGE/USDT:USDT": {
+        "rows_total": 55755,
+        "first_candle": "2020-07-10T09:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "BNB/USDT:USDT": {
+        "rows_total": 59380,
+        "first_candle": "2020-02-10T08:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "ADA/USDT:USDT": {
+        "rows_total": 59620,
+        "first_candle": "2020-01-31T08:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "AVAX/USDT:USDT": {
+        "rows_total": 53957,
+        "first_candle": "2020-09-23T07:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "LINK/USDT:USDT": {
+        "rows_total": 59956,
+        "first_candle": "2020-01-17T08:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "DOT/USDT:USDT": {
+        "rows_total": 54725,
+        "first_candle": "2020-08-22T07:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "LTC/USDT:USDT": {
+        "rows_total": 60148,
+        "first_candle": "2020-01-09T08:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "TRX/USDT:USDT": {
+        "rows_total": 60004,
+        "first_candle": "2020-01-15T08:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "ATOM/USDT:USDT": {
+        "rows_total": 59448,
+        "first_candle": "2020-02-07T12:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "NEAR/USDT:USDT": {
+        "rows_total": 53428,
+        "first_candle": "2020-10-15T08:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "APT/USDT:USDT": {
+        "rows_total": 35818,
+        "first_candle": "2022-10-19T02:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "ARB/USDT:USDT": {
+        "rows_total": 32085,
+        "first_candle": "2023-03-23T15:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "OP/USDT:USDT": {
+        "rows_total": 39166,
+        "first_candle": "2022-06-01T14:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "SUI/USDT:USDT": {
+        "rows_total": 31100,
+        "first_candle": "2023-05-03T16:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "INJ/USDT:USDT": {
+        "rows_total": 37330,
+        "first_candle": "2022-08-17T02:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      },
+      "SEI/USDT:USDT": {
+        "rows_total": 28570,
+        "first_candle": "2023-08-17T02:00:00+00:00",
+        "last_candle": "2026-11-19T11:00:00+00:00",
+        "test_rows_per_window": {
+          "2025-09": 720,
+          "2025-10": 744
+        }
+      }
+    },
+    "min_window_candles": 100,
+    "min_train_candles": 100
+  },
+  "manifest_hash_scope": "sha256 over: schema_version, artifact, git_sha, freqtrade_version, config_path, config_sha256, fee_model, fee_ratio, timeframe, strategies, universe, window list (train/test timeranges), bootstrap config, gate rule, and per-pair test-window row counts for every window. EXCLUDED: timestamps, output paths, full-file row counts, runtime, metrics.",
+  "manifest_hash": "sha256:85efcfc13517121a816d2f24aa5c1ebd59e64ca99fbc5d545c91a7cd88c3e22e",
+  "runs": [
+    {
+      "window": "2025-09",
+      "label": "2025-09__EnsembleStrategy",
+      "returncode": 1,
+      "elapsed_s": 5.9,
+      "timed_out": false,
+      "command": "D:\\dev\\algotrading\\.venv\\Scripts\\freqtrade.exe backtesting --strategy EnsembleStrategy -c user_data/config_backtest.json --userdir user_data --timerange 20250901-20251001 --fee 0.001 --cache none --export trades --backtest-directory reports/phase2/2.2/smoke3-crash/raw/2025-09__EnsembleStrategy --timeframe 1h -p BTC/USDT:USDT ETH/USDT:USDT SOL/USDT:USDT XRP/USDT:USDT DOGE/USDT:USDT BNB/USDT:USDT ADA/USDT:USDT AVAX/USDT:USDT LINK/USDT:USDT DOT/USDT:USDT LTC/USDT:USDT TRX/USDT:USDT ATOM/USDT:USDT NEAR/USDT:USDT APT/USDT:USDT ARB/USDT:USDT OP/USDT:USDT SUI/USDT:USDT INJ/USDT:USDT SEI/USDT:USDT"
+    },
+    {
+      "window": "2025-10",
+      "label": "2025-10__EnsembleStrategy",
+      "returncode": 1,
+      "elapsed_s": 6.55,
+      "timed_out": false,
+      "command": "D:\\dev\\algotrading\\.venv\\Scripts\\freqtrade.exe backtesting --strategy EnsembleStrategy -c user_data/config_backtest.json --userdir user_data --timerange 20251001-20251101 --fee 0.001 --cache none --export trades --backtest-directory reports/phase2/2.2/smoke3-crash/raw/2025-10__EnsembleStrategy --timeframe 1h -p BTC/USDT:USDT ETH/USDT:USDT SOL/USDT:USDT XRP/USDT:USDT DOGE/USDT:USDT BNB/USDT:USDT ADA/USDT:USDT AVAX/USDT:USDT LINK/USDT:USDT DOT/USDT:USDT LTC/USDT:USDT TRX/USDT:USDT ATOM/USDT:USDT NEAR/USDT:USDT APT/USDT:USDT ARB/USDT:USDT OP/USDT:USDT SUI/USDT:USDT INJ/USDT:USDT SEI/USDT:USDT"
+    }
+  ],
+  "runtime": {
+    "total_elapsed_s": 12.9,
+    "windows_run": 2,
+    "windows_insufficient": 0
+  }
+}

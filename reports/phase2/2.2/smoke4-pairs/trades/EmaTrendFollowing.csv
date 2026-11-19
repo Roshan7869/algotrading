@@ -1,0 +1,16 @@
+window,strategy,pair,open_date,close_date,profit_ratio,profit_abs,is_short,leverage,exit_reason,enter_tag,funding_fees,stake_amount
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-02 15:00:00+00:00,2024-01-03 11:00:00+00:00,-0.058635,-144.442713,False,3.0,stop_loss,ema_trend_long,-6.767664,2460.95
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-04 17:00:00+00:00,2024-01-05 01:00:00+00:00,-0.056189,-136.669344,False,3.0,stop_loss,ema_trend_long,-0.73284,2429.86
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-05 10:00:00+00:00,2024-01-05 14:00:00+00:00,-0.055888,-134.191364,False,3.0,stop_loss,ema_trend_long,0.0,2398.7
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-08 16:00:00+00:00,2024-01-08 18:00:00+00:00,0.107822,255.620327,False,3.0,trailing_stop_loss,ema_trend_long,-0.710435,2368.4
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-09 01:00:00+00:00,2024-01-09 12:00:00+00:00,-0.056192,-136.542194,False,3.0,stop_loss,ema_trend_long,-0.730684,2427.48
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-09 13:00:00+00:00,2024-01-09 21:00:00+00:00,-0.056192,-135.060048,False,3.0,stop_loss,ema_trend_long,-0.731209,2401.15
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-10 19:00:00+00:00,2024-01-10 20:00:00+00:00,-0.055892,-131.93793,False,3.0,stop_loss,ema_trend_long,0.0,2358.24
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-10 21:00:00+00:00,2024-01-10 21:00:00+00:00,-0.05589,-129.887618,False,3.0,stop_loss,ema_trend_long,0.0,2321.67
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-10 22:00:00+00:00,2024-01-10 23:00:00+00:00,0.076123,175.11237,False,3.0,trailing_stop_loss,ema_trend_long,0.0,2298.09
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-11 00:00:00+00:00,2024-01-11 06:00:00+00:00,-0.056193,-131.237109,False,3.0,stop_loss,ema_trend_long,-0.699864,2333.15
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-26 16:00:00+00:00,2024-01-27 16:00:00+00:00,0.021643,49.92873,False,3.0,roi,ema_trend_long,-2.59322,2304.59
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-27 20:00:00+00:00,2024-01-28 09:00:00+00:00,0.050002,116.03483,False,3.0,roi,ema_trend_long,-1.031226,2318.27
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-28 10:00:00+00:00,2024-01-28 19:00:00+00:00,-0.056189,-132.457202,False,3.0,stop_loss,ema_trend_long,-0.701259,2354.98
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-30 02:00:00+00:00,2024-01-30 23:00:00+00:00,-0.056332,-130.586741,False,3.0,stop_loss,ema_trend_long,-1.015493,2315.84
+2024-01,EmaTrendFollowing,BTC/USDT:USDT,2024-01-31 17:00:00+00:00,2024-01-31 20:00:00+00:00,-0.055892,-128.058257,False,3.0,stop_loss,ema_trend_long,0.0,2288.88

@@ -191,3 +191,13 @@ measure. F23 scope creep → KB/walkforward/signal_v1 marked optional/gated. F24
 discovery (verified: 338/205/40/13 — critic's 130/22 were wrong). F27 missing configs → 1.2
 uses the three that exist. F28 empty tracked DB → 0.5 + R6 wording. F29 inventory → 4.1
 enumerate at execution. F30 deliverables-as-state → all NEW files marked.
+
+## Outcome log
+
+### 2026-11-19 — Phase 2 gate: **FAIL (no edge)**
+Executed 2.1+2.2. SupertrendEma quarantined (lookahead: 4h merge on raw stamp; 19 files total).
+BollingerMR baseline invalidated (hyperopt params 2026-05-14 overlap validation 2026H1);
+post-stop-fix −0.93%/trade. Walkforward smoke: −1.115%/trade, CI [−1.74%, −0.47%], 0% positive
+windows → loud FAIL. **2.3 dry-run does not launch; Phase 3 stays gated.** Decision memo:
+`reports/decisions/no-edge-memo-20261119.md`. Root cause: cost drag (20bps round trip vs
+1h trade frequency) × 3x leverage. Next: cost-aware redesign (user decision).

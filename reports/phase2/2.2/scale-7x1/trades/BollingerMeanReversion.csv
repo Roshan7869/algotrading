@@ -1,0 +1,16 @@
+window,strategy,pair,open_date,close_date,profit_ratio,profit_abs,is_short,leverage,exit_reason,enter_tag,funding_fees,stake_amount
+2025-10,BollingerMeanReversion,OP/USDT:USDT,2025-10-04 11:00:00+00:00,2025-10-04 13:00:00+00:00,0.038991,96.599223,False,3.0,trailing_stop_loss,bb_mean_rev_long,0.0,2475.0
+2025-10,BollingerMeanReversion,ARB/USDT:USDT,2025-10-04 09:00:00+00:00,2025-10-04 14:00:00+00:00,-0.050456,-125.003072,False,3.0,trailing_stop_loss,bb_mean_rev_long,0.0,2474.99
+2025-10,BollingerMeanReversion,DOGE/USDT:USDT,2025-10-04 10:00:00+00:00,2025-10-04 15:00:00+00:00,-0.046831,-116.021593,False,3.0,trailing_stop_loss,bb_mean_rev_long,0.0,2474.97
+2025-10,BollingerMeanReversion,APT/USDT:USDT,2025-10-04 12:00:00+00:00,2025-10-04 19:00:00+00:00,0.040026,99.161028,False,3.0,roi,bb_mean_rev_long,3.671489,2474.93
+2025-10,BollingerMeanReversion,NEAR/USDT:USDT,2025-10-04 16:00:00+00:00,2025-10-04 20:00:00+00:00,0.040362,97.107348,False,3.0,roi,bb_mean_rev_long,-0.634277,2403.52
+2025-10,BollingerMeanReversion,DOGE/USDT:USDT,2025-10-04 16:00:00+00:00,2025-10-04 23:00:00+00:00,0.02393,58.430217,False,3.0,bb_reversion_exit_short,bb_mean_rev_long,0.162454,2439.24
+2025-10,BollingerMeanReversion,DOT/USDT:USDT,2025-10-04 16:00:00+00:00,2025-10-05 02:00:00+00:00,0.024419,59.620147,False,3.0,bb_reversion_exit_short,bb_mean_rev_long,-1.469687,2439.13
+2025-10,BollingerMeanReversion,ADA/USDT:USDT,2025-10-05 19:00:00+00:00,2025-10-05 19:00:00+00:00,-0.055728,-140.401864,False,3.0,stop_loss,bb_mean_rev_long,0.0,2516.88
+2025-10,BollingerMeanReversion,SUI/USDT:USDT,2025-10-05 20:00:00+00:00,2025-10-06 00:00:00+00:00,0.040016,99.428259,False,3.0,roi,bb_mean_rev_long,0.176803,2482.22
+2025-10,BollingerMeanReversion,DOGE/USDT:USDT,2025-10-05 20:00:00+00:00,2025-10-06 06:00:00+00:00,0.039945,99.253468,False,3.0,roi,bb_mean_rev_long,0.201011,2482.26
+2025-10,BollingerMeanReversion,OP/USDT:USDT,2025-10-07 09:00:00+00:00,2025-10-07 14:00:00+00:00,-0.047498,-120.360808,False,3.0,trailing_stop_loss,bb_mean_rev_long,0.0,2531.47
+2025-10,BollingerMeanReversion,BNB/USDT:USDT,2025-10-09 14:00:00+00:00,2025-10-09 14:00:00+00:00,-0.055888,-139.722366,False,3.0,stop_loss,bb_mean_rev_long,0.0,2497.54
+2025-10,BollingerMeanReversion,BNB/USDT:USDT,2025-10-09 15:00:00+00:00,2025-10-09 22:00:00+00:00,0.04,98.652578,False,3.0,roi,bb_mean_rev_long,0.0,2463.88
+2025-10,BollingerMeanReversion,SEI/USDT:USDT,2025-10-27 15:00:00+00:00,2025-10-27 16:00:00+00:00,0.061501,153.3797,False,3.0,trailing_stop_loss,bb_mean_rev_long,0.322674,2491.47
+2025-10,BollingerMeanReversion,ARB/USDT:USDT,2025-10-28 06:00:00+00:00,2025-10-28 06:00:00+00:00,-0.007833,-19.833406,False,3.0,trailing_stop_loss,bb_mean_rev_long,0.0,2529.48
