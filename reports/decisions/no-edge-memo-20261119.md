@@ -45,6 +45,13 @@ callbacks triple the bleed. The old fake results (+21,300%/+3.6M%) hid this enti
    ATR stops, target ≥100bps gross expectancy per trade, maker-entry where possible. Validate
    train-only first, then a fresh validation window (post-2026-07). This directly attacks the
    measured cause rather than the symptom.
+
+   **Pre-check executed 2026-11-19** (`research/regime_delta.py`, method from arXiv:2110.11848 —
+   Wasserstein-k-means regime clusters fit on 2025 only, applied causally to the validation slice):
+   gating entries to the calm cluster moves expectancy by **+0.278pp (EmaTrend: −0.925→−0.648,
+   loss −42%)**, **+0.001pp (Aroon_V2)**, **+0.064pp (BollingerMR)** — real as a loss-reduction
+   filter, but **no strategy crosses zero**. The regime gate alone is insufficient; it is one
+   component of the redesign, not a fix.
 2. **Next scoreboard tier**: evaluate the repo's remaining generated strategies under the same
    gates (costs + lookahead audit) — but expect the same cost floor; not obviously different.
 3. **Park the trading track**: keep the durable assets — measure-first infrastructure

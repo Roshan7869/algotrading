@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "fit_window": "2025-01-01..2026-01-01",
+    "eval_window": "2026-01-01..2026-07-01",
+    "H1": 168,
+    "quantiles": 21,
+    "cost_model": "10bps all-in (inherited from walkforward fills)",
+    "note": "trade-filter delta; equity-path not modeled; holdout untouched"
+  },
+  "strategies": {
+    "EmaTrendFollowing": {
+      "baseline (all)": {
+        "trades": 529,
+        "exp_pct": -0.925438752362949,
+        "win_pct": 39.50850661625709,
+        "pf": 0.7140171061497844,
+        "sum_profit_abs": -10842.161078000001,
+        "maxdd_abs": 14083.822680000008
+      },
+      "gate=calm-only": {
+        "trades": 453,
+        "exp_pct": -0.6475227373068432,
+        "win_pct": 42.16335540838852,
+        "pf": 0.7899126820050014,
+        "sum_profit_abs": -6294.362986,
+        "maxdd_abs": 10107.951415999998
+      },
+      "gate=volatile-only": {
+        "trades": 76,
+        "exp_pct": -2.5819644736842107,
+        "win_pct": 23.684210526315788,
+        "pf": 0.37827749649897646,
+        "sum_profit_abs": -4547.798092,
+        "maxdd_abs": 4402.642247999998
+      }
+    },
+    "AroonMomentumEngine_V2": {
+      "baseline (all)": {
+        "trades": 2029,
+        "exp_pct": -0.8631704287826516,
+        "win_pct": 40.66042385411533,
+        "pf": 0.6218753576549224,
+        "sum_profit_abs": -26986.835351,
+        "maxdd_abs": 29454.90866399996
+      },
+      "gate=calm-only": {
+        "trades": 1510,
+        "exp_pct": -0.8622505298013246,
+        "win_pct": 40.52980132450331,
+        "pf": 0.6090011946500603,
+        "sum_profit_abs": -21057.723223,
+        "maxdd_abs": 23533.316105999973
+      },
+      "gate=volatile-only": {
+        "trades": 519,
+        "exp_pct": -0.8658468208092487,
+        "win_pct": 41.040462427745666,
+        "pf": 0.6548065954578451,
+        "sum_profit_abs": -5929.112128000001,
+        "maxdd_abs": 6071.222555000006
+      }
+    },
+    "BollingerMeanReversion": {
+      "baseline (all)": {
+        "trades": 72,
+        "exp_pct": -0.9827736111111112,
+        "win_pct": 40.27777777777778,
+        "pf": 0.6236894754923809,
+        "sum_profit_abs": -1650.7426269999999,
+        "maxdd_abs": 2936.7260640000004
+      },
+      "gate=calm-only": {
+        "trades": 65,
+        "exp_pct": -0.9188138461538462,
+        "win_pct": 40.0,
+        "pf": 0.6397162752622216,
+        "sum_profit_abs": -1359.7624250000001,
+        "maxdd_abs": 2838.2503349999997
+      },
+      "gate=volatile-only": {
+        "trades": 7,
+        "exp_pct": -1.5766857142857142,
+        "win_pct": 42.857142857142854,
+        "pf": 0.5043894903700644,
+        "sum_profit_abs": -290.98020199999996,
+        "maxdd_abs": 187.69129499999994
+      }
+    }
+  }
+}
