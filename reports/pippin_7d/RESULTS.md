@@ -22,6 +22,13 @@
 | MacdRsiStrategy | 0 | 0.00 | 0.000 | 0.0 | 0:00 | 0     0     0     0 | 0 USDT  0.00% |
 | AroonMomentumEngine_Hybrid | 0 | 0.00 | 0.000 | 0.0 | 0:00 | 0     0     0     0 | 0 USDT  0.00% |
 
+## Swarm cross-check (2026-11-20, 3 parallel agents)
+
+- **Window definition:** the research agent's closed-candle window is 2026-11-13 00:00 → 2026-11-19 23:00 UTC (168 bars): Gate open $0.012199 → close $0.018395 (**+50.79%**), high $0.022289 (Nov 18 18:00 UTC), low $0.01021 (Nov 14 21:00 UTC). Our raw JSON spanned 11-13 07:00 → 11-20 06:00 (+62.37% on those boundary prices); the difference is window boundary, not conflicting data. Both come from the same Gate series.
+- **Data endpoints:** MEXC rejects `interval=1h` (HTTP 400) but accepts `interval=60m`; Gate and MEXC candle series agree within ~0.5%. Gate was the correct venue choice.
+- **Strategy review:** of the 7 loadable strategies, **BollingerMeanReversion was the only one defensible as a diagnostic smoke test**; MacdRsiStrategy has a latent lookahead pattern (raw 4h `pd.merge` + ffill), EmaTrendFollowing and Aroon V2 fail the 10 bps/side cost floor, Aroon Hybrid and Ensemble are inert, DmiAdx has 1 OOS trade in 35 windows. Every loadable strategy is in the 2026-11-19 walkforward FAIL set. The zero-trade outcome above is therefore *absence of signal in this window*, not validation of any strategy.
+- **Event context:** no confirmed catalyst for the Nov 18 pump; insider-coordination claims remain analyst allegations, not findings. This is consistent with the vault case study.
+
 ## Honest reading
 
 - **No edge demonstrated.** All five strategies produced **zero trades** in the evaluated 7-day window once the BTC/USDT:USDT informative filter was correctly loaded. An earlier run showed 2 EmaTrendFollowing trades only because that informative series was missing; those results were discarded.
