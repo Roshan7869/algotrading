@@ -24,7 +24,7 @@
 
 ## Honest reading
 
-- **No edge demonstrated.** One strategy produced a handful of trades; the others produced none. Samples this small cannot support expectancy, win-rate, or annualization claims.
+- **No edge demonstrated.** All five strategies produced **zero trades** in the evaluated 7-day window once the BTC/USDT:USDT informative filter was correctly loaded. An earlier run showed 2 EmaTrendFollowing trades only because that informative series was missing; those results were discarded.
 - Wallet 10,000 USDT / stake 100 USDT: any profit shown is a tiny fraction of wallet, not a return to extrapolate.
 - Prior 35-window walkforward found all surviving strategies FAIL; this short window does not overturn that.
 - Thin memecoin spot liquidity, cross-venue BTC informative data, proxied fees and unmodeled slippage are additional caveats.
