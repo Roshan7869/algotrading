@@ -1,0 +1,68 @@
+{
+    "_comment": "CANONICAL CONFIG 1/3 - FUTURES BACKTEST. Purpose: offline backtesting of the futures strategy set against binance futures data (trading_mode=futures, margin_mode=isolated). Owner: Phase 1.2 of EXECUTION_PLAN.md. Not a trading config: dry_run=true and no exchange keys. LEVERAGE: the 'leverage' key below is NOT read by freqtrade core - every strategy's leverage() callback decides the value (capped by exchange max); see docs/leverage-matrix.md. STOPLOSS: this config-level value OVERRIDES each strategy's stoploss attribute (freqtrade/resolvers/strategy_resolver.py:106-114). DB: separate from the dry-run/paper record on purpose. | whitelist=canonical 20-pair futures universe (EXECUTION_PLAN v0.2 1.4); BNB blacklist removed 2026-11-19 (reconcile with universe)",
+    "max_open_trades": 1,
+    "stake_currency": "USDT",
+    "stake_amount": 100,
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "timeframe": "1h",
+    "dry_run": true,
+    "dry_run_wallet": 10000,
+    "cancel_open_orders_on_exit": false,
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "binance",
+        "pair_whitelist": [
+            "SOL/USDT:USDT"
+        ],
+        "pair_blacklist": []
+    },
+    "leverage": 18,
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "api_server": {
+        "enabled": false,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8080,
+        "username": "freqtrade",
+        "password": "${FREQTRADE_API_PASSWORD}",
+        "jwt_secret": "${FREQTRADE_JWT_SECRET}"
+    },
+    "bot_name": "vector_strategy_backtest",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "trading_mode": "futures",
+    "stoploss": -0.05,
+    "db_url": "sqlite:///tradesv3.backtest_sol_18x.sqlite",
+    "strategy": "EmaTrendFollowing",
+    "margin_mode": "isolated"
+}
